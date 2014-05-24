@@ -521,3 +521,37 @@ ActionView::MissingTemplate (Missing template popups/new, application/new with {
 
 
   Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (0.5ms)
+  [1m[36m (53.4ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (11.2ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (1.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreatePopups (20140523214431)
+  [1m[35m (1.0ms)[0m  BEGIN
+  [1m[36m (35.9ms)[0m  [1mCREATE TABLE "popups" ("id" serial primary key, "name" character varying(255), "address" character varying(255), "hours" character varying(255), "price" character varying(255), "description" character varying(255), "image" text, "expires_at" timestamp, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (3.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140523214431"]]
+  [1m[36m (5.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateFeeds (20140523214439)
+  [1m[35m (1.1ms)[0m  BEGIN
+  [1m[36m (23.1ms)[0m  [1mCREATE TABLE "feeds" ("id" serial primary key, "comment" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (8.5ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140523214439"]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+Migrating to DeviseCreateUsers (20140523214720)
+  [1m[35m (0.6ms)[0m  BEGIN
+  [1m[36m (24.7ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "email" character varying(255) DEFAULT '' NOT NULL, "encrypted_password" character varying(255) DEFAULT '' NOT NULL, "reset_password_token" character varying(255), "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" character varying(255), "last_sign_in_ip" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (10.7ms)[0m  CREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")
+  [1m[36m (2.1ms)[0m  [1mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140523214720"]]
+  [1m[36m (9.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.5ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36mSQL (4.4ms)[0m  [1mINSERT INTO "popups" ("address", "created_at", "description", "expires_at", "hours", "image", "name", "price", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["address", "123 main st, san francisco,ca "], ["created_at", "2014-05-24 18:36:22.698063"], ["description", "get cheap jeans"], ["expires_at", "2014-06-01 00:00:00.000000"], ["hours", "3:00 pm - 6:00 pm"], ["image", "jeans.jpg"], ["name", "James' Jeans"], ["price", "$"], ["updated_at", "2014-05-24 18:36:22.698063"]]
+  [1m[35m (1.0ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "popups" ("address", "created_at", "description", "expires_at", "hours", "image", "name", "price", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["address", "456 hunger st, san francisco,ca "], ["created_at", "2014-05-24 18:36:22.715093"], ["description", "get cheap tacos"], ["expires_at", "2014-06-01 00:00:00.000000"], ["hours", "3:00 pm - 6:00 pm"], ["image", "tacos.jpg"], ["name", "Tim's Tacos"], ["price", "$"], ["updated_at", "2014-05-24 18:36:22.715093"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "popups" ("address", "created_at", "description", "expires_at", "hours", "image", "name", "price", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["address", "404 forbidden st, san francisco,ca "], ["created_at", "2014-05-24 18:36:22.720078"], ["description", "awful designer clothing"], ["expires_at", "2014-06-04 00:00:00.000000"], ["hours", "3:00 pm - 9:00 pm"], ["image", "miley.jpg"], ["name", "Miley's Boutique"], ["price", "$$$"], ["updated_at", "2014-05-24 18:36:22.720078"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "popups" ("address", "created_at", "description", "expires_at", "hours", "image", "name", "price", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["address", "200 music st, san francisco,ca "], ["created_at", "2014-05-24 18:36:22.725071"], ["description", "get free music records"], ["expires_at", "2014-06-02 00:00:00.000000"], ["hours", "10:00 am - 11:00 am"], ["image", "record.jpg"], ["name", "Breakback Records"], ["price", "$"], ["updated_at", "2014-05-24 18:36:22.725071"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
