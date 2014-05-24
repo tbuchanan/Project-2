@@ -1,2 +1,25 @@
 <h1> Popups </h1>
 
+
+<div id = "popups">
+</div>
+
+<form>
+  <input id="name" type="text" placeholder="Add Popup">
+  <input id="description" type="text" placeholder="description">
+  <input id="price" type="text" placeholder="price">
+  <input id="address" type="text" placeholder="address">
+  <input id="hours" type="text" placeholder="hours">
+  <input id="expires_at" type="text" placeholder="Expires at">
+  <input id="image" type="text" placeholder="image">
+  <button id="submit" type="submit">Submit</button>
+</form>
+
+
+
+<h1>Popups</h1>
+<ul>
+  <% @popups.each do |popup| %>
+    <li><b><%=popup.name%></b></li>
+  <%end %>
+</ul>
