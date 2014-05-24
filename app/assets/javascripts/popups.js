@@ -21,7 +21,6 @@
     e.preventDefault();
     var name = $("#name").val();
     $('#popups').append("<li>" + name + "</li>");
-    // $("#name").val("");
    
 
   $.ajax({
@@ -38,7 +37,7 @@
     console.log(data);
   }
    });
-});
+  });
   }
   addPopup();
  });
