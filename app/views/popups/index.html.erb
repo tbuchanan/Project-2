@@ -1,9 +1,5 @@
 <h1> Popups </h1>
 
-
-<div id = "popups">
-</div>
-
 <form>
   <input id="name" type="text" placeholder="Add Popup">
   <input id="description" type="text" placeholder="description">
@@ -15,7 +11,11 @@
   <button id="submit" type="submit">Submit</button>
 </form>
 
-<ul>
+<ul id = "popups">
+</ul>
+
+
+<ul id= "all-popups">
   <% @popups.each do |popup| %>
     <li><%=popup.name%></li>
   <%end %>

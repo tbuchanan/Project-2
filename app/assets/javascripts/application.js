@@ -19,14 +19,17 @@
 
 
 // $.ajax({
-//     url: ('/popups/create'),
-//     type: ('post'),
-//     data: {
-//       "popup": {
-//         "name": name
-//       }
-//     },
-//     dataType: "json",
-//     success: function(data) {
-//       console.log(data);
+//   url: ('/popups/create'),
+//   type: ('post'),
+//   data: {
+//     "popup": {
+//       "name": name
 //     }
+//   },
+//   dataType: "json",
+//   success: function(data) {
+//     console.log(data);
+//   }
+// });
+
+

@@ -15,14 +15,30 @@
    };
    loadPopups();
 
-
-   function addPopup() {
+   var addPopup = function(name) {
      $('#submit').click(function(e) {
        e.preventDefault();
        var name = $("#name").val();
        $('#popups').append("<li>" + name + "</li>");
-       $("#name").val("");
+       // $("#name").val();
+
+       $.ajax({
+         url: ('/popups'),
+         type: ('post'),
+         data: {
+           "popup": {
+             "name": name
+           }
+         },
+         dataType: "json",
+         success: function(data) {
+           addPopup(data.name);
+           console.log(data);
+         }
+       });
+
      });
+
    }
    addPopup();
  });
