@@ -2,6 +2,7 @@ class PopupsController < ApplicationController
 
 def index
   @popups = Popup.all
+  @popup = Popup.new
   respond_to do |f|
     f.html { render :index }
     f.json { render json: @popups, :only => [:name, :address, :hours, :expires_at, :price, :description, :image] }
@@ -10,6 +11,7 @@ end
 
 def create
   @popup = Popup.new popup_params
+  @popups = Popup.all
   if @popup.save
     respond_to do |f|
       f.html { render :index }
