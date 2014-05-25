@@ -6823,3 +6823,145 @@ Processing by PopupsController#create as JSON
   [1m[36mSQL (32.8ms)[0m  [1mINSERT INTO "popups" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-05-24 23:19:26.485469"], ["name", "sams sands"], ["updated_at", "2014-05-24 23:19:26.485469"]]
   [1m[35m (1.9ms)[0m  COMMIT
 Completed 201 Created in 65ms (Views: 0.7ms | ActiveRecord: 54.8ms)
+  [1m[36m (46.5ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (8.5ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (1.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreatePopups (20140523214431)
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (25.6ms)[0m  [1mCREATE TABLE "popups" ("id" serial primary key, "name" character varying(255), "address" character varying(255), "hours" character varying(255), "price" character varying(255), "description" character varying(255), "image" text, "expires_at" timestamp, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140523214431"]]
+  [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+Migrating to CreateFeeds (20140523214439)
+  [1m[35m (0.7ms)[0m  BEGIN
+  [1m[36m (12.1ms)[0m  [1mCREATE TABLE "feeds" ("id" serial primary key, "comment" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (1.5ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140523214439"]]
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+Migrating to DeviseCreateUsers (20140523214720)
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36m (17.8ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "email" character varying(255) DEFAULT '' NOT NULL, "encrypted_password" character varying(255) DEFAULT '' NOT NULL, "reset_password_token" character varying(255), "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" character varying(255), "last_sign_in_ip" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (2.4ms)[0m  CREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")
+  [1m[36m (1.9ms)[0m  [1mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140523214720"]]
+  [1m[36m (6.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.6ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mSQL (2.2ms)[0m  [1mINSERT INTO "popups" ("address", "created_at", "description", "expires_at", "hours", "image", "name", "price", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["address", "123 main st, san francisco,ca "], ["created_at", "2014-05-24 23:45:49.431039"], ["description", "get cheap jeans"], ["expires_at", "2014-06-01 00:00:00.000000"], ["hours", "3:00 pm - 6:00 pm"], ["image", "jeans.jpg"], ["name", "James' Jeans"], ["price", "$"], ["updated_at", "2014-05-24 23:45:49.431039"]]
+  [1m[35m (0.9ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "popups" ("address", "created_at", "description", "expires_at", "hours", "image", "name", "price", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["address", "456 hunger st, san francisco,ca "], ["created_at", "2014-05-24 23:45:49.446440"], ["description", "get cheap tacos"], ["expires_at", "2014-06-01 00:00:00.000000"], ["hours", "3:00 pm - 6:00 pm"], ["image", "tacos.jpg"], ["name", "Tim's Tacos"], ["price", "$"], ["updated_at", "2014-05-24 23:45:49.446440"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "popups" ("address", "created_at", "description", "expires_at", "hours", "image", "name", "price", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["address", "404 forbidden st, san francisco,ca "], ["created_at", "2014-05-24 23:45:49.454073"], ["description", "awful designer clothing"], ["expires_at", "2014-06-04 00:00:00.000000"], ["hours", "3:00 pm - 9:00 pm"], ["image", "miley.jpg"], ["name", "Miley's Boutique"], ["price", "$$$"], ["updated_at", "2014-05-24 23:45:49.454073"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "popups" ("address", "created_at", "description", "expires_at", "hours", "image", "name", "price", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["address", "200 music st, san francisco,ca "], ["created_at", "2014-05-24 23:45:49.458782"], ["description", "get free music records"], ["expires_at", "2014-06-02 00:00:00.000000"], ["hours", "10:00 am - 11:00 am"], ["image", "record.jpg"], ["name", "Breakback Records"], ["price", "$"], ["updated_at", "2014-05-24 23:45:49.458782"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-24 16:46:13 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (1.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PopupsController#index as HTML
+  [1m[35mUser Load (2.9ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+Completed 401 Unauthorized in 79ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-05-24 16:46:13 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (3.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (143.9ms)
+Completed 200 OK in 377ms (Views: 332.3ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/assets/popups.css?body=1" for 127.0.0.1 at 2014-05-24 16:46:14 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-24 16:46:14 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-24 16:46:14 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-24 16:46:14 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-05-24 16:46:14 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-24 16:46:14 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-24 16:46:14 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-05-24 16:46:14 -0700
+
+
+Started GET "/assets/popups.js?body=1" for 127.0.0.1 at 2014-05-24 16:46:14 -0700
+
+
+Started GET "/popups.json" for 127.0.0.1 at 2014-05-24 16:46:14 -0700
+Processing by PopupsController#index as JSON
+Completed 401 Unauthorized in 1ms
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2014-05-24 16:46:16 -0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (0.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (21.7ms)
+Completed 200 OK in 55ms (Views: 42.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2014-05-24 16:46:30 -0700
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"j3WWCXVfKPkHXMSjNCqiEWSUmusTM0TpUvEjxtlDIBc=", "user"=>{"email"=>"tyler@test.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (21.3ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'tyler@test.com' LIMIT 1
+  [1m[36mSQL (3.0ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2014-05-24 23:46:30.463702"], ["email", "tyler@test.com"], ["encrypted_password", "$2a$10$RA1q4oFFvtEe5fwV.mbjwOHZBhgxnu8rCbcieTcx/qCfUQc5smklC"], ["updated_at", "2014-05-24 23:46:30.463702"]]
+  [1m[35m (0.8ms)[0m  COMMIT
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.4ms)[0m  UPDATE "users" SET "current_sign_in_at" = $1, "current_sign_in_ip" = $2, "last_sign_in_at" = $3, "last_sign_in_ip" = $4, "sign_in_count" = $5, "updated_at" = $6 WHERE "users"."id" = 1  [["current_sign_in_at", "2014-05-24 23:46:30.561647"], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_at", "2014-05-24 23:46:30.561647"], ["last_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", "2014-05-24 23:46:30.564902"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 363ms (ActiveRecord: 28.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-24 16:46:30 -0700
+Processing by PopupsController#index as HTML
+  [1m[35mUser Load (1.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered popups/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 44ms (Views: 19.5ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/assets/popups.css?body=1" for 127.0.0.1 at 2014-05-24 16:46:30 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-24 16:46:30 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-24 16:46:30 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-24 16:46:30 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-05-24 16:46:30 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-24 16:46:30 -0700
+
+
+Started GET "/assets/popups.js?body=1" for 127.0.0.1 at 2014-05-24 16:46:30 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-24 16:46:30 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-05-24 16:46:30 -0700
+
+
+Started GET "/popups.json" for 127.0.0.1 at 2014-05-24 16:46:31 -0700
+Processing by PopupsController#index as JSON
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPopup Load (1.2ms)[0m  SELECT "popups".* FROM "popups"
+Completed 200 OK in 30ms (Views: 23.5ms | ActiveRecord: 2.3ms)
