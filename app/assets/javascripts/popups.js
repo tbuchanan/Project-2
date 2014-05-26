@@ -5,12 +5,13 @@
        type: 'get'
      }).success(function(data) {
        for (var i in data) {
+        console.log(data[i])
          $('#popups').append(
-           '<li>' + data[i].name,
+           '<a href= https://localhost:3000/popups/' + data[i].id + '>' + '<li>' + data[i].name,
                     data[i].description,
                     data[i].address,
                     data[i].hours,
-                    data[i].expires_at + '</li>');
+                    data[i].expires_at + '</li></a>');
        }
      });
    };

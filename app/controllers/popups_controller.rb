@@ -5,7 +5,7 @@ def index
   @popup = Popup.new
   respond_to do |f|
     f.html { render :index }
-    f.json { render json: @popups, :only => [:name, :address, :hours, :expires_at, :price, :description, :image] }
+    f.json { render json: @popups, :only => [:id, :name, :address, :hours, :expires_at, :price, :description, :image] }
   end
 end
 
