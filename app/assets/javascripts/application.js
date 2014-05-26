@@ -15,21 +15,3 @@
 //= require bootstrap.min.js
 //= require turbolinks
 //= require_tree .
-
-
-
-// $.ajax({
-//   url: ('/popups/create'),
-//   type: ('post'),
-//   data: {
-//     "popup": {
-//       "name": name
-//     }
-//   },
-//   dataType: "json",
-//   success: function(data) {
-//     console.log(data);
-//   }
-// });
-
-
