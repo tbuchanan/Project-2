@@ -9,17 +9,20 @@
            '<li>' + data[i].description + '</li>',
            '<li>' + data[i].address + '</li>',
            '<li>' + data[i].hours + '</li>',
-           '<li>' + data[i].expires_at + '</li>');
+           '<li>' + data[i].expires_at + '</li>',
+           '<li>' + data[i].image + '</li>');
        }
      });
    };
    loadPopups();
 
-   var addPopup = function(name) {
+   var addPopup = function(name, image) {
      $('#submit').click(function(e) {
        e.preventDefault();
        var name = $("#name").val();
-       $('#popups').append("<li>" + name + "</li>");
+       var image = $("#upload").val();
+       $('#popups').append("<li>", name, "</li>",
+         "<li>", image, "</li>");
        // $("#name").val();
 
        $.ajax({
@@ -27,18 +30,19 @@
          type: ('post'),
          data: {
            "popup": {
-             "name": name
+             "name": name,
+             "image": image
            }
          },
          dataType: "json",
          success: function(data) {
-           addPopup(data.name);
+           addPopup(data.name, data.image);
            console.log(data);
          }
        });
 
      });
 
-   }
+   };
    addPopup();
  });
