@@ -2,7 +2,10 @@
  $(document).ready(function() {
    var loadPopups = function() {
      $.ajax('/popups.json', {
-       type: 'get'
+       type: 'get',
+       data: {
+        "q": $('#q'.val()
+       },
      }).success(function(data) {
        for (var i in data) {
         console.log(data[i])
