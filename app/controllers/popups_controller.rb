@@ -22,10 +22,18 @@ def create
   end
 end
 
+def show
+  @popup = Popup.find(params[:id])
+  @feed_new = Feed.new
+  # @feed = @popup.feeds
+  @feeds = @popup.feeds.all
+  @popups = Popup.all
+end
+
 private 
 
 def popup_params
-  params.require(:popup).permit(:name, :address, :hours, :expires_at, :price, :description, :image)  
+  params.require(:popup).permit(:name, :address, :hours, :expires_at, :price, :description, :image, :feeds_attributes => [:comment])  
 end
 
 end

@@ -8683,3 +8683,3487 @@ Processing by PopupsController#index as JSON
   [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
   [1m[35mPopup Load (0.7ms)[0m  SELECT "popups".* FROM "popups"
 Completed 200 OK in 7ms (Views: 2.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2014-05-25 22:40:17 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.1.1) lib/active_record/migration.rb:389:in `check_pending!'
+  activerecord (4.1.1) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/mathur7/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/mathur7/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/mathur7/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (21.7ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddPicToPopups (20140525231405)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (5.4ms)[0m  [1mALTER TABLE "popups" ADD COLUMN "image_file_name" character varying(255)[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "popups" ADD COLUMN "image_content_type" character varying(255)
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "popups" ADD COLUMN "image_file_size" integer[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "popups" ADD COLUMN "image_updated_at" timestamp
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140525231405"]]
+  [1m[35m (1.1ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-25 22:40:46 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (1.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PopupsController#index as HTML
+  [1m[35mUser Load (1.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered popups/index.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_form.html.erb (0.7ms)
+Completed 200 OK in 482ms (Views: 439.0ms | ActiveRecord: 6.9ms)
+
+
+Started GET "/assets/feeds.css?body=1" for 127.0.0.1 at 2014-05-25 22:40:47 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-25 22:40:47 -0700
+
+
+Started GET "/assets/popups.css?body=1" for 127.0.0.1 at 2014-05-25 22:40:47 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-25 22:40:47 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-25 22:40:47 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-05-25 22:40:47 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-25 22:40:47 -0700
+
+
+Started GET "/assets/feeds.js?body=1" for 127.0.0.1 at 2014-05-25 22:40:47 -0700
+
+
+Started GET "/assets/popups.js?body=1" for 127.0.0.1 at 2014-05-25 22:40:47 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-25 22:40:47 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-05-25 22:40:47 -0700
+
+
+Started GET "/popups.json" for 127.0.0.1 at 2014-05-25 22:40:47 -0700
+Processing by PopupsController#index as JSON
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPopup Load (0.9ms)[0m  SELECT "popups".* FROM "popups"
+Completed 200 OK in 20ms (Views: 14.7ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/popup/1" for 127.0.0.1 at 2014-05-25 22:42:38 -0700
+
+ActionController::RoutingError (No route matches [GET] "/popup/1"):
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/mathur7/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/mathur7/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/mathur7/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.4ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (7.4ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (38.2ms)
+
+
+Started GET "/popups/1" for 127.0.0.1 at 2014-05-25 22:42:43 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered popups/show.html.erb within layouts/application (2.6ms)
+Completed 500 Internal Server Error in 7ms
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    1: <%= @popup.name %><br>
+    2: <%= @popup.description %><br>
+    3: <%= @popup.price %><br>
+    4: <%= @popup.address %><br>
+  app/views/popups/show.html.erb:1:in `_app_views_popups_show_html_erb__4252522143077697942_2179231460'
+
+
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (9.7ms)
+
+
+Started GET "/popups/1" for 127.0.0.1 at 2014-05-25 22:44:19 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (0.4ms)[0m  [1mSELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered popups/show.html.erb within layouts/application (5.9ms)
+Completed 500 Internal Server Error in 29ms
+
+ActionView::Template::Error (undefined method `feeds' for #<Popup:0x00000105bb6ee8>):
+     7: <p> Expires at:  <%= @popup.expires_at %><br></p>
+     8: 
+     9: <h3>Feed</h3>
+    10: <% @popup.feeds.each do |feed| %>
+    11:   <p><%= feed.comment %></p>
+    12:   <%= link_to "Delete", feed_path(feed), method: 'delete' %>
+    13: <% end %>
+  app/views/popups/show.html.erb:10:in `_app_views_popups_show_html_erb__4252522143077697942_2179231460'
+
+
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (9.2ms)
+
+
+Started GET "/popups/1/feeds/1" for 127.0.0.1 at 2014-05-25 22:45:27 -0700
+
+AbstractController::ActionNotFound (The action 'show' could not be found for FeedsController):
+  actionpack (4.1.1) lib/abstract_controller/base.rb:131:in `process'
+  actionview (4.1.1) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.1) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.1.1) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.1) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.1.1) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.1.1) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.1.1) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.1.1) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.1.1) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.1) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.1) lib/action_dispatch/routing/route_set.rb:676:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.1) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.1) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/mathur7/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/mathur7/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/mathur7/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (0.4ms)
+
+
+Started GET "/popups/1/feeds/1" for 127.0.0.1 at 2014-05-25 22:53:08 -0700
+
+LoadError (Unable to autoload constant FeedsController, expected /Users/mathur7/Projects/Project_2/app/controllers/feeds_controller.rb to define it):
+  activesupport (4.1.1) lib/active_support/dependencies.rb:481:in `load_missing_constant'
+  activesupport (4.1.1) lib/active_support/dependencies.rb:180:in `const_missing'
+  activesupport (4.1.1) lib/active_support/inflector/methods.rb:238:in `const_get'
+  activesupport (4.1.1) lib/active_support/inflector/methods.rb:238:in `block in constantize'
+  activesupport (4.1.1) lib/active_support/inflector/methods.rb:236:in `each'
+  activesupport (4.1.1) lib/active_support/inflector/methods.rb:236:in `inject'
+  activesupport (4.1.1) lib/active_support/inflector/methods.rb:236:in `constantize'
+  activesupport (4.1.1) lib/active_support/dependencies.rb:552:in `get'
+  activesupport (4.1.1) lib/active_support/dependencies.rb:583:in `constantize'
+  actionpack (4.1.1) lib/action_dispatch/routing/route_set.rb:76:in `controller_reference'
+  actionpack (4.1.1) lib/action_dispatch/routing/route_set.rb:66:in `controller'
+  actionpack (4.1.1) lib/action_dispatch/routing/route_set.rb:44:in `call'
+  actionpack (4.1.1) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.1.1) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.1) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.1) lib/action_dispatch/routing/route_set.rb:676:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.1) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.1) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/mathur7/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/mathur7/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/mathur7/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (16.9ms)
+
+
+Started GET "/popups/1/feeds/1" for 127.0.0.1 at 2014-05-25 22:53:34 -0700
+Processing by FeedsController#show as HTML
+  Parameters: {"popup_id"=>"1", "id"=>"1"}
+Completed 500 Internal Server Error in 8ms
+
+NoMethodError (undefined method `load_post' for #<FeedsController:0x000001038f56c0>):
+  activesupport (4.1.1) lib/active_support/callbacks.rb:424:in `block in make_lambda'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:160:in `call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:160:in `block in halting'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:229:in `call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:229:in `call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:86:in `call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:86:in `run_callbacks'
+  actionpack (4.1.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.1.1) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.1.1) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.1.1) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.1) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.1) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.1.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.1.1) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.1.1) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.1.1) lib/abstract_controller/base.rb:136:in `process'
+  actionview (4.1.1) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.1) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.1.1) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.1) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.1.1) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.1.1) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.1.1) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.1.1) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.1.1) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.1) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.1) lib/action_dispatch/routing/route_set.rb:676:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.1) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.1) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/mathur7/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/mathur7/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/mathur7/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (18.1ms)
+
+
+Started GET "/popups/1/feeds/1" for 127.0.0.1 at 2014-05-25 22:54:33 -0700
+Processing by FeedsController#show as HTML
+  Parameters: {"popup_id"=>"1", "id"=>"1"}
+  [1m[35mPopup Load (0.4ms)[0m  SELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 500 Internal Server Error in 21ms
+
+NoMethodError (undefined method `feeds' for #<Popup:0x000001059cfa80>):
+  app/controllers/feeds_controller.rb:12:in `show'
+
+
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.6ms)
+
+
+Started GET "/popups/1/feeds/2" for 127.0.0.1 at 2014-05-25 22:55:58 -0700
+Processing by FeedsController#show as HTML
+  Parameters: {"popup_id"=>"1", "id"=>"2"}
+  [1m[36mPopup Load (0.5ms)[0m  [1mSELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 500 Internal Server Error in 4ms
+
+NoMethodError (undefined method `feeds' for #<Popup:0x00000103e6c7e8>):
+  app/controllers/feeds_controller.rb:12:in `show'
+
+
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.4ms)
+
+
+Started GET "/popups/1/feeds/new" for 127.0.0.1 at 2014-05-25 23:00:26 -0700
+Processing by FeedsController#new as HTML
+  Parameters: {"popup_id"=>"1"}
+  [1m[35mPopup Load (0.4ms)[0m  SELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 500 Internal Server Error in 24ms
+
+NoMethodError (undefined method `feeds' for #<Popup:0x0000010275d6b0>):
+  app/controllers/feeds_controller.rb:16:in `new'
+
+
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.4ms)
+
+
+Started GET "/popups/1" for 127.0.0.1 at 2014-05-25 23:04:52 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered popups/show.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 7ms
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    1: <%= @popup.name %><br>
+    2: <%= @popup.description %><br>
+    3: <%= @popup.price %><br>
+    4: <%= @popup.address %><br>
+  app/views/popups/show.html.erb:1:in `_app_views_popups_show_html_erb__4252522143077697942_2179231460'
+
+
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (11.3ms)
+
+
+Started GET "/popups/1" for 127.0.0.1 at 2014-05-25 23:04:57 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered popups/show.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 5ms
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    1: <%= @popup.name %><br>
+    2: <%= @popup.description %><br>
+    3: <%= @popup.price %><br>
+    4: <%= @popup.address %><br>
+  app/views/popups/show.html.erb:1:in `_app_views_popups_show_html_erb__4252522143077697942_2179231460'
+
+
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (9.2ms)
+
+
+Started GET "/popups/1" for 127.0.0.1 at 2014-05-25 23:07:42 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered popups/show.html.erb within layouts/application (1.8ms)
+Completed 500 Internal Server Error in 21ms
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    1: <%= @popup.name %><br>
+    2: <%= @popup.description %><br>
+    3: <%= @popup.price %><br>
+    4: <%= @popup.address %><br>
+  app/views/popups/show.html.erb:1:in `_app_views_popups_show_html_erb__4252522143077697942_2179231460'
+
+
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (14.7ms)
+
+
+Started GET "/popups/1" for 127.0.0.1 at 2014-05-25 23:07:47 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered popups/show.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 12ms
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    1: <%= @popup.name %><br>
+    2: <%= @popup.description %><br>
+    3: <%= @popup.price %><br>
+    4: <%= @popup.address %><br>
+  app/views/popups/show.html.erb:1:in `_app_views_popups_show_html_erb__4252522143077697942_2179231460'
+
+
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (10.4ms)
+
+
+Started GET "/popups/1" for 127.0.0.1 at 2014-05-25 23:08:45 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (0.4ms)[0m  [1mSELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered popups/show.html.erb within layouts/application (7.3ms)
+Completed 500 Internal Server Error in 33ms
+
+ActionView::Template::Error (undefined method `feeds' for #<Popup:0x00000103d84f88>):
+     7: <p> Expires at:  <%= @popup.expires_at %><br></p>
+     8: 
+     9: <h3>Feed</h3>
+    10: <% @popup.feeds.each do |feed| %>
+    11:   <p><%= feed.comment %></p>
+    12:   <%= link_to "Delete", feed_path(feed), method: 'delete' %>
+    13: <% end %>
+  app/views/popups/show.html.erb:10:in `_app_views_popups_show_html_erb__4252522143077697942_2179231460'
+
+
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (10.0ms)
+
+
+Started GET "/popups/1" for 127.0.0.1 at 2014-05-25 23:09:12 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (0.5ms)[0m  [1mSELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered popups/_comment_form.html.erb (1.3ms)
+  Rendered popups/show.html.erb within layouts/application (11.2ms)
+Completed 500 Internal Server Error in 17ms
+
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <%= form_for @feed do |f| %>
+    2:   <%= f.text_area :comment %>
+    3:   <%= f.hidden_field :popup_id, value: @popup.id %>
+    4:   <%= f.submit %>
+  app/views/popups/_comment_form.html.erb:1:in `_app_views_popups__comment_form_html_erb___1305274899351065923_2177169380'
+  app/views/popups/show.html.erb:12:in `_app_views_popups_show_html_erb__4252522143077697942_2177299200'
+
+
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (10.7ms)
+
+
+Started GET "/popups/1/feeds/1" for 127.0.0.1 at 2014-05-25 23:09:46 -0700
+Processing by FeedsController#show as HTML
+  Parameters: {"popup_id"=>"1", "id"=>"1"}
+  [1m[35mPopup Load (0.4ms)[0m  SELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 500 Internal Server Error in 3ms
+
+NoMethodError (undefined method `feeds' for #<Popup:0x00000105d17be8>):
+  app/controllers/feeds_controller.rb:12:in `show'
+
+
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.7ms)
+
+
+Started GET "/popups/1/feeds/1" for 127.0.0.1 at 2014-05-25 23:12:04 -0700
+Processing by FeedsController#show as HTML
+  Parameters: {"popup_id"=>"1", "id"=>"1"}
+  [1m[36mPopup Load (0.3ms)[0m  [1mSELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 500 Internal Server Error in 2ms
+
+NoMethodError (undefined method `feeds' for #<Popup:0x00000105a7f020>):
+  app/controllers/feeds_controller.rb:12:in `show'
+
+
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (16.1ms)
+
+
+Started GET "/popups/1/feeds/new" for 127.0.0.1 at 2014-05-25 23:12:22 -0700
+Processing by FeedsController#new as HTML
+  Parameters: {"popup_id"=>"1"}
+  [1m[35mPopup Load (0.5ms)[0m  SELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 500 Internal Server Error in 4ms
+
+NoMethodError (undefined method `feeds' for #<Popup:0x00000103f6fa28>):
+  app/controllers/feeds_controller.rb:16:in `new'
+
+
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.9ms)
+
+
+Started GET "/popups/1" for 127.0.0.1 at 2014-05-25 23:59:20 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (0.3ms)[0m  [1mSELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered popups/show.html.erb within layouts/application (13.8ms)
+  Rendered layouts/_form.html.erb (0.1ms)
+Completed 200 OK in 46ms (Views: 24.3ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/assets/popups.css?body=1" for 127.0.0.1 at 2014-05-25 23:59:20 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-25 23:59:20 -0700
+
+
+Started GET "/assets/feeds.css?body=1" for 127.0.0.1 at 2014-05-25 23:59:20 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-05-25 23:59:20 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-25 23:59:20 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-05-25 23:59:20 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-25 23:59:20 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-25 23:59:20 -0700
+
+
+Started GET "/assets/popups.js?body=1" for 127.0.0.1 at 2014-05-25 23:59:20 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-25 23:59:20 -0700
+
+
+Started GET "/assets/feeds.js?body=1" for 127.0.0.1 at 2014-05-25 23:59:20 -0700
+
+
+Started GET "/popups.json" for 127.0.0.1 at 2014-05-25 23:59:20 -0700
+Processing by PopupsController#index as JSON
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (0.5ms)[0m  [1mSELECT "popups".* FROM "popups"[0m
+Completed 200 OK in 7ms (Views: 2.4ms | ActiveRecord: 1.1ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/popups/1" for 127.0.0.1 at 2014-05-26 00:34:39 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (1.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (0.7ms)[0m  [1mSELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered popups/show.html.erb within layouts/application (12.8ms)
+Completed 500 Internal Server Error in 68ms
+
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+     6: <%= @popup.image %><br>
+     7: <p> Expires at:  <%= @popup.expires_at %><br></p>
+     8: 
+     9: <%= form_for ([@popup, @feed]) do |f| %>
+    10:   <%= f.text_field :body, placeholder: "Add your comment" %><br></br>
+    11:   <%= f.submit "Create comment" %><br></br>
+    12: <% end %>
+  app/views/popups/show.html.erb:9:in `_app_views_popups_show_html_erb___1999503468589821375_2193737040'
+
+
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (13.9ms)
+
+
+Started GET "/popups/1" for 127.0.0.1 at 2014-05-26 00:36:50 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (0.5ms)[0m  [1mSELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered popups/show.html.erb within layouts/application (19.0ms)
+Completed 500 Internal Server Error in 79ms
+
+ActionView::Template::Error (undefined method `body' for #<Feed:0x00000102a512b8>):
+     7: <p> Expires at:  <%= @popup.expires_at %><br></p>
+     8: 
+     9: <%= form_for ([@popup, @feed]) do |f| %>
+    10:   <%= f.text_field :body, placeholder: "Add your comment" %><br></br>
+    11:   <%= f.submit "Create comment" %><br></br>
+    12: <% end %>
+  app/views/popups/show.html.erb:10:in `block in _app_views_popups_show_html_erb___1999503468589821375_2193737040'
+  app/views/popups/show.html.erb:9:in `_app_views_popups_show_html_erb___1999503468589821375_2193737040'
+
+
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (9.9ms)
+
+
+Started GET "/popups/1" for 127.0.0.1 at 2014-05-26 00:37:17 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (0.5ms)[0m  [1mSELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered popups/show.html.erb within layouts/application (20.2ms)
+  Rendered layouts/_form.html.erb (0.6ms)
+Completed 200 OK in 91ms (Views: 87.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-05-26 00:37:17 -0700
+
+
+Started GET "/assets/feeds.css?body=1" for 127.0.0.1 at 2014-05-26 00:37:17 -0700
+
+
+Started GET "/assets/popups.css?body=1" for 127.0.0.1 at 2014-05-26 00:37:17 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-26 00:37:17 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-26 00:37:17 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-26 00:37:17 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-05-26 00:37:17 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-26 00:37:17 -0700
+
+
+Started GET "/assets/feeds.js?body=1" for 127.0.0.1 at 2014-05-26 00:37:17 -0700
+
+
+Started GET "/assets/popups.js?body=1" for 127.0.0.1 at 2014-05-26 00:37:17 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-26 00:37:17 -0700
+
+
+Started GET "/popups.json" for 127.0.0.1 at 2014-05-26 00:37:17 -0700
+Processing by PopupsController#index as JSON
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (0.8ms)[0m  [1mSELECT "popups".* FROM "popups"[0m
+Completed 200 OK in 8ms (Views: 3.0ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/popups/1/feeds" for 127.0.0.1 at 2014-05-26 00:37:30 -0700
+Processing by FeedsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pDN7LtMGaTDR5TTaF9piN0zp2AImZfTK51jM1VL3WKA=", "feed"=>{"comment"=>"this is a test"}, "commit"=>"Create comment", "popup_id"=>"1"}
+  [1m[35mUser Load (1.8ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (0.6ms)[0m  [1mSELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 500 Internal Server Error in 8ms
+
+NoMethodError (undefined method `feeds' for #<Popup:0x00000101e84688>):
+  app/controllers/feeds_controller.rb:16:in `create'
+
+
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.6ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (21.9ms)
+
+
+Started GET "/popups/1" for 127.0.0.1 at 2014-05-26 10:14:34 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (1.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (0.5ms)[0m  [1mSELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered popups/show.html.erb within layouts/application (24.9ms)
+  Rendered layouts/_form.html.erb (0.6ms)
+Completed 200 OK in 149ms (Views: 101.1ms | ActiveRecord: 9.4ms)
+
+
+Started GET "/assets/feeds.css?body=1" for 127.0.0.1 at 2014-05-26 10:14:34 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-05-26 10:14:34 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-26 10:14:34 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-26 10:14:34 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-26 10:14:34 -0700
+
+
+Started GET "/assets/popups.css?body=1" for 127.0.0.1 at 2014-05-26 10:14:34 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-26 10:14:34 -0700
+
+
+Started GET "/assets/feeds.js?body=1" for 127.0.0.1 at 2014-05-26 10:14:34 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-05-26 10:14:34 -0700
+
+
+Started GET "/assets/popups.js?body=1" for 127.0.0.1 at 2014-05-26 10:14:34 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-26 10:14:34 -0700
+
+
+Started GET "/popups.json" for 127.0.0.1 at 2014-05-26 10:14:34 -0700
+Processing by PopupsController#index as JSON
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (0.5ms)[0m  [1mSELECT "popups".* FROM "popups"[0m
+Completed 200 OK in 6ms (Views: 2.0ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/popups/1/feeds" for 127.0.0.1 at 2014-05-26 10:14:42 -0700
+Processing by FeedsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pDN7LtMGaTDR5TTaF9piN0zp2AImZfTK51jM1VL3WKA=", "feed"=>{"comment"=>"this is a test"}, "commit"=>"Create comment", "popup_id"=>"1"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (0.4ms)[0m  [1mSELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 500 Internal Server Error in 5ms
+
+NoMethodError (undefined method `feeds' for #<Popup:0x000001042e1530>):
+  app/controllers/feeds_controller.rb:16:in `create'
+
+
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.3ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (21.3ms)
+
+
+Started GET "/popups/1/feeds/new" for 127.0.0.1 at 2014-05-26 10:16:02 -0700
+Processing by FeedsController#new as HTML
+  Parameters: {"popup_id"=>"1"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (0.4ms)[0m  [1mSELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 500 Internal Server Error in 27ms
+
+NoMethodError (undefined method `feeds' for #<Popup:0x000001022381d0>):
+  app/controllers/feeds_controller.rb:11:in `new'
+
+
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.6ms)
+
+
+Started GET "/popups/1" for 127.0.0.1 at 2014-05-26 10:16:11 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (0.5ms)[0m  [1mSELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered popups/show.html.erb within layouts/application (3.6ms)
+  Rendered layouts/_form.html.erb (0.1ms)
+Completed 200 OK in 49ms (Views: 11.2ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-05-26 10:16:11 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-26 10:16:11 -0700
+
+
+Started GET "/assets/popups.css?body=1" for 127.0.0.1 at 2014-05-26 10:16:11 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-26 10:16:11 -0700
+
+
+Started GET "/assets/feeds.css?body=1" for 127.0.0.1 at 2014-05-26 10:16:11 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-26 10:16:11 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-26 10:16:11 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-05-26 10:16:11 -0700
+
+
+Started GET "/assets/feeds.js?body=1" for 127.0.0.1 at 2014-05-26 10:16:11 -0700
+
+
+Started GET "/assets/popups.js?body=1" for 127.0.0.1 at 2014-05-26 10:16:11 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-26 10:16:11 -0700
+
+
+Started GET "/popups.json" for 127.0.0.1 at 2014-05-26 10:16:11 -0700
+Processing by PopupsController#index as JSON
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (0.4ms)[0m  [1mSELECT "popups".* FROM "popups"[0m
+Completed 200 OK in 5ms (Views: 1.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/popups/1/feeds/1" for 127.0.0.1 at 2014-05-26 10:17:45 -0700
+Processing by FeedsController#show as HTML
+  Parameters: {"popup_id"=>"1", "id"=>"1"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (0.4ms)[0m  [1mSELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 500 Internal Server Error in 5ms
+
+NoMethodError (undefined method `feeds' for #<Popup:0x00000104259568>):
+  app/controllers/feeds_controller.rb:26:in `show'
+
+
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.8ms)
+
+
+Started GET "/popups/1/feeds/1" for 127.0.0.1 at 2014-05-26 10:21:18 -0700
+Processing by FeedsController#show as HTML
+  Parameters: {"popup_id"=>"1", "id"=>"1"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (0.4ms)[0m  [1mSELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 500 Internal Server Error in 23ms
+
+NoMethodError (undefined method `feeds' for #<Popup:0x0000010127fb80>):
+  app/controllers/feeds_controller.rb:26:in `show'
+
+
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.2ms)
+
+
+Started GET "/popups/1" for 127.0.0.1 at 2014-05-26 10:21:20 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered popups/show.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 15ms
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    1: <%= @popup.name %><br>
+    2: <%= @popup.description %><br>
+    3: <%= @popup.price %><br>
+    4: <%= @popup.address %><br>
+  app/views/popups/show.html.erb:1:in `_app_views_popups_show_html_erb__1584877486364205418_2182415300'
+
+
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (12.2ms)
+
+
+Started GET "/popups/1/feeds/1" for 127.0.0.1 at 2014-05-26 10:21:25 -0700
+Processing by FeedsController#show as HTML
+  Parameters: {"popup_id"=>"1", "id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPopup Load (0.3ms)[0m  SELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 500 Internal Server Error in 4ms
+
+NoMethodError (undefined method `feeds' for #<Popup:0x00000102579060>):
+  app/controllers/feeds_controller.rb:26:in `show'
+
+
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (33.2ms)
+
+
+Started GET "/popups/1/feeds/1" for 127.0.0.1 at 2014-05-26 10:21:33 -0700
+Processing by FeedsController#show as HTML
+  Parameters: {"popup_id"=>"1", "id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPopup Load (0.3ms)[0m  SELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 500 Internal Server Error in 23ms
+
+NoMethodError (undefined method `feeds' for #<Popup:0x0000010406a248>):
+  app/controllers/feeds_controller.rb:26:in `show'
+
+
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-26 10:30:00 -0700
+Processing by PopupsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered popups/index.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_form.html.erb (0.2ms)
+Completed 200 OK in 30ms (Views: 8.9ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-05-26 10:30:01 -0700
+
+
+Started GET "/assets/feeds.css?body=1" for 127.0.0.1 at 2014-05-26 10:30:01 -0700
+
+
+Started GET "/assets/popups.css?body=1" for 127.0.0.1 at 2014-05-26 10:30:01 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-26 10:30:01 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-26 10:30:01 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-26 10:30:01 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-05-26 10:30:01 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-26 10:30:01 -0700
+
+
+Started GET "/assets/feeds.js?body=1" for 127.0.0.1 at 2014-05-26 10:30:01 -0700
+
+
+Started GET "/assets/popups.js?body=1" for 127.0.0.1 at 2014-05-26 10:30:01 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-26 10:30:01 -0700
+
+
+Started GET "/popups.json" for 127.0.0.1 at 2014-05-26 10:30:01 -0700
+Processing by PopupsController#index as JSON
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (0.6ms)[0m  [1mSELECT "popups".* FROM "popups"[0m
+Completed 200 OK in 19ms (Views: 14.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/popups/1" for 127.0.0.1 at 2014-05-26 10:30:06 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (0.7ms)[0m  [1mSELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 500 Internal Server Error in 16ms
+
+ActiveRecord::HasManyThroughAssociationNotFoundError (Could not find the association :users in model Popup):
+  app/controllers/popups_controller.rb:27:in `show'
+
+
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.1ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.6ms)
+  [1m[36mPopup Load (1.1ms)[0m  [1mSELECT  "popups".* FROM "popups"   ORDER BY "popups"."id" ASC LIMIT 1[0m
+  [1m[35mPopup Load (1.1ms)[0m  SELECT  "popups".* FROM "popups"   ORDER BY "popups"."id" DESC LIMIT 1
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-26 10:31:23 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PopupsController#index as HTML
+  [1m[35mUser Load (1.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered popups/index.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_form.html.erb (0.5ms)
+Completed 200 OK in 102ms (Views: 50.5ms | ActiveRecord: 7.6ms)
+
+
+Started GET "/assets/feeds.css?body=1" for 127.0.0.1 at 2014-05-26 10:31:23 -0700
+
+
+Started GET "/assets/popups.css?body=1" for 127.0.0.1 at 2014-05-26 10:31:23 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-26 10:31:23 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-05-26 10:31:23 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-26 10:31:23 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-26 10:31:23 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-05-26 10:31:23 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-26 10:31:23 -0700
+
+
+Started GET "/assets/feeds.js?body=1" for 127.0.0.1 at 2014-05-26 10:31:23 -0700
+
+
+Started GET "/assets/popups.js?body=1" for 127.0.0.1 at 2014-05-26 10:31:23 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-26 10:31:23 -0700
+
+
+Started GET "/popups.json" for 127.0.0.1 at 2014-05-26 10:31:24 -0700
+Processing by PopupsController#index as JSON
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPopup Load (0.5ms)[0m  SELECT "popups".* FROM "popups"
+Completed 200 OK in 19ms (Views: 15.9ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/popups" for 127.0.0.1 at 2014-05-26 10:31:33 -0700
+Processing by PopupsController#create as JSON
+  Parameters: {"popup"=>{"name"=>"ami's yummy food", "image"=>""}}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (2.3ms)[0m  BEGIN
+  [1m[36mSQL (6.6ms)[0m  [1mINSERT INTO "popups" ("created_at", "image", "name", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2014-05-26 17:31:33.340456"], ["image", ""], ["name", "ami's yummy food"], ["updated_at", "2014-05-26 17:31:33.340456"]]
+  [1m[35m (3.6ms)[0m  COMMIT
+Completed 201 Created in 38ms (Views: 0.7ms | ActiveRecord: 13.7ms)
+
+
+Started GET "/popups/5" for 127.0.0.1 at 2014-05-26 10:31:41 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPopup Load (0.7ms)[0m  SELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1  [["id", 5]]
+Completed 500 Internal Server Error in 16ms
+
+ActiveRecord::HasManyThroughAssociationNotFoundError (Could not find the association :users in model Popup):
+  app/controllers/popups_controller.rb:27:in `show'
+
+
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.7ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (24.9ms)
+
+
+Started GET "/popups/5" for 127.0.0.1 at 2014-05-26 10:32:12 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPopup Load (0.3ms)[0m  SELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1  [["id", 5]]
+  Rendered popups/show.html.erb within layouts/application (12.2ms)
+Completed 500 Internal Server Error in 50ms
+
+ActionView::Template::Error (undefined method `model_name' for Feed::ActiveRecord_Associations_CollectionProxy:Class):
+     6: <%= @popup.image %><br>
+     7: <p> Expires at:  <%= @popup.expires_at %><br></p>
+     8: 
+     9: <%= form_for ([@popup, @feed]) do |f| %>
+    10:   <%= f.text_field :comment, placeholder: "Add your comment" %><br></br>
+    11:   <%= f.submit "Create comment" %><br></br>
+    12: <% end %>
+  app/views/popups/show.html.erb:9:in `_app_views_popups_show_html_erb___517188503035001351_2158267420'
+
+
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (10.1ms)
+
+
+Started GET "/popups/5" for 127.0.0.1 at 2014-05-26 10:34:51 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPopup Load (0.4ms)[0m  SELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1  [["id", 5]]
+  Rendered popups/show.html.erb within layouts/application (6.3ms)
+Completed 500 Internal Server Error in 32ms
+
+ActionView::Template::Error (undefined method `model_name' for Feed::ActiveRecord_Associations_CollectionProxy:Class):
+     6: <%= @popup.image %><br>
+     7: <p> Expires at:  <%= @popup.expires_at %><br></p>
+     8: 
+     9: <%= form_for ([@popup, @feed]) do |f| %>
+    10:   <%= f.text_field :comment, placeholder: "Add your comment" %><br></br>
+    11:   <%= f.submit "Create comment" %><br></br>
+    12: <% end %>
+  app/views/popups/show.html.erb:9:in `_app_views_popups_show_html_erb___517188503035001351_2158267420'
+
+
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (10.7ms)
+
+
+Started GET "/popups/5" for 127.0.0.1 at 2014-05-26 10:35:06 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPopup Load (0.4ms)[0m  SELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1  [["id", 5]]
+  Rendered popups/show.html.erb within layouts/application (11.1ms)
+  Rendered layouts/_form.html.erb (0.2ms)
+Completed 200 OK in 22ms (Views: 18.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/feeds.css?body=1" for 127.0.0.1 at 2014-05-26 10:35:06 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-26 10:35:06 -0700
+
+
+Started GET "/assets/popups.css?body=1" for 127.0.0.1 at 2014-05-26 10:35:06 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-05-26 10:35:06 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-26 10:35:06 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-05-26 10:35:06 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-26 10:35:06 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-26 10:35:06 -0700
+
+
+Started GET "/assets/feeds.js?body=1" for 127.0.0.1 at 2014-05-26 10:35:06 -0700
+
+
+Started GET "/assets/popups.js?body=1" for 127.0.0.1 at 2014-05-26 10:35:06 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-26 10:35:06 -0700
+
+
+Started GET "/popups.json" for 127.0.0.1 at 2014-05-26 10:35:06 -0700
+Processing by PopupsController#index as JSON
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPopup Load (0.6ms)[0m  SELECT "popups".* FROM "popups"
+Completed 200 OK in 8ms (Views: 3.1ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/popups/5/feeds" for 127.0.0.1 at 2014-05-26 10:36:03 -0700
+Processing by FeedsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pDN7LtMGaTDR5TTaF9piN0zp2AImZfTK51jM1VL3WKA=", "feed"=>{"comment"=>"this is a test"}, "commit"=>"Create comment", "popup_id"=>"5"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPopup Load (0.4ms)[0m  SELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (2.7ms)[0m  INSERT INTO "feeds" ("comment", "created_at", "popup_id", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["comment", "this is a test"], ["created_at", "2014-05-26 17:36:03.750380"], ["popup_id", 5], ["updated_at", "2014-05-26 17:36:03.750380"], ["user_id", 1]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/popups/5/feeds
+Completed 302 Found in 20ms (ActiveRecord: 4.6ms)
+
+
+Started GET "/popups/5/feeds" for 127.0.0.1 at 2014-05-26 10:36:03 -0700
+Processing by FeedsController#index as HTML
+  Parameters: {"popup_id"=>"5"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (0.4ms)[0m  [1mSELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1[0m  [["id", 5]]
+Completed 500 Internal Server Error in 6ms
+
+ActionView::MissingTemplate (Missing template feeds/index, application/index with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :jbuilder, :coffee]}. Searched in:
+  * "/Users/mathur7/Projects/Project_2/app/views"
+  * "/Users/mathur7/.rvm/gems/ruby-2.1.1/gems/devise-3.2.4/app/views"
+):
+  actionview (4.1.1) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.1.1) lib/action_view/lookup_context.rb:124:in `find'
+  actionview (4.1.1) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.1.1) lib/action_view/renderer/template_renderer.rb:41:in `determine_template'
+  actionview (4.1.1) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.1.1) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.1.1) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.1.1) lib/action_view/rendering.rb:99:in `_render_template'
+  actionpack (4.1.1) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.1.1) lib/action_view/rendering.rb:82:in `render_to_body'
+  actionpack (4.1.1) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.1.1) lib/action_controller/metal/renderers.rb:32:in `render_to_body'
+  actionpack (4.1.1) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.1.1) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.1.1) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.1.1) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/mathur7/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+  activesupport (4.1.1) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.1.1) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.1.1) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.1.1) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.1.1) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.1.1) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.1.1) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.1.1) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.1.1) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.1.1) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:113:in `call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:113:in `call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:229:in `call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:229:in `call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:86:in `call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:86:in `run_callbacks'
+  actionpack (4.1.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.1.1) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.1.1) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.1.1) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.1) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.1) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.1.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.1.1) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.1.1) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.1.1) lib/abstract_controller/base.rb:136:in `process'
+  actionview (4.1.1) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.1) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.1.1) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.1) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.1.1) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.1.1) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.1.1) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.1.1) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.1.1) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.1) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.1) lib/action_dispatch/routing/route_set.rb:676:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.1) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.1) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/mathur7/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/mathur7/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/mathur7/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (0.4ms)
+
+
+Started GET "/popups/5/feeds" for 127.0.0.1 at 2014-05-26 10:37:46 -0700
+Processing by FeedsController#index as HTML
+  Parameters: {"popup_id"=>"5"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (0.3ms)[0m  [1mSELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mFeed Load (0.4ms)[0m  SELECT "feeds".* FROM "feeds"  WHERE "feeds"."popup_id" = $1  [["popup_id", 5]]
+  Rendered feeds/index.html.erb within layouts/application (2.8ms)
+Completed 500 Internal Server Error in 15ms
+
+ActionView::Template::Error (undefined method `comment' for #<Feed::ActiveRecord_Associations_CollectionProxy:0x00000101648758>):
+    1: <%= @feeds.comment %>
+  app/views/feeds/index.html.erb:1:in `_app_views_feeds_index_html_erb___1451766557518168248_2159729820'
+
+
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (11.4ms)
+
+
+Started GET "/popups/5/feeds" for 127.0.0.1 at 2014-05-26 10:38:00 -0700
+Processing by FeedsController#index as HTML
+  Parameters: {"popup_id"=>"5"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPopup Load (0.3ms)[0m  SELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1  [["id", 5]]
+  Rendered feeds/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_form.html.erb (0.2ms)
+Completed 200 OK in 10ms (Views: 6.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-05-26 10:38:00 -0700
+
+
+Started GET "/assets/popups.css?body=1" for 127.0.0.1 at 2014-05-26 10:38:00 -0700
+
+
+Started GET "/assets/feeds.css?body=1" for 127.0.0.1 at 2014-05-26 10:38:00 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-26 10:38:00 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-26 10:38:00 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-26 10:38:00 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-05-26 10:38:00 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-26 10:38:00 -0700
+
+
+Started GET "/assets/feeds.js?body=1" for 127.0.0.1 at 2014-05-26 10:38:00 -0700
+
+
+Started GET "/assets/popups.js?body=1" for 127.0.0.1 at 2014-05-26 10:38:00 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-26 10:38:00 -0700
+
+
+Started GET "/popups.json" for 127.0.0.1 at 2014-05-26 10:38:00 -0700
+Processing by PopupsController#index as JSON
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPopup Load (0.5ms)[0m  SELECT "popups".* FROM "popups"
+Completed 200 OK in 8ms (Views: 2.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/popups/5" for 127.0.0.1 at 2014-05-26 10:38:34 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPopup Load (0.3ms)[0m  SELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1  [["id", 5]]
+  Rendered popups/show.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_form.html.erb (0.1ms)
+Completed 200 OK in 15ms (Views: 10.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-05-26 10:38:34 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-26 10:38:34 -0700
+
+
+Started GET "/assets/feeds.css?body=1" for 127.0.0.1 at 2014-05-26 10:38:34 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-26 10:38:34 -0700
+
+
+Started GET "/assets/popups.css?body=1" for 127.0.0.1 at 2014-05-26 10:38:34 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-26 10:38:34 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-05-26 10:38:34 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-26 10:38:34 -0700
+
+
+Started GET "/assets/feeds.js?body=1" for 127.0.0.1 at 2014-05-26 10:38:34 -0700
+
+
+Started GET "/assets/popups.js?body=1" for 127.0.0.1 at 2014-05-26 10:38:34 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-26 10:38:34 -0700
+
+
+Started GET "/popups.json" for 127.0.0.1 at 2014-05-26 10:38:34 -0700
+Processing by PopupsController#index as JSON
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPopup Load (0.5ms)[0m  SELECT "popups".* FROM "popups"
+Completed 200 OK in 7ms (Views: 2.5ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/popups/5/feeds" for 127.0.0.1 at 2014-05-26 10:38:40 -0700
+Processing by FeedsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pDN7LtMGaTDR5TTaF9piN0zp2AImZfTK51jM1VL3WKA=", "feed"=>{"comment"=>"this is a test"}, "commit"=>"Create comment", "popup_id"=>"5"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPopup Load (0.3ms)[0m  SELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "feeds" ("comment", "created_at", "popup_id", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["comment", "this is a test"], ["created_at", "2014-05-26 17:38:40.127845"], ["popup_id", 5], ["updated_at", "2014-05-26 17:38:40.127845"], ["user_id", 1]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/popups/5/feeds
+Completed 302 Found in 9ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/popups/5/feeds" for 127.0.0.1 at 2014-05-26 10:38:40 -0700
+Processing by FeedsController#index as HTML
+  Parameters: {"popup_id"=>"5"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (0.3ms)[0m  [1mSELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  Rendered feeds/index.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_form.html.erb (0.1ms)
+Completed 200 OK in 10ms (Views: 6.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/popups.css?body=1" for 127.0.0.1 at 2014-05-26 10:38:40 -0700
+
+
+Started GET "/assets/feeds.css?body=1" for 127.0.0.1 at 2014-05-26 10:38:40 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-26 10:38:40 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-26 10:38:40 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-26 10:38:40 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-05-26 10:38:40 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-05-26 10:38:40 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-26 10:38:40 -0700
+
+
+Started GET "/assets/feeds.js?body=1" for 127.0.0.1 at 2014-05-26 10:38:40 -0700
+
+
+Started GET "/assets/popups.js?body=1" for 127.0.0.1 at 2014-05-26 10:38:40 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-26 10:38:40 -0700
+
+
+Started GET "/popups.json" for 127.0.0.1 at 2014-05-26 10:38:40 -0700
+Processing by PopupsController#index as JSON
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (0.6ms)[0m  [1mSELECT "popups".* FROM "popups"[0m
+Completed 200 OK in 13ms (Views: 2.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/popups/5/feeds" for 127.0.0.1 at 2014-05-26 10:39:59 -0700
+Processing by FeedsController#index as HTML
+  Parameters: {"popup_id"=>"5"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (0.3ms)[0m  [1mSELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  Rendered feeds/index.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_form.html.erb (0.1ms)
+Completed 200 OK in 29ms (Views: 5.9ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/assets/feeds.css?body=1" for 127.0.0.1 at 2014-05-26 10:39:59 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-26 10:39:59 -0700
+
+
+Started GET "/assets/popups.css?body=1" for 127.0.0.1 at 2014-05-26 10:39:59 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-05-26 10:39:59 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-26 10:39:59 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-26 10:39:59 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-05-26 10:39:59 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-26 10:39:59 -0700
+
+
+Started GET "/assets/feeds.js?body=1" for 127.0.0.1 at 2014-05-26 10:39:59 -0700
+
+
+Started GET "/assets/popups.js?body=1" for 127.0.0.1 at 2014-05-26 10:39:59 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-26 10:39:59 -0700
+
+
+Started GET "/popups.json" for 127.0.0.1 at 2014-05-26 10:39:59 -0700
+Processing by PopupsController#index as JSON
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (0.5ms)[0m  [1mSELECT "popups".* FROM "popups"[0m
+Completed 200 OK in 15ms (Views: 11.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/popups/5" for 127.0.0.1 at 2014-05-26 10:40:02 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (0.8ms)[0m  [1mSELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  Rendered popups/show.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_form.html.erb (0.1ms)
+Completed 200 OK in 18ms (Views: 10.4ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/assets/feeds.css?body=1" for 127.0.0.1 at 2014-05-26 10:40:02 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-26 10:40:02 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-26 10:40:02 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-26 10:40:02 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-05-26 10:40:02 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-05-26 10:40:02 -0700
+
+
+Started GET "/assets/popups.css?body=1" for 127.0.0.1 at 2014-05-26 10:40:02 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-26 10:40:02 -0700
+
+
+Started GET "/assets/feeds.js?body=1" for 127.0.0.1 at 2014-05-26 10:40:02 -0700
+
+
+Started GET "/assets/popups.js?body=1" for 127.0.0.1 at 2014-05-26 10:40:02 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-26 10:40:02 -0700
+
+
+Started GET "/popups.json" for 127.0.0.1 at 2014-05-26 10:40:02 -0700
+Processing by PopupsController#index as JSON
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (0.5ms)[0m  [1mSELECT "popups".* FROM "popups"[0m
+Completed 200 OK in 7ms (Views: 2.7ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/popups/5/feeds" for 127.0.0.1 at 2014-05-26 10:40:05 -0700
+Processing by FeedsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pDN7LtMGaTDR5TTaF9piN0zp2AImZfTK51jM1VL3WKA=", "feed"=>{"comment"=>"test"}, "commit"=>"Create comment", "popup_id"=>"5"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (0.3ms)[0m  [1mSELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "feeds" ("comment", "created_at", "popup_id", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["comment", "test"], ["created_at", "2014-05-26 17:40:05.400856"], ["popup_id", 5], ["updated_at", "2014-05-26 17:40:05.400856"], ["user_id", 1]]
+  [1m[35m (0.6ms)[0m  COMMIT
+Redirected to http://localhost:3000/popups/5/feeds
+Completed 302 Found in 8ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/popups/5/feeds" for 127.0.0.1 at 2014-05-26 10:40:05 -0700
+Processing by FeedsController#index as HTML
+  Parameters: {"popup_id"=>"5"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPopup Load (0.2ms)[0m  SELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1  [["id", 5]]
+  Rendered feeds/index.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_form.html.erb (0.1ms)
+Completed 200 OK in 9ms (Views: 5.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-05-26 10:40:05 -0700
+
+
+Started GET "/assets/feeds.css?body=1" for 127.0.0.1 at 2014-05-26 10:40:05 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-26 10:40:05 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-26 10:40:05 -0700
+
+
+Started GET "/assets/popups.css?body=1" for 127.0.0.1 at 2014-05-26 10:40:05 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-26 10:40:05 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-05-26 10:40:05 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-26 10:40:05 -0700
+
+
+Started GET "/assets/feeds.js?body=1" for 127.0.0.1 at 2014-05-26 10:40:05 -0700
+
+
+Started GET "/assets/popups.js?body=1" for 127.0.0.1 at 2014-05-26 10:40:05 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-26 10:40:05 -0700
+
+
+Started GET "/popups.json" for 127.0.0.1 at 2014-05-26 10:40:05 -0700
+Processing by PopupsController#index as JSON
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPopup Load (0.5ms)[0m  SELECT "popups".* FROM "popups"
+Completed 200 OK in 7ms (Views: 2.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/popups/5" for 127.0.0.1 at 2014-05-26 10:40:25 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPopup Load (0.3ms)[0m  SELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1  [["id", 5]]
+  Rendered popups/show.html.erb within layouts/application (8.6ms)
+  Rendered layouts/_form.html.erb (0.1ms)
+Completed 200 OK in 62ms (Views: 19.0ms | ActiveRecord: 14.5ms)
+
+
+Started GET "/assets/feeds.css?body=1" for 127.0.0.1 at 2014-05-26 10:40:25 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-26 10:40:25 -0700
+
+
+Started GET "/assets/popups.css?body=1" for 127.0.0.1 at 2014-05-26 10:40:25 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-05-26 10:40:25 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-26 10:40:25 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-26 10:40:25 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-05-26 10:40:25 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-26 10:40:26 -0700
+
+
+Started GET "/assets/feeds.js?body=1" for 127.0.0.1 at 2014-05-26 10:40:26 -0700
+
+
+Started GET "/assets/popups.js?body=1" for 127.0.0.1 at 2014-05-26 10:40:26 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-26 10:40:26 -0700
+
+
+Started GET "/popups.json" for 127.0.0.1 at 2014-05-26 10:40:26 -0700
+Processing by PopupsController#index as JSON
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPopup Load (0.7ms)[0m  SELECT "popups".* FROM "popups"
+Completed 200 OK in 9ms (Views: 3.2ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/popups/5/feeds" for 127.0.0.1 at 2014-05-26 10:40:28 -0700
+Processing by FeedsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pDN7LtMGaTDR5TTaF9piN0zp2AImZfTK51jM1VL3WKA=", "feed"=>{"comment"=>"test"}, "commit"=>"Create comment", "popup_id"=>"5"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPopup Load (0.3ms)[0m  SELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1  [["id", 5]]
+Completed 500 Internal Server Error in 8ms
+
+ActionView::MissingTemplate (Missing template feeds/create, application/create with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :jbuilder, :coffee]}. Searched in:
+  * "/Users/mathur7/Projects/Project_2/app/views"
+  * "/Users/mathur7/.rvm/gems/ruby-2.1.1/gems/devise-3.2.4/app/views"
+):
+  actionview (4.1.1) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.1.1) lib/action_view/lookup_context.rb:124:in `find'
+  actionview (4.1.1) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.1.1) lib/action_view/renderer/template_renderer.rb:41:in `determine_template'
+  actionview (4.1.1) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.1.1) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.1.1) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.1.1) lib/action_view/rendering.rb:99:in `_render_template'
+  actionpack (4.1.1) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.1.1) lib/action_view/rendering.rb:82:in `render_to_body'
+  actionpack (4.1.1) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.1.1) lib/action_controller/metal/renderers.rb:32:in `render_to_body'
+  actionpack (4.1.1) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.1.1) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.1.1) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.1.1) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/mathur7/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+  activesupport (4.1.1) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.1.1) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.1.1) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.1.1) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.1.1) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.1.1) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.1.1) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.1.1) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.1.1) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.1.1) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:113:in `call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:113:in `call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:229:in `call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:229:in `call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:86:in `call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:86:in `run_callbacks'
+  actionpack (4.1.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.1.1) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.1.1) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.1.1) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.1) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.1) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.1.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.1.1) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.1.1) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.1.1) lib/abstract_controller/base.rb:136:in `process'
+  actionview (4.1.1) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.1) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.1.1) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.1) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.1.1) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.1.1) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.1.1) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.1.1) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.1.1) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.1) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.1) lib/action_dispatch/routing/route_set.rb:676:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:35:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.1) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.1) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/mathur7/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/mathur7/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/mathur7/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (0.4ms)
+
+
+Started GET "/popups/5" for 127.0.0.1 at 2014-05-26 10:42:16 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPopup Load (0.3ms)[0m  SELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1  [["id", 5]]
+  Rendered popups/show.html.erb within layouts/application (8.2ms)
+  Rendered layouts/_form.html.erb (0.1ms)
+Completed 200 OK in 48ms (Views: 13.8ms | ActiveRecord: 7.7ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-05-26 10:42:16 -0700
+
+
+Started GET "/assets/feeds.css?body=1" for 127.0.0.1 at 2014-05-26 10:42:16 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-26 10:42:16 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-26 10:42:16 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-26 10:42:16 -0700
+
+
+Started GET "/assets/popups.css?body=1" for 127.0.0.1 at 2014-05-26 10:42:16 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-05-26 10:42:16 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-26 10:42:16 -0700
+
+
+Started GET "/assets/feeds.js?body=1" for 127.0.0.1 at 2014-05-26 10:42:16 -0700
+
+
+Started GET "/assets/popups.js?body=1" for 127.0.0.1 at 2014-05-26 10:42:16 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-26 10:42:16 -0700
+
+
+Started GET "/popups.json" for 127.0.0.1 at 2014-05-26 10:42:17 -0700
+Processing by PopupsController#index as JSON
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPopup Load (0.9ms)[0m  SELECT "popups".* FROM "popups"
+Completed 200 OK in 8ms (Views: 3.6ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/popups/5/feeds" for 127.0.0.1 at 2014-05-26 10:42:18 -0700
+Processing by FeedsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pDN7LtMGaTDR5TTaF9piN0zp2AImZfTK51jM1VL3WKA=", "feed"=>{"comment"=>"test"}, "commit"=>"Create comment", "popup_id"=>"5"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPopup Load (0.8ms)[0m  SELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "feeds" ("comment", "created_at", "popup_id", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["comment", "test"], ["created_at", "2014-05-26 17:42:18.962753"], ["popup_id", 5], ["updated_at", "2014-05-26 17:42:18.962753"], ["user_id", 1]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Completed 500 Internal Server Error in 10ms
+
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"feeds", :format=>nil, :id=>nil, :popup_id=>#<Popup id: 5, name: "ami's yummy food", address: nil, hours: nil, price: nil, description: nil, image: "", expires_at: nil, user_id: nil, created_at: "2014-05-26 17:31:33", updated_at: "2014-05-26 17:31:33", image_file_name: nil, image_content_type: nil, image_file_size: nil, image_updated_at: nil>} missing required keys: [:id]):
+  app/controllers/feeds_controller.rb:19:in `create'
+
+
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.8ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (16.4ms)
+
+
+Started POST "/popups/5/feeds" for 127.0.0.1 at 2014-05-26 10:42:33 -0700
+Processing by FeedsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pDN7LtMGaTDR5TTaF9piN0zp2AImZfTK51jM1VL3WKA=", "feed"=>{"comment"=>"test"}, "commit"=>"Create comment", "popup_id"=>"5"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (0.3ms)[0m  [1mSELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "feeds" ("comment", "created_at", "popup_id", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["comment", "test"], ["created_at", "2014-05-26 17:42:33.151339"], ["popup_id", 5], ["updated_at", "2014-05-26 17:42:33.151339"], ["user_id", 1]]
+  [1m[35m (7.6ms)[0m  COMMIT
+Completed 500 Internal Server Error in 45ms
+
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"feeds", :popup_id=>"5"} missing required keys: [:id]):
+  app/controllers/feeds_controller.rb:19:in `create'
+
+
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.0ms)
+
+
+Started GET "/popups/5" for 127.0.0.1 at 2014-05-26 10:42:44 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPopup Load (0.3ms)[0m  SELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1  [["id", 5]]
+  Rendered popups/show.html.erb within layouts/application (10.3ms)
+  Rendered layouts/_form.html.erb (0.1ms)
+Completed 200 OK in 22ms (Views: 16.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/feeds.css?body=1" for 127.0.0.1 at 2014-05-26 10:42:45 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-26 10:42:45 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-05-26 10:42:45 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-26 10:42:45 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-26 10:42:45 -0700
+
+
+Started GET "/assets/popups.css?body=1" for 127.0.0.1 at 2014-05-26 10:42:45 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-05-26 10:42:45 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-26 10:42:45 -0700
+
+
+Started GET "/assets/feeds.js?body=1" for 127.0.0.1 at 2014-05-26 10:42:45 -0700
+
+
+Started GET "/assets/popups.js?body=1" for 127.0.0.1 at 2014-05-26 10:42:45 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-26 10:42:45 -0700
+
+
+Started GET "/popups.json" for 127.0.0.1 at 2014-05-26 10:42:45 -0700
+Processing by PopupsController#index as JSON
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPopup Load (0.7ms)[0m  SELECT "popups".* FROM "popups"
+Completed 200 OK in 8ms (Views: 4.5ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/popups/5/feeds" for 127.0.0.1 at 2014-05-26 10:42:47 -0700
+Processing by FeedsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pDN7LtMGaTDR5TTaF9piN0zp2AImZfTK51jM1VL3WKA=", "feed"=>{"comment"=>"test"}, "commit"=>"Create comment", "popup_id"=>"5"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPopup Load (1.3ms)[0m  SELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "feeds" ("comment", "created_at", "popup_id", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["comment", "test"], ["created_at", "2014-05-26 17:42:47.094640"], ["popup_id", 5], ["updated_at", "2014-05-26 17:42:47.094640"], ["user_id", 1]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Completed 500 Internal Server Error in 12ms
+
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"feeds", :popup_id=>"5"} missing required keys: [:id]):
+  app/controllers/feeds_controller.rb:19:in `create'
+
+
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.2ms)
+
+
+Started GET "/popups/5" for 127.0.0.1 at 2014-05-26 10:43:22 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (0.3ms)[0m  [1mSELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  Rendered popups/show.html.erb within layouts/application (7.6ms)
+  Rendered layouts/_form.html.erb (0.1ms)
+Completed 200 OK in 37ms (Views: 12.9ms | ActiveRecord: 8.3ms)
+
+
+Started GET "/assets/feeds.css?body=1" for 127.0.0.1 at 2014-05-26 10:43:22 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-05-26 10:43:22 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-26 10:43:22 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-26 10:43:22 -0700
+
+
+Started GET "/assets/popups.css?body=1" for 127.0.0.1 at 2014-05-26 10:43:22 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-26 10:43:22 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-05-26 10:43:22 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-26 10:43:22 -0700
+
+
+Started GET "/assets/feeds.js?body=1" for 127.0.0.1 at 2014-05-26 10:43:22 -0700
+
+
+Started GET "/assets/popups.js?body=1" for 127.0.0.1 at 2014-05-26 10:43:22 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-26 10:43:22 -0700
+
+
+Started GET "/popups.json" for 127.0.0.1 at 2014-05-26 10:43:22 -0700
+Processing by PopupsController#index as JSON
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (0.6ms)[0m  [1mSELECT "popups".* FROM "popups"[0m
+Completed 200 OK in 8ms (Views: 2.9ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/popups/5/feeds" for 127.0.0.1 at 2014-05-26 10:43:24 -0700
+Processing by FeedsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pDN7LtMGaTDR5TTaF9piN0zp2AImZfTK51jM1VL3WKA=", "feed"=>{"comment"=>"test"}, "commit"=>"Create comment", "popup_id"=>"5"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (0.3ms)[0m  [1mSELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "feeds" ("comment", "created_at", "popup_id", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["comment", "test"], ["created_at", "2014-05-26 17:43:24.925472"], ["popup_id", 5], ["updated_at", "2014-05-26 17:43:24.925472"], ["user_id", 1]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Completed 500 Internal Server Error in 7ms
+
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"feeds", :format=>nil, :id=>nil, :popup_id=>5} missing required keys: [:id]):
+  app/controllers/feeds_controller.rb:19:in `create'
+
+
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.1ms)
+
+
+Started GET "/popups/5" for 127.0.0.1 at 2014-05-26 10:45:17 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPopup Load (0.2ms)[0m  SELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1  [["id", 5]]
+  Rendered popups/show.html.erb within layouts/application (7.4ms)
+  Rendered layouts/_form.html.erb (0.1ms)
+Completed 200 OK in 37ms (Views: 12.7ms | ActiveRecord: 7.4ms)
+
+
+Started GET "/assets/feeds.css?body=1" for 127.0.0.1 at 2014-05-26 10:45:17 -0700
+
+
+Started GET "/assets/popups.css?body=1" for 127.0.0.1 at 2014-05-26 10:45:17 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-26 10:45:17 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-26 10:45:17 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-26 10:45:17 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-05-26 10:45:17 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-26 10:45:17 -0700
+
+
+Started GET "/assets/feeds.js?body=1" for 127.0.0.1 at 2014-05-26 10:45:17 -0700
+
+
+Started GET "/assets/popups.js?body=1" for 127.0.0.1 at 2014-05-26 10:45:17 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-26 10:45:17 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-05-26 10:45:17 -0700
+
+
+Started GET "/popups.json" for 127.0.0.1 at 2014-05-26 10:45:17 -0700
+Processing by PopupsController#index as JSON
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPopup Load (1.8ms)[0m  SELECT "popups".* FROM "popups"
+Completed 200 OK in 8ms (Views: 3.2ms | ActiveRecord: 2.3ms)
+
+
+Started POST "/popups/5/feeds" for 127.0.0.1 at 2014-05-26 10:45:19 -0700
+Processing by FeedsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pDN7LtMGaTDR5TTaF9piN0zp2AImZfTK51jM1VL3WKA=", "feed"=>{"comment"=>"test"}, "commit"=>"Create comment", "popup_id"=>"5"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPopup Load (0.4ms)[0m  SELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36m (0.6ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "feeds" ("comment", "created_at", "popup_id", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["comment", "test"], ["created_at", "2014-05-26 17:45:19.639144"], ["popup_id", 5], ["updated_at", "2014-05-26 17:45:19.639144"], ["user_id", 1]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+Completed 500 Internal Server Error in 12ms
+
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"feeds", :format=>nil, :id=>nil, :popup_id=>#<Popup id: 5, name: "ami's yummy food", address: nil, hours: nil, price: nil, description: nil, image: "", expires_at: nil, user_id: nil, created_at: "2014-05-26 17:31:33", updated_at: "2014-05-26 17:31:33", image_file_name: nil, image_content_type: nil, image_file_size: nil, image_updated_at: nil>} missing required keys: [:id]):
+  app/controllers/feeds_controller.rb:19:in `create'
+
+
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.3ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.5ms)
+
+
+Started GET "/popups/5" for 127.0.0.1 at 2014-05-26 10:46:22 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (0.2ms)[0m  [1mSELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  Rendered popups/show.html.erb within layouts/application (8.7ms)
+  Rendered layouts/_form.html.erb (0.1ms)
+Completed 200 OK in 52ms (Views: 14.5ms | ActiveRecord: 7.6ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-26 10:46:23 -0700
+
+
+Started GET "/assets/feeds.css?body=1" for 127.0.0.1 at 2014-05-26 10:46:23 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-26 10:46:23 -0700
+
+
+Started GET "/assets/popups.css?body=1" for 127.0.0.1 at 2014-05-26 10:46:23 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-05-26 10:46:23 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-05-26 10:46:23 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-26 10:46:23 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-26 10:46:23 -0700
+
+
+Started GET "/assets/feeds.js?body=1" for 127.0.0.1 at 2014-05-26 10:46:23 -0700
+
+
+Started GET "/assets/popups.js?body=1" for 127.0.0.1 at 2014-05-26 10:46:23 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-26 10:46:23 -0700
+
+
+Started GET "/popups.json" for 127.0.0.1 at 2014-05-26 10:46:23 -0700
+Processing by PopupsController#index as JSON
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (0.5ms)[0m  [1mSELECT "popups".* FROM "popups"[0m
+Completed 200 OK in 15ms (Views: 1.7ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/popups/5/feeds" for 127.0.0.1 at 2014-05-26 10:46:25 -0700
+Processing by FeedsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pDN7LtMGaTDR5TTaF9piN0zp2AImZfTK51jM1VL3WKA=", "feed"=>{"comment"=>"tets"}, "commit"=>"Create comment", "popup_id"=>"5"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (0.4ms)[0m  [1mSELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "feeds" ("comment", "created_at", "popup_id", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["comment", "tets"], ["created_at", "2014-05-26 17:46:25.174558"], ["popup_id", 5], ["updated_at", "2014-05-26 17:46:25.174558"], ["user_id", 1]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Redirected to http://localhost:3000/popups/5
+Completed 302 Found in 12ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/popups/5" for 127.0.0.1 at 2014-05-26 10:46:25 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPopup Load (0.3ms)[0m  SELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1  [["id", 5]]
+  Rendered popups/show.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_form.html.erb (0.1ms)
+Completed 200 OK in 13ms (Views: 9.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-05-26 10:46:25 -0700
+
+
+Started GET "/assets/popups.css?body=1" for 127.0.0.1 at 2014-05-26 10:46:25 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-26 10:46:25 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-26 10:46:25 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-26 10:46:25 -0700
+
+
+Started GET "/assets/feeds.css?body=1" for 127.0.0.1 at 2014-05-26 10:46:25 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-05-26 10:46:25 -0700
+
+
+Started GET "/assets/popups.js?body=1" for 127.0.0.1 at 2014-05-26 10:46:25 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-26 10:46:25 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-26 10:46:25 -0700
+
+
+Started GET "/assets/feeds.js?body=1" for 127.0.0.1 at 2014-05-26 10:46:25 -0700
+
+
+Started GET "/popups.json" for 127.0.0.1 at 2014-05-26 10:46:25 -0700
+Processing by PopupsController#index as JSON
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPopup Load (0.5ms)[0m  SELECT "popups".* FROM "popups"
+Completed 200 OK in 7ms (Views: 2.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/popups/5" for 127.0.0.1 at 2014-05-26 10:47:55 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (20.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPopup Load (0.3ms)[0m  SELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1  [["id", 5]]
+  Rendered popups/show.html.erb within layouts/application (3.2ms)
+Completed 500 Internal Server Error in 31ms
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    11:   <%= f.submit "Create comment" %><br></br>
+    12: <% end %>
+    13: 
+    14: <% @feeds.each do |f| %>
+    15:   <%= f.comment %>
+    16:   <% end %>
+  app/views/popups/show.html.erb:14:in `_app_views_popups_show_html_erb___517188503035001351_2163910680'
+
+
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (15.5ms)
+
+
+Started GET "/popups/5" for 127.0.0.1 at 2014-05-26 10:50:00 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPopup Load (0.3ms)[0m  SELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1  [["id", 5]]
+  Rendered popups/show.html.erb within layouts/application (2.4ms)
+Completed 500 Internal Server Error in 8ms
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    11:   <%= f.submit "Create comment" %><br></br>
+    12: <% end %>
+    13: 
+    14: <% @popups.each do |popup| %>
+    15:   <li><%= link_to popup.name, popup_feeds_path(popup)%>
+    16:     <% count = 0%>
+    17:     <% popup.feeds.each do |feed| %>
+  app/views/popups/show.html.erb:14:in `_app_views_popups_show_html_erb___517188503035001351_2174275800'
+
+
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (11.2ms)
+
+
+Started GET "/popups/5" for 127.0.0.1 at 2014-05-26 10:50:57 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPopup Load (0.4ms)[0m  SELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mPopup Load (0.4ms)[0m  [1mSELECT "popups".* FROM "popups"[0m
+  [1m[35mFeed Load (0.5ms)[0m  SELECT "feeds".* FROM "feeds"  WHERE "feeds"."popup_id" = $1  [["popup_id", 1]]
+  [1m[36mFeed Load (0.3ms)[0m  [1mSELECT "feeds".* FROM "feeds"  WHERE "feeds"."popup_id" = $1[0m  [["popup_id", 2]]
+  [1m[35mFeed Load (0.3ms)[0m  SELECT "feeds".* FROM "feeds"  WHERE "feeds"."popup_id" = $1  [["popup_id", 3]]
+  [1m[36mFeed Load (0.3ms)[0m  [1mSELECT "feeds".* FROM "feeds"  WHERE "feeds"."popup_id" = $1[0m  [["popup_id", 4]]
+  [1m[35mFeed Load (0.4ms)[0m  SELECT "feeds".* FROM "feeds"  WHERE "feeds"."popup_id" = $1  [["popup_id", 5]]
+  Rendered popups/show.html.erb within layouts/application (17.1ms)
+  Rendered layouts/_form.html.erb (0.1ms)
+Completed 200 OK in 48ms (Views: 20.8ms | ActiveRecord: 10.1ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-05-26 10:50:57 -0700
+
+
+Started GET "/assets/feeds.css?body=1" for 127.0.0.1 at 2014-05-26 10:50:57 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-26 10:50:57 -0700
+
+
+Started GET "/assets/popups.css?body=1" for 127.0.0.1 at 2014-05-26 10:50:57 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-26 10:50:57 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-26 10:50:57 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-05-26 10:50:57 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-26 10:50:57 -0700
+
+
+Started GET "/assets/feeds.js?body=1" for 127.0.0.1 at 2014-05-26 10:50:57 -0700
+
+
+Started GET "/assets/popups.js?body=1" for 127.0.0.1 at 2014-05-26 10:50:57 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-26 10:50:57 -0700
+
+
+Started GET "/popups.json" for 127.0.0.1 at 2014-05-26 10:50:57 -0700
+Processing by PopupsController#index as JSON
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPopup Load (0.6ms)[0m  SELECT "popups".* FROM "popups"
+Completed 200 OK in 6ms (Views: 2.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/popups/5/feeds" for 127.0.0.1 at 2014-05-26 10:51:03 -0700
+Processing by FeedsController#index as HTML
+  Parameters: {"popup_id"=>"5"}
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPopup Load (0.4ms)[0m  SELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1  [["id", 5]]
+  Rendered feeds/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_form.html.erb (0.7ms)
+Completed 200 OK in 14ms (Views: 8.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/popups/5" for 127.0.0.1 at 2014-05-26 10:52:12 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPopup Load (0.3ms)[0m  SELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mPopup Load (0.4ms)[0m  [1mSELECT "popups".* FROM "popups"[0m
+  [1m[35mFeed Load (0.2ms)[0m  SELECT "feeds".* FROM "feeds"  WHERE "feeds"."popup_id" = $1  [["popup_id", 1]]
+  [1m[36mFeed Load (0.3ms)[0m  [1mSELECT "feeds".* FROM "feeds"  WHERE "feeds"."popup_id" = $1[0m  [["popup_id", 5]]
+  Rendered popups/show.html.erb within layouts/application (7.0ms)
+Completed 500 Internal Server Error in 12ms
+
+ActionView::Template::Error (undefined method `comment' for #<Feed::ActiveRecord_Associations_CollectionProxy:0x000001053e6da8>):
+    20: 
+    21:   Comment Count: <%= link_to "#{count} comments", popup_feeds_path(popup)%>
+    22:   <br></br> 
+    23:   <%= @feed.comment %>
+    24:  
+    25: <% end %>
+  app/views/popups/show.html.erb:23:in `block in _app_views_popups_show_html_erb___517188503035001351_2191466500'
+  app/views/popups/show.html.erb:14:in `_app_views_popups_show_html_erb___517188503035001351_2191466500'
+
+
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (9.0ms)
+
+
+Started GET "/popups/5" for 127.0.0.1 at 2014-05-26 10:52:26 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (0.4ms)[0m  [1mSELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mPopup Load (0.5ms)[0m  SELECT "popups".* FROM "popups"
+  [1m[36mFeed Load (0.3ms)[0m  [1mSELECT "feeds".* FROM "feeds"  WHERE "feeds"."popup_id" = $1[0m  [["popup_id", 1]]
+  [1m[35mFeed Load (0.3ms)[0m  SELECT "feeds".* FROM "feeds"  WHERE "feeds"."popup_id" = $1  [["popup_id", 5]]
+  Rendered popups/show.html.erb within layouts/application (6.6ms)
+Completed 500 Internal Server Error in 12ms
+
+ActionView::Template::Error (undefined method `feed' for #<Feed::ActiveRecord_Associations_CollectionProxy:0x000001092512a0>):
+    20: 
+    21:   Comment Count: <%= link_to "#{count} comments", popup_feeds_path(popup)%>
+    22:   <br></br> 
+    23:   <%= @feed.feed %>
+    24:  
+    25: <% end %>
+  app/views/popups/show.html.erb:23:in `block in _app_views_popups_show_html_erb___517188503035001351_2224214720'
+  app/views/popups/show.html.erb:14:in `_app_views_popups_show_html_erb___517188503035001351_2224214720'
+
+
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (8.9ms)
+
+
+Started GET "/popups/5" for 127.0.0.1 at 2014-05-26 10:52:35 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPopup Load (0.3ms)[0m  SELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mPopup Load (0.6ms)[0m  [1mSELECT "popups".* FROM "popups"[0m
+  [1m[35mFeed Load (0.3ms)[0m  SELECT "feeds".* FROM "feeds"  WHERE "feeds"."popup_id" = $1  [["popup_id", 1]]
+  [1m[36mFeed Load (0.3ms)[0m  [1mSELECT "feeds".* FROM "feeds"  WHERE "feeds"."popup_id" = $1[0m  [["popup_id", 5]]
+  Rendered popups/show.html.erb within layouts/application (6.3ms)
+Completed 500 Internal Server Error in 11ms
+
+ActionView::Template::Error (undefined method `comment' for #<Feed::ActiveRecord_Associations_CollectionProxy:0x000001054e1c30>):
+    20: 
+    21:   Comment Count: <%= link_to "#{count} comments", popup_feeds_path(popup)%>
+    22:   <br></br> 
+    23:   <%= @feed.comment %>
+    24:  
+    25: <% end %>
+  app/views/popups/show.html.erb:23:in `block in _app_views_popups_show_html_erb___517188503035001351_2192004940'
+  app/views/popups/show.html.erb:14:in `_app_views_popups_show_html_erb___517188503035001351_2192004940'
+
+
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (9.5ms)
+
+
+Started GET "/popups/5" for 127.0.0.1 at 2014-05-26 10:53:07 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (0.3ms)[0m  [1mSELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mPopup Load (0.4ms)[0m  SELECT "popups".* FROM "popups"
+  [1m[36mFeed Load (0.2ms)[0m  [1mSELECT "feeds".* FROM "feeds"  WHERE "feeds"."popup_id" = $1[0m  [["popup_id", 1]]
+  Rendered popups/show.html.erb within layouts/application (4.6ms)
+Completed 500 Internal Server Error in 10ms
+
+ActionView::Template::Error (undefined method `feed' for #<Popup:0x00000109809c60>):
+    20: 
+    21:   Comment Count: <%= link_to "#{count} comments", popup_feeds_path(popup)%>
+    22:   <br></br> 
+    23:   <%= @popup.feed.comment %>
+    24:  
+    25: <% end %>
+  app/views/popups/show.html.erb:23:in `block in _app_views_popups_show_html_erb___517188503035001351_2227213260'
+  app/views/popups/show.html.erb:14:in `_app_views_popups_show_html_erb___517188503035001351_2227213260'
+
+
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (9.4ms)
+
+
+Started GET "/popups/5" for 127.0.0.1 at 2014-05-26 10:53:43 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (0.3ms)[0m  [1mSELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mPopup Load (0.4ms)[0m  SELECT "popups".* FROM "popups"
+  [1m[36mFeed Load (0.2ms)[0m  [1mSELECT "feeds".* FROM "feeds"  WHERE "feeds"."popup_id" = $1[0m  [["popup_id", 1]]
+  [1m[35mFeed Load (0.3ms)[0m  SELECT "feeds".* FROM "feeds"  WHERE "feeds"."popup_id" = $1  [["popup_id", 5]]
+  Rendered popups/show.html.erb within layouts/application (6.8ms)
+Completed 500 Internal Server Error in 12ms
+
+ActionView::Template::Error (undefined method `comment' for #<Feed::ActiveRecord_Associations_CollectionProxy:0x000001055d0128>):
+    20: 
+    21:   Comment Count: <%= link_to "#{count} comments", popup_feeds_path(popup)%>
+    22:   <br></br> 
+    23:   <%= @feed.comment %>
+    24:  
+    25: <% end %>
+  app/views/popups/show.html.erb:23:in `block in _app_views_popups_show_html_erb___517188503035001351_2192443340'
+  app/views/popups/show.html.erb:14:in `_app_views_popups_show_html_erb___517188503035001351_2192443340'
+
+
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (11.4ms)
+
+
+Started GET "/popups/5/feeds/1" for 127.0.0.1 at 2014-05-26 10:53:56 -0700
+Processing by FeedsController#show as HTML
+  Parameters: {"popup_id"=>"5", "id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPopup Load (0.3ms)[0m  SELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mFeed Load (0.3ms)[0m  [1mSELECT  "feeds".* FROM "feeds"  WHERE "feeds"."popup_id" = $1 AND "feeds"."id" = $2 LIMIT 1[0m  [["popup_id", 5], ["id", 1]]
+  Rendered feeds/show.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_form.html.erb (0.2ms)
+Completed 200 OK in 15ms (Views: 8.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-05-26 10:53:56 -0700
+
+
+Started GET "/assets/popups.css?body=1" for 127.0.0.1 at 2014-05-26 10:53:56 -0700
+
+
+Started GET "/assets/feeds.css?body=1" for 127.0.0.1 at 2014-05-26 10:53:56 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-26 10:53:56 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-26 10:53:56 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-26 10:53:56 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-05-26 10:53:56 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-26 10:53:56 -0700
+
+
+Started GET "/assets/feeds.js?body=1" for 127.0.0.1 at 2014-05-26 10:53:56 -0700
+
+
+Started GET "/assets/popups.js?body=1" for 127.0.0.1 at 2014-05-26 10:53:56 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-26 10:53:56 -0700
+
+
+Started GET "/popups.json" for 127.0.0.1 at 2014-05-26 10:53:56 -0700
+Processing by PopupsController#index as JSON
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (2.6ms)[0m  [1mSELECT "popups".* FROM "popups"[0m
+Completed 200 OK in 10ms (Views: 3.3ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/popups/5" for 127.0.0.1 at 2014-05-26 10:54:14 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (0.3ms)[0m  [1mSELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mPopup Load (0.5ms)[0m  SELECT "popups".* FROM "popups"
+  [1m[36mFeed Load (0.3ms)[0m  [1mSELECT "feeds".* FROM "feeds"  WHERE "feeds"."popup_id" = $1[0m  [["popup_id", 1]]
+  [1m[35mFeed Load (0.3ms)[0m  SELECT "feeds".* FROM "feeds"  WHERE "feeds"."popup_id" = $1  [["popup_id", 5]]
+  Rendered popups/show.html.erb within layouts/application (5.8ms)
+Completed 500 Internal Server Error in 12ms
+
+ActionView::Template::Error (undefined method `comment' for #<Feed::ActiveRecord_Associations_CollectionProxy:0x00000102abf0b0>):
+    20: 
+    21:   Comment Count: <%= link_to "#{count} comments", popup_feeds_path(popup)%>
+    22:   <br></br> 
+    23:   <%= @feed.comment %>
+    24:  
+    25: <% end %>
+  app/views/popups/show.html.erb:23:in `block in _app_views_popups_show_html_erb___517188503035001351_2192443340'
+  app/views/popups/show.html.erb:14:in `_app_views_popups_show_html_erb___517188503035001351_2192443340'
+
+
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (10.5ms)
+
+
+Started GET "/popups/5" for 127.0.0.1 at 2014-05-26 10:54:22 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPopup Load (0.3ms)[0m  SELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mPopup Load (0.4ms)[0m  [1mSELECT "popups".* FROM "popups"[0m
+  [1m[35mFeed Load (0.3ms)[0m  SELECT "feeds".* FROM "feeds"  WHERE "feeds"."popup_id" = $1  [["popup_id", 1]]
+  [1m[36mFeed Load (0.2ms)[0m  [1mSELECT "feeds".* FROM "feeds"  WHERE "feeds"."popup_id" = $1[0m  [["popup_id", 2]]
+  [1m[35mFeed Load (0.2ms)[0m  SELECT "feeds".* FROM "feeds"  WHERE "feeds"."popup_id" = $1  [["popup_id", 3]]
+  [1m[36mFeed Load (0.3ms)[0m  [1mSELECT "feeds".* FROM "feeds"  WHERE "feeds"."popup_id" = $1[0m  [["popup_id", 4]]
+  [1m[35mFeed Load (0.2ms)[0m  SELECT "feeds".* FROM "feeds"  WHERE "feeds"."popup_id" = $1  [["popup_id", 5]]
+  Rendered popups/show.html.erb within layouts/application (8.0ms)
+  Rendered layouts/_form.html.erb (0.1ms)
+Completed 200 OK in 18ms (Views: 12.9ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/assets/feeds.css?body=1" for 127.0.0.1 at 2014-05-26 10:54:22 -0700
+
+
+Started GET "/assets/popups.css?body=1" for 127.0.0.1 at 2014-05-26 10:54:22 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-05-26 10:54:22 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-26 10:54:22 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-26 10:54:22 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-26 10:54:22 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-05-26 10:54:22 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-26 10:54:22 -0700
+
+
+Started GET "/assets/feeds.js?body=1" for 127.0.0.1 at 2014-05-26 10:54:22 -0700
+
+
+Started GET "/assets/popups.js?body=1" for 127.0.0.1 at 2014-05-26 10:54:22 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-26 10:54:22 -0700
+
+
+Started GET "/popups.json" for 127.0.0.1 at 2014-05-26 10:54:22 -0700
+Processing by PopupsController#index as JSON
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPopup Load (0.6ms)[0m  SELECT "popups".* FROM "popups"
+Completed 200 OK in 7ms (Views: 2.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/popups/5" for 127.0.0.1 at 2014-05-26 10:56:45 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPopup Load (0.3ms)[0m  SELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1  [["id", 5]]
+  Rendered popups/show.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 6ms
+
+SyntaxError (/Users/mathur7/Projects/Project_2/app/views/popups/show.html.erb:25: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  actionview (4.1.1) lib/action_view/template.rb:297:in `module_eval'
+  actionview (4.1.1) lib/action_view/template.rb:297:in `compile'
+  actionview (4.1.1) lib/action_view/template.rb:245:in `block (2 levels) in compile!'
+  activesupport (4.1.1) lib/active_support/notifications.rb:161:in `instrument'
+  actionview (4.1.1) lib/action_view/template.rb:339:in `instrument'
+  actionview (4.1.1) lib/action_view/template.rb:244:in `block in compile!'
+  actionview (4.1.1) lib/action_view/template.rb:232:in `synchronize'
+  actionview (4.1.1) lib/action_view/template.rb:232:in `compile!'
+  actionview (4.1.1) lib/action_view/template.rb:144:in `block in render'
+  activesupport (4.1.1) lib/active_support/notifications.rb:161:in `instrument'
+  actionview (4.1.1) lib/action_view/template.rb:339:in `instrument'
+  actionview (4.1.1) lib/action_view/template.rb:143:in `render'
+  actionview (4.1.1) lib/action_view/renderer/template_renderer.rb:55:in `block (2 levels) in render_template'
+  actionview (4.1.1) lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  activesupport (4.1.1) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.1) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.1) lib/active_support/notifications.rb:159:in `instrument'
+  actionview (4.1.1) lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  actionview (4.1.1) lib/action_view/renderer/template_renderer.rb:54:in `block in render_template'
+  actionview (4.1.1) lib/action_view/renderer/template_renderer.rb:62:in `render_with_layout'
+  actionview (4.1.1) lib/action_view/renderer/template_renderer.rb:53:in `render_template'
+  actionview (4.1.1) lib/action_view/renderer/template_renderer.rb:17:in `render'
+  actionview (4.1.1) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.1.1) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.1.1) lib/action_view/rendering.rb:99:in `_render_template'
+  actionpack (4.1.1) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.1.1) lib/action_view/rendering.rb:82:in `render_to_body'
+  actionpack (4.1.1) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.1.1) lib/action_controller/metal/renderers.rb:32:in `render_to_body'
+  actionpack (4.1.1) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.1.1) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.1.1) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.1.1) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/mathur7/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+  activesupport (4.1.1) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.1.1) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.1.1) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.1.1) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.1.1) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.1.1) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.1.1) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.1.1) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.1.1) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.1.1) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:113:in `call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:113:in `call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:229:in `call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:229:in `call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:86:in `call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:86:in `run_callbacks'
+  actionpack (4.1.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.1.1) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.1.1) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.1.1) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.1) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.1) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.1.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.1.1) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.1.1) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.1.1) lib/abstract_controller/base.rb:136:in `process'
+  actionview (4.1.1) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.1) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.1.1) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.1) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.1.1) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.1.1) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.1.1) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.1.1) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.1.1) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.1) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.1) lib/action_dispatch/routing/route_set.rb:676:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.1) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.1) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/mathur7/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/mathur7/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/mathur7/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.4ms)
+
+
+Started GET "/popups/5" for 127.0.0.1 at 2014-05-26 10:57:08 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPopup Load (0.8ms)[0m  SELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mFeed Load (0.4ms)[0m  [1mSELECT "feeds".* FROM "feeds"  WHERE "feeds"."popup_id" = $1[0m  [["popup_id", 5]]
+  Rendered popups/show.html.erb within layouts/application (5.2ms)
+Completed 500 Internal Server Error in 13ms
+
+ActionView::Template::Error (undefined method `+' for nil:NilClass):
+    14: 
+    15:     <% @feed.each do |feed| %>
+    16:     <%= feed.comment %>
+    17:       <% count += 1%>
+    18:   <% end %></br> 
+    19: 
+    20:   Comment Count: <%= link_to "#{count} comments", popup_feeds_path(popup)%>
+  app/views/popups/show.html.erb:17:in `block in _app_views_popups_show_html_erb___517188503035001351_2175799660'
+  app/views/popups/show.html.erb:15:in `_app_views_popups_show_html_erb___517188503035001351_2175799660'
+
+
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (9.3ms)
+
+
+Started GET "/popups/5" for 127.0.0.1 at 2014-05-26 10:59:13 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (0.2ms)[0m  [1mSELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1[0m  [["id", 5]]
+Completed 500 Internal Server Error in 32ms
+
+NoMethodError (undefined method `feed' for #<Popup:0x000001052e3578>):
+  app/controllers/popups_controller.rb:29:in `show'
+
+
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.8ms)
+
+
+Started GET "/popups/5" for 127.0.0.1 at 2014-05-26 10:59:28 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (0.2ms)[0m  [1mSELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mFeed Load (0.3ms)[0m  SELECT "feeds".* FROM "feeds"  WHERE "feeds"."popup_id" = $1  [["popup_id", 5]]
+  [1m[36mPopup Load (0.5ms)[0m  [1mSELECT "popups".* FROM "popups"[0m
+  Rendered popups/show.html.erb within layouts/application (24.6ms)
+Completed 500 Internal Server Error in 48ms
+
+ActionView::Template::Error (undefined local variable or method `count' for #<#<Class:0x000001092fa760>:0x000001092f9c48>):
+    18:       <% count += 1%>
+    19:   <% end %></br> 
+    20: 
+    21:   Comment Count: <%= link_to "#{count} comments", popup_feeds_path(popup)%>
+    22:   <br></br> 
+    23: 
+    24:  
+  app/views/popups/show.html.erb:21:in `_app_views_popups_show_html_erb___517188503035001351_2224538700'
+
+
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (8.7ms)
+
+
+Started GET "/popups/5" for 127.0.0.1 at 2014-05-26 11:00:27 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (0.3ms)[0m  [1mSELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mFeed Load (0.3ms)[0m  SELECT "feeds".* FROM "feeds"  WHERE "feeds"."popup_id" = $1  [["popup_id", 5]]
+  Rendered popups/show.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_form.html.erb (0.1ms)
+Completed 200 OK in 14ms (Views: 9.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/feeds.css?body=1" for 127.0.0.1 at 2014-05-26 11:00:27 -0700
+
+
+Started GET "/assets/popups.css?body=1" for 127.0.0.1 at 2014-05-26 11:00:27 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-26 11:00:27 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-05-26 11:00:27 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-26 11:00:27 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-26 11:00:27 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-05-26 11:00:27 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-26 11:00:27 -0700
+
+
+Started GET "/assets/feeds.js?body=1" for 127.0.0.1 at 2014-05-26 11:00:27 -0700
+
+
+Started GET "/assets/popups.js?body=1" for 127.0.0.1 at 2014-05-26 11:00:27 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-26 11:00:27 -0700
+
+
+Started GET "/popups.json" for 127.0.0.1 at 2014-05-26 11:00:27 -0700
+Processing by PopupsController#index as JSON
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPopup Load (0.5ms)[0m  SELECT "popups".* FROM "popups"
+Completed 200 OK in 6ms (Views: 2.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/popups/5" for 127.0.0.1 at 2014-05-26 11:01:02 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPopup Load (0.3ms)[0m  SELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mFeed Load (0.3ms)[0m  [1mSELECT "feeds".* FROM "feeds"  WHERE "feeds"."popup_id" = $1[0m  [["popup_id", 5]]
+  [1m[35mPopup Load (0.4ms)[0m  SELECT "popups".* FROM "popups"
+  Rendered popups/show.html.erb within layouts/application (19.5ms)
+Completed 500 Internal Server Error in 25ms
+
+ActionView::Template::Error (undefined local variable or method `popup' for #<#<Class:0x000001092fa760>:0x000001091836c0>):
+    16:     <% count = 0%>
+    17:     <%= feed.comment %>
+    18:       <% count += 1%>
+    19:  Comment Count:<%= link_to "#{count} comments", popup_feeds_path(popup)%>
+    20:   <% end %></br> 
+    21: 
+    22:  
+  app/views/popups/show.html.erb:19:in `block in _app_views_popups_show_html_erb___517188503035001351_2223771680'
+  app/views/popups/show.html.erb:14:in `_app_views_popups_show_html_erb___517188503035001351_2223771680'
+
+
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (11.9ms)
+
+
+Started GET "/popups/5" for 127.0.0.1 at 2014-05-26 11:01:16 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPopup Load (0.3ms)[0m  SELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mFeed Load (0.3ms)[0m  [1mSELECT "feeds".* FROM "feeds"  WHERE "feeds"."popup_id" = $1[0m  [["popup_id", 5]]
+  Rendered popups/show.html.erb within layouts/application (4.9ms)
+  Rendered layouts/_form.html.erb (0.1ms)
+Completed 200 OK in 19ms (Views: 13.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/feeds.css?body=1" for 127.0.0.1 at 2014-05-26 11:01:16 -0700
+
+
+Started GET "/assets/popups.css?body=1" for 127.0.0.1 at 2014-05-26 11:01:16 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-26 11:01:16 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-26 11:01:16 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-05-26 11:01:16 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-26 11:01:16 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-05-26 11:01:16 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-26 11:01:16 -0700
+
+
+Started GET "/assets/feeds.js?body=1" for 127.0.0.1 at 2014-05-26 11:01:16 -0700
+
+
+Started GET "/assets/popups.js?body=1" for 127.0.0.1 at 2014-05-26 11:01:16 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-26 11:01:16 -0700
+
+
+Started GET "/popups.json" for 127.0.0.1 at 2014-05-26 11:01:16 -0700
+Processing by PopupsController#index as JSON
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (0.8ms)[0m  [1mSELECT "popups".* FROM "popups"[0m
+Completed 200 OK in 9ms (Views: 4.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/popups/5" for 127.0.0.1 at 2014-05-26 11:02:03 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (0.3ms)[0m  [1mSELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mFeed Load (0.3ms)[0m  SELECT "feeds".* FROM "feeds"  WHERE "feeds"."popup_id" = $1  [["popup_id", 5]]
+  Rendered popups/show.html.erb within layouts/application (3.4ms)
+Completed 500 Internal Server Error in 9ms
+
+ActionView::Template::Error (No route matches {:action=>"index", :controller=>"feeds", :popup_id=>nil} missing required keys: [:popup_id]):
+    16:     <% count = 0%>
+    17:     <%= feed.comment %>
+    18:       <% count += 1%>
+    19:  Comment Count:<%= link_to "#{count} comments", popup_feeds_path(@feed)%>
+    20:   <% end %></br> 
+    21: 
+    22:  
+  app/views/popups/show.html.erb:19:in `block in _app_views_popups_show_html_erb___517188503035001351_2204801920'
+  app/views/popups/show.html.erb:14:in `_app_views_popups_show_html_erb___517188503035001351_2204801920'
+
+
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (9.7ms)
+
+
+Started GET "/popups/5" for 127.0.0.1 at 2014-05-26 11:02:20 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPopup Load (0.3ms)[0m  SELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mFeed Load (0.4ms)[0m  [1mSELECT "feeds".* FROM "feeds"  WHERE "feeds"."popup_id" = $1[0m  [["popup_id", 5]]
+  [1m[35mPopup Load (0.4ms)[0m  SELECT "popups".* FROM "popups"
+  Rendered popups/show.html.erb within layouts/application (20.3ms)
+Completed 500 Internal Server Error in 26ms
+
+ActionView::Template::Error (undefined local variable or method `count' for #<#<Class:0x000001092fa760>:0x000001052ab498>):
+    17:     <%= feed.comment %>
+    18:       <% count += 1%>
+    19:   <% end %></br> 
+    20:   Comment Count:<%= link_to "#{count} comments", popup_feeds_path(@popup)%>
+    21: 
+    22:  
+    23:   <br></br> 
+  app/views/popups/show.html.erb:20:in `_app_views_popups_show_html_erb___517188503035001351_2190823540'
+
+
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (9.4ms)
+
+
+Started GET "/popups/5" for 127.0.0.1 at 2014-05-26 11:03:17 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPopup Load (0.3ms)[0m  SELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mFeed Load (0.3ms)[0m  [1mSELECT "feeds".* FROM "feeds"  WHERE "feeds"."popup_id" = $1[0m  [["popup_id", 5]]
+  Rendered popups/show.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_form.html.erb (0.1ms)
+Completed 200 OK in 12ms (Views: 8.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-05-26 11:03:17 -0700
+
+
+Started GET "/assets/popups.css?body=1" for 127.0.0.1 at 2014-05-26 11:03:17 -0700
+
+
+Started GET "/assets/feeds.css?body=1" for 127.0.0.1 at 2014-05-26 11:03:17 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-26 11:03:17 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-26 11:03:17 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-26 11:03:17 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-05-26 11:03:17 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-26 11:03:17 -0700
+
+
+Started GET "/assets/feeds.js?body=1" for 127.0.0.1 at 2014-05-26 11:03:17 -0700
+
+
+Started GET "/assets/popups.js?body=1" for 127.0.0.1 at 2014-05-26 11:03:17 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-26 11:03:17 -0700
+
+
+Started GET "/popups.json" for 127.0.0.1 at 2014-05-26 11:03:17 -0700
+Processing by PopupsController#index as JSON
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (0.6ms)[0m  [1mSELECT "popups".* FROM "popups"[0m
+Completed 200 OK in 7ms (Views: 2.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/popups/5" for 127.0.0.1 at 2014-05-26 11:04:11 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (0.3ms)[0m  [1mSELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mFeed Load (0.4ms)[0m  SELECT "feeds".* FROM "feeds"  WHERE "feeds"."popup_id" = $1  [["popup_id", 5]]
+  Rendered popups/show.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_form.html.erb (0.1ms)
+Completed 200 OK in 12ms (Views: 8.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-05-26 11:04:11 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-26 11:04:11 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-26 11:04:11 -0700
+
+
+Started GET "/assets/feeds.css?body=1" for 127.0.0.1 at 2014-05-26 11:04:11 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-26 11:04:11 -0700
+
+
+Started GET "/assets/popups.css?body=1" for 127.0.0.1 at 2014-05-26 11:04:11 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-05-26 11:04:11 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-26 11:04:11 -0700
+
+
+Started GET "/assets/feeds.js?body=1" for 127.0.0.1 at 2014-05-26 11:04:11 -0700
+
+
+Started GET "/assets/popups.js?body=1" for 127.0.0.1 at 2014-05-26 11:04:11 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-26 11:04:11 -0700
+
+
+Started GET "/popups.json" for 127.0.0.1 at 2014-05-26 11:04:11 -0700
+Processing by PopupsController#index as JSON
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPopup Load (0.5ms)[0m  SELECT "popups".* FROM "popups"
+Completed 200 OK in 8ms (Views: 3.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/popups/5" for 127.0.0.1 at 2014-05-26 11:04:44 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPopup Load (0.3ms)[0m  SELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mFeed Load (0.3ms)[0m  [1mSELECT "feeds".* FROM "feeds"  WHERE "feeds"."popup_id" = $1[0m  [["popup_id", 5]]
+  [1m[35mPopup Load (0.4ms)[0m  SELECT "popups".* FROM "popups"
+  Rendered popups/show.html.erb within layouts/application (20.4ms)
+Completed 500 Internal Server Error in 26ms
+
+ActionView::Template::Error (undefined local variable or method `count' for #<#<Class:0x000001092fa760>:0x000001033faff8>):
+    17:     <%= feed.comment %><br>
+    18:       <%# count += 1%>
+    19:   <% end %></br> 
+    20:   Comment Count: <%= link_to "#{count} comments", popup_feeds_path(@popup)%>
+    21: 
+    22:  
+    23:   <br></br> 
+  app/views/popups/show.html.erb:20:in `_app_views_popups_show_html_erb___517188503035001351_2174731880'
+
+
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (10.6ms)
+
+
+Started GET "/popups/5" for 127.0.0.1 at 2014-05-26 11:04:57 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPopup Load (0.3ms)[0m  SELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mFeed Load (0.3ms)[0m  [1mSELECT "feeds".* FROM "feeds"  WHERE "feeds"."popup_id" = $1[0m  [["popup_id", 5]]
+  [1m[35mPopup Load (0.5ms)[0m  SELECT "popups".* FROM "popups"
+  Rendered popups/show.html.erb within layouts/application (19.4ms)
+Completed 500 Internal Server Error in 26ms
+
+ActionView::Template::Error (undefined local variable or method `count' for #<#<Class:0x000001092fa760>:0x000001017a5bf0>):
+    17:     <%= feed.comment %><br>
+    18:       <% count += 1%>
+    19:   <% end %></br> 
+    20:   Comment Count: <%= link_to "#{count} comments", popup_feeds_path(@popup)%>
+    21: 
+    22:  
+    23:   <br></br> 
+  app/views/popups/show.html.erb:20:in `_app_views_popups_show_html_erb___517188503035001351_2159879200'
+
+
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (10.6ms)
+
+
+Started GET "/popups/5" for 127.0.0.1 at 2014-05-26 11:04:59 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPopup Load (0.3ms)[0m  SELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mFeed Load (0.3ms)[0m  [1mSELECT "feeds".* FROM "feeds"  WHERE "feeds"."popup_id" = $1[0m  [["popup_id", 5]]
+  [1m[35mPopup Load (0.5ms)[0m  SELECT "popups".* FROM "popups"
+  Rendered popups/show.html.erb within layouts/application (19.6ms)
+Completed 500 Internal Server Error in 24ms
+
+ActionView::Template::Error (undefined local variable or method `count' for #<#<Class:0x000001092fa760>:0x000001055285e0>):
+    17:     <%= feed.comment %><br>
+    18:       <% count += 1%>
+    19:   <% end %></br> 
+    20:   Comment Count: <%= link_to "#{count} comments", popup_feeds_path(@popup)%>
+    21: 
+    22:  
+    23:   <br></br> 
+  app/views/popups/show.html.erb:20:in `_app_views_popups_show_html_erb___517188503035001351_2159879200'
+
+
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (10.3ms)
+
+
+Started GET "/popups/5" for 127.0.0.1 at 2014-05-26 11:05:11 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPopup Load (0.5ms)[0m  SELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mFeed Load (0.3ms)[0m  [1mSELECT "feeds".* FROM "feeds"  WHERE "feeds"."popup_id" = $1[0m  [["popup_id", 5]]
+  [1m[35mPopup Load (0.5ms)[0m  SELECT "popups".* FROM "popups"
+  Rendered popups/show.html.erb within layouts/application (22.6ms)
+Completed 500 Internal Server Error in 32ms
+
+ActionView::Template::Error (undefined local variable or method `count' for #<#<Class:0x000001092fa760>:0x00000106e08d30>):
+    17:     <%= feed.comment %>
+    18:       <% count += 1%>
+    19:   <% end %></br> 
+    20:   Comment Count:<%= link_to "#{count} comments", popup_feeds_path(@popup)%>
+    21: 
+    22:  
+    23:   <br></br> 
+  app/views/popups/show.html.erb:20:in `_app_views_popups_show_html_erb___517188503035001351_2205162600'
+
+
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (9.9ms)
+
+
+Started GET "/popups/5" for 127.0.0.1 at 2014-05-26 11:05:16 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPopup Load (0.6ms)[0m  SELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mFeed Load (1.9ms)[0m  [1mSELECT "feeds".* FROM "feeds"  WHERE "feeds"."popup_id" = $1[0m  [["popup_id", 5]]
+  Rendered popups/show.html.erb within layouts/application (5.5ms)
+  Rendered layouts/_form.html.erb (0.1ms)
+Completed 200 OK in 20ms (Views: 10.3ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/assets/feeds.css?body=1" for 127.0.0.1 at 2014-05-26 11:05:16 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-26 11:05:16 -0700
+
+
+Started GET "/assets/popups.css?body=1" for 127.0.0.1 at 2014-05-26 11:05:16 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-05-26 11:05:16 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-26 11:05:16 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-26 11:05:16 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-05-26 11:05:16 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-26 11:05:16 -0700
+
+
+Started GET "/assets/feeds.js?body=1" for 127.0.0.1 at 2014-05-26 11:05:16 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-26 11:05:16 -0700
+
+
+Started GET "/assets/popups.js?body=1" for 127.0.0.1 at 2014-05-26 11:05:16 -0700
+
+
+Started GET "/popups.json" for 127.0.0.1 at 2014-05-26 11:05:16 -0700
+Processing by PopupsController#index as JSON
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (0.4ms)[0m  [1mSELECT "popups".* FROM "popups"[0m
+Completed 200 OK in 5ms (Views: 1.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/popups/5" for 127.0.0.1 at 2014-05-26 11:05:28 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (0.3ms)[0m  [1mSELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mFeed Load (0.3ms)[0m  SELECT "feeds".* FROM "feeds"  WHERE "feeds"."popup_id" = $1  [["popup_id", 5]]
+  Rendered popups/show.html.erb within layouts/application (3.5ms)
+  Rendered layouts/_form.html.erb (0.1ms)
+Completed 200 OK in 14ms (Views: 10.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/feeds.css?body=1" for 127.0.0.1 at 2014-05-26 11:05:28 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-26 11:05:28 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-26 11:05:28 -0700
+
+
+Started GET "/assets/popups.css?body=1" for 127.0.0.1 at 2014-05-26 11:05:28 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-26 11:05:28 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-05-26 11:05:28 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-05-26 11:05:28 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-26 11:05:28 -0700
+
+
+Started GET "/assets/feeds.js?body=1" for 127.0.0.1 at 2014-05-26 11:05:28 -0700
+
+
+Started GET "/assets/popups.js?body=1" for 127.0.0.1 at 2014-05-26 11:05:28 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-26 11:05:28 -0700
+
+
+Started GET "/popups.json" for 127.0.0.1 at 2014-05-26 11:05:28 -0700
+Processing by PopupsController#index as JSON
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPopup Load (0.6ms)[0m  SELECT "popups".* FROM "popups"
+Completed 200 OK in 6ms (Views: 2.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/popups/5" for 127.0.0.1 at 2014-05-26 11:05:34 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPopup Load (0.9ms)[0m  SELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mFeed Load (0.3ms)[0m  [1mSELECT "feeds".* FROM "feeds"  WHERE "feeds"."popup_id" = $1[0m  [["popup_id", 5]]
+  [1m[35mPopup Load (0.4ms)[0m  SELECT "popups".* FROM "popups"
+  Rendered popups/show.html.erb within layouts/application (20.1ms)
+Completed 500 Internal Server Error in 29ms
+
+ActionView::Template::Error (undefined local variable or method `count' for #<#<Class:0x000001092fa760>:0x00000106d52030>):
+    16:     <%# count = 0%>
+    17:     <%= feed.comment %>
+    18:       <%# count += 1%>
+    19:  Comment Count:<%= link_to "#{count} comments", popup_feeds_path(@popup)%>
+    20:   <% end %></br> 
+    21: 
+    22:  
+  app/views/popups/show.html.erb:19:in `block in _app_views_popups_show_html_erb___517188503035001351_2204796200'
+  app/views/popups/show.html.erb:14:in `_app_views_popups_show_html_erb___517188503035001351_2204796200'
+
+
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/mathur7/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (9.5ms)
+
+
+Started GET "/popups/5" for 127.0.0.1 at 2014-05-26 11:05:48 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPopup Load (0.3ms)[0m  SELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mFeed Load (0.3ms)[0m  [1mSELECT "feeds".* FROM "feeds"  WHERE "feeds"."popup_id" = $1[0m  [["popup_id", 5]]
+  Rendered popups/show.html.erb within layouts/application (3.7ms)
+  Rendered layouts/_form.html.erb (0.1ms)
+Completed 200 OK in 14ms (Views: 9.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/feeds.css?body=1" for 127.0.0.1 at 2014-05-26 11:05:48 -0700
+
+
+Started GET "/assets/popups.css?body=1" for 127.0.0.1 at 2014-05-26 11:05:48 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-26 11:05:48 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-05-26 11:05:48 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-26 11:05:48 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-26 11:05:48 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-05-26 11:05:49 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-26 11:05:49 -0700
+
+
+Started GET "/assets/feeds.js?body=1" for 127.0.0.1 at 2014-05-26 11:05:49 -0700
+
+
+Started GET "/assets/popups.js?body=1" for 127.0.0.1 at 2014-05-26 11:05:49 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-26 11:05:49 -0700
+
+
+Started GET "/popups.json" for 127.0.0.1 at 2014-05-26 11:05:49 -0700
+Processing by PopupsController#index as JSON
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (0.6ms)[0m  [1mSELECT "popups".* FROM "popups"[0m
+Completed 200 OK in 7ms (Views: 2.6ms | ActiveRecord: 1.3ms)

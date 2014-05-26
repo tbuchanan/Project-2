@@ -42,5 +42,5 @@ end
 #                          PATCH  /popups/:popup_id/feeds/:id(.:format)      feeds#update
 #                          PUT    /popups/:popup_id/feeds/:id(.:format)      feeds#update
 #                          DELETE /popups/:popup_id/feeds/:id(.:format)      feeds#destroy
-#                     root GET    /                              popups#index
+#                     root GET    /                                          popups#index
 

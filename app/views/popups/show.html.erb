@@ -6,12 +6,20 @@
 <%= @popup.image %><br>
 <p> Expires at:  <%= @popup.expires_at %><br></p>
 
-<h3>Feed</h3>
-<% @popup.feeds.each do |feed| %>
-  <p><%= feed.comment %></p>
-  <%= link_to "Delete", feed_path(feed), method: 'delete' %>
+<%= form_for ([@popup, @feed_new]) do |f| %>
+  <%= f.text_field :comment, placeholder: "Add your comment" %><br></br>
+  <%= f.submit "Create comment" %><br></br>
 <% end %>
 
-<h5>Leave Comment</h5>
+<% @feeds.each do |feed| %>
+  <%#= link_to popup.name, popup_feeds_path(popup)%>
+    <% count = 0%>
+    <%= feed.comment %>
+      <% count = 1%>
+ Comment Count:<%= link_to "#{count} comments", popup_feeds_path(@popup)%>
+  <% end %></br> 
+<!-- count/comments needs to be fixed -->
+ 
+  <br></br> 
 
-<%= render 'comment_form' %>
+ 

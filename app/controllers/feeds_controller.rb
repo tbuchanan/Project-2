@@ -1,20 +1,38 @@
 class FeedsController < ApplicationController
 
-def create
-  @feed = Feed.create(feed_params)
-  redirect_to popup_path(feed_params[:popup_id])
-end
+before_filter :load_popup
 
-def destroy 
-  feed = Feed.find(params[:id])
-  popup = feed.popup
-  feed.destroy
-  redirect_to popup
-end
+  def index
+    @feeds = @popup.feeds.all
+    @user = current_user
+  end
 
-private
-def feed_params
-  params.require(:feed).permit(:comment, :popup_id, :user_id)
-end
+  def new
+    @feed = @popup.feeds.new
+    @feed = User.find(params[:user_id]).feeds.new(params[:feed])
+  end
+
+  def create
+    @feed = @popup.feeds.new(feed_params)
+    @feed.user_id = current_user.id
+    if @feed.save
+      redirect_to popup_path(@popup)
+    else
+      render 'new'
+    end 
+  end
+
+  def show
+    @feed = @popup.feeds.find(params[:id])
+  end
+
+  private
+  def feed_params
+    params.require(:feed).permit(:comment)
+  end
+    
+  def load_popup
+    @popup = Popup.find(params[:popup_id])
+  end
 
 end
