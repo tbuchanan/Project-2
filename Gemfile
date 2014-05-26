@@ -2,9 +2,13 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.1'
-# Use sqlite3 as the database for Active Record
+# Use postgres as the database for Active Record
 gem 'pg'
 gem 'devise'
+
+# gems for image upload and storage through Amazon AWS/S3
+gem 'paperclip'
+gem 'aws-sdk'
 
 # have to research before implementing
 # gem 'foursquare'
