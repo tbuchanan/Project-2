@@ -6,11 +6,11 @@
      }).success(function(data) {
        for (var i in data) {
          $('#popups').append(
-           '<li>' + data[i].name + '</li>',
-           '<li>' + data[i].description + '</li>',
-           '<li>' + data[i].address + '</li>',
-           '<li>' + data[i].hours + '</li>',
-           '<li>' + data[i].expires_at + '</li>');
+           '<li>' + data[i].name,
+                    data[i].description,
+                    data[i].address,
+                    data[i].hours,
+                    data[i].expires_at + '</li>');
        }
      });
    };

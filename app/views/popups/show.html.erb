@@ -5,3 +5,13 @@
 <%= @popup.hours %><br>
 <%= @popup.image %><br>
 <p> Expires at:  <%= @popup.expires_at %><br></p>
+
+<h3>Feed</h3>
+<% @popup.feeds.each do |feed| %>
+  <p><%= feed.comment %></p>
+  <%= link_to "Delete", feed_path(feed), method: 'delete' %>
+<% end %>
+
+<h5>Leave Comment</h5>
+
+<%= render 'comment_form' %>
