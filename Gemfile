@@ -5,8 +5,6 @@ gem 'rails', '4.1.1'
 # Use postgres as the database for Active Record
 gem 'pg'
 gem 'devise'
-# rails gem for uploading files via jQuery/ajax
-gem 'remotipart', '~> 1.2.1'
 
 # gems for image upload and storage through Amazon AWS/S3
 gem 'paperclip'
