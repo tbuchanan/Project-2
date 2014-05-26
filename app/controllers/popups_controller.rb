@@ -22,6 +22,10 @@ def create
   end
 end
 
+def show
+  @popup = Popup.find(params[:id])
+end
+
 private 
 
 def popup_params
