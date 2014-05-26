@@ -1,4 +1,3 @@
- 
  $(document).ready(function() {
    var loadPopups = function() {
      $.ajax('/popups.json', {
@@ -10,7 +9,7 @@
        for (var i in data) {
         console.log(data[i])
          $('#popups').append(
-           '<a href= https://localhost:3000/popups/' + data[i].id + '>' + '<li>' + data[i].name,
+           '<a href= http://localhost:3000/popups/' + data[i].id + '>' + '<li>' + data[i].name,
                     data[i].description,
                     data[i].address,
                     data[i].hours,
@@ -41,7 +40,7 @@
          },
          dataType: "json",
          success: function(data) {
-           addPopup(data.name, data.image);
+           // addPopup(data.name, data.image);
            console.log(data);
          }
        });
