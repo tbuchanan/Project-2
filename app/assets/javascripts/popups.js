@@ -1,16 +1,19 @@
- 
  $(document).ready(function() {
    var loadPopups = function() {
      $.ajax('/popups.json', {
-       type: 'get'
+       type: 'get',
+       data: {
+         "q": $('#q').val()
+       },
      }).success(function(data) {
        for (var i in data) {
+         console.log(data[i])
          $('#popups').append(
-           '<li>' + data[i].name,
-                    data[i].description,
-                    data[i].address,
-                    data[i].hours,
-                    data[i].expires_at + '</li>');
+           '<a href= http://localhost:3000/popups/' + data[i].id + '>' + '<li>' + data[i].name,
+           data[i].description,
+           data[i].address,
+           data[i].hours,
+           data[i].expires_at + '</li></a>');
        }
      });
    };
@@ -37,7 +40,7 @@
          },
          dataType: "json",
          success: function(data) {
-           addPopup(data.name, data.image);
+           // addPopup(data.name, data.image);
            console.log(data);
          }
        });

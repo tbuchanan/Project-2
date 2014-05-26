@@ -1,9 +1,16 @@
 Rails.application.routes.draw do
 
+  # get 'search' => 'popups#search'
+
+  resources :popups do 
+    get 'search', on: :collection
+  end 
+
   devise_for :users
   resources :popups do
     resources :feeds
   end 
+ 
 
   root 'popups#index'
 

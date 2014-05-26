@@ -1,0 +1,8 @@
+<div class="navbar navbar-default">
+  <div class="row">
+    <div class="col-sm-12">
+    <%= form_tag "/", method: "GET" do %>
+      <%= text_field_tag :q, params[:q] %>
+      <%= submit_tag "Search" %>
+    <% end %>
+      

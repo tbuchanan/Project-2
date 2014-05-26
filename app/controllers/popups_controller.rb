@@ -1,17 +1,17 @@
 class PopupsController < ApplicationController
 
 def index
-  @popups = Popup.all
+  @popups = Popup.search_for(params[:q])
   @popup = Popup.new
+  
   respond_to do |f|
     f.html { render :index }
-    f.json { render json: @popups, :only => [:name, :address, :hours, :expires_at, :price, :description, :image] }
+    f.json { render json: @popups} #, :only => [:id, :name, :address, :hours, :expires_at, :price, :description, :image] }
   end
 end
 
 def create
   @popup = Popup.new popup_params
-  @popups = Popup.all
   if @popup.save
     respond_to do |f|
       f.html { render :index }
@@ -27,13 +27,12 @@ def show
   @feed_new = Feed.new
   # @feed = @popup.feeds
   @feeds = @popup.feeds.all
-  @popups = Popup.all
 end
 
 private 
 
 def popup_params
-  params.require(:popup).permit(:name, :address, :hours, :expires_at, :price, :description, :image, :feeds_attributes => [:comment])  
+  params.require(:popup).permit(:id, :name, :address, :hours, :expires_at, :price, :description, :image, :feeds_attributes => [:comment])  
 end
 
 end
