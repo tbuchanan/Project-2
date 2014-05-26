@@ -3,7 +3,7 @@
      $.ajax('/popups.json', {
        type: 'get',
        data: {
-        "q": $('#q'.val()
+        "q": $('#q').val()
        },
      }).success(function(data) {
        for (var i in data) {
