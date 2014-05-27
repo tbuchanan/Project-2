@@ -3,8 +3,7 @@ class Popup < ActiveRecord::Base
   belongs_to :user
   has_many :feeds
 
-  validates :image, :presence => { :message => "Image is required" }
-  validates :geocode, presence: true
+  # validates :geocode, presence: true
 
   # for geocoder gem to convert address into "geocode"(longitude and latitude)
   geocoded_by :address
