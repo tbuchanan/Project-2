@@ -52,12 +52,21 @@
            console.log(data);
          }
        });
-       // $('#new_popup').click(function(e) {
-       //   http: localhost / popups / id
-       // })
+
+
 
      });
 
    };
    addPopup();
+   // $('#name').click(function() {
+   //   $.ajax({
+   //     type: "POST",
+   //     url: "/popups",
+   //     data: {
+   //       name: name
+   //     }
+   //   });
+   //   window.location.replace("/popups/show");
+   // });
  });

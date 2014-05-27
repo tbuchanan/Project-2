@@ -13,3 +13,80 @@
  *= require_tree .
  *= require_self
  */
+
+@import url(http://fonts.googleapis.com/css?family=Ewert);
+@import url(http://fonts.googleapis.com/css?family=Indie+Flower);
+@import url(http://fonts.googleapis.com/css?family=Playfair+Display:700);
+
+a {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+}
+
+a.navbar-brand {
+  font-family: 'Ewert', cursive;
+  font-size: 35px;
+  margin-top: -2px;
+}
+
+.form-group {
+  margin-top: 5px;
+}
+
+a.navbar-brand:hover, a.navbar-brand:hover:focus {
+  text-decoration: underline;
+}
+
+#popups {
+
+}
+
+h3 {
+  margin-top: 0;
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  color: #2980b9;
+}
+
+.navbar {
+  background-color: #ADD8E6;
+}
+
+
+div.jumbotron {
+  background-color: #F8F8FF;
+}
+
+.container {
+  margin-top: 27px;
+}
+
+.container .jumbotron {
+border-radius: 5px;
+/*background: repeating-linear-gradient(circle at 0 0, #ADD8E6, #F8F8FF);*/
+background: #D3D3D3;
+padding-top: 20px;
+padding-bottom: 20px;
+
+}
+
+body {
+  background-color: #F5F5F5;
+  font-family: 'Playfair Display', serif;
+}
+
+ul {
+  
+  font-family: 'Playfair Display', serif;
+}
+
+input, button, select, textarea {
+font-family: 'Playfair Display', serif;
+font-size: 12px;
+}
+
+ul#popups {
+  padding-left: 19px;
+}
+
+

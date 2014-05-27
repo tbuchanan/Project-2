@@ -1,8 +1,36 @@
-<div class="navbar navbar-default">
-  <div class="row">
-    <div class="col-sm-12">
-    <%= form_tag "/", method: "GET" do %>
-      <%= text_field_tag :q, params[:q] %>
-      <%= submit_tag "Search" %>
-    <% end %>
-      
+ <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header-fluid">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/popups">Popupz</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <form class="navbar-form navbar-right" role="form">
+            <div class="form-group">
+              <%= form_tag "/", method: "GET" do %>
+                <%= text_field_tag :q, params[:q] %>
+                <%= submit_tag "Search" %>
+              <% end %>
+              <% if user_signed_in? %>
+                Logged in as <strong><%= current_user.email %></strong>.
+                <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
+                <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+              <% else %>
+                <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
+                <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+              <% end %>
+            </div>
+          </form>
+           
+        </div>
+      </div>          
+    </div>
+</div>
+<br></br>
+
+

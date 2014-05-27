@@ -1,22 +1,27 @@
-<h1> Popups </h1>
+<h3> Add a new Popup! </h3>
 
-
-<form>
-  <input id="name" type="text" placeholder="Add Popup">
-  <input id="description" type="text" placeholder="description">
-  <input id="price" type="text" placeholder="price">
-  <input id="address" type="text" placeholder="address">
-  <input id="hours" type="text" placeholder="hours">
-  <input id="expires_at" type="text" placeholder="Expires at">
-  <!-- <input id="image" type="file" placeholder="image"> -->
-  <input type="file" id="upload" accept="image">
-  <button id="submit" type="submit">Submit</button>
-</form>
-<br>
-
-<ul id = "popups">
-	<br>
-</ul>
+<div class="jumbotron">
+  <form>
+    <input id="name" type="text" placeholder="popup name">
+    <input id="description" type="text" placeholder="description">
+    <input id="price" type="text" placeholder="price">
+    <input id="address" type="text" placeholder="address">
+    <input id="hours" type="text" placeholder="hours">
+    <input id="expires_at" type="text" placeholder="expires at">
+    <!-- <input id="image" type="file" placeholder="image"> -->
+    <!-- <input type="file" id="upload" accept="image"> -->
+    <button id="submit" type="submit">Submit</button>
+  </form>
+  <!-- <%#= form_for @popup, :html => { :multipart => true } do |f| %>
+    <div><%#= f.file_field :image %> 
+      <%#= f.submit "Upload image", :class => "btn-default" %>
+    </div>
+  <%# end %> -->
+  </div>
+  
+  <ul id = "popups">
+  	<br>
+  </ul>
 
 
 
