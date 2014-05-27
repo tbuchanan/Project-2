@@ -16,7 +16,7 @@ before_filter :load_popup
     @feed = @popup.feeds.new(feed_params)
     @feed.user_id = current_user.id
     if @feed.save
-      redirect_to popup_path(@popup)
+      redirect_to popup_feeds_path(@popup)
     else
       render 'new'
     end 

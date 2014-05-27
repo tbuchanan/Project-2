@@ -3,8 +3,8 @@
 <%= @popup.price %><br>
 <%= @popup.address %><br>
 <%= @popup.hours %><br>
-<%= image_tag @popup.image %>
-<p> Expires at:  <%= @popup.expires_at %><br></p>
+<%= image_tag @popup.image(:medium) %>
+<p> Expires at:  <%= @popup.expires_at %></p>
 
 <%= form_for ([@popup, @feed_new]) do |f| %>
   <%= f.text_field :comment, placeholder: "Add your comment" %><br></br>
@@ -20,8 +20,14 @@
     <% count = 1%>
     Comment Count:<%= link_to "#{count} comments", popup_feeds_path(@popup)%></br>     
   <% end %></br> 
+  
+
 <!-- count/comments needs to be fixed -->
  
-  <br></br> 
+  <%= form_for @popup, :html => { :multipart => true } do |f| %>
+    <div><%= f.file_field :image %> </br> 
+      <%= f.submit "Upload image", :class => "btn-default" %>
+    </div>
+  <% end %> 
 
  
