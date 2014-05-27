@@ -57588,3 +57588,1193 @@ Processing by PopupsController#index as JSON
   [1m[35mUser Load (1.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
   [1m[36mPopup Load (1.1ms)[0m  [1mSELECT "popups".* FROM "popups"  WHERE (name LIKE '%%')[0m
 Completed 200 OK in 17ms (Views: 10.2ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/popups" for 127.0.0.1 at 2014-05-27 14:58:07 -0700
+Processing by PopupsController#index as HTML
+  [1m[35mUser Load (2.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered popups/index.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_search.html.erb (4.7ms)
+  Rendered layouts/_form.html.erb (0.7ms)
+Completed 200 OK in 61ms (Views: 40.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-05-27 14:58:08 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-27 14:58:08 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-27 14:58:08 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-27 14:58:08 -0700
+
+
+Started GET "/assets/feeds.css?body=1" for 127.0.0.1 at 2014-05-27 14:58:08 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-05-27 14:58:08 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-27 14:58:08 -0700
+
+
+Started GET "/assets/google.js?body=1" for 127.0.0.1 at 2014-05-27 14:58:08 -0700
+
+
+Started GET "/assets/popups.js?body=1" for 127.0.0.1 at 2014-05-27 14:58:08 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-27 14:58:08 -0700
+
+
+Started GET "/assets/popups.css?body=1" for 127.0.0.1 at 2014-05-27 14:58:08 -0700
+
+
+Started GET "/popups.json?q=" for 127.0.0.1 at 2014-05-27 14:58:09 -0700
+Processing by PopupsController#index as JSON
+  Parameters: {"q"=>""}
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPopup Load (1.5ms)[0m  SELECT "popups".* FROM "popups"  WHERE (name LIKE '%%')
+Completed 200 OK in 28ms (Views: 21.4ms | ActiveRecord: 2.6ms)
+
+
+Started POST "/popups" for 127.0.0.1 at 2014-05-27 14:58:25 -0700
+Processing by PopupsController#create as JSON
+  Parameters: {"popup"=>{"name"=>"asdf", "description"=>"asdf", "address"=>"333 brannan st, san francisco, ca", "price"=>"adsf", "hours"=>"asdf", "expires_at"=>"asdf"}}
+  [1m[36mUser Load (2.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+Completed 500 Internal Server Error in 440ms
+
+NameError (undefined local variable or method `f' for #<PopupsController:0x007fb82cb99448>):
+  app/controllers/popups_controller.rb:20:in `create'
+
+
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.1ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (2.0ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (2.5ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb (65.6ms)
+
+
+Started GET "/popups/asdf" for 127.0.0.1 at 2014-05-27 14:58:29 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"asdf"}
+  [1m[35mUser Load (1.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (9.5ms)[0m  [1mSELECT  "popups".* FROM "popups"  WHERE "popups"."name" = 'asdf' LIMIT 1[0m
+Completed 500 Internal Server Error in 42ms
+
+NoMethodError (undefined method `feeds' for nil:NilClass):
+  app/controllers/popups_controller.rb:33:in `show'
+
+
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.7ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (40.5ms)
+
+
+Started GET "/popups/asdf" for 127.0.0.1 at 2014-05-27 14:58:29 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"asdf"}
+  [1m[35mUser Load (1.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (0.9ms)[0m  [1mSELECT  "popups".* FROM "popups"  WHERE "popups"."name" = 'asdf' LIMIT 1[0m
+Completed 500 Internal Server Error in 8ms
+
+NoMethodError (undefined method `feeds' for nil:NilClass):
+  app/controllers/popups_controller.rb:33:in `show'
+
+
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.1ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (41.5ms)
+
+
+Started GET "/popups" for 127.0.0.1 at 2014-05-27 14:58:34 -0700
+Processing by PopupsController#index as HTML
+  [1m[35mUser Load (1.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered popups/index.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_search.html.erb (1.3ms)
+  Rendered layouts/_form.html.erb (0.2ms)
+Completed 200 OK in 23ms (Views: 17.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/popups.css?body=1" for 127.0.0.1 at 2014-05-27 14:58:34 -0700
+
+
+Started GET "/assets/feeds.css?body=1" for 127.0.0.1 at 2014-05-27 14:58:34 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-27 14:58:34 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-27 14:58:34 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-05-27 14:58:34 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-27 14:58:34 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-27 14:58:34 -0700
+
+
+Started GET "/assets/google.js?body=1" for 127.0.0.1 at 2014-05-27 14:58:34 -0700
+
+
+Started GET "/assets/popups.js?body=1" for 127.0.0.1 at 2014-05-27 14:58:35 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-05-27 14:58:35 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-27 14:58:35 -0700
+
+
+Started GET "/popups.json?q=" for 127.0.0.1 at 2014-05-27 14:58:35 -0700
+Processing by PopupsController#index as JSON
+  Parameters: {"q"=>""}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPopup Load (1.4ms)[0m  SELECT "popups".* FROM "popups"  WHERE (name LIKE '%%')
+Completed 200 OK in 20ms (Views: 10.2ms | ActiveRecord: 2.4ms)
+
+
+Started POST "/popups" for 127.0.0.1 at 2014-05-27 14:59:04 -0700
+Processing by PopupsController#create as JSON
+  Parameters: {"popup"=>{"name"=>"asdf", "description"=>"asdf", "address"=>"333 brannan st, san francisco, ca", "price"=>"asdf", "hours"=>"asdf", "expires_at"=>"asdf"}}
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (0.7ms)[0m  [1mROLLBACK[0m
+Completed 500 Internal Server Error in 241ms
+
+NameError (undefined local variable or method `f' for #<PopupsController:0x007fb829c70298>):
+  app/controllers/popups_controller.rb:20:in `create'
+
+
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.3ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (1.2ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (1.9ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb (46.2ms)
+
+
+Started GET "/popups/asdf" for 127.0.0.1 at 2014-05-27 14:59:12 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"asdf"}
+  [1m[35mUser Load (1.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (2.0ms)[0m  [1mSELECT  "popups".* FROM "popups"  WHERE "popups"."name" = 'asdf' LIMIT 1[0m
+Completed 500 Internal Server Error in 9ms
+
+NoMethodError (undefined method `feeds' for nil:NilClass):
+  app/controllers/popups_controller.rb:33:in `show'
+
+
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.8ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.5ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (169.2ms)
+
+
+Started GET "/popups/asdf" for 127.0.0.1 at 2014-05-27 15:00:21 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"asdf"}
+  [1m[35mUser Load (1.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (0.8ms)[0m  [1mSELECT  "popups".* FROM "popups"  WHERE "popups"."name" = 'asdf' LIMIT 1[0m
+  Rendered popups/show.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 91ms
+
+ActionView::Template::Error (undefined method `address' for nil:NilClass):
+    1: <div class="col-md-7" id="google">
+    2:     <%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&markers=#{@popup.address}&zoom=16", id: "popupMap" %>
+    3:     <button id="zoomOut"> - </button><button id="zoomIn"> + </button>
+    4:   </div>
+    5:   <script>
+  app/views/popups/show.html.erb:2:in `_app_views_popups_show_html_erb__4320194028158099436_70214496814240'
+
+
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.4ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (37.6ms)
+
+
+Started GET "/popups/asdf" for 127.0.0.1 at 2014-05-27 15:01:04 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"asdf"}
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (0.8ms)[0m  [1mSELECT  "popups".* FROM "popups"  WHERE "popups"."name" = 'asdf' LIMIT 1[0m
+Completed 500 Internal Server Error in 78ms
+
+NoMethodError (undefined method `feeds' for nil:NilClass):
+  app/controllers/popups_controller.rb:33:in `show'
+
+
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.5ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.7ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (46.1ms)
+
+
+Started GET "/popups/" for 127.0.0.1 at 2014-05-27 15:01:08 -0700
+Processing by PopupsController#index as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered popups/index.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_search.html.erb (1.4ms)
+  Rendered layouts/_form.html.erb (0.2ms)
+Completed 200 OK in 27ms (Views: 21.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/feeds.css?body=1" for 127.0.0.1 at 2014-05-27 15:01:08 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-27 15:01:08 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-27 15:01:08 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-27 15:01:08 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-05-27 15:01:08 -0700
+
+
+Started GET "/assets/popups.css?body=1" for 127.0.0.1 at 2014-05-27 15:01:08 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-27 15:01:08 -0700
+
+
+Started GET "/assets/google.js?body=1" for 127.0.0.1 at 2014-05-27 15:01:08 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-05-27 15:01:08 -0700
+
+
+Started GET "/assets/popups.js?body=1" for 127.0.0.1 at 2014-05-27 15:01:08 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-27 15:01:08 -0700
+
+
+Started GET "/popups.json?q=" for 127.0.0.1 at 2014-05-27 15:01:09 -0700
+Processing by PopupsController#index as JSON
+  Parameters: {"q"=>""}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPopup Load (1.0ms)[0m  SELECT "popups".* FROM "popups"  WHERE (name LIKE '%%')
+Completed 200 OK in 44ms (Views: 37.0ms | ActiveRecord: 2.1ms)
+
+
+Started POST "/popups" for 127.0.0.1 at 2014-05-27 15:01:28 -0700
+Processing by PopupsController#create as JSON
+  Parameters: {"popup"=>{"name"=>"asdf", "description"=>"dsf", "address"=>"444 main st, sf, ca", "price"=>"adsf", "hours"=>"adsf", "expires_at"=>"asdf"}}
+  [1m[36mUser Load (2.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (0.7ms)[0m  [1mROLLBACK[0m
+Completed 500 Internal Server Error in 258ms
+
+NameError (undefined local variable or method `f' for #<PopupsController:0x007fb82c45b320>):
+  app/controllers/popups_controller.rb:20:in `create'
+
+
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.3ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (1.3ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (1.8ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb (47.6ms)
+
+
+Started GET "/popups/asdf" for 127.0.0.1 at 2014-05-27 15:01:30 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"asdf"}
+  [1m[35mUser Load (1.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (2.2ms)[0m  [1mSELECT  "popups".* FROM "popups"  WHERE "popups"."name" = 'asdf' LIMIT 1[0m
+Completed 500 Internal Server Error in 15ms
+
+NoMethodError (undefined method `feeds' for nil:NilClass):
+  app/controllers/popups_controller.rb:33:in `show'
+
+
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.4ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (38.3ms)
+
+
+Started GET "/popups/asdf" for 127.0.0.1 at 2014-05-27 15:01:30 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"asdf"}
+  [1m[35mUser Load (4.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (0.9ms)[0m  [1mSELECT  "popups".* FROM "popups"  WHERE "popups"."name" = 'asdf' LIMIT 1[0m
+Completed 500 Internal Server Error in 12ms
+
+NoMethodError (undefined method `feeds' for nil:NilClass):
+  app/controllers/popups_controller.rb:33:in `show'
+
+
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.6ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (40.1ms)
+
+
+Started GET "/popups/asdf" for 127.0.0.1 at 2014-05-27 15:01:51 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"asdf"}
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (0.8ms)[0m  [1mSELECT  "popups".* FROM "popups"  WHERE "popups"."name" = 'asdf' LIMIT 1[0m
+Completed 500 Internal Server Error in 78ms
+
+NoMethodError (undefined method `feeds' for nil:NilClass):
+  app/controllers/popups_controller.rb:33:in `show'
+
+
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.4ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (40.2ms)
+
+
+Started GET "/popups/asdf" for 127.0.0.1 at 2014-05-27 15:01:58 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"asdf"}
+  [1m[35mUser Load (1.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (1.5ms)[0m  [1mSELECT  "popups".* FROM "popups"  WHERE "popups"."name" = 'asdf' LIMIT 1[0m
+Completed 500 Internal Server Error in 183ms
+
+NoMethodError (undefined method `feeds' for nil:NilClass):
+  app/controllers/popups_controller.rb:33:in `show'
+
+
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.5ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (39.6ms)
+
+
+Started GET "/popups/asdf" for 127.0.0.1 at 2014-05-27 15:02:08 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"asdf"}
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (0.9ms)[0m  [1mSELECT  "popups".* FROM "popups"  WHERE "popups"."name" = 'asdf' LIMIT 1[0m
+Completed 500 Internal Server Error in 74ms
+
+NoMethodError (undefined method `feeds' for nil:NilClass):
+  app/controllers/popups_controller.rb:33:in `show'
+
+
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.5ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.6ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (43.1ms)
+
+
+Started GET "/popups/asdf" for 127.0.0.1 at 2014-05-27 15:02:18 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"asdf"}
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (4.3ms)[0m  [1mSELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1[0m  [["id", 0]]
+Completed 404 Not Found in 173ms
+
+ActiveRecord::RecordNotFound (Couldn't find Popup with 'id'=asdf):
+  app/controllers/popups_controller.rb:25:in `show'
+
+
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.7ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (43.0ms)
+
+
+Started GET "/popups/asdf" for 127.0.0.1 at 2014-05-27 15:02:29 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"asdf"}
+  [1m[35mUser Load (1.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (0.4ms)[0m  [1mSELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1[0m  [["id", 0]]
+Completed 404 Not Found in 61ms
+
+ActiveRecord::RecordNotFound (Couldn't find Popup with 'id'=asdf):
+  app/controllers/popups_controller.rb:25:in `show'
+
+
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.4ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (38.4ms)
+
+
+Started GET "/popups/asdf" for 127.0.0.1 at 2014-05-27 15:02:42 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"asdf"}
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (0.8ms)[0m  [1mSELECT  "popups".* FROM "popups"  WHERE "popups"."name" = 'asdf' LIMIT 1[0m
+Completed 500 Internal Server Error in 180ms
+
+NoMethodError (undefined method `feeds' for nil:NilClass):
+  app/controllers/popups_controller.rb:33:in `show'
+
+
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.5ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (38.8ms)
+
+
+Started GET "/popups/asdf" for 127.0.0.1 at 2014-05-27 15:03:10 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"asdf"}
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (0.8ms)[0m  [1mSELECT  "popups".* FROM "popups"  WHERE "popups"."name" = 'asdf' LIMIT 1[0m
+Completed 500 Internal Server Error in 29259ms
+
+NoMethodError (undefined method `feeds' for nil:NilClass):
+  app/controllers/popups_controller.rb:34:in `show'
+
+
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.6ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.9ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.3ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (47.8ms)
+
+
+Started GET "/popups/asdf" for 127.0.0.1 at 2014-05-27 15:03:40 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"asdf"}
+  [1m[35mUser Load (1.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (0.5ms)[0m  [1mSELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1[0m  [["id", 0]]
+Completed 404 Not Found in 71ms
+
+ActiveRecord::RecordNotFound (Couldn't find Popup with 'id'=asdf):
+  app/controllers/popups_controller.rb:25:in `show'
+
+
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.8ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (41.9ms)
+
+
+Started GET "/popups/asdf" for 127.0.0.1 at 2014-05-27 15:03:42 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"asdf"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (0.7ms)[0m  [1mSELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1[0m  [["id", 0]]
+Completed 404 Not Found in 12ms
+
+ActiveRecord::RecordNotFound (Couldn't find Popup with 'id'=asdf):
+  app/controllers/popups_controller.rb:25:in `show'
+
+
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.5ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (28.9ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (113.4ms)
+
+
+Started GET "/popups" for 127.0.0.1 at 2014-05-27 15:03:48 -0700
+Processing by PopupsController#index as HTML
+  [1m[35mUser Load (2.8ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered popups/index.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_search.html.erb (1.5ms)
+  Rendered layouts/_form.html.erb (0.2ms)
+Completed 200 OK in 33ms (Views: 23.9ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/assets/popups.css?body=1" for 127.0.0.1 at 2014-05-27 15:03:48 -0700
+
+
+Started GET "/assets/feeds.css?body=1" for 127.0.0.1 at 2014-05-27 15:03:48 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-27 15:03:48 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-27 15:03:48 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-27 15:03:48 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-05-27 15:03:48 -0700
+
+
+Started GET "/assets/google.js?body=1" for 127.0.0.1 at 2014-05-27 15:03:48 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-27 15:03:48 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-05-27 15:03:48 -0700
+
+
+Started GET "/assets/popups.js?body=1" for 127.0.0.1 at 2014-05-27 15:03:48 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-27 15:03:48 -0700
+
+
+Started GET "/popups.json?q=" for 127.0.0.1 at 2014-05-27 15:03:48 -0700
+Processing by PopupsController#index as JSON
+  Parameters: {"q"=>""}
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPopup Load (8.2ms)[0m  SELECT "popups".* FROM "popups"  WHERE (name LIKE '%%')
+Completed 200 OK in 64ms (Views: 49.1ms | ActiveRecord: 9.3ms)
+
+
+Started POST "/popups" for 127.0.0.1 at 2014-05-27 15:03:51 -0700
+Processing by PopupsController#create as JSON
+  Parameters: {"popup"=>{"name"=>"asdf", "description"=>"", "address"=>"", "price"=>"", "hours"=>"", "expires_at"=>""}}
+  [1m[36mUser Load (1.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36m (0.9ms)[0m  [1mROLLBACK[0m
+Completed 500 Internal Server Error in 26ms
+
+NameError (undefined local variable or method `f' for #<PopupsController:0x007fb82c502df0>):
+  app/controllers/popups_controller.rb:20:in `create'
+
+
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.5ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (1.2ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (1.9ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb (47.2ms)
+
+
+Started GET "/popups/asdf" for 127.0.0.1 at 2014-05-27 15:03:52 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"asdf"}
+  [1m[35mUser Load (7.8ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (0.7ms)[0m  [1mSELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1[0m  [["id", 0]]
+Completed 404 Not Found in 34ms
+
+ActiveRecord::RecordNotFound (Couldn't find Popup with 'id'=asdf):
+  app/controllers/popups_controller.rb:25:in `show'
+
+
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.4ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.3ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (43.2ms)
+
+
+Started GET "/popups/asdf" for 127.0.0.1 at 2014-05-27 15:03:53 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"asdf"}
+  [1m[35mUser Load (1.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (0.7ms)[0m  [1mSELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1[0m  [["id", 0]]
+Completed 404 Not Found in 8ms
+
+ActiveRecord::RecordNotFound (Couldn't find Popup with 'id'=asdf):
+  app/controllers/popups_controller.rb:25:in `show'
+
+
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.8ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.4ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (140.4ms)
+
+
+Started GET "/popups/asdf" for 127.0.0.1 at 2014-05-27 15:04:05 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"asdf"}
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (0.6ms)[0m  [1mSELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1[0m  [["id", 0]]
+Completed 404 Not Found in 81340ms
+
+ActiveRecord::RecordNotFound (Couldn't find Popup with 'id'=asdf):
+  app/controllers/popups_controller.rb:26:in `show'
+
+
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.4ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (8.5ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (47.1ms)
+
+
+Started GET "/popups/asdf" for 127.0.0.1 at 2014-05-27 15:05:27 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"asdf"}
+  [1m[35mUser Load (1.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (0.8ms)[0m  [1mSELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1[0m  [["id", 0]]
+Completed 404 Not Found in 2341ms
+
+ActiveRecord::RecordNotFound (Couldn't find Popup with 'id'=asdf):
+  app/controllers/popups_controller.rb:26:in `show'
+
+
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.6ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (42.1ms)
+
+
+Started GET "/popups/asdf" for 127.0.0.1 at 2014-05-27 15:05:55 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"asdf"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (0.8ms)[0m  [1mSELECT  "popups".* FROM "popups"  WHERE "popups"."name" = 'asdf' LIMIT 1[0m
+Completed 500 Internal Server Error in 88ms
+
+NoMethodError (undefined method `feeds' for nil:NilClass):
+  app/controllers/popups_controller.rb:33:in `show'
+
+
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.4ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.4ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (43.0ms)
+
+
+Started GET "/popups/asdf" for 127.0.0.1 at 2014-05-27 15:06:16 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"asdf"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (1.0ms)[0m  [1mSELECT  "popups".* FROM "popups"  WHERE "popups"."name" = 'asdf' LIMIT 1[0m
+Completed 500 Internal Server Error in 8ms
+
+NoMethodError (undefined method `feeds' for nil:NilClass):
+  app/controllers/popups_controller.rb:33:in `show'
+
+
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.5ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (43.6ms)
+
+
+Started GET "/popups/asdf" for 127.0.0.1 at 2014-05-27 15:06:22 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"asdf"}
+  [1m[35mUser Load (1.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (0.9ms)[0m  [1mSELECT  "popups".* FROM "popups"  WHERE "popups"."name" = 'asdf' LIMIT 1[0m
+Completed 500 Internal Server Error in 10ms
+
+NoMethodError (undefined method `feeds' for nil:NilClass):
+  app/controllers/popups_controller.rb:33:in `show'
+
+
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.7ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (50.1ms)
+
+
+Started GET "/popups/asdf" for 127.0.0.1 at 2014-05-27 15:06:51 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"asdf"}
+  [1m[35mUser Load (1.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (0.9ms)[0m  [1mSELECT  "popups".* FROM "popups"  WHERE "popups"."name" = 'asdf' LIMIT 1[0m
+Completed 500 Internal Server Error in 8ms
+
+NoMethodError (undefined method `feeds' for nil:NilClass):
+  app/controllers/popups_controller.rb:33:in `show'
+
+
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.6ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (39.8ms)
+
+
+Started GET "/popups" for 127.0.0.1 at 2014-05-27 15:07:16 -0700
+Processing by PopupsController#index as HTML
+  [1m[35mUser Load (1.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered popups/index.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_search.html.erb (1.6ms)
+  Rendered layouts/_form.html.erb (0.2ms)
+Completed 200 OK in 41ms (Views: 34.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/feeds.css?body=1" for 127.0.0.1 at 2014-05-27 15:07:16 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-27 15:07:16 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-27 15:07:16 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-27 15:07:16 -0700
+
+
+Started GET "/assets/popups.css?body=1" for 127.0.0.1 at 2014-05-27 15:07:16 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-05-27 15:07:16 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-27 15:07:16 -0700
+
+
+Started GET "/assets/google.js?body=1" for 127.0.0.1 at 2014-05-27 15:07:16 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-27 15:07:16 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-05-27 15:07:16 -0700
+
+
+Started GET "/assets/popups.js?body=1" for 127.0.0.1 at 2014-05-27 15:07:16 -0700
+
+
+Started GET "/popups.json?q=" for 127.0.0.1 at 2014-05-27 15:07:17 -0700
+Processing by PopupsController#index as JSON
+  Parameters: {"q"=>""}
+  [1m[36mUser Load (2.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPopup Load (1.0ms)[0m  SELECT "popups".* FROM "popups"  WHERE (name LIKE '%%')
+Completed 200 OK in 55ms (Views: 46.4ms | ActiveRecord: 3.6ms)
+
+
+Started POST "/popups" for 127.0.0.1 at 2014-05-27 15:07:22 -0700
+Processing by PopupsController#create as JSON
+  Parameters: {"popup"=>{"name"=>"asdfsd", "description"=>"", "address"=>"", "price"=>"", "hours"=>"", "expires_at"=>""}}
+  [1m[36mUser Load (4.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (5.4ms)[0m  [1mROLLBACK[0m
+Completed 500 Internal Server Error in 43ms
+
+NameError (undefined local variable or method `f' for #<PopupsController:0x007fb82ca5cd50>):
+  app/controllers/popups_controller.rb:20:in `create'
+
+
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.4ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (1.5ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (1.8ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb (54.9ms)
+
+
+Started GET "/popups/asdfsd" for 127.0.0.1 at 2014-05-27 15:07:24 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"asdfsd"}
+  [1m[35mUser Load (1.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (1.0ms)[0m  [1mSELECT  "popups".* FROM "popups"  WHERE "popups"."name" = 'asdfsd' LIMIT 1[0m
+Completed 500 Internal Server Error in 14ms
+
+NoMethodError (undefined method `feeds' for nil:NilClass):
+  app/controllers/popups_controller.rb:33:in `show'
+
+
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.6ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.4ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (45.5ms)
+
+
+Started GET "/popups/asdfsd" for 127.0.0.1 at 2014-05-27 15:07:24 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"asdfsd"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (0.9ms)[0m  [1mSELECT  "popups".* FROM "popups"  WHERE "popups"."name" = 'asdfsd' LIMIT 1[0m
+Completed 500 Internal Server Error in 8ms
+
+NoMethodError (undefined method `feeds' for nil:NilClass):
+  app/controllers/popups_controller.rb:33:in `show'
+
+
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.5ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.7ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.4ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (53.1ms)
+
+
+Started GET "/popups/asdfsd" for 127.0.0.1 at 2014-05-27 15:07:48 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"asdfsd"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (0.8ms)[0m  [1mSELECT  "popups".* FROM "popups"  WHERE "popups"."name" = 'asdfsd' LIMIT 1[0m
+Completed 500 Internal Server Error in 8ms
+
+NoMethodError (undefined method `feeds' for nil:NilClass):
+  app/controllers/popups_controller.rb:33:in `show'
+
+
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.4ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (39.0ms)
+
+
+Started GET "/popups/asdfsd" for 127.0.0.1 at 2014-05-27 15:07:51 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"asdfsd"}
+  [1m[35mUser Load (1.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (1.0ms)[0m  [1mSELECT  "popups".* FROM "popups"  WHERE "popups"."name" = 'asdfsd' LIMIT 1[0m
+Completed 500 Internal Server Error in 11ms
+
+NoMethodError (undefined method `feeds' for nil:NilClass):
+  app/controllers/popups_controller.rb:33:in `show'
+
+
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.5ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.6ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (45.9ms)
+
+
+Started GET "/popups/asdfsd" for 127.0.0.1 at 2014-05-27 15:08:14 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"asdfsd"}
+  [1m[35mUser Load (1.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (0.8ms)[0m  [1mSELECT  "popups".* FROM "popups"  WHERE "popups"."name" = 'asdfsd' LIMIT 1[0m
+Completed 500 Internal Server Error in 8ms
+
+NoMethodError (undefined method `feeds' for nil:NilClass):
+  app/controllers/popups_controller.rb:33:in `show'
+
+
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.6ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (42.0ms)
+
+
+Started GET "/popups/12" for 127.0.0.1 at 2014-05-27 15:08:17 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (1.2ms)[0m  [1mSELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1[0m  [["id", 12]]
+Completed 404 Not Found in 8ms
+
+ActiveRecord::RecordNotFound (Couldn't find Popup with 'id'=12):
+  app/controllers/popups_controller.rb:27:in `show'
+
+
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.6ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.4ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (41.1ms)
+
+
+Started GET "/popups/12" for 127.0.0.1 at 2014-05-27 15:08:19 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mUser Load (1.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (1.4ms)[0m  [1mSELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1[0m  [["id", 12]]
+Completed 404 Not Found in 9ms
+
+ActiveRecord::RecordNotFound (Couldn't find Popup with 'id'=12):
+  app/controllers/popups_controller.rb:27:in `show'
+
+
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.5ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (45.0ms)
+
+
+Started GET "/popups/1" for 127.0.0.1 at 2014-05-27 15:08:21 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (0.6ms)[0m  [1mSELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mFeed Load (0.6ms)[0m  SELECT "feeds".* FROM "feeds"  WHERE "feeds"."popup_id" = $1  [["popup_id", 1]]
+  Rendered popups/show.html.erb within layouts/application (34.3ms)
+  Rendered layouts/_search.html.erb (1.3ms)
+  Rendered layouts/_form.html.erb (0.2ms)
+Completed 200 OK in 68ms (Views: 56.6ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/feeds.css?body=1" for 127.0.0.1 at 2014-05-27 15:08:21 -0700
+
+
+Started GET "/assets/popups.css?body=1" for 127.0.0.1 at 2014-05-27 15:08:21 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-27 15:08:21 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-27 15:08:21 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-27 15:08:21 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-27 15:08:21 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-27 15:08:21 -0700
+
+
+Started GET "/assets/popups.js?body=1" for 127.0.0.1 at 2014-05-27 15:08:21 -0700
+
+
+Started GET "/assets/google.js?body=1" for 127.0.0.1 at 2014-05-27 15:08:21 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-05-27 15:08:21 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-05-27 15:08:21 -0700
+
+
+Started GET "/popups.json?q=" for 127.0.0.1 at 2014-05-27 15:08:22 -0700
+Processing by PopupsController#index as JSON
+  Parameters: {"q"=>""}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPopup Load (1.1ms)[0m  SELECT "popups".* FROM "popups"  WHERE (name LIKE '%%')
+Completed 200 OK in 15ms (Views: 8.6ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/popups" for 127.0.0.1 at 2014-05-27 15:09:43 -0700
+Processing by PopupsController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered popups/index.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_search.html.erb (1.5ms)
+  Rendered layouts/_form.html.erb (0.2ms)
+Completed 200 OK in 214ms (Views: 205.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/popups" for 127.0.0.1 at 2014-05-27 15:09:44 -0700
+Processing by PopupsController#index as HTML
+  [1m[35mUser Load (2.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered popups/index.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_search.html.erb (1.1ms)
+  Rendered layouts/_form.html.erb (0.1ms)
+Completed 200 OK in 35ms (Views: 26.3ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/feeds.css?body=1" for 127.0.0.1 at 2014-05-27 15:09:44 -0700
+
+
+Started GET "/assets/popups.css?body=1" for 127.0.0.1 at 2014-05-27 15:09:44 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-05-27 15:09:44 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-27 15:09:44 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-27 15:09:44 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-27 15:09:44 -0700
+
+
+Started GET "/assets/google.js?body=1" for 127.0.0.1 at 2014-05-27 15:09:44 -0700
+
+
+Started GET "/assets/popups.js?body=1" for 127.0.0.1 at 2014-05-27 15:09:44 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-27 15:09:44 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-05-27 15:09:44 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-27 15:09:44 -0700
+
+
+Started GET "/popups.json?q=" for 127.0.0.1 at 2014-05-27 15:09:45 -0700
+Processing by PopupsController#index as JSON
+  Parameters: {"q"=>""}
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPopup Load (1.1ms)[0m  SELECT "popups".* FROM "popups"  WHERE (name LIKE '%%')
+Completed 200 OK in 16ms (Views: 10.0ms | ActiveRecord: 2.3ms)
+
+
+Started POST "/popups" for 127.0.0.1 at 2014-05-27 15:09:47 -0700
+Processing by PopupsController#create as JSON
+  Parameters: {"popup"=>{"name"=>"adfdd", "description"=>"", "address"=>"", "price"=>"", "hours"=>"", "expires_at"=>""}}
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+Completed 500 Internal Server Error in 23ms
+
+NameError (undefined local variable or method `f' for #<PopupsController:0x007fb82d0c1470>):
+  app/controllers/popups_controller.rb:20:in `create'
+
+
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.4ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (1.3ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (1.7ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb (47.6ms)
+
+
+Started GET "/popups/adfdd" for 127.0.0.1 at 2014-05-27 15:09:49 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"adfdd"}
+  [1m[35mUser Load (1.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (0.9ms)[0m  [1mSELECT  "popups".* FROM "popups"  WHERE "popups"."name" = 'adfdd' LIMIT 1[0m
+Completed 500 Internal Server Error in 19ms
+
+NoMethodError (undefined method `feeds' for nil:NilClass):
+  app/controllers/popups_controller.rb:33:in `show'
+
+
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.5ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (45.6ms)
+
+
+Started GET "/popups/adfdd" for 127.0.0.1 at 2014-05-27 15:09:49 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"adfdd"}
+  [1m[35mUser Load (1.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (1.0ms)[0m  [1mSELECT  "popups".* FROM "popups"  WHERE "popups"."name" = 'adfdd' LIMIT 1[0m
+Completed 500 Internal Server Error in 10ms
+
+NoMethodError (undefined method `feeds' for nil:NilClass):
+  app/controllers/popups_controller.rb:33:in `show'
+
+
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.5ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.9ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (45.2ms)
+
+
+Started GET "/popups/adfdd" for 127.0.0.1 at 2014-05-27 15:10:31 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"adfdd"}
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (1.1ms)[0m  [1mSELECT  "popups".* FROM "popups"  WHERE "popups"."name" = 'adfdd' LIMIT 1[0m
+Completed 500 Internal Server Error in 79ms
+
+NoMethodError (undefined method `feeds' for nil:NilClass):
+  app/controllers/popups_controller.rb:33:in `show'
+
+
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.6ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.3ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (39.7ms)
+
+
+Started GET "/popups/adfdd" for 127.0.0.1 at 2014-05-27 15:10:51 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"adfdd"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (0.9ms)[0m  [1mSELECT  "popups".* FROM "popups"  WHERE "popups"."name" = 'adfdd' LIMIT 1[0m
+Completed 500 Internal Server Error in 89ms
+
+NoMethodError (undefined method `feeds' for nil:NilClass):
+  app/controllers/popups_controller.rb:33:in `show'
+
+
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.6ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (39.2ms)
+
+
+Started GET "/popups/adfdd" for 127.0.0.1 at 2014-05-27 15:12:23 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"adfdd"}
+  [1m[35mUser Load (2.9ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (2.5ms)[0m  [1mSELECT  "popups".* FROM "popups"  WHERE "popups"."name" = 'adfdd' LIMIT 1[0m
+Completed 500 Internal Server Error in 199ms
+
+NoMethodError (undefined method `feeds' for nil:NilClass):
+  app/controllers/popups_controller.rb:33:in `show'
+
+
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.7ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.4ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (64.3ms)
+
+
+Started GET "/popups/" for 127.0.0.1 at 2014-05-27 15:12:25 -0700
+Processing by PopupsController#index as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered popups/index.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_search.html.erb (7.5ms)
+  Rendered layouts/_form.html.erb (1.2ms)
+Completed 200 OK in 226ms (Views: 219.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/feeds.css?body=1" for 127.0.0.1 at 2014-05-27 15:12:25 -0700
+
+
+Started GET "/assets/popups.css?body=1" for 127.0.0.1 at 2014-05-27 15:12:25 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-27 15:12:25 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-27 15:12:25 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-27 15:12:26 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-05-27 15:12:26 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-27 15:12:26 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-05-27 15:12:26 -0700
+
+
+Started GET "/assets/google.js?body=1" for 127.0.0.1 at 2014-05-27 15:12:26 -0700
+
+
+Started GET "/assets/popups.js?body=1" for 127.0.0.1 at 2014-05-27 15:12:26 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-27 15:12:26 -0700
+
+
+Started GET "/popups.json?q=" for 127.0.0.1 at 2014-05-27 15:12:26 -0700
+Processing by PopupsController#index as JSON
+  Parameters: {"q"=>""}
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPopup Load (1.3ms)[0m  SELECT "popups".* FROM "popups"  WHERE (name LIKE '%%')
+Completed 200 OK in 53ms (Views: 45.4ms | ActiveRecord: 2.7ms)
+
+
+Started POST "/popups" for 127.0.0.1 at 2014-05-27 15:12:30 -0700
+Processing by PopupsController#create as JSON
+  Parameters: {"popup"=>{"name"=>"adsfdas", "description"=>"", "address"=>"", "price"=>"", "hours"=>"", "expires_at"=>""}}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+Completed 500 Internal Server Error in 50ms
+
+NameError (undefined local variable or method `f' for #<PopupsController:0x007fdbbc4d6558>):
+  app/controllers/popups_controller.rb:20:in `create'
+
+
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.4ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (1.6ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (2.5ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb (139.4ms)
+
+
+Started GET "/popups/adsfdas" for 127.0.0.1 at 2014-05-27 15:12:32 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"adsfdas"}
+  [1m[35mUser Load (2.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (3.6ms)[0m  [1mSELECT  "popups".* FROM "popups"  WHERE "popups"."name" = 'adsfdas' LIMIT 1[0m
+Completed 500 Internal Server Error in 12ms
+
+NoMethodError (undefined method `feeds' for nil:NilClass):
+  app/controllers/popups_controller.rb:33:in `show'
+
+
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.7ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.3ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (42.2ms)
+
+
+Started GET "/popups/adsfdas" for 127.0.0.1 at 2014-05-27 15:12:32 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"adsfdas"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (1.1ms)[0m  [1mSELECT  "popups".* FROM "popups"  WHERE "popups"."name" = 'adsfdas' LIMIT 1[0m
+Completed 500 Internal Server Error in 10ms
+
+NoMethodError (undefined method `feeds' for nil:NilClass):
+  app/controllers/popups_controller.rb:33:in `show'
+
+
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.5ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.6ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (46.2ms)
