@@ -8,6 +8,7 @@ class CreatePopups < ActiveRecord::Migration
       t.string :description
       t.text :image
       t.datetime :expires_at
+      t.boolean :active, :default => true
       t.integer  :user_id
       t.timestamps
     end

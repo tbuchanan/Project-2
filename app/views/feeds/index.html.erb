@@ -1,5 +1,6 @@
+
 <h1><%= @popup.name %></h1>
-What is it? <%= @popup.description %></br>
+<%= @popup.description %></br>
 <%= image_tag @popup.image(:medium) %>
 
 <!-- <button type="button" class="btn btn-success"><%#= link_to @popup.upvote %></button> -->
@@ -15,5 +16,6 @@ What is it? <%= @popup.description %></br>
 
 
 <%= link_to 'Back to popup', popup_path(@popup) %>
+
 
 

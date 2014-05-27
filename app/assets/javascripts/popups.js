@@ -1,4 +1,4 @@
- $(document).ready(function() {
+ var ready = function() {
    var loadPopups = function() {
      $.ajax('/popups.json', {
        type: 'get',
@@ -59,5 +59,11 @@
 
    };
    addPopup();
+ };
 
- });
+ $(document).ready(ready);
+ $(document).on('page:load', ready);
+
+
+ 
+

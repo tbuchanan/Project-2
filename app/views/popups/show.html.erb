@@ -42,6 +42,8 @@
 <% end %>
 
 
+<!-- count/comments needs to be fixed -->
+
 <h2>Comments</h2>
 <div class="jumbotron" id="jumbo">
 <% @feeds.each do |feed|%>
@@ -51,10 +53,11 @@
     <%= link_to "Delete", [@popup, feed], method: :delete, data: {confirm: "Are You Sure?"}, :class => 'btn btn-danger btn-sm' %></br>
 <% end %></br> 
  </div>
-  <%= form_for @popup, :html => { :multipart => true } do |f| %>
+
+<%= form_for @popup, :html => { :multipart => true } do |f| %>
     <div><%= f.file_field :image %> </br> 
       <%= f.submit "Upload image", :class => "btn-default" %>
     </div>
-  <% end %> 
+<% end %> 
 
- <%= link_to 'Back to popup', popup_path(@popup) %>
+<%= link_to 'Back to popup', popup_path(@popup) %>

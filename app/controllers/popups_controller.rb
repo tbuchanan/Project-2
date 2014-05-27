@@ -1,11 +1,12 @@
 class PopupsController < ApplicationController
 
   def index
-    @popups = Popup.search_for(params[:q])
+    @popups = Popup.search_for(params[:q]).where(active: true)
     @popup = Popup.new
+    
     respond_to do |f|
       f.html { render :index }
-      f.json { render json: @popups, :only => [:id, :name, :address, :hours, :expires_at, :price, :description, :image]}
+      f.json { render json: @popups, :only => [:id, :name, :address, :hours, :expires_at, :active, :price, :description, :image]}
     end
   end
   
@@ -37,7 +38,7 @@ class PopupsController < ApplicationController
 private 
 
   def popup_params
-    params.require(:popup).permit(:id, :name, :address, :hours, :expires_at, :price, :description, :image, :longitude, :latitude, :feeds_attributes => [:comment])  
+    params.require(:popup).permit(:id, :name, :address, :hours, :expires_at, :active, :price, :description, :image, :longitude, :latitude, :feeds_attributes => [:comment])  
   end
 
 end
