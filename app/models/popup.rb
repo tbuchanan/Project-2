@@ -4,7 +4,13 @@ class Popup < ActiveRecord::Base
   has_many :feeds
 
   validates :image, :presence => { :message => "Image is required" }
+  validates :geocode, presence: true
 
+  # for geocoder gem to convert address into "geocode"(longitude and latitude)
+  geocoded_by :address
+  after_validation :geocode
+
+  # paperclip image styles
   has_attached_file :image, styles: {
       thumb: '100x100>',
       square: '200x200#',

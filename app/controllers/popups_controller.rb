@@ -37,7 +37,7 @@ class PopupsController < ApplicationController
 private 
 
   def popup_params
-    params.require(:popup).permit(:id, :name, :address, :hours, :expires_at, :price, :description, :image, :feeds_attributes => [:comment])  
+    params.require(:popup).permit(:id, :name, :address, :hours, :expires_at, :price, :description, :image, :longitude, :latitude, :feeds_attributes => [:comment])  
   end
 
 end
