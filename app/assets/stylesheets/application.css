@@ -18,6 +18,22 @@
 @import url(http://fonts.googleapis.com/css?family=Indie+Flower);
 @import url(http://fonts.googleapis.com/css?family=Playfair+Display:700);
 
+#jumbo {
+  width: 35%;
+  padding-left: 20px;
+}
+
+#google {
+  float: right;
+  margin-top: 5px;
+}
+
+.btn-danger {
+float: right;
+clear: both;
+line-height: 0.5;
+}
+
 a {
   font-family: 'Playfair Display', serif;
   font-size: 18px;

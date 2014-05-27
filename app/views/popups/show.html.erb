@@ -1,3 +1,33 @@
+<div class="col-md-7" id="google">
+    <%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&markers=#{@popup.address}&zoom=16", id: "popupMap" %>
+    <button id="zoomOut"> - </button><button id="zoomIn"> + </button>
+  </div>
+  <script>
+        $("#google").on("click", "#zoomIn, #zoomOut", function(event){
+          var $img = $("#popupMap");
+          var src = $("#popupMap").attr("src");
+
+          var src_arr = src.split("&zoom=")
+          var zoom = (Number(src_arr[1]));
+
+          console.log(event.target.id)
+          if (event.target.id === "zoomIn"){
+            if (zoom < 20){ 
+              zoom += 1;
+            
+            }
+          } else {
+            if (zoom > 0){ 
+              zoom -= 1;
+            }
+          }
+          src = src_arr[0] + "&zoom="+ zoom;
+          $img.attr("src",src);
+        });
+    </script>
+    
+
+
 <%= @popup.name %><br>
 <%= @popup.description %><br>
 <%= @popup.price %><br>
@@ -6,28 +36,31 @@
 <%= image_tag @popup.image(:medium) %>
 <p> Expires at:  <%= @popup.expires_at %></p>
 
+
+
 <%= form_for ([@popup, @feed_new]) do |f| %>
   <%= f.text_field :comment, placeholder: "Add your comment" %><br></br>
-  <%= f.submit "Create comment" %><br></br>
+  <%= f.submit "Create comment" %>
 <% end %>
 
 
-
-<% @feeds.each do |feed| %>
-  <%#= link_to popup.name, popup_feeds_path(popup)%>
-    <% count = 0%>
-    <%= feed.comment %>
-    <% count = 1%>
-    Comment Count:<%= link_to "#{count} comments", popup_feeds_path(@popup)%></br>     
-  <% end %></br> 
-  
-
 <!-- count/comments needs to be fixed -->
- 
-  <%= form_for @popup, :html => { :multipart => true } do |f| %>
+
+<h2>Comments</h2>
+<div class="jumbotron" id="jumbo">
+<% @feeds.each do |feed|%>
+  <%# count = 0%>
+  <%=feed.comment%>
+  <%# count += 1%>
+    <%= link_to "Delete", [@popup, feed], method: :delete, data: {confirm: "Are You Sure?"}, :class => 'btn btn-danger btn-sm' %></br>
+<% end %></br> 
+ </div>
+
+<%= form_for @popup, :html => { :multipart => true } do |f| %>
     <div><%= f.file_field :image %> </br> 
       <%= f.submit "Upload image", :class => "btn-default" %>
     </div>
-  <% end %> 
+<% end %> 
 
- 
+
+<%= link_to 'Back to popup', popup_path(@popup) %>

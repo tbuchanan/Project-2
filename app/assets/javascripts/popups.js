@@ -59,17 +59,11 @@
 
    };
    addPopup();
-   // $('#name').click(function() {
-   //   $.ajax({
-   //     type: "POST",
-   //     url: "/popups",
-   //     data: {
-   //       name: name
-   //     }
-   //   });
-   //   window.location.replace("/popups/show");
-   // });
  };
 
  $(document).ready(ready);
  $(document).on('page:load', ready);
+
+
+ 
+
