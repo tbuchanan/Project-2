@@ -1,8 +1,9 @@
 class PopupsController < ApplicationController
 
   def index
-    @popups = Popup.search_for(params[:q])
+    @popups = Popup.search_for(params[:q]).where(active: true)
     @popup = Popup.new
+    # @popups = @popups.active(params[:active]) unless params[:active].blank?
     respond_to do |f|
       f.html { render :index }
       f.json { render json: @popups, :only => [:id, :name, :address, :hours, :expires_at, :price, :description, :image]}

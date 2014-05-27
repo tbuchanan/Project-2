@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(version: 20140526183605) do
     t.string   "description"
     t.text     "image"
     t.datetime "expires_at"
+    t.boolean  "active",             default: true
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
