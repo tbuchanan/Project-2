@@ -12,7 +12,6 @@ class PopupsController < ApplicationController
   
   def create
     @popup = Popup.new popup_params
-    binding.pry
     if @popup.save
       respond_to do |f|
         f.html { render :index }
