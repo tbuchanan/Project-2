@@ -4,7 +4,7 @@ class Popup < ActiveRecord::Base
   belongs_to :user
   has_many :feeds
 
-  validates :image, :presence => { :message => "Image is required" }
+  # validates :image, :presence => { :message => "Image is required" }
 
   has_attached_file :image, styles: {
       thumb: '100x100>',
@@ -15,7 +15,7 @@ class Popup < ActiveRecord::Base
 
 
   # Validate the attached image is image/jpg, image/png, etc
-  validates_attachment_content_type :image, :content_type => /\Aimage\/.*\Z/
+  # validates_attachment_content_type :image, :content_type => /\Aimage\/.*\Z/
 
   def self.search_for(query)
     where('name LIKE :query', query: "%#{query}%")

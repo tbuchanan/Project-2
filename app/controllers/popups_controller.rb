@@ -3,15 +3,16 @@ class PopupsController < ApplicationController
   def index
     @popups = Popup.search_for(params[:q]).where(active: true)
     @popup = Popup.new
-    # @popups = @popups.active(params[:active]) unless params[:active].blank?
+    
     respond_to do |f|
       f.html { render :index }
-      f.json { render json: @popups, :only => [:id, :name, :address, :hours, :expires_at, :price, :description, :image]}
+      f.json { render json: @popups, :only => [:id, :name, :address, :hours, :expires_at, :active, :price, :description, :image]}
     end
   end
   
   def create
     @popup = Popup.new popup_params
+    binding.pry
     if @popup.save
       respond_to do |f|
         f.html { render :index }
@@ -38,7 +39,7 @@ class PopupsController < ApplicationController
 private 
 
   def popup_params
-    params.require(:popup).permit(:id, :name, :address, :hours, :expires_at, :price, :description, :image, :feeds_attributes => [:comment])  
+    params.require(:popup).permit(:id, :name, :address, :hours, :expires_at, :active, :price, :description, :image, :feeds_attributes => [:comment])  
   end
 
 end

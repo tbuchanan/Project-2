@@ -1,4 +1,4 @@
- $(document).ready(function() {
+ var ready = function() {
    var loadPopups = function() {
      $.ajax('/popups.json', {
        type: 'get',
@@ -69,4 +69,7 @@
    //   });
    //   window.location.replace("/popups/show");
    // });
- });
+ };
+
+ $(document).ready(ready);
+ $(document).on('page:load', ready);
