@@ -38,13 +38,18 @@ class PopupsController < ApplicationController
 
   def update
     @popup = Popup.find(params[:id])
-      redirect_to :back
+    @popup.update image_params
+    redirect_to :back
   end
 
 private 
 
   def popup_params
     params.require(:popup).permit(:id, :name, :address, :hours, :expires_at, :active, :price, :description, :image, :longitude, :latitude, :feeds_attributes => [:comment])  
+  end
+
+  def image_params
+    params.require(:popup).permit(:image)  
   end
 
 end

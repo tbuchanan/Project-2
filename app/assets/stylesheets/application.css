@@ -109,8 +109,9 @@ font-size: 12px;
 ul#popups {
   padding-left: 25px;
   background-color: #D3D3D3;
-  border-radius: 5px;
   margin-left: 15px;
+  border-radius: 5px;
+
 }
 
 #map-canvas {
@@ -126,7 +127,3 @@ ul#popups {
 float: right;
 }
 
-.col-med-8 {
-  width: 60%
-  margin-top: 50px;
-}
