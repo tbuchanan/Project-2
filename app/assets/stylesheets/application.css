@@ -126,3 +126,6 @@ ul#popups {
 float: right;
 }
 
+img {
+  position: inline;
+}
