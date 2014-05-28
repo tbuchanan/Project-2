@@ -12,6 +12,7 @@ class PopupsController < ApplicationController
   
   def create
     @popup = Popup.new popup_params
+    # @popup.expires_at = #use params(expires_at)
     if @popup.save
       respond_to do |f|
         f.html { render :index }

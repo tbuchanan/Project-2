@@ -9,6 +9,7 @@
        for (var i in data) {
          var exp = new Date(data[i].expires_at);
          console.log(data[i]);
+         var exp = new Date(data[i].expires_at);
 
 
          $('#popups').append(
@@ -18,6 +19,7 @@
            data[i].hours, '</br>',
            data[i].price, '</br>',
            exp.toLocaleDateString(), '</br>' + '</li></br></a>');
+
        }
      });
    };
