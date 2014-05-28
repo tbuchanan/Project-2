@@ -7,7 +7,7 @@
        },
      }).success(function(data) {
        for (var i in data) {
-         console.log(data[i])
+         console.log(data[i]);
          $('#popups').append(
            '<a href= http://localhost:3000/popups/' + data[i].id + '>' + '<li>' + data[i].name,
            data[i].description,

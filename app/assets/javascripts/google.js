@@ -1,37 +1,40 @@
 $(document).ready(function() {
-  var markers = [];
-  // var prev_infowindow = false;
 
-  function initialize() {
+  (function initialize() {
     //just a variable storing a location
     var mapOptions = {
-      center: new google.maps.LatLng(32.7758, 96.7967),
-      zoom: 2
+      center: new google.maps.LatLng(37.7914136, -122.414475),
+      zoom: 12
     };
+    var map = new google.maps.Map(document.getElementById("map-canvas"),
+      mapOptions);
     // alert(gon.current_user)
-    var loadPins = function() {    
+    var loadGeo = function() {    
       var url = "/popups.json";    
       $.ajax(url, {
         type: 'get'
       }).success(function(data) {      
         for (var i in data) {        
-          addPin(data[i].lat, data[i].lng);      
+          addPin(data[i].latitude, data[i].longitude);      
         }    
-
-        function addPin(lat, lng, email) {
-          var loc = new google.maps.LatLng(lat, lng);
-          console.log(loc);
-        }
-      });
-
-      loadPins();
-
-      var map = new google.maps.Map(document.getElementById("map-canvas"),
-        mapOptions);
-
-      //code loads the map
+      }); 
 
     };
-    initialize();
-  }
-});
+
+    loadGeo();
+
+    function addPin(latitude, longitude) {
+      var loc = new google.maps.LatLng(latitude, longitude);
+      console.log(loc);
+      var newMarker = new google.maps.Marker({
+        position: loc,
+        map: map
+
+      });
+
+
+    };
+
+  })();
+
+})
