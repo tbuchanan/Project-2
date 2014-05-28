@@ -53,8 +53,8 @@ a.navbar-brand:hover, a.navbar-brand:hover:focus {
   text-decoration: underline;
 }
 
-#popups {
-
+html, body {
+  height: 100%;
 }
 
 h3 {
@@ -90,8 +90,8 @@ body {
   background-color: #F5F5F5;
   font-family: 'Playfair Display', serif;
   height: 100%; 
-  margin: 0; 
-  padding: 0;
+  background-image: url(http://i.imgur.com/foiYk30.jpg?1);
+  
 }
 
 ul {
@@ -105,22 +105,28 @@ font-size: 12px;
 }
 
 ul#popups {
-  padding-left: 19px;
+  padding-left: 25px;
+  width: 42%;
+  background-color: #D3D3D3;
+  border-radius: 5px;
+  margin-left: 15px;
 }
 
 #map-canvas {
-        width: 500px;
-        height: 500px;
-      }
-
-html { 
-  height: 100%; 
+  width: 500px;
+  height: 500px;
+  margin: 0;
+  padding: 0;
 }
+
       
-#map-canvas { 
-  /*height: 100%; 
-  width: 100%;*/
-  background-color: red;
+.google-map {
+float: right;
+}
+
+.col-med-8 {
+  width: 60%
+  margin-top: 50px;
 }
 
 
