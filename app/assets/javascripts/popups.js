@@ -9,12 +9,12 @@
        for (var i in data) {
          console.log(data[i]);
          $('#popups').append(
-           '<a href= http://localhost:3000/popups/' + data[i].id + '>' + '<li>' + data[i].name, 
-           data[i].description,'</br>',
-           data[i].address,'</br>',
-           data[i].hours,'</br>',
-           data[i].price,'</br>',
-           data[i].expires_at, '</br>' + '</li></br></a>');       
+           '<a href=/popups/' + data[i].id + '>' + '<li>' + data[i].name,
+           data[i].description, '</br>',
+           data[i].address, '</br>',
+           data[i].hours, '</br>',
+           data[i].price, '</br>',
+           data[i].expires_at, '</br>' + '</li></br></a>');
        }
      });
    };
@@ -30,7 +30,7 @@
        var price = $("#price").val();
        var hours = $("#hours").val();
        var expires_at = $("#expires_at").val();
-       $('#popups').append('<a href=http://localhost:3000/popups/' + name + '>' + "<li>" + name, description, address, price, hours, expires_at + "</li></a>");
+       $('#popups').append('<a href=/popups/' + name + '>' + "<li>" + name, description, address, price, hours, expires_at + "</li></a>");
 
 
        $.ajax({
