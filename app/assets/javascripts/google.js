@@ -15,7 +15,7 @@ $(document).ready(function() {
         type: 'get'
       }).success(function(data) {      
         for (var i in data) {        
-          addPin(data[i].latitude, data[i].longitude);      
+          addPin(data[i].latitude, data[i].longitude, data[i].name);      
         }    
       }); 
 
@@ -23,17 +23,37 @@ $(document).ready(function() {
 
     loadGeo();
 
-    function addPin(latitude, longitude) {
+    function addPin(latitude, longitude, name) {
       var loc = new google.maps.LatLng(latitude, longitude);
       console.log(loc);
       var newMarker = new google.maps.Marker({
         position: loc,
-        map: map
+        map: map,
+        title: name
 
       });
 
 
+      var newInfoWindow = new google.maps.InfoWindow({
+        content: '<h3>' + name + '</h3>'
+      });
+      addInfoWindowListener(newMarker, newInfoWindow);
     };
+
+    var lastInfoWindow;
+    var addInfoWindowListener = function(marker, newInfoWindow) {
+      google.maps.event.addListener(marker, 'click', function() {
+        if ( !! lastInfoWindow) {
+          lastInfoWindow.close();
+        }
+        if (lastInfoWindow === newInfoWindow) {
+          lastInfoWindow = null;
+        } else {
+          newInfoWindow.open(map, this);
+          lastInfoWindow = newInfoWindow;
+        }
+      });
+    }
 
   })();
 

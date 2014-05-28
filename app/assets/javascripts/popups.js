@@ -14,7 +14,7 @@
            data[i].address,'</br>',
            data[i].hours,'</br>',
            data[i].price,'</br>',
-           data[i].expires_at, '</br>' + '</li></br></a>');
+           data[i].expires_at, '</br>' + '</li></br></a>');       
        }
      });
    };
@@ -42,8 +42,7 @@
              "description": description,
              "address": address,
              "price": price,
-             "hours": hours,
-             "expires_at": expires_at
+             "hours": hours
            }
          },
          dataType: "json",
@@ -63,7 +62,3 @@
 
  $(document).ready(ready);
  $(document).on('page:load', ready);
-
-
- 
-

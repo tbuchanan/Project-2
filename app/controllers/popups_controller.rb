@@ -35,6 +35,11 @@ class PopupsController < ApplicationController
     end
   end
 
+  def update
+    @popup = Popup.find(params[:id])
+      redirect_to :back
+  end
+
 private 
 
   def popup_params
