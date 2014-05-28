@@ -17,7 +17,7 @@
            data[i].address,'</br>',
            data[i].hours,'</br>',
            data[i].price,'</br>',
-           exp.toLocaleDateString(), '</br>' + '</li></br></a>');       
+           exp.toLoca leDateString(), '</br>' + '</li></br></a>');       
        }
      });
    };
