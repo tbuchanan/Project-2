@@ -17,7 +17,7 @@
            data[i].address,'</br>',
            data[i].hours,'</br>',
            data[i].price,'</br>',
-           exp.toLoca leDateString(), '</br>' + '</li></br></a>');       
+           exp.toLocaleDateString(), '</br>' + '</li></br></a>');       
        }
      });
    };
@@ -45,7 +45,8 @@
              "description": description,
              "address": address,
              "price": price,
-             "hours": hours
+             "hours": hours,
+             "expires_at": expires_at
            }
          },
          dataType: "json",
