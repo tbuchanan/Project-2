@@ -85571,3 +85571,600 @@ Processing by PopupsController#index as JSON
   [1m[36mUser Load (1.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1[0m
   [1m[35mPopup Load (1.5ms)[0m  SELECT "popups".* FROM "popups"  WHERE (name LIKE '%%') AND "popups"."active" = 't'
 Completed 200 OK in 21ms (Views: 13.5ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/popups" for 127.0.0.1 at 2014-05-28 13:45:07 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (1.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PopupsController#index as HTML
+  [1m[35mUser Load (2.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered popups/index.html.erb within layouts/application (3.5ms)
+  Rendered layouts/_search.html.erb (3.1ms)
+  Rendered layouts/_form.html.erb (1.1ms)
+Completed 200 OK in 385ms (Views: 252.9ms | ActiveRecord: 15.9ms)
+
+
+Started GET "/assets/feeds.css?body=1" for 127.0.0.1 at 2014-05-28 13:45:07 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-28 13:45:07 -0700
+
+
+Started GET "/assets/popups.css?body=1" for 127.0.0.1 at 2014-05-28 13:45:07 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-28 13:45:08 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-28 13:45:08 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-05-28 13:45:08 -0700
+
+
+Started GET "/assets/google.js?body=1" for 127.0.0.1 at 2014-05-28 13:45:08 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-28 13:45:08 -0700
+
+
+Started GET "/assets/popups.js?body=1" for 127.0.0.1 at 2014-05-28 13:45:08 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-05-28 13:45:08 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-28 13:45:08 -0700
+
+
+Started GET "/popups.json" for 127.0.0.1 at 2014-05-28 13:45:08 -0700
+Processing by PopupsController#index as JSON
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPopup Load (6.8ms)[0m  SELECT "popups".* FROM "popups"  WHERE (name LIKE '%%') AND "popups"."active" = 't'
+Completed 200 OK in 70ms (Views: 57.5ms | ActiveRecord: 7.9ms)
+
+
+Started GET "/popups.json?q=" for 127.0.0.1 at 2014-05-28 13:45:08 -0700
+Processing by PopupsController#index as JSON
+  Parameters: {"q"=>""}
+  [1m[36mUser Load (2.8ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPopup Load (1.2ms)[0m  SELECT "popups".* FROM "popups"  WHERE (name LIKE '%%') AND "popups"."active" = 't'
+Completed 200 OK in 24ms (Views: 13.9ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/popups" for 127.0.0.1 at 2014-05-28 13:50:21 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PopupsController#index as HTML
+  [1m[35mUser Load (2.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered popups/index.html.erb within layouts/application (5.9ms)
+  Rendered layouts/_search.html.erb (3.1ms)
+  Rendered layouts/_form.html.erb (1.1ms)
+Completed 200 OK in 494ms (Views: 367.8ms | ActiveRecord: 15.8ms)
+
+
+Started GET "/assets/popups.css?body=1" for 127.0.0.1 at 2014-05-28 13:50:22 -0700
+
+
+Started GET "/assets/feeds.css?body=1" for 127.0.0.1 at 2014-05-28 13:50:22 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-28 13:50:22 -0700
+
+
+Started GET "/assets/popups.js?body=1" for 127.0.0.1 at 2014-05-28 13:50:22 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-05-28 13:50:22 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-28 13:50:22 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-28 13:50:22 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-28 13:50:22 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-28 13:50:22 -0700
+
+
+Started GET "/assets/google.js?body=1" for 127.0.0.1 at 2014-05-28 13:50:22 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-05-28 13:50:22 -0700
+
+
+Started GET "/popups.json" for 127.0.0.1 at 2014-05-28 13:50:23 -0700
+Processing by PopupsController#index as JSON
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPopup Load (4.4ms)[0m  SELECT "popups".* FROM "popups"  WHERE (name LIKE '%%') AND "popups"."active" = 't'
+Completed 200 OK in 76ms (Views: 63.9ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/popups" for 127.0.0.1 at 2014-05-28 13:50:31 -0700
+Processing by PopupsController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered popups/index.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_search.html.erb (1.3ms)
+  Rendered layouts/_form.html.erb (0.2ms)
+Completed 200 OK in 22ms (Views: 15.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/popups" for 127.0.0.1 at 2014-05-28 13:50:33 -0700
+Processing by PopupsController#index as HTML
+  [1m[35mUser Load (1.9ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered popups/index.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_search.html.erb (1.3ms)
+  Rendered layouts/_form.html.erb (0.2ms)
+Completed 200 OK in 35ms (Views: 26.6ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/feeds.css?body=1" for 127.0.0.1 at 2014-05-28 13:50:33 -0700
+
+
+Started GET "/assets/popups.css?body=1" for 127.0.0.1 at 2014-05-28 13:50:33 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-28 13:50:33 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-05-28 13:50:33 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-28 13:50:33 -0700
+
+
+Started GET "/assets/google.js?body=1" for 127.0.0.1 at 2014-05-28 13:50:33 -0700
+
+
+Started GET "/assets/popups.js?body=1" for 127.0.0.1 at 2014-05-28 13:50:33 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-28 13:50:33 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-28 13:50:33 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-28 13:50:33 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-05-28 13:50:33 -0700
+
+
+Started GET "/popups.json" for 127.0.0.1 at 2014-05-28 13:50:33 -0700
+Processing by PopupsController#index as JSON
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPopup Load (1.1ms)[0m  SELECT "popups".* FROM "popups"  WHERE (name LIKE '%%') AND "popups"."active" = 't'
+Completed 200 OK in 21ms (Views: 14.9ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/popups" for 127.0.0.1 at 2014-05-28 13:50:44 -0700
+Processing by PopupsController#index as HTML
+  [1m[36mUser Load (4.9ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered popups/index.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_search.html.erb (1.3ms)
+  Rendered layouts/_form.html.erb (0.2ms)
+Completed 200 OK in 108ms (Views: 94.4ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/assets/feeds.css?body=1" for 127.0.0.1 at 2014-05-28 13:50:44 -0700
+
+
+Started GET "/assets/popups.css?body=1" for 127.0.0.1 at 2014-05-28 13:50:44 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-28 13:50:44 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-28 13:50:44 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-28 13:50:44 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-28 13:50:44 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-05-28 13:50:44 -0700
+
+
+Started GET "/assets/google.js?body=1" for 127.0.0.1 at 2014-05-28 13:50:44 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-28 13:50:44 -0700
+
+
+Started GET "/assets/popups.js?body=1" for 127.0.0.1 at 2014-05-28 13:50:44 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-05-28 13:50:44 -0700
+
+
+Started GET "/popups.json?q=" for 127.0.0.1 at 2014-05-28 13:50:44 -0700
+Processing by PopupsController#index as JSON
+  Parameters: {"q"=>""}
+  [1m[35mUser Load (7.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (1.2ms)[0m  [1mSELECT "popups".* FROM "popups"  WHERE (name LIKE '%%') AND "popups"."active" = 't'[0m
+Completed 200 OK in 34ms (Views: 19.2ms | ActiveRecord: 8.7ms)
+
+
+Started GET "/popups.json" for 127.0.0.1 at 2014-05-28 13:50:44 -0700
+Processing by PopupsController#index as JSON
+  [1m[35mUser Load (1.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (1.3ms)[0m  [1mSELECT "popups".* FROM "popups"  WHERE (name LIKE '%%') AND "popups"."active" = 't'[0m
+Completed 200 OK in 22ms (Views: 14.2ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/popups" for 127.0.0.1 at 2014-05-28 13:51:59 -0700
+Processing by PopupsController#index as HTML
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered popups/index.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_search.html.erb (1.3ms)
+  Rendered layouts/_form.html.erb (82.1ms)
+Completed 200 OK in 155ms (Views: 149.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/feeds.css?body=1" for 127.0.0.1 at 2014-05-28 13:52:00 -0700
+
+
+Started GET "/assets/popups.css?body=1" for 127.0.0.1 at 2014-05-28 13:52:00 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-28 13:52:00 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-28 13:52:00 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-28 13:52:00 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-05-28 13:52:00 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-28 13:52:00 -0700
+
+
+Started GET "/assets/google.js?body=1" for 127.0.0.1 at 2014-05-28 13:52:00 -0700
+
+
+Started GET "/assets/popups.js?body=1" for 127.0.0.1 at 2014-05-28 13:52:00 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-28 13:52:00 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-05-28 13:52:00 -0700
+
+
+Started GET "/popups.json" for 127.0.0.1 at 2014-05-28 13:52:00 -0700
+Processing by PopupsController#index as JSON
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPopup Load (1.2ms)[0m  SELECT "popups".* FROM "popups"  WHERE (name LIKE '%%') AND "popups"."active" = 't'
+Completed 200 OK in 23ms (Views: 14.2ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/popups" for 127.0.0.1 at 2014-05-28 13:54:47 -0700
+Processing by PopupsController#index as HTML
+  [1m[36mUser Load (2.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered popups/index.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_search.html.erb (1.5ms)
+  Rendered layouts/_form.html.erb (0.4ms)
+Completed 200 OK in 174ms (Views: 156.6ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/assets/feeds.css?body=1" for 127.0.0.1 at 2014-05-28 13:54:48 -0700
+
+
+Started GET "/assets/popups.css?body=1" for 127.0.0.1 at 2014-05-28 13:54:48 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-28 13:54:48 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-28 13:54:48 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-28 13:54:48 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-28 13:54:48 -0700
+
+
+Started GET "/assets/google.js?body=1" for 127.0.0.1 at 2014-05-28 13:54:48 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-05-28 13:54:48 -0700
+
+
+Started GET "/assets/popups.js?body=1" for 127.0.0.1 at 2014-05-28 13:54:48 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-28 13:54:48 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-05-28 13:54:48 -0700
+
+
+Started GET "/popups.json" for 127.0.0.1 at 2014-05-28 13:54:48 -0700
+Processing by PopupsController#index as JSON
+  [1m[35mUser Load (1.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (1.1ms)[0m  [1mSELECT "popups".* FROM "popups"  WHERE (name LIKE '%%') AND "popups"."active" = 't'[0m
+Completed 200 OK in 23ms (Views: 14.5ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/popups.json?q=" for 127.0.0.1 at 2014-05-28 13:54:48 -0700
+Processing by PopupsController#index as JSON
+  Parameters: {"q"=>""}
+  [1m[35mUser Load (3.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (1.1ms)[0m  [1mSELECT "popups".* FROM "popups"  WHERE (name LIKE '%%') AND "popups"."active" = 't'[0m
+Completed 200 OK in 23ms (Views: 13.5ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/popups" for 127.0.0.1 at 2014-05-28 13:55:36 -0700
+Processing by PopupsController#index as HTML
+  [1m[35mUser Load (1.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered popups/index.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_search.html.erb (1.4ms)
+  Rendered layouts/_form.html.erb (0.2ms)
+Completed 200 OK in 197ms (Views: 191.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/feeds.css?body=1" for 127.0.0.1 at 2014-05-28 13:55:37 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-05-28 13:55:37 -0700
+
+
+Started GET "/assets/popups.css?body=1" for 127.0.0.1 at 2014-05-28 13:55:37 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-28 13:55:37 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-28 13:55:37 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-28 13:55:37 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-28 13:55:37 -0700
+
+
+Started GET "/assets/google.js?body=1" for 127.0.0.1 at 2014-05-28 13:55:37 -0700
+
+
+Started GET "/assets/popups.js?body=1" for 127.0.0.1 at 2014-05-28 13:55:37 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-28 13:55:37 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-05-28 13:55:37 -0700
+
+
+Started GET "/popups.json" for 127.0.0.1 at 2014-05-28 13:55:37 -0700
+Processing by PopupsController#index as JSON
+  [1m[36mUser Load (4.9ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPopup Load (1.1ms)[0m  SELECT "popups".* FROM "popups"  WHERE (name LIKE '%%') AND "popups"."active" = 't'
+Completed 200 OK in 24ms (Views: 13.6ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/popups.json?q=" for 127.0.0.1 at 2014-05-28 13:55:37 -0700
+Processing by PopupsController#index as JSON
+  Parameters: {"q"=>""}
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPopup Load (1.2ms)[0m  SELECT "popups".* FROM "popups"  WHERE (name LIKE '%%') AND "popups"."active" = 't'
+Completed 200 OK in 27ms (Views: 15.4ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/popups" for 127.0.0.1 at 2014-05-28 13:56:01 -0700
+Processing by PopupsController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered popups/index.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_search.html.erb (1.5ms)
+  Rendered layouts/_form.html.erb (0.2ms)
+Completed 200 OK in 171ms (Views: 165.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/feeds.css?body=1" for 127.0.0.1 at 2014-05-28 13:56:01 -0700
+
+
+Started GET "/assets/popups.css?body=1" for 127.0.0.1 at 2014-05-28 13:56:01 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-28 13:56:01 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-28 13:56:01 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-28 13:56:01 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-05-28 13:56:01 -0700
+
+
+Started GET "/assets/google.js?body=1" for 127.0.0.1 at 2014-05-28 13:56:01 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-28 13:56:01 -0700
+
+
+Started GET "/assets/popups.js?body=1" for 127.0.0.1 at 2014-05-28 13:56:01 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-28 13:56:01 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-05-28 13:56:01 -0700
+
+
+Started GET "/popups.json" for 127.0.0.1 at 2014-05-28 13:56:02 -0700
+Processing by PopupsController#index as JSON
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (1.1ms)[0m  [1mSELECT "popups".* FROM "popups"  WHERE (name LIKE '%%') AND "popups"."active" = 't'[0m
+Completed 200 OK in 27ms (Views: 15.7ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/popups.json?q=" for 127.0.0.1 at 2014-05-28 13:56:02 -0700
+Processing by PopupsController#index as JSON
+  Parameters: {"q"=>""}
+  [1m[35mUser Load (1.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (1.3ms)[0m  [1mSELECT "popups".* FROM "popups"  WHERE (name LIKE '%%') AND "popups"."active" = 't'[0m
+Completed 200 OK in 21ms (Views: 13.7ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/popups/4" for 127.0.0.1 at 2014-05-28 13:56:55 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mUser Load (1.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (2.4ms)[0m  [1mSELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mFeed Load (2.2ms)[0m  SELECT "feeds".* FROM "feeds"  WHERE "feeds"."popup_id" = $1  [["popup_id", 4]]
+  Rendered popups/show.html.erb within layouts/application (185.5ms)
+  Rendered layouts/_search.html.erb (4.2ms)
+  Rendered layouts/_form.html.erb (1.2ms)
+Completed 200 OK in 266ms (Views: 210.9ms | ActiveRecord: 11.6ms)
+
+
+Started GET "/popups.json?q=" for 127.0.0.1 at 2014-05-28 13:56:55 -0700
+Processing by PopupsController#index as JSON
+  Parameters: {"q"=>""}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPopup Load (1.1ms)[0m  SELECT "popups".* FROM "popups"  WHERE (name LIKE '%%') AND "popups"."active" = 't'
+Completed 200 OK in 20ms (Views: 13.6ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/popups" for 127.0.0.1 at 2014-05-28 14:00:35 -0700
+Processing by PopupsController#index as HTML
+  [1m[36mUser Load (28.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered popups/index.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_search.html.erb (6.5ms)
+  Rendered layouts/_form.html.erb (0.2ms)
+Completed 200 OK in 169ms (Views: 49.5ms | ActiveRecord: 28.2ms)
+
+
+Started GET "/assets/feeds.css?body=1" for 127.0.0.1 at 2014-05-28 14:00:35 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-28 14:00:35 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-28 14:00:35 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-28 14:00:35 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-05-28 14:00:35 -0700
+
+
+Started GET "/assets/popups.css?body=1" for 127.0.0.1 at 2014-05-28 14:00:35 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-28 14:00:35 -0700
+
+
+Started GET "/assets/google.js?body=1" for 127.0.0.1 at 2014-05-28 14:00:35 -0700
+
+
+Started GET "/assets/popups.js?body=1" for 127.0.0.1 at 2014-05-28 14:00:35 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-05-28 14:00:35 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-28 14:00:35 -0700
+
+
+Started GET "/popups.json?q=" for 127.0.0.1 at 2014-05-28 14:00:36 -0700
+Processing by PopupsController#index as JSON
+  Parameters: {"q"=>""}
+  [1m[35mUser Load (1.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (2.6ms)[0m  [1mSELECT "popups".* FROM "popups"  WHERE (name LIKE '%%') AND "popups"."active" = 't'[0m
+Completed 200 OK in 22ms (Views: 15.2ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/popups.json" for 127.0.0.1 at 2014-05-28 14:00:36 -0700
+Processing by PopupsController#index as JSON
+  [1m[35mUser Load (1.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (1.6ms)[0m  [1mSELECT "popups".* FROM "popups"  WHERE (name LIKE '%%') AND "popups"."active" = 't'[0m
+Completed 200 OK in 22ms (Views: 14.3ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/popups" for 127.0.0.1 at 2014-05-28 14:01:26 -0700
+Processing by PopupsController#index as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered popups/index.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_search.html.erb (1.6ms)
+  Rendered layouts/_form.html.erb (0.2ms)
+Completed 200 OK in 241ms (Views: 234.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/feeds.css?body=1" for 127.0.0.1 at 2014-05-28 14:01:26 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-28 14:01:26 -0700
+
+
+Started GET "/assets/popups.css?body=1" for 127.0.0.1 at 2014-05-28 14:01:26 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-28 14:01:26 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-28 14:01:26 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-28 14:01:26 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-05-28 14:01:26 -0700
+
+
+Started GET "/assets/popups.js?body=1" for 127.0.0.1 at 2014-05-28 14:01:26 -0700
+
+
+Started GET "/assets/google.js?body=1" for 127.0.0.1 at 2014-05-28 14:01:26 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-28 14:01:26 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-05-28 14:01:26 -0700
+
+
+Started GET "/popups.json?q=" for 127.0.0.1 at 2014-05-28 14:01:27 -0700
+Processing by PopupsController#index as JSON
+  Parameters: {"q"=>""}
+  [1m[36mUser Load (9.8ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPopup Load (6.9ms)[0m  SELECT "popups".* FROM "popups"  WHERE (name LIKE '%%') AND "popups"."active" = 't'
+Completed 200 OK in 51ms (Views: 25.7ms | ActiveRecord: 16.6ms)
+
+
+Started GET "/popups.json" for 127.0.0.1 at 2014-05-28 14:01:27 -0700
+Processing by PopupsController#index as JSON
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPopup Load (6.5ms)[0m  SELECT "popups".* FROM "popups"  WHERE (name LIKE '%%') AND "popups"."active" = 't'
+Completed 200 OK in 37ms (Views: 14.8ms | ActiveRecord: 7.6ms)
+
+
+Started GET "/popups/4" for 127.0.0.1 at 2014-05-28 14:01:32 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (11.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPopup Load (6.8ms)[0m  SELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mFeed Load (0.8ms)[0m  [1mSELECT "feeds".* FROM "feeds"  WHERE "feeds"."popup_id" = $1[0m  [["popup_id", 4]]
+  Rendered popups/show.html.erb within layouts/application (40.7ms)
+  Rendered layouts/_search.html.erb (1.2ms)
+  Rendered layouts/_form.html.erb (0.2ms)
+Completed 200 OK in 115ms (Views: 84.5ms | ActiveRecord: 18.7ms)
+
+
+Started GET "/popups.json?q=" for 127.0.0.1 at 2014-05-28 14:01:32 -0700
+Processing by PopupsController#index as JSON
+  Parameters: {"q"=>""}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (1.1ms)[0m  [1mSELECT "popups".* FROM "popups"  WHERE (name LIKE '%%') AND "popups"."active" = 't'[0m
+Completed 200 OK in 23ms (Views: 15.3ms | ActiveRecord: 2.1ms)

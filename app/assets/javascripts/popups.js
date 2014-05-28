@@ -7,14 +7,17 @@
        },
      }).success(function(data) {
        for (var i in data) {
+         var exp = new Date(data[i].expires_at);
          console.log(data[i]);
+
+
          $('#popups').append(
            '<a href=/popups/' + data[i].id + '>' + '<li>' + data[i].name,
            data[i].description, '</br>',
            data[i].address, '</br>',
            data[i].hours, '</br>',
            data[i].price, '</br>',
-           data[i].expires_at, '</br>' + '</li></br></a>');
+           exp.toLocaleDateString(), '</br>' + '</li></br></a>');
        }
      });
    };
@@ -42,7 +45,8 @@
              "description": description,
              "address": address,
              "price": price,
-             "hours": hours
+             "hours": hours,
+             "expires_at": expires_at
            }
          },
          dataType: "json",
