@@ -9,12 +9,12 @@
        for (var i in data) {
          console.log(data[i]);
          $('#popups').append(
-           '<a href=http://localhost:3000/popups/' + data[i].id + '>' + '<li>' + data[i].name,
-           data[i].description,
-           data[i].address,
-           data[i].hours,
-           data[i].price,
-           data[i].expires_at + '</li></a>');
+           '<a href= http://localhost:3000/popups/' + data[i].id + '>' + '<li>' + data[i].name, 
+           data[i].description,'</br>',
+           data[i].address,'</br>',
+           data[i].hours,'</br>',
+           data[i].price,'</br>',
+           data[i].expires_at, '</br>' + '</li></br></a>');       
        }
      });
    };
