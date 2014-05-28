@@ -9,32 +9,20 @@
     <input id="hours" type="text" placeholder="hours">
     <input id="expires_at" type="text" placeholder="expires at">
     <!-- <input id="image" type="file" placeholder="image"> -->
-    <!-- <input type="file" id="upload" accept="image"> -->
     <button id="submit" type="submit">Submit</button>
   </form>
-  <!-- <%#= form_for @popup, :html => { :multipart => true } do |f| %>
-    <div><%#= f.file_field :image %> 
-      <%#= f.submit "Upload image", :class => "btn-default" %>
-    </div>
-  <%# end %> -->
+  
   </div>
 
 <div class="row">
-  <div class="col-med-8">  
-    <ul id = "popups">
-     <br>
+  <div class="col-md-6">  
+    <ul id="popups">
     </ul>
-    <div class="col-med-4">
-      <div class="google-map">
-        <div id="map-canvas">
-        </div>
+  </div>
+  <div class="col-md-6">
+    <div class="google-map">
+      <div id="map-canvas">
       </div>
-    </div>
+  </div>
   </div>
 </div>
-
-
-
-
-
-

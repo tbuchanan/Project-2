@@ -71,6 +71,8 @@ h3 {
 
 div.jumbotron {
   background-color: #F8F8FF;
+  width: 1126px;
+  margin-left: 1em;
 }
 
 .container {
@@ -106,17 +108,17 @@ font-size: 12px;
 
 ul#popups {
   padding-left: 25px;
-  width: 42%;
   background-color: #D3D3D3;
   border-radius: 5px;
   margin-left: 15px;
 }
 
 #map-canvas {
-  width: 500px;
-  height: 500px;
+  width: 600px;
+  height: 800px;
   margin: 0;
   padding: 0;
+  border-radius: 5px;
 }
 
   
@@ -128,8 +130,3 @@ float: right;
   width: 60%
   margin-top: 50px;
 }
-
-
-
-
-

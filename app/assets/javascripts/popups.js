@@ -8,13 +8,16 @@
      }).success(function(data) {
        for (var i in data) {
          console.log(data[i]);
+
+        var exp = new Date(data[i].expires_at);
+
          $('#popups').append(
            '<a href= http://localhost:3000/popups/' + data[i].id + '>' + '<li>' + data[i].name, 
            data[i].description,'</br>',
            data[i].address,'</br>',
            data[i].hours,'</br>',
            data[i].price,'</br>',
-           data[i].expires_at, '</br>' + '</li></br></a>');       
+           exp.toLocaleDateString(), '</br>' + '</li></br></a>');       
        }
      });
    };
