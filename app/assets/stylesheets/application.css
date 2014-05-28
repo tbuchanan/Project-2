@@ -106,15 +106,14 @@ font-size: 12px;
 
 ul#popups {
   padding-left: 25px;
-  width: 42%;
   background-color: #D3D3D3;
   border-radius: 5px;
   margin-left: 15px;
 }
 
 #map-canvas {
-  width: 500px;
-  height: 500px;
+  width: 600px;
+  height: 600px;
   margin: 0;
   padding: 0;
 }

@@ -81353,3 +81353,2478 @@ Processing by PopupsController#index as JSON
   [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1
   [1m[36mPopup Load (1.1ms)[0m  [1mSELECT "popups".* FROM "popups"  WHERE (name LIKE '%%') AND "popups"."active" = 't'[0m
 Completed 200 OK in 22ms (Views: 14.8ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-28 11:04:36 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (3.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PopupsController#index as HTML
+  [1m[35mUser Load (4.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered popups/index.html.erb within layouts/application (3.7ms)
+  Rendered layouts/_search.html.erb (5.8ms)
+  Rendered layouts/_form.html.erb (1.1ms)
+Completed 200 OK in 700ms (Views: 259.3ms | ActiveRecord: 20.0ms)
+
+
+Started GET "/assets/feeds.css?body=1" for 127.0.0.1 at 2014-05-28 11:04:37 -0700
+
+
+Started GET "/assets/popups.css?body=1" for 127.0.0.1 at 2014-05-28 11:04:37 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-28 11:04:37 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-28 11:04:37 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-05-28 11:04:37 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-28 11:04:37 -0700
+
+
+Started GET "/assets/google.js?body=1" for 127.0.0.1 at 2014-05-28 11:04:37 -0700
+
+
+Started GET "/assets/popups.js?body=1" for 127.0.0.1 at 2014-05-28 11:04:37 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-28 11:04:37 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-28 11:04:37 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-05-28 11:04:37 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-28 11:04:37 -0700
+Processing by PopupsController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered popups/index.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_search.html.erb (1.5ms)
+  Rendered layouts/_form.html.erb (0.1ms)
+Completed 200 OK in 43ms (Views: 32.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/popups.css?body=1" for 127.0.0.1 at 2014-05-28 11:04:38 -0700
+
+
+Started GET "/assets/feeds.css?body=1" for 127.0.0.1 at 2014-05-28 11:04:38 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-28 11:04:38 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-28 11:04:38 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-28 11:04:38 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-05-28 11:04:38 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-28 11:04:38 -0700
+
+
+Started GET "/assets/google.js?body=1" for 127.0.0.1 at 2014-05-28 11:04:38 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-05-28 11:04:38 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-28 11:04:38 -0700
+
+
+Started GET "/assets/popups.js?body=1" for 127.0.0.1 at 2014-05-28 11:04:38 -0700
+
+
+Started GET "/popups.json?q=" for 127.0.0.1 at 2014-05-28 11:04:38 -0700
+Processing by PopupsController#index as JSON
+  Parameters: {"q"=>""}
+  [1m[35mUser Load (1.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (3.2ms)[0m  [1mSELECT "popups".* FROM "popups"  WHERE (name LIKE '%%') AND "popups"."active" = 't'[0m
+Completed 200 OK in 69ms (Views: 58.6ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/popups.json" for 127.0.0.1 at 2014-05-28 11:04:39 -0700
+Processing by PopupsController#index as JSON
+  [1m[35mUser Load (3.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (1.3ms)[0m  [1mSELECT "popups".* FROM "popups"  WHERE (name LIKE '%%') AND "popups"."active" = 't'[0m
+Completed 200 OK in 28ms (Views: 15.4ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-28 11:05:07 -0700
+Processing by PopupsController#index as HTML
+  [1m[35mUser Load (1.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered popups/index.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_search.html.erb (1.5ms)
+  Rendered layouts/_form.html.erb (0.3ms)
+Completed 200 OK in 26ms (Views: 20.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/popups.css?body=1" for 127.0.0.1 at 2014-05-28 11:05:07 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-28 11:05:07 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-28 11:05:07 -0700
+
+
+Started GET "/assets/google.js?body=1" for 127.0.0.1 at 2014-05-28 11:05:07 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-28 11:05:08 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-28 11:05:08 -0700
+
+
+Started GET "/assets/popups.js?body=1" for 127.0.0.1 at 2014-05-28 11:05:08 -0700
+
+
+Started GET "/assets/feeds.css?body=1" for 127.0.0.1 at 2014-05-28 11:05:08 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-28 11:05:08 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-05-28 11:05:08 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-05-28 11:05:08 -0700
+
+
+Started GET "/popups.json" for 127.0.0.1 at 2014-05-28 11:05:08 -0700
+Processing by PopupsController#index as JSON
+  [1m[36mUser Load (4.9ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPopup Load (2.1ms)[0m  SELECT "popups".* FROM "popups"  WHERE (name LIKE '%%') AND "popups"."active" = 't'
+Completed 200 OK in 25ms (Views: 12.8ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/popups.json?q=" for 127.0.0.1 at 2014-05-28 11:05:08 -0700
+Processing by PopupsController#index as JSON
+  Parameters: {"q"=>""}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPopup Load (1.1ms)[0m  SELECT "popups".* FROM "popups"  WHERE (name LIKE '%%') AND "popups"."active" = 't'
+Completed 200 OK in 21ms (Views: 14.4ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-28 11:06:10 -0700
+Processing by PopupsController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered popups/index.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_search.html.erb (1.5ms)
+  Rendered layouts/_form.html.erb (0.2ms)
+Completed 200 OK in 56ms (Views: 49.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/feeds.css?body=1" for 127.0.0.1 at 2014-05-28 11:06:10 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-28 11:06:10 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-28 11:06:10 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-28 11:06:10 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-28 11:06:11 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-05-28 11:06:11 -0700
+
+
+Started GET "/assets/popups.css?body=1" for 127.0.0.1 at 2014-05-28 11:06:11 -0700
+
+
+Started GET "/assets/google.js?body=1" for 127.0.0.1 at 2014-05-28 11:06:11 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-05-28 11:06:11 -0700
+
+
+Started GET "/assets/popups.js?body=1" for 127.0.0.1 at 2014-05-28 11:06:11 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-28 11:06:11 -0700
+
+
+Started GET "/popups.json?q=" for 127.0.0.1 at 2014-05-28 11:06:11 -0700
+Processing by PopupsController#index as JSON
+  Parameters: {"q"=>""}
+  [1m[35mUser Load (1.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (1.1ms)[0m  [1mSELECT "popups".* FROM "popups"  WHERE (name LIKE '%%') AND "popups"."active" = 't'[0m
+Completed 200 OK in 20ms (Views: 13.2ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/popups.json" for 127.0.0.1 at 2014-05-28 11:06:11 -0700
+Processing by PopupsController#index as JSON
+  [1m[35mUser Load (2.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (1.3ms)[0m  [1mSELECT "popups".* FROM "popups"  WHERE (name LIKE '%%') AND "popups"."active" = 't'[0m
+Completed 200 OK in 22ms (Views: 13.5ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-28 11:06:57 -0700
+Processing by PopupsController#index as HTML
+  [1m[35mUser Load (3.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered popups/index.html.erb within layouts/application (5.8ms)
+  Rendered layouts/_search.html.erb (1.4ms)
+  Rendered layouts/_form.html.erb (0.9ms)
+Completed 200 OK in 75ms (Views: 64.1ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-28 11:06:57 -0700
+
+
+Started GET "/assets/popups.css?body=1" for 127.0.0.1 at 2014-05-28 11:06:57 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-28 11:06:57 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-28 11:06:57 -0700
+
+
+Started GET "/assets/feeds.css?body=1" for 127.0.0.1 at 2014-05-28 11:06:57 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-28 11:06:57 -0700
+
+
+Started GET "/assets/popups.js?body=1" for 127.0.0.1 at 2014-05-28 11:06:57 -0700
+
+
+Started GET "/assets/google.js?body=1" for 127.0.0.1 at 2014-05-28 11:06:57 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-28 11:06:57 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-05-28 11:06:57 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-05-28 11:06:57 -0700
+
+
+Started GET "/popups.json" for 127.0.0.1 at 2014-05-28 11:06:58 -0700
+Processing by PopupsController#index as JSON
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPopup Load (1.2ms)[0m  SELECT "popups".* FROM "popups"  WHERE (name LIKE '%%') AND "popups"."active" = 't'
+Completed 200 OK in 23ms (Views: 16.9ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/popups.json?q=" for 127.0.0.1 at 2014-05-28 11:06:58 -0700
+Processing by PopupsController#index as JSON
+  Parameters: {"q"=>""}
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPopup Load (1.8ms)[0m  SELECT "popups".* FROM "popups"  WHERE (name LIKE '%%') AND "popups"."active" = 't'
+Completed 200 OK in 27ms (Views: 16.9ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/popups/1" for 127.0.0.1 at 2014-05-28 11:10:06 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (36.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPopup Load (2.2ms)[0m  SELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mFeed Load (2.2ms)[0m  [1mSELECT "feeds".* FROM "feeds"  WHERE "feeds"."popup_id" = $1[0m  [["popup_id", 1]]
+  Rendered popups/show.html.erb within layouts/application (51.8ms)
+  Rendered layouts/_search.html.erb (2.9ms)
+  Rendered layouts/_form.html.erb (1.2ms)
+Completed 200 OK in 290ms (Views: 74.4ms | ActiveRecord: 46.1ms)
+
+
+Started GET "/popups.json?q=" for 127.0.0.1 at 2014-05-28 11:10:07 -0700
+Processing by PopupsController#index as JSON
+  Parameters: {"q"=>""}
+  [1m[35mUser Load (2.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (1.2ms)[0m  [1mSELECT "popups".* FROM "popups"  WHERE (name LIKE '%%') AND "popups"."active" = 't'[0m
+Completed 200 OK in 58ms (Views: 48.6ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/popups/1" for 127.0.0.1 at 2014-05-28 11:11:48 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (3.8ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (1.2ms)[0m  [1mSELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mFeed Load (0.8ms)[0m  SELECT "feeds".* FROM "feeds"  WHERE "feeds"."popup_id" = $1  [["popup_id", 1]]
+  Rendered popups/show.html.erb within layouts/application (10.2ms)
+  Rendered layouts/_search.html.erb (1.1ms)
+  Rendered layouts/_form.html.erb (0.2ms)
+Completed 200 OK in 66ms (Views: 49.8ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/popups.json?q=" for 127.0.0.1 at 2014-05-28 11:11:48 -0700
+Processing by PopupsController#index as JSON
+  Parameters: {"q"=>""}
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPopup Load (1.2ms)[0m  SELECT "popups".* FROM "popups"  WHERE (name LIKE '%%') AND "popups"."active" = 't'
+Completed 200 OK in 33ms (Views: 24.8ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/popups/1" for 127.0.0.1 at 2014-05-28 11:13:16 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPopup Load (1.8ms)[0m  SELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mFeed Load (0.8ms)[0m  [1mSELECT "feeds".* FROM "feeds"  WHERE "feeds"."popup_id" = $1[0m  [["popup_id", 1]]
+  Rendered popups/show.html.erb within layouts/application (19.7ms)
+  Rendered layouts/_search.html.erb (1.1ms)
+  Rendered layouts/_form.html.erb (0.2ms)
+Completed 200 OK in 48ms (Views: 35.9ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/popups.json?q=" for 127.0.0.1 at 2014-05-28 11:13:16 -0700
+Processing by PopupsController#index as JSON
+  Parameters: {"q"=>""}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (4.1ms)[0m  [1mSELECT "popups".* FROM "popups"  WHERE (name LIKE '%%') AND "popups"."active" = 't'[0m
+Completed 200 OK in 23ms (Views: 13.2ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/popups" for 127.0.0.1 at 2014-05-28 11:14:28 -0700
+Processing by PopupsController#index as HTML
+  [1m[35mUser Load (2.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered popups/index.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_search.html.erb (2.0ms)
+  Rendered layouts/_form.html.erb (0.2ms)
+Completed 200 OK in 50ms (Views: 42.1ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/popups.json?q=" for 127.0.0.1 at 2014-05-28 11:14:28 -0700
+Processing by PopupsController#index as JSON
+  Parameters: {"q"=>""}
+  [1m[36mUser Load (1.9ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPopup Load (1.1ms)[0m  SELECT "popups".* FROM "popups"  WHERE (name LIKE '%%') AND "popups"."active" = 't'
+Completed 200 OK in 25ms (Views: 18.1ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/popups/7" for 127.0.0.1 at 2014-05-28 11:14:30 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (1.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPopup Load (2.5ms)[0m  SELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36mFeed Load (0.7ms)[0m  [1mSELECT "feeds".* FROM "feeds"  WHERE "feeds"."popup_id" = $1[0m  [["popup_id", 7]]
+  Rendered popups/show.html.erb within layouts/application (26.6ms)
+  Rendered layouts/_search.html.erb (1.2ms)
+  Rendered layouts/_form.html.erb (0.3ms)
+Completed 200 OK in 63ms (Views: 48.9ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/popups.json?q=" for 127.0.0.1 at 2014-05-28 11:14:30 -0700
+Processing by PopupsController#index as JSON
+  Parameters: {"q"=>""}
+  [1m[35mUser Load (2.9ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (1.2ms)[0m  [1mSELECT "popups".* FROM "popups"  WHERE (name LIKE '%%') AND "popups"."active" = 't'[0m
+Completed 200 OK in 29ms (Views: 19.0ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/images/medium/missing.png" for 127.0.0.1 at 2014-05-28 11:14:30 -0700
+
+ActionController::RoutingError (No route matches [GET] "/images/medium/missing.png"):
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (10.5ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (6.2ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (121.9ms)
+
+
+Started PATCH "/popups/7" for 127.0.0.1 at 2014-05-28 11:14:39 -0700
+Processing by PopupsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PeAGEmUvzo0kGjyBWXbUSMwGkgBb4mGy3KeD0nhZCaw=", "popup"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x007f9dae834638 @tempfile=#<Tempfile:/var/folders/ph/5qm9vccx5fb4nn7_fjtrvxfc0000gn/T/RackMultipart20140528-92309-qjziff>, @original_filename="roti_roll.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"popup[image]\"; filename=\"roti_roll.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Upload image", "id"=>"7"}
+  [1m[35mUser Load (1.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (1.0ms)[0m  [1mSELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1[0m  [["id", 7]]
+Redirected to http://localhost:3000/popups/7
+Completed 302 Found in 8ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/popups/7" for 127.0.0.1 at 2014-05-28 11:14:39 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (0.8ms)[0m  [1mSELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mFeed Load (0.7ms)[0m  SELECT "feeds".* FROM "feeds"  WHERE "feeds"."popup_id" = $1  [["popup_id", 7]]
+  Rendered popups/show.html.erb within layouts/application (10.7ms)
+  Rendered layouts/_search.html.erb (4.8ms)
+  Rendered layouts/_form.html.erb (0.2ms)
+Completed 200 OK in 38ms (Views: 30.3ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/assets/feeds.css?body=1" for 127.0.0.1 at 2014-05-28 11:14:39 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-28 11:14:39 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-28 11:14:39 -0700
+
+
+Started GET "/assets/popups.css?body=1" for 127.0.0.1 at 2014-05-28 11:14:39 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-28 11:14:39 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-05-28 11:14:39 -0700
+
+
+Started GET "/assets/popups.js?body=1" for 127.0.0.1 at 2014-05-28 11:14:39 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-28 11:14:39 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-28 11:14:39 -0700
+
+
+Started GET "/assets/google.js?body=1" for 127.0.0.1 at 2014-05-28 11:14:39 -0700
+
+
+Started GET "/images/medium/missing.png" for 127.0.0.1 at 2014-05-28 11:14:39 -0700
+
+ActionController::RoutingError (No route matches [GET] "/images/medium/missing.png"):
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (8.2ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.6ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (96.4ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-05-28 11:14:39 -0700
+
+
+Started GET "/images/medium/missing.png" for 127.0.0.1 at 2014-05-28 11:14:40 -0700
+
+ActionController::RoutingError (No route matches [GET] "/images/medium/missing.png"):
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (14.4ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.9ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (91.3ms)
+  [1m[36mPopup Load (2.7ms)[0m  [1mSELECT  "popups".* FROM "popups"   ORDER BY "popups"."id" DESC LIMIT 1[0m
+
+
+Started GET "/popups" for 127.0.0.1 at 2014-05-28 11:16:13 -0700
+Processing by PopupsController#index as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered popups/index.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_search.html.erb (1.5ms)
+  Rendered layouts/_form.html.erb (0.2ms)
+Completed 200 OK in 31ms (Views: 22.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/popups.json?q=" for 127.0.0.1 at 2014-05-28 11:16:13 -0700
+Processing by PopupsController#index as JSON
+  Parameters: {"q"=>""}
+  [1m[35mUser Load (1.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (1.2ms)[0m  [1mSELECT "popups".* FROM "popups"  WHERE (name LIKE '%%') AND "popups"."active" = 't'[0m
+Completed 200 OK in 29ms (Views: 22.8ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/popups/1" for 127.0.0.1 at 2014-05-28 11:16:15 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (2.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (5.3ms)[0m  [1mSELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mFeed Load (2.7ms)[0m  SELECT "feeds".* FROM "feeds"  WHERE "feeds"."popup_id" = $1  [["popup_id", 1]]
+  Rendered popups/show.html.erb within layouts/application (12.3ms)
+  Rendered layouts/_search.html.erb (1.8ms)
+  Rendered layouts/_form.html.erb (0.2ms)
+Completed 200 OK in 53ms (Views: 32.0ms | ActiveRecord: 10.5ms)
+
+
+Started GET "/popups.json?q=" for 127.0.0.1 at 2014-05-28 11:16:15 -0700
+Processing by PopupsController#index as JSON
+  Parameters: {"q"=>""}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPopup Load (1.6ms)[0m  SELECT "popups".* FROM "popups"  WHERE (name LIKE '%%') AND "popups"."active" = 't'
+Completed 200 OK in 31ms (Views: 21.7ms | ActiveRecord: 2.7ms)
+
+
+Started PATCH "/popups/1" for 127.0.0.1 at 2014-05-28 11:17:41 -0700
+Processing by PopupsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PeAGEmUvzo0kGjyBWXbUSMwGkgBb4mGy3KeD0nhZCaw=", "popup"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x007f9dace85408 @tempfile=#<Tempfile:/var/folders/ph/5qm9vccx5fb4nn7_fjtrvxfc0000gn/T/RackMultipart20140528-92309-1cv1mnd>, @original_filename="roti_roll.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"popup[image]\"; filename=\"roti_roll.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Upload image", "id"=>"1"}
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPopup Load (0.6ms)[0m  SELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1  [["id", 1]]
+Redirected to http://localhost:3000/popups/1
+Completed 302 Found in 9ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/popups/1" for 127.0.0.1 at 2014-05-28 11:17:41 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPopup Load (0.6ms)[0m  SELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mFeed Load (0.6ms)[0m  [1mSELECT "feeds".* FROM "feeds"  WHERE "feeds"."popup_id" = $1[0m  [["popup_id", 1]]
+  Rendered popups/show.html.erb within layouts/application (9.1ms)
+  Rendered layouts/_search.html.erb (1.2ms)
+  Rendered layouts/_form.html.erb (0.2ms)
+Completed 200 OK in 34ms (Views: 27.2ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-28 11:17:41 -0700
+
+
+Started GET "/assets/feeds.css?body=1" for 127.0.0.1 at 2014-05-28 11:17:41 -0700
+
+
+Started GET "/assets/popups.css?body=1" for 127.0.0.1 at 2014-05-28 11:17:41 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-28 11:17:41 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-28 11:17:41 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-05-28 11:17:41 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-28 11:17:41 -0700
+
+
+Started GET "/assets/google.js?body=1" for 127.0.0.1 at 2014-05-28 11:17:41 -0700
+
+
+Started GET "/assets/popups.js?body=1" for 127.0.0.1 at 2014-05-28 11:17:41 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-28 11:17:41 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-05-28 11:17:41 -0700
+
+
+Started GET "/popups/1" for 127.0.0.1 at 2014-05-28 11:19:13 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (0.9ms)[0m  [1mSELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mFeed Load (0.6ms)[0m  SELECT "feeds".* FROM "feeds"  WHERE "feeds"."popup_id" = $1  [["popup_id", 1]]
+  Rendered popups/show.html.erb within layouts/application (49.1ms)
+  Rendered layouts/_search.html.erb (1.4ms)
+  Rendered layouts/_form.html.erb (0.2ms)
+Completed 200 OK in 249ms (Views: 160.6ms | ActiveRecord: 20.9ms)
+
+
+Started GET "/assets/popups.css?body=1" for 127.0.0.1 at 2014-05-28 11:19:13 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-28 11:19:13 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-28 11:19:13 -0700
+
+
+Started GET "/assets/feeds.css?body=1" for 127.0.0.1 at 2014-05-28 11:19:13 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-28 11:19:13 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-05-28 11:19:13 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-28 11:19:13 -0700
+
+
+Started GET "/assets/google.js?body=1" for 127.0.0.1 at 2014-05-28 11:19:13 -0700
+
+
+Started GET "/assets/popups.js?body=1" for 127.0.0.1 at 2014-05-28 11:19:13 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-28 11:19:14 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-05-28 11:19:14 -0700
+
+
+Started GET "/popups" for 127.0.0.1 at 2014-05-28 11:19:16 -0700
+Processing by PopupsController#index as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered popups/index.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_search.html.erb (1.1ms)
+  Rendered layouts/_form.html.erb (0.2ms)
+Completed 200 OK in 30ms (Views: 22.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/popups.json?q=" for 127.0.0.1 at 2014-05-28 11:19:16 -0700
+Processing by PopupsController#index as JSON
+  Parameters: {"q"=>""}
+  [1m[35mUser Load (3.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (1.7ms)[0m  [1mSELECT "popups".* FROM "popups"  WHERE (name LIKE '%%') AND "popups"."active" = 't'[0m
+Completed 200 OK in 35ms (Views: 25.2ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/popups/7" for 127.0.0.1 at 2014-05-28 11:19:19 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (0.7ms)[0m  [1mSELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mFeed Load (0.5ms)[0m  SELECT "feeds".* FROM "feeds"  WHERE "feeds"."popup_id" = $1  [["popup_id", 7]]
+  Rendered popups/show.html.erb within layouts/application (14.7ms)
+  Rendered layouts/_search.html.erb (1.7ms)
+  Rendered layouts/_form.html.erb (0.2ms)
+Completed 200 OK in 66ms (Views: 47.3ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/images/medium/missing.png" for 127.0.0.1 at 2014-05-28 11:19:19 -0700
+
+ActionController::RoutingError (No route matches [GET] "/images/medium/missing.png"):
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (7.9ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.5ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (105.3ms)
+
+
+Started GET "/popups.json?q=" for 127.0.0.1 at 2014-05-28 11:19:19 -0700
+Processing by PopupsController#index as JSON
+  Parameters: {"q"=>""}
+  [1m[36mUser Load (2.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPopup Load (1.3ms)[0m  SELECT "popups".* FROM "popups"  WHERE (name LIKE '%%') AND "popups"."active" = 't'
+Completed 200 OK in 27ms (Views: 18.5ms | ActiveRecord: 3.5ms)
+
+
+Started PATCH "/popups/7" for 127.0.0.1 at 2014-05-28 11:19:44 -0700
+Processing by PopupsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PeAGEmUvzo0kGjyBWXbUSMwGkgBb4mGy3KeD0nhZCaw=", "popup"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x007f9dafa41ce0 @tempfile=#<Tempfile:/var/folders/ph/5qm9vccx5fb4nn7_fjtrvxfc0000gn/T/RackMultipart20140528-92309-1eqtrkb>, @original_filename="roti_roll.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"popup[image]\"; filename=\"roti_roll.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Upload image", "id"=>"7"}
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPopup Load (0.7ms)[0m  SELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1  [["id", 7]]
+Redirected to http://localhost:3000/popups/7
+Completed 302 Found in 16ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/popups/7" for 127.0.0.1 at 2014-05-28 11:19:44 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPopup Load (0.6ms)[0m  SELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36mFeed Load (0.5ms)[0m  [1mSELECT "feeds".* FROM "feeds"  WHERE "feeds"."popup_id" = $1[0m  [["popup_id", 7]]
+  Rendered popups/show.html.erb within layouts/application (8.3ms)
+  Rendered layouts/_search.html.erb (1.2ms)
+  Rendered layouts/_form.html.erb (0.2ms)
+Completed 200 OK in 36ms (Views: 27.8ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-05-28 11:19:44 -0700
+
+
+Started GET "/assets/feeds.css?body=1" for 127.0.0.1 at 2014-05-28 11:19:44 -0700
+
+
+Started GET "/assets/popups.css?body=1" for 127.0.0.1 at 2014-05-28 11:19:44 -0700
+
+
+Started GET "/assets/popups.js?body=1" for 127.0.0.1 at 2014-05-28 11:19:44 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-28 11:19:45 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-05-28 11:19:45 -0700
+
+
+Started GET "/assets/google.js?body=1" for 127.0.0.1 at 2014-05-28 11:19:45 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-28 11:19:45 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-28 11:19:45 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-28 11:19:45 -0700
+
+
+Started GET "/images/medium/missing.png" for 127.0.0.1 at 2014-05-28 11:19:45 -0700
+
+ActionController::RoutingError (No route matches [GET] "/images/medium/missing.png"):
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (124.3ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.7ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (208.6ms)
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-28 11:19:45 -0700
+
+
+Started GET "/images/medium/missing.png" for 127.0.0.1 at 2014-05-28 11:19:45 -0700
+
+ActionController::RoutingError (No route matches [GET] "/images/medium/missing.png"):
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (13.6ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.5ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (114.6ms)
+
+
+Started GET "/popups/7" for 127.0.0.1 at 2014-05-28 11:20:49 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mUser Load (2.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (1.3ms)[0m  [1mSELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mFeed Load (1.0ms)[0m  SELECT "feeds".* FROM "feeds"  WHERE "feeds"."popup_id" = $1  [["popup_id", 7]]
+  Rendered popups/show.html.erb within layouts/application (182.3ms)
+  Rendered layouts/_search.html.erb (4.6ms)
+  Rendered layouts/_form.html.erb (1.3ms)
+Completed 200 OK in 559ms (Views: 395.0ms | ActiveRecord: 21.3ms)
+
+
+Started GET "/assets/feeds.css?body=1" for 127.0.0.1 at 2014-05-28 11:20:50 -0700
+
+
+Started GET "/assets/popups.css?body=1" for 127.0.0.1 at 2014-05-28 11:20:50 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-28 11:20:50 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-28 11:20:50 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-28 11:20:50 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-05-28 11:20:50 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-05-28 11:20:50 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-28 11:20:50 -0700
+
+
+Started GET "/assets/google.js?body=1" for 127.0.0.1 at 2014-05-28 11:20:50 -0700
+
+
+Started GET "/assets/popups.js?body=1" for 127.0.0.1 at 2014-05-28 11:20:50 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-28 11:20:50 -0700
+
+
+Started GET "/images/medium/missing.png" for 127.0.0.1 at 2014-05-28 11:20:50 -0700
+
+ActionController::RoutingError (No route matches [GET] "/images/medium/missing.png"):
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (10.9ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (12.2ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (177.4ms)
+
+
+Started PATCH "/popups/7" for 127.0.0.1 at 2014-05-28 11:20:58 -0700
+Processing by PopupsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PeAGEmUvzo0kGjyBWXbUSMwGkgBb4mGy3KeD0nhZCaw=", "popup"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x007fcf46b6ac48 @tempfile=#<Tempfile:/var/folders/ph/5qm9vccx5fb4nn7_fjtrvxfc0000gn/T/RackMultipart20140528-92835-vmucu1>, @original_filename="roti_roll.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"popup[image]\"; filename=\"roti_roll.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Upload image", "id"=>"7"}
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPopup Load (0.9ms)[0m  SELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1  [["id", 7]]
+Redirected to http://localhost:3000/popups/7
+Completed 302 Found in 9ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/popups/7" for 127.0.0.1 at 2014-05-28 11:20:58 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPopup Load (0.8ms)[0m  SELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36mFeed Load (0.8ms)[0m  [1mSELECT "feeds".* FROM "feeds"  WHERE "feeds"."popup_id" = $1[0m  [["popup_id", 7]]
+  Rendered popups/show.html.erb within layouts/application (22.6ms)
+  Rendered layouts/_search.html.erb (1.1ms)
+  Rendered layouts/_form.html.erb (0.3ms)
+Completed 200 OK in 61ms (Views: 52.9ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/assets/feeds.css?body=1" for 127.0.0.1 at 2014-05-28 11:20:58 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-28 11:20:58 -0700
+
+
+Started GET "/assets/popups.css?body=1" for 127.0.0.1 at 2014-05-28 11:20:58 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-28 11:20:58 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-05-28 11:20:58 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-28 11:20:58 -0700
+
+
+Started GET "/images/medium/missing.png" for 127.0.0.1 at 2014-05-28 11:20:58 -0700
+
+ActionController::RoutingError (No route matches [GET] "/images/medium/missing.png"):
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (8.9ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.5ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (85.2ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-05-28 11:20:58 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-28 11:20:58 -0700
+
+
+Started GET "/assets/popups.js?body=1" for 127.0.0.1 at 2014-05-28 11:20:58 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-28 11:20:58 -0700
+
+
+Started GET "/assets/google.js?body=1" for 127.0.0.1 at 2014-05-28 11:20:58 -0700
+
+
+Started GET "/images/medium/missing.png" for 127.0.0.1 at 2014-05-28 11:20:58 -0700
+
+ActionController::RoutingError (No route matches [GET] "/images/medium/missing.png"):
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.1ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (12.4ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (8.0ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (108.2ms)
+
+
+Started GET "/popups/7" for 127.0.0.1 at 2014-05-28 11:23:19 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mUser Load (1.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (1.0ms)[0m  [1mSELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  Rendered popups/show.html.erb within layouts/application (5.8ms)
+  Rendered layouts/_search.html.erb (1.2ms)
+  Rendered layouts/_form.html.erb (0.2ms)
+Completed 200 OK in 35ms (Views: 25.6ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/feeds.css?body=1" for 127.0.0.1 at 2014-05-28 11:23:19 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-05-28 11:23:19 -0700
+
+
+Started GET "/assets/popups.css?body=1" for 127.0.0.1 at 2014-05-28 11:23:19 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-28 11:23:19 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-28 11:23:19 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-28 11:23:19 -0700
+
+
+Started GET "/assets/google.js?body=1" for 127.0.0.1 at 2014-05-28 11:23:19 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-28 11:23:20 -0700
+
+
+Started GET "/assets/popups.js?body=1" for 127.0.0.1 at 2014-05-28 11:23:20 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-28 11:23:20 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-05-28 11:23:20 -0700
+
+
+Started GET "/images/medium/missing.png" for 127.0.0.1 at 2014-05-28 11:23:20 -0700
+
+ActionController::RoutingError (No route matches [GET] "/images/medium/missing.png"):
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (11.0ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.6ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (223.9ms)
+
+
+Started GET "/images/medium/missing.png" for 127.0.0.1 at 2014-05-28 11:23:20 -0700
+
+ActionController::RoutingError (No route matches [GET] "/images/medium/missing.png"):
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.5ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (19.8ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.7ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (149.0ms)
+
+
+Started PATCH "/popups/7" for 127.0.0.1 at 2014-05-28 11:23:35 -0700
+Processing by PopupsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PeAGEmUvzo0kGjyBWXbUSMwGkgBb4mGy3KeD0nhZCaw=", "popup"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x007fcf46efae30 @tempfile=#<Tempfile:/var/folders/ph/5qm9vccx5fb4nn7_fjtrvxfc0000gn/T/RackMultipart20140528-92835-1u7jvdl>, @original_filename="roti_roll.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"popup[image]\"; filename=\"roti_roll.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Upload image", "id"=>"7"}
+  [1m[35mUser Load (1.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (1.0ms)[0m  [1mSELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1[0m  [["id", 7]]
+Redirected to http://localhost:3000/popups/7
+Completed 302 Found in 8ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/popups/7" for 127.0.0.1 at 2014-05-28 11:23:35 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (1.0ms)[0m  [1mSELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  Rendered popups/show.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_search.html.erb (1.2ms)
+  Rendered layouts/_form.html.erb (0.2ms)
+Completed 200 OK in 26ms (Views: 19.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/popups.css?body=1" for 127.0.0.1 at 2014-05-28 11:23:35 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-28 11:23:35 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-28 11:23:35 -0700
+
+
+Started GET "/assets/feeds.css?body=1" for 127.0.0.1 at 2014-05-28 11:23:35 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-28 11:23:35 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-28 11:23:35 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-05-28 11:23:35 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-05-28 11:23:35 -0700
+
+
+Started GET "/assets/google.js?body=1" for 127.0.0.1 at 2014-05-28 11:23:35 -0700
+
+
+Started GET "/assets/popups.js?body=1" for 127.0.0.1 at 2014-05-28 11:23:35 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-28 11:23:35 -0700
+
+
+Started GET "/images/medium/missing.png" for 127.0.0.1 at 2014-05-28 11:23:35 -0700
+
+ActionController::RoutingError (No route matches [GET] "/images/medium/missing.png"):
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (9.0ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (8.0ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (271.4ms)
+
+
+Started GET "/popups/7" for 127.0.0.1 at 2014-05-28 11:24:34 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (0.6ms)[0m  [1mSELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  Rendered popups/show.html.erb within layouts/application (5.6ms)
+  Rendered layouts/_search.html.erb (1.2ms)
+  Rendered layouts/_form.html.erb (0.2ms)
+Completed 200 OK in 39ms (Views: 29.0ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/popups.css?body=1" for 127.0.0.1 at 2014-05-28 11:24:35 -0700
+
+
+Started GET "/assets/feeds.css?body=1" for 127.0.0.1 at 2014-05-28 11:24:35 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-28 11:24:35 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-28 11:24:35 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-28 11:24:35 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-28 11:24:35 -0700
+
+
+Started GET "/assets/popups.js?body=1" for 127.0.0.1 at 2014-05-28 11:24:35 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-05-28 11:24:35 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-28 11:24:35 -0700
+
+
+Started GET "/assets/google.js?body=1" for 127.0.0.1 at 2014-05-28 11:24:35 -0700
+
+
+Started GET "/images/medium/missing.png" for 127.0.0.1 at 2014-05-28 11:24:35 -0700
+
+ActionController::RoutingError (No route matches [GET] "/images/medium/missing.png"):
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (8.5ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (4.2ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (80.4ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-05-28 11:24:35 -0700
+
+
+Started GET "/images/medium/missing.png" for 127.0.0.1 at 2014-05-28 11:24:35 -0700
+
+ActionController::RoutingError (No route matches [GET] "/images/medium/missing.png"):
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (8.3ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.3ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (92.9ms)
+
+
+Started PATCH "/popups/7" for 127.0.0.1 at 2014-05-28 11:24:38 -0700
+Processing by PopupsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PeAGEmUvzo0kGjyBWXbUSMwGkgBb4mGy3KeD0nhZCaw=", "commit"=>"Upload image", "id"=>"7"}
+  [1m[35mUser Load (1.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (0.6ms)[0m  [1mSELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1[0m  [["id", 7]]
+Redirected to http://localhost:3000/popups/7
+Completed 302 Found in 9ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/popups/7" for 127.0.0.1 at 2014-05-28 11:24:39 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (2.9ms)[0m  [1mSELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  Rendered popups/show.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_search.html.erb (1.1ms)
+  Rendered layouts/_form.html.erb (0.2ms)
+Completed 200 OK in 54ms (Views: 24.4ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/assets/feeds.css?body=1" for 127.0.0.1 at 2014-05-28 11:24:39 -0700
+
+
+Started GET "/assets/popups.css?body=1" for 127.0.0.1 at 2014-05-28 11:24:39 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-28 11:24:39 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-28 11:24:39 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-28 11:24:39 -0700
+
+
+Started GET "/assets/google.js?body=1" for 127.0.0.1 at 2014-05-28 11:24:39 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-05-28 11:24:39 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-28 11:24:39 -0700
+
+
+Started GET "/images/medium/missing.png" for 127.0.0.1 at 2014-05-28 11:24:39 -0700
+
+ActionController::RoutingError (No route matches [GET] "/images/medium/missing.png"):
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (8.3ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.3ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (82.4ms)
+
+
+Started GET "/assets/popups.js?body=1" for 127.0.0.1 at 2014-05-28 11:24:39 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-28 11:24:39 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-05-28 11:24:39 -0700
+
+
+Started GET "/images/medium/missing.png" for 127.0.0.1 at 2014-05-28 11:24:39 -0700
+
+ActionController::RoutingError (No route matches [GET] "/images/medium/missing.png"):
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (9.9ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.4ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (239.6ms)
+
+
+Started GET "/popups/7" for 127.0.0.1 at 2014-05-28 11:27:04 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (0.5ms)[0m  [1mSELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mFeed Load (0.7ms)[0m  SELECT "feeds".* FROM "feeds"  WHERE "feeds"."popup_id" = $1  [["popup_id", 7]]
+  Rendered popups/show.html.erb within layouts/application (70.0ms)
+  Rendered layouts/_search.html.erb (1.2ms)
+  Rendered layouts/_form.html.erb (0.2ms)
+Completed 200 OK in 174ms (Views: 88.5ms | ActiveRecord: 17.9ms)
+
+
+Started GET "/assets/popups.css?body=1" for 127.0.0.1 at 2014-05-28 11:27:05 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-28 11:27:05 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-28 11:27:05 -0700
+
+
+Started GET "/assets/feeds.css?body=1" for 127.0.0.1 at 2014-05-28 11:27:05 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-28 11:27:05 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-05-28 11:27:05 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-28 11:27:05 -0700
+
+
+Started GET "/assets/google.js?body=1" for 127.0.0.1 at 2014-05-28 11:27:05 -0700
+
+
+Started GET "/assets/popups.js?body=1" for 127.0.0.1 at 2014-05-28 11:27:05 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-28 11:27:05 -0700
+
+
+Started GET "/images/medium/missing.png" for 127.0.0.1 at 2014-05-28 11:27:05 -0700
+
+ActionController::RoutingError (No route matches [GET] "/images/medium/missing.png"):
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (9.2ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.4ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (274.1ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-05-28 11:27:05 -0700
+
+
+Started GET "/images/medium/missing.png" for 127.0.0.1 at 2014-05-28 11:27:06 -0700
+
+ActionController::RoutingError (No route matches [GET] "/images/medium/missing.png"):
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (9.1ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (19.1ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (14.8ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (199.8ms)
+
+
+Started PATCH "/popups/7" for 127.0.0.1 at 2014-05-28 11:27:22 -0700
+Processing by PopupsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PeAGEmUvzo0kGjyBWXbUSMwGkgBb4mGy3KeD0nhZCaw=", "popup"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x007fcf46c48458 @tempfile=#<Tempfile:/var/folders/ph/5qm9vccx5fb4nn7_fjtrvxfc0000gn/T/RackMultipart20140528-92835-hi9d7a>, @original_filename="roti_roll.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"popup[image]\"; filename=\"roti_roll.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Upload image", "id"=>"7"}
+  [1m[36mUser Load (4.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPopup Load (1.0ms)[0m  SELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1  [["id", 7]]
+Redirected to http://localhost:3000/popups/7
+Completed 302 Found in 115935ms (ActiveRecord: 5.3ms)
+
+
+Started GET "/popups/7" for 127.0.0.1 at 2014-05-28 11:29:18 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPopup Load (0.6ms)[0m  SELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36mFeed Load (0.8ms)[0m  [1mSELECT "feeds".* FROM "feeds"  WHERE "feeds"."popup_id" = $1[0m  [["popup_id", 7]]
+  Rendered popups/show.html.erb within layouts/application (48.5ms)
+  Rendered layouts/_search.html.erb (1.3ms)
+  Rendered layouts/_form.html.erb (0.2ms)
+Completed 200 OK in 148ms (Views: 67.9ms | ActiveRecord: 17.9ms)
+
+
+Started GET "/assets/feeds.css?body=1" for 127.0.0.1 at 2014-05-28 11:29:18 -0700
+
+
+Started GET "/assets/popups.css?body=1" for 127.0.0.1 at 2014-05-28 11:29:18 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-28 11:29:18 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-28 11:29:18 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-28 11:29:18 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-05-28 11:29:18 -0700
+
+
+Started GET "/assets/popups.js?body=1" for 127.0.0.1 at 2014-05-28 11:29:18 -0700
+
+
+Started GET "/assets/google.js?body=1" for 127.0.0.1 at 2014-05-28 11:29:18 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-28 11:29:18 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-28 11:29:18 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-05-28 11:29:18 -0700
+
+
+Started GET "/images/medium/missing.png" for 127.0.0.1 at 2014-05-28 11:29:18 -0700
+
+ActionController::RoutingError (No route matches [GET] "/images/medium/missing.png"):
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (9.2ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.1ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (150.5ms)
+
+
+Started GET "/images/medium/missing.png" for 127.0.0.1 at 2014-05-28 11:29:19 -0700
+
+ActionController::RoutingError (No route matches [GET] "/images/medium/missing.png"):
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (193.5ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (6.2ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (318.1ms)
+
+
+Started PATCH "/popups/7" for 127.0.0.1 at 2014-05-28 11:29:29 -0700
+Processing by PopupsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PeAGEmUvzo0kGjyBWXbUSMwGkgBb4mGy3KeD0nhZCaw=", "popup"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x007fcf437cdf20 @tempfile=#<Tempfile:/var/folders/ph/5qm9vccx5fb4nn7_fjtrvxfc0000gn/T/RackMultipart20140528-92835-ly3fi7>, @original_filename="roti_roll.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"popup[image]\"; filename=\"roti_roll.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Upload image", "id"=>"7"}
+  [1m[35mUser Load (1.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (0.8ms)[0m  [1mSELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35m (1.3ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+Completed 500 Internal Server Error in 12ms
+
+ArgumentError (When assigning attributes, you must pass a hash as an argument.):
+  app/controllers/popups_controller.rb:40:in `update'
+
+
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.7ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.6ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.4ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (57.4ms)
+
+
+Started GET "/popups/7" for 127.0.0.1 at 2014-05-28 11:31:28 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (1.3ms)[0m  [1mSELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mFeed Load (0.8ms)[0m  SELECT "feeds".* FROM "feeds"  WHERE "feeds"."popup_id" = $1  [["popup_id", 7]]
+  Rendered popups/show.html.erb within layouts/application (176.2ms)
+  Rendered layouts/_search.html.erb (1.3ms)
+  Rendered layouts/_form.html.erb (0.2ms)
+Completed 200 OK in 289ms (Views: 196.6ms | ActiveRecord: 18.8ms)
+
+
+Started GET "/assets/feeds.css?body=1" for 127.0.0.1 at 2014-05-28 11:31:28 -0700
+
+
+Started GET "/assets/popups.css?body=1" for 127.0.0.1 at 2014-05-28 11:31:28 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-28 11:31:28 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-28 11:31:28 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-28 11:31:28 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-05-28 11:31:28 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-28 11:31:28 -0700
+
+
+Started GET "/assets/google.js?body=1" for 127.0.0.1 at 2014-05-28 11:31:28 -0700
+
+
+Started GET "/assets/popups.js?body=1" for 127.0.0.1 at 2014-05-28 11:31:28 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-28 11:31:28 -0700
+
+
+Started GET "/images/medium/missing.png" for 127.0.0.1 at 2014-05-28 11:31:28 -0700
+
+ActionController::RoutingError (No route matches [GET] "/images/medium/missing.png"):
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (8.0ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.5ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (109.0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-05-28 11:31:29 -0700
+
+
+Started GET "/images/medium/missing.png" for 127.0.0.1 at 2014-05-28 11:31:29 -0700
+
+ActionController::RoutingError (No route matches [GET] "/images/medium/missing.png"):
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.3ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (10.1ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.4ms)
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (118.4ms)
+
+
+Started PATCH "/popups/7" for 127.0.0.1 at 2014-05-28 11:31:33 -0700
+Processing by PopupsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PeAGEmUvzo0kGjyBWXbUSMwGkgBb4mGy3KeD0nhZCaw=", "popup"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x007fcf47008458 @tempfile=#<Tempfile:/var/folders/ph/5qm9vccx5fb4nn7_fjtrvxfc0000gn/T/RackMultipart20140528-92835-17tk2yx>, @original_filename="roti_roll.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"popup[image]\"; filename=\"roti_roll.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Upload image", "id"=>"7"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPopup Load (0.6ms)[0m  SELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36m (0.7ms)[0m  [1mBEGIN[0m
+Command :: file -b --mime-type '/var/folders/ph/5qm9vccx5fb4nn7_fjtrvxfc0000gn/T/a2242458847025bb92444376ba23497920140528-92835-2j8e2f'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/ph/5qm9vccx5fb4nn7_fjtrvxfc0000gn/T/f4719910131a71f727ffb2ca5e10502720140528-92835-1g5c1e6[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/ph/5qm9vccx5fb4nn7_fjtrvxfc0000gn/T/f4719910131a71f727ffb2ca5e10502720140528-92835-1g5c1e6[0]'
+Command :: convert '/var/folders/ph/5qm9vccx5fb4nn7_fjtrvxfc0000gn/T/f4719910131a71f727ffb2ca5e10502720140528-92835-1g5c1e6[0]' -auto-orient -resize "100x100>" '/var/folders/ph/5qm9vccx5fb4nn7_fjtrvxfc0000gn/T/f4719910131a71f727ffb2ca5e10502720140528-92835-1g5c1e620140528-92835-ooocp4'
+Command :: file -b --mime '/var/folders/ph/5qm9vccx5fb4nn7_fjtrvxfc0000gn/T/f4719910131a71f727ffb2ca5e10502720140528-92835-1g5c1e620140528-92835-ooocp4'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/ph/5qm9vccx5fb4nn7_fjtrvxfc0000gn/T/f4719910131a71f727ffb2ca5e10502720140528-92835-1g5c1e6[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/ph/5qm9vccx5fb4nn7_fjtrvxfc0000gn/T/f4719910131a71f727ffb2ca5e10502720140528-92835-1g5c1e6[0]'
+Command :: convert '/var/folders/ph/5qm9vccx5fb4nn7_fjtrvxfc0000gn/T/f4719910131a71f727ffb2ca5e10502720140528-92835-1g5c1e6[0]' -auto-orient -resize "x200" -crop "200x200+49+0" +repage '/var/folders/ph/5qm9vccx5fb4nn7_fjtrvxfc0000gn/T/f4719910131a71f727ffb2ca5e10502720140528-92835-1g5c1e620140528-92835-1lgovnw'
+Command :: file -b --mime '/var/folders/ph/5qm9vccx5fb4nn7_fjtrvxfc0000gn/T/f4719910131a71f727ffb2ca5e10502720140528-92835-1g5c1e620140528-92835-1lgovnw'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/ph/5qm9vccx5fb4nn7_fjtrvxfc0000gn/T/f4719910131a71f727ffb2ca5e10502720140528-92835-1g5c1e6[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/ph/5qm9vccx5fb4nn7_fjtrvxfc0000gn/T/f4719910131a71f727ffb2ca5e10502720140528-92835-1g5c1e6[0]'
+Command :: convert '/var/folders/ph/5qm9vccx5fb4nn7_fjtrvxfc0000gn/T/f4719910131a71f727ffb2ca5e10502720140528-92835-1g5c1e6[0]' -auto-orient -resize "300x300>" '/var/folders/ph/5qm9vccx5fb4nn7_fjtrvxfc0000gn/T/f4719910131a71f727ffb2ca5e10502720140528-92835-1g5c1e620140528-92835-15k7dp2'
+Command :: file -b --mime '/var/folders/ph/5qm9vccx5fb4nn7_fjtrvxfc0000gn/T/f4719910131a71f727ffb2ca5e10502720140528-92835-1g5c1e620140528-92835-15k7dp2'
+Command :: file -b --mime-type '/var/folders/ph/5qm9vccx5fb4nn7_fjtrvxfc0000gn/T/e6403bd1538dd36437fec9a6664a403520140528-92835-d1kwy'
+  [1m[35mSQL (6.7ms)[0m  UPDATE "popups" SET "image_content_type" = $1, "image_file_name" = $2, "image_file_size" = $3, "image_updated_at" = $4, "updated_at" = $5 WHERE "popups"."id" = 7  [["image_content_type", "image/jpeg"], ["image_file_name", "roti_roll.jpg"], ["image_file_size", 105677], ["image_updated_at", "2014-05-28 18:31:34.020224"], ["updated_at", "2014-05-28 18:31:36.325713"]]
+  [1m[36m (3.4ms)[0m  [1mCOMMIT[0m
+Completed 500 Internal Server Error in 14102ms
+
+ActionView::MissingTemplate (Missing template popups/update, application/update with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :jbuilder, :coffee]}. Searched in:
+  * "/Users/tylair/GA-group_project/Project-2/app/views"
+  * "/Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/devise-3.2.4/app/views"
+):
+  actionview (4.1.1) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.1.1) lib/action_view/lookup_context.rb:124:in `find'
+  actionview (4.1.1) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.1.1) lib/action_view/renderer/template_renderer.rb:41:in `determine_template'
+  actionview (4.1.1) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.1.1) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.1.1) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.1.1) lib/action_view/rendering.rb:99:in `_render_template'
+  actionpack (4.1.1) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.1.1) lib/action_view/rendering.rb:82:in `render_to_body'
+  actionpack (4.1.1) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.1.1) lib/action_controller/metal/renderers.rb:32:in `render_to_body'
+  actionpack (4.1.1) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.1.1) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.1.1) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.1.1) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/benchmark.rb:296:in `realtime'
+  activesupport (4.1.1) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.1.1) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.1.1) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.1.1) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.1.1) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.1.1) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.1.1) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.1.1) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.1.1) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.1.1) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:113:in `call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:113:in `call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:229:in `call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:229:in `call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:86:in `call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:86:in `run_callbacks'
+  actionpack (4.1.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.1.1) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.1.1) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.1.1) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.1) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.1) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.1.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.1.1) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.1.1) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.1.1) lib/abstract_controller/base.rb:136:in `process'
+  actionview (4.1.1) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.1) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.1.1) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.1) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.1.1) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.1.1) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.1.1) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.1.1) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.1.1) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.1) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.1) lib/action_dispatch/routing/route_set.rb:676:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:35:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.1) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.1) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/tylair/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (1.2ms)
+
+
+Started GET "/popups/7" for 127.0.0.1 at 2014-05-28 11:32:10 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (2.9ms)[0m  [1mSELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mFeed Load (0.7ms)[0m  SELECT "feeds".* FROM "feeds"  WHERE "feeds"."popup_id" = $1  [["popup_id", 7]]
+  Rendered popups/show.html.erb within layouts/application (63.4ms)
+  Rendered layouts/_search.html.erb (1.2ms)
+  Rendered layouts/_form.html.erb (0.2ms)
+Completed 200 OK in 187ms (Views: 80.2ms | ActiveRecord: 27.3ms)
+
+
+Started GET "/assets/feeds.css?body=1" for 127.0.0.1 at 2014-05-28 11:32:10 -0700
+
+
+Started GET "/assets/popups.css?body=1" for 127.0.0.1 at 2014-05-28 11:32:10 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-28 11:32:10 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-28 11:32:10 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-28 11:32:10 -0700
+
+
+Started GET "/assets/google.js?body=1" for 127.0.0.1 at 2014-05-28 11:32:10 -0700
+
+
+Started GET "/assets/popups.js?body=1" for 127.0.0.1 at 2014-05-28 11:32:10 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-28 11:32:10 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-28 11:32:10 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-05-28 11:32:10 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-05-28 11:32:10 -0700
+
+
+Started POST "/popups/7/feeds" for 127.0.0.1 at 2014-05-28 11:32:11 -0700
+Processing by FeedsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PeAGEmUvzo0kGjyBWXbUSMwGkgBb4mGy3KeD0nhZCaw=", "feed"=>{"comment"=>""}, "commit"=>"Create comment", "popup_id"=>"7"}
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPopup Load (0.7ms)[0m  SELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36m (1.6ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (23.8ms)[0m  INSERT INTO "feeds" ("comment", "created_at", "popup_id", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["comment", ""], ["created_at", "2014-05-28 18:32:11.220778"], ["popup_id", 7], ["updated_at", "2014-05-28 18:32:11.220778"], ["user_id", 3]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/popups/7/feeds
+Completed 302 Found in 76ms (ActiveRecord: 27.8ms)
+
+
+Started GET "/popups/7/feeds" for 127.0.0.1 at 2014-05-28 11:32:11 -0700
+Processing by FeedsController#index as HTML
+  Parameters: {"popup_id"=>"7"}
+  [1m[35mUser Load (2.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (0.6ms)[0m  [1mSELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mFeed Load (1.1ms)[0m  SELECT "feeds".* FROM "feeds"  WHERE "feeds"."popup_id" = $1  [["popup_id", 7]]
+  Rendered feeds/index.html.erb within layouts/application (9.4ms)
+  Rendered layouts/_search.html.erb (1.1ms)
+  Rendered layouts/_form.html.erb (0.2ms)
+Completed 200 OK in 41ms (Views: 30.5ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-05-28 11:32:11 -0700
+
+
+Started GET "/assets/feeds.css?body=1" for 127.0.0.1 at 2014-05-28 11:32:11 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-28 11:32:11 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-28 11:32:11 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-28 11:32:11 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-28 11:32:11 -0700
+
+
+Started GET "/assets/popups.css?body=1" for 127.0.0.1 at 2014-05-28 11:32:11 -0700
+
+
+Started GET "/assets/google.js?body=1" for 127.0.0.1 at 2014-05-28 11:32:11 -0700
+
+
+Started GET "/assets/popups.js?body=1" for 127.0.0.1 at 2014-05-28 11:32:11 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-28 11:32:11 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-05-28 11:32:11 -0700
+
+
+Started GET "/popups/7" for 127.0.0.1 at 2014-05-28 11:32:16 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPopup Load (0.7ms)[0m  SELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36mFeed Load (0.8ms)[0m  [1mSELECT "feeds".* FROM "feeds"  WHERE "feeds"."popup_id" = $1[0m  [["popup_id", 7]]
+  Rendered popups/show.html.erb within layouts/application (17.7ms)
+  Rendered layouts/_search.html.erb (2.8ms)
+  Rendered layouts/_form.html.erb (1.2ms)
+Completed 200 OK in 52ms (Views: 41.2ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/popups.json?q=" for 127.0.0.1 at 2014-05-28 11:32:16 -0700
+Processing by PopupsController#index as JSON
+  Parameters: {"q"=>""}
+  [1m[35mUser Load (1.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (1.9ms)[0m  [1mSELECT "popups".* FROM "popups"  WHERE (name LIKE '%%') AND "popups"."active" = 't'[0m
+Completed 200 OK in 55ms (Views: 45.9ms | ActiveRecord: 3.0ms)
+
+
+Started PATCH "/popups/7" for 127.0.0.1 at 2014-05-28 11:32:27 -0700
+Processing by PopupsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PeAGEmUvzo0kGjyBWXbUSMwGkgBb4mGy3KeD0nhZCaw=", "popup"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x007fcf46b43058 @tempfile=#<Tempfile:/var/folders/ph/5qm9vccx5fb4nn7_fjtrvxfc0000gn/T/RackMultipart20140528-92835-pifg9l>, @original_filename="images.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"popup[image]\"; filename=\"images.jpeg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Upload image", "id"=>"7"}
+  [1m[35mUser Load (1.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (13.0ms)[0m  [1mSELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35m (0.4ms)[0m  BEGIN
+Command :: file -b --mime-type '/var/folders/ph/5qm9vccx5fb4nn7_fjtrvxfc0000gn/T/15733befb02a7e5a02c8683202d4122220140528-92835-6hedm'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/ph/5qm9vccx5fb4nn7_fjtrvxfc0000gn/T/40a35a691d4572c4682f1413100c04d920140528-92835-1rykao[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/ph/5qm9vccx5fb4nn7_fjtrvxfc0000gn/T/40a35a691d4572c4682f1413100c04d920140528-92835-1rykao[0]'
+Command :: convert '/var/folders/ph/5qm9vccx5fb4nn7_fjtrvxfc0000gn/T/40a35a691d4572c4682f1413100c04d920140528-92835-1rykao[0]' -auto-orient -resize "100x100>" '/var/folders/ph/5qm9vccx5fb4nn7_fjtrvxfc0000gn/T/40a35a691d4572c4682f1413100c04d920140528-92835-1rykao20140528-92835-17wu5xy'
+Command :: file -b --mime '/var/folders/ph/5qm9vccx5fb4nn7_fjtrvxfc0000gn/T/40a35a691d4572c4682f1413100c04d920140528-92835-1rykao20140528-92835-17wu5xy'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/ph/5qm9vccx5fb4nn7_fjtrvxfc0000gn/T/40a35a691d4572c4682f1413100c04d920140528-92835-1rykao[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/ph/5qm9vccx5fb4nn7_fjtrvxfc0000gn/T/40a35a691d4572c4682f1413100c04d920140528-92835-1rykao[0]'
+Command :: convert '/var/folders/ph/5qm9vccx5fb4nn7_fjtrvxfc0000gn/T/40a35a691d4572c4682f1413100c04d920140528-92835-1rykao[0]' -auto-orient -resize "x200" -crop "200x200+80+0" +repage '/var/folders/ph/5qm9vccx5fb4nn7_fjtrvxfc0000gn/T/40a35a691d4572c4682f1413100c04d920140528-92835-1rykao20140528-92835-kh30dl'
+Command :: file -b --mime '/var/folders/ph/5qm9vccx5fb4nn7_fjtrvxfc0000gn/T/40a35a691d4572c4682f1413100c04d920140528-92835-1rykao20140528-92835-kh30dl'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/ph/5qm9vccx5fb4nn7_fjtrvxfc0000gn/T/40a35a691d4572c4682f1413100c04d920140528-92835-1rykao[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/ph/5qm9vccx5fb4nn7_fjtrvxfc0000gn/T/40a35a691d4572c4682f1413100c04d920140528-92835-1rykao[0]'
+Command :: convert '/var/folders/ph/5qm9vccx5fb4nn7_fjtrvxfc0000gn/T/40a35a691d4572c4682f1413100c04d920140528-92835-1rykao[0]' -auto-orient -resize "300x300>" '/var/folders/ph/5qm9vccx5fb4nn7_fjtrvxfc0000gn/T/40a35a691d4572c4682f1413100c04d920140528-92835-1rykao20140528-92835-vicw5c'
+Command :: file -b --mime '/var/folders/ph/5qm9vccx5fb4nn7_fjtrvxfc0000gn/T/40a35a691d4572c4682f1413100c04d920140528-92835-1rykao20140528-92835-vicw5c'
+Command :: file -b --mime-type '/var/folders/ph/5qm9vccx5fb4nn7_fjtrvxfc0000gn/T/146e2207124406c224c855344f477e2f20140528-92835-1vq8sq2'
+  [1m[36mSQL (0.9ms)[0m  [1mUPDATE "popups" SET "image_file_name" = $1, "image_file_size" = $2, "image_updated_at" = $3, "updated_at" = $4 WHERE "popups"."id" = 7[0m  [["image_file_name", "images.jpeg"], ["image_file_size", 3574], ["image_updated_at", "2014-05-28 18:32:27.289018"], ["updated_at", "2014-05-28 18:32:28.308311"]]
+[paperclip] deleting /Users/tylair/GA-group_project/Project-2/public/system/popups/images/000/000/007/original/roti_roll.jpg
+[paperclip] deleting /Users/tylair/GA-group_project/Project-2/public/system/popups/images/000/000/007/thumb/roti_roll.jpg
+[paperclip] deleting /Users/tylair/GA-group_project/Project-2/public/system/popups/images/000/000/007/square/roti_roll.jpg
+[paperclip] deleting /Users/tylair/GA-group_project/Project-2/public/system/popups/images/000/000/007/medium/roti_roll.jpg
+  [1m[35m (0.8ms)[0m  COMMIT
+Redirected to http://localhost:3000/popups/7
+Completed 302 Found in 1222ms (ActiveRecord: 16.7ms)
+
+
+Started GET "/popups/7" for 127.0.0.1 at 2014-05-28 11:32:28 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (3.9ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPopup Load (0.6ms)[0m  SELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36mFeed Load (0.6ms)[0m  [1mSELECT "feeds".* FROM "feeds"  WHERE "feeds"."popup_id" = $1[0m  [["popup_id", 7]]
+  Rendered popups/show.html.erb within layouts/application (11.5ms)
+  Rendered layouts/_search.html.erb (1.3ms)
+  Rendered layouts/_form.html.erb (0.3ms)
+Completed 200 OK in 41ms (Views: 28.3ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-05-28 11:32:28 -0700
+
+
+Started GET "/assets/feeds.css?body=1" for 127.0.0.1 at 2014-05-28 11:32:28 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-28 11:32:28 -0700
+
+
+Started GET "/assets/popups.css?body=1" for 127.0.0.1 at 2014-05-28 11:32:28 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-28 11:32:28 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-28 11:32:28 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-28 11:32:28 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-28 11:32:28 -0700
+
+
+Started GET "/assets/google.js?body=1" for 127.0.0.1 at 2014-05-28 11:32:28 -0700
+
+
+Started GET "/assets/popups.js?body=1" for 127.0.0.1 at 2014-05-28 11:32:28 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-05-28 11:32:28 -0700
+
+
+Started PATCH "/popups/7" for 127.0.0.1 at 2014-05-28 11:33:41 -0700
+Processing by PopupsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PeAGEmUvzo0kGjyBWXbUSMwGkgBb4mGy3KeD0nhZCaw=", "popup"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x007fcf46cb9680 @tempfile=#<Tempfile:/var/folders/ph/5qm9vccx5fb4nn7_fjtrvxfc0000gn/T/RackMultipart20140528-92835-ba40e>, @original_filename="roti_roll.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"popup[image]\"; filename=\"roti_roll.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Upload image", "id"=>"7"}
+  [1m[35mUser Load (5.8ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (2.6ms)[0m  [1mSELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35m (3.8ms)[0m  BEGIN
+Command :: file -b --mime-type '/var/folders/ph/5qm9vccx5fb4nn7_fjtrvxfc0000gn/T/22a241464a3052af946b0142e468801120140528-92835-mwni9t'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/ph/5qm9vccx5fb4nn7_fjtrvxfc0000gn/T/f4751a23c5f019d3af5d1be2e55add5420140528-92835-uno7t7[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/ph/5qm9vccx5fb4nn7_fjtrvxfc0000gn/T/f4751a23c5f019d3af5d1be2e55add5420140528-92835-uno7t7[0]'
+Command :: convert '/var/folders/ph/5qm9vccx5fb4nn7_fjtrvxfc0000gn/T/f4751a23c5f019d3af5d1be2e55add5420140528-92835-uno7t7[0]' -auto-orient -resize "100x100>" '/var/folders/ph/5qm9vccx5fb4nn7_fjtrvxfc0000gn/T/f4751a23c5f019d3af5d1be2e55add5420140528-92835-uno7t720140528-92835-1csomcp'
+Command :: file -b --mime '/var/folders/ph/5qm9vccx5fb4nn7_fjtrvxfc0000gn/T/f4751a23c5f019d3af5d1be2e55add5420140528-92835-uno7t720140528-92835-1csomcp'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/ph/5qm9vccx5fb4nn7_fjtrvxfc0000gn/T/f4751a23c5f019d3af5d1be2e55add5420140528-92835-uno7t7[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/ph/5qm9vccx5fb4nn7_fjtrvxfc0000gn/T/f4751a23c5f019d3af5d1be2e55add5420140528-92835-uno7t7[0]'
+Command :: convert '/var/folders/ph/5qm9vccx5fb4nn7_fjtrvxfc0000gn/T/f4751a23c5f019d3af5d1be2e55add5420140528-92835-uno7t7[0]' -auto-orient -resize "x200" -crop "200x200+49+0" +repage '/var/folders/ph/5qm9vccx5fb4nn7_fjtrvxfc0000gn/T/f4751a23c5f019d3af5d1be2e55add5420140528-92835-uno7t720140528-92835-1g3juqq'
+Command :: file -b --mime '/var/folders/ph/5qm9vccx5fb4nn7_fjtrvxfc0000gn/T/f4751a23c5f019d3af5d1be2e55add5420140528-92835-uno7t720140528-92835-1g3juqq'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/ph/5qm9vccx5fb4nn7_fjtrvxfc0000gn/T/f4751a23c5f019d3af5d1be2e55add5420140528-92835-uno7t7[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/ph/5qm9vccx5fb4nn7_fjtrvxfc0000gn/T/f4751a23c5f019d3af5d1be2e55add5420140528-92835-uno7t7[0]'
+Command :: convert '/var/folders/ph/5qm9vccx5fb4nn7_fjtrvxfc0000gn/T/f4751a23c5f019d3af5d1be2e55add5420140528-92835-uno7t7[0]' -auto-orient -resize "300x300>" '/var/folders/ph/5qm9vccx5fb4nn7_fjtrvxfc0000gn/T/f4751a23c5f019d3af5d1be2e55add5420140528-92835-uno7t720140528-92835-h5s2hc'
+Command :: file -b --mime '/var/folders/ph/5qm9vccx5fb4nn7_fjtrvxfc0000gn/T/f4751a23c5f019d3af5d1be2e55add5420140528-92835-uno7t720140528-92835-h5s2hc'
+Command :: file -b --mime-type '/var/folders/ph/5qm9vccx5fb4nn7_fjtrvxfc0000gn/T/f030b3f5e7e9e907852a2381f9cd797020140528-92835-16j8d5b'
+  [1m[36mSQL (1.2ms)[0m  [1mUPDATE "popups" SET "image_file_name" = $1, "image_file_size" = $2, "image_updated_at" = $3, "updated_at" = $4 WHERE "popups"."id" = 7[0m  [["image_file_name", "roti_roll.jpg"], ["image_file_size", 105677], ["image_updated_at", "2014-05-28 18:33:41.778733"], ["updated_at", "2014-05-28 18:33:43.083724"]]
+[paperclip] deleting /Users/tylair/GA-group_project/Project-2/public/system/popups/images/000/000/007/original/images.jpeg
+[paperclip] deleting /Users/tylair/GA-group_project/Project-2/public/system/popups/images/000/000/007/thumb/images.jpeg
+[paperclip] deleting /Users/tylair/GA-group_project/Project-2/public/system/popups/images/000/000/007/square/images.jpeg
+[paperclip] deleting /Users/tylair/GA-group_project/Project-2/public/system/popups/images/000/000/007/medium/images.jpeg
+  [1m[35m (1.1ms)[0m  COMMIT
+Redirected to http://localhost:3000/popups/7
+Completed 302 Found in 1492ms (ActiveRecord: 14.5ms)
+
+
+Started GET "/popups/7" for 127.0.0.1 at 2014-05-28 11:33:43 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPopup Load (0.6ms)[0m  SELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36mFeed Load (0.6ms)[0m  [1mSELECT "feeds".* FROM "feeds"  WHERE "feeds"."popup_id" = $1[0m  [["popup_id", 7]]
+  Rendered popups/show.html.erb within layouts/application (13.1ms)
+  Rendered layouts/_search.html.erb (1.1ms)
+  Rendered layouts/_form.html.erb (0.2ms)
+Completed 200 OK in 42ms (Views: 28.7ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/feeds.css?body=1" for 127.0.0.1 at 2014-05-28 11:33:43 -0700
+
+
+Started GET "/assets/popups.css?body=1" for 127.0.0.1 at 2014-05-28 11:33:43 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-28 11:33:43 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-28 11:33:43 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-28 11:33:43 -0700
+
+
+Started GET "/assets/popups.js?body=1" for 127.0.0.1 at 2014-05-28 11:33:43 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-28 11:33:43 -0700
+
+
+Started GET "/assets/google.js?body=1" for 127.0.0.1 at 2014-05-28 11:33:43 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-28 11:33:43 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-05-28 11:33:43 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-05-28 11:33:43 -0700
+
+
+Started GET "/popups" for 127.0.0.1 at 2014-05-28 11:36:27 -0700
+Processing by PopupsController#index as HTML
+  [1m[35mUser Load (2.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered popups/index.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_search.html.erb (1.5ms)
+  Rendered layouts/_form.html.erb (0.2ms)
+Completed 200 OK in 39ms (Views: 31.4ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/popups.json?q=" for 127.0.0.1 at 2014-05-28 11:36:27 -0700
+Processing by PopupsController#index as JSON
+  Parameters: {"q"=>""}
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPopup Load (1.7ms)[0m  SELECT "popups".* FROM "popups"  WHERE (name LIKE '%%') AND "popups"."active" = 't'
+Completed 200 OK in 35ms (Views: 19.7ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/popups" for 127.0.0.1 at 2014-05-28 11:36:29 -0700
+Processing by PopupsController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered popups/index.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_search.html.erb (1.5ms)
+  Rendered layouts/_form.html.erb (0.2ms)
+Completed 200 OK in 25ms (Views: 19.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/feeds.css?body=1" for 127.0.0.1 at 2014-05-28 11:36:29 -0700
+
+
+Started GET "/assets/popups.css?body=1" for 127.0.0.1 at 2014-05-28 11:36:29 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-28 11:36:29 -0700
+
+
+Started GET "/assets/google.js?body=1" for 127.0.0.1 at 2014-05-28 11:36:29 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-28 11:36:29 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-05-28 11:36:29 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-28 11:36:29 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-28 11:36:29 -0700
+
+
+Started GET "/assets/popups.js?body=1" for 127.0.0.1 at 2014-05-28 11:36:29 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-28 11:36:29 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-05-28 11:36:29 -0700
+
+
+Started GET "/popups.json" for 127.0.0.1 at 2014-05-28 11:36:29 -0700
+Processing by PopupsController#index as JSON
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (1.4ms)[0m  [1mSELECT "popups".* FROM "popups"  WHERE (name LIKE '%%') AND "popups"."active" = 't'[0m
+Completed 200 OK in 21ms (Views: 15.0ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/popups.json?q=" for 127.0.0.1 at 2014-05-28 11:36:29 -0700
+Processing by PopupsController#index as JSON
+  Parameters: {"q"=>""}
+  [1m[35mUser Load (1.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (1.2ms)[0m  [1mSELECT "popups".* FROM "popups"  WHERE (name LIKE '%%') AND "popups"."active" = 't'[0m
+Completed 200 OK in 23ms (Views: 14.8ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/popups?utf8=%E2%9C%93&q=Jeans&commit=Search" for 127.0.0.1 at 2014-05-28 11:36:48 -0700
+Processing by PopupsController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"Jeans", "commit"=>"Search"}
+  [1m[35mUser Load (1.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered popups/index.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_search.html.erb (2.1ms)
+  Rendered layouts/_form.html.erb (0.2ms)
+Completed 200 OK in 43ms (Views: 36.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/feeds.css?body=1" for 127.0.0.1 at 2014-05-28 11:36:49 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-28 11:36:49 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-28 11:36:49 -0700
+
+
+Started GET "/assets/popups.css?body=1" for 127.0.0.1 at 2014-05-28 11:36:49 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-28 11:36:49 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-05-28 11:36:49 -0700
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-05-28 11:36:49 -0700
+
+
+Started GET "/assets/google.js?body=1" for 127.0.0.1 at 2014-05-28 11:36:49 -0700
+
+
+Started GET "/assets/popups.js?body=1" for 127.0.0.1 at 2014-05-28 11:36:49 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-28 11:36:49 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-28 11:36:49 -0700
+
+
+Started GET "/popups.json" for 127.0.0.1 at 2014-05-28 11:36:49 -0700
+Processing by PopupsController#index as JSON
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPopup Load (1.1ms)[0m  SELECT "popups".* FROM "popups"  WHERE (name LIKE '%%') AND "popups"."active" = 't'
+Completed 200 OK in 22ms (Views: 14.2ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/popups.json?q=Jeans" for 127.0.0.1 at 2014-05-28 11:36:49 -0700
+Processing by PopupsController#index as JSON
+  Parameters: {"q"=>"Jeans"}
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPopup Load (1.1ms)[0m  SELECT "popups".* FROM "popups"  WHERE (name LIKE '%Jeans%') AND "popups"."active" = 't'
+Completed 200 OK in 12ms (Views: 4.3ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/popups?utf8=%E2%9C%93&q=Jeans&commit=Search" for 127.0.0.1 at 2014-05-28 11:45:11 -0700
+Processing by PopupsController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"Jeans", "commit"=>"Search"}
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered popups/index.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_search.html.erb (1.7ms)
+  Rendered layouts/_form.html.erb (0.3ms)
+Completed 200 OK in 88ms (Views: 78.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-05-28 11:45:11 -0700
+
+
+Started GET "/assets/feeds.css?body=1" for 127.0.0.1 at 2014-05-28 11:45:11 -0700
+
+
+Started GET "/assets/popups.css?body=1" for 127.0.0.1 at 2014-05-28 11:45:11 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-28 11:45:11 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-28 11:45:11 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-28 11:45:11 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-28 11:45:11 -0700
+
+
+Started GET "/assets/google.js?body=1" for 127.0.0.1 at 2014-05-28 11:45:11 -0700
+
+
+Started GET "/assets/popups.js?body=1" for 127.0.0.1 at 2014-05-28 11:45:11 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-28 11:45:11 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-05-28 11:45:11 -0700
+
+
+Started GET "/popups.json?q=Jeans" for 127.0.0.1 at 2014-05-28 11:45:12 -0700
+Processing by PopupsController#index as JSON
+  Parameters: {"q"=>"Jeans"}
+  [1m[35mUser Load (1.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (1.1ms)[0m  [1mSELECT "popups".* FROM "popups"  WHERE (name LIKE '%Jeans%') AND "popups"."active" = 't'[0m
+Completed 200 OK in 11ms (Views: 4.1ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/popups.json" for 127.0.0.1 at 2014-05-28 11:45:12 -0700
+Processing by PopupsController#index as JSON
+  [1m[35mUser Load (2.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (5.1ms)[0m  [1mSELECT "popups".* FROM "popups"  WHERE (name LIKE '%%') AND "popups"."active" = 't'[0m
+Completed 200 OK in 32ms (Views: 19.2ms | ActiveRecord: 7.4ms)
+
+
+Started GET "/popups/1" for 127.0.0.1 at 2014-05-28 11:45:21 -0700
+Processing by PopupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (1.9ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPopup Load (2.0ms)[0m  [1mSELECT  "popups".* FROM "popups"  WHERE "popups"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mFeed Load (30.0ms)[0m  SELECT "feeds".* FROM "feeds"  WHERE "feeds"."popup_id" = $1  [["popup_id", 1]]
+  Rendered popups/show.html.erb within layouts/application (42.6ms)
+  Rendered layouts/_search.html.erb (1.3ms)
+  Rendered layouts/_form.html.erb (0.2ms)
+Completed 200 OK in 75ms (Views: 32.6ms | ActiveRecord: 33.8ms)
+
+
+Started GET "/popups.json?q=" for 127.0.0.1 at 2014-05-28 11:45:21 -0700
+Processing by PopupsController#index as JSON
+  Parameters: {"q"=>""}
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPopup Load (1.3ms)[0m  SELECT "popups".* FROM "popups"  WHERE (name LIKE '%%') AND "popups"."active" = 't'
+Completed 200 OK in 33ms (Views: 24.8ms | ActiveRecord: 2.5ms)
