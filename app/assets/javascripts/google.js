@@ -35,7 +35,7 @@ $(document).ready(function() {
 
 
       var newInfoWindow = new google.maps.InfoWindow({
-        content: '<h3>' + name + '</h3>'
+        content: '<a>' + name + '</a>'
       });
       addInfoWindowListener(newMarker, newInfoWindow);
     };
