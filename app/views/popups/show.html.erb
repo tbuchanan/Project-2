@@ -26,25 +26,25 @@
         });
     </script>
 
-<%= @popup.name %><br>
+<p><%= @popup.name %><br>
 <%= @popup.description %><br>
 <%= @popup.price %><br>
 <%= @popup.address %><br>
 <%= @popup.hours %><br>
-<img src="<%= @popup.image(:medium) %>">
-<p> Expires at:  <%= @popup.expires_at %></p>
+<img src="<%= @popup.image(:medium) %>"><br>
+Expires at:  <%= @popup.expires_at %></p>
 
 
 
 <%= form_for ([@popup, @feed_new]) do |f| %>
-  <%= f.text_field :comment, placeholder: "Add your comment" %><br></br>
+  <%= f.text_field :comment, placeholder: "Add your comment", :id => "comment_field" %><br></br>
   <%= f.submit "Create comment" %>
 <% end %>
 
 
 <!-- count/comments needs to be fixed -->
 
-<h2>Comments</h2>
+<h4>Comments</h4>
 <div class="jumbotron" id="jumbo">
 <% @feeds.each do |feed|%>
   <%# count = 0%>
@@ -57,7 +57,7 @@
 <%= form_for @popup, :html => { :multipart => true } do |f| %>
     <div><%= f.file_field :image %> </br> 
       <%= f.submit "Upload image", :class => "btn-default" %>
-    </div>
+    </div><br>
 <% end %> 
 
 <%= link_to 'Back to popup', popup_path(@popup) %>

@@ -25,7 +25,6 @@ var ready = function() {
       },
     }).success(function(data) {
       for (var i in data) {
-        var exp = new Date(data[i].expires_at);
         console.log(data[i]);
         var exp = new Date(data[i].expires_at);
 
