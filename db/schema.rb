@@ -42,6 +42,7 @@ ActiveRecord::Schema.define(version: 20140527202030) do
     t.datetime "image_updated_at"
     t.float    "latitude"
     t.float    "longitude"
+    t.string   "website"
   end
 
   create_table "simple_searches", force: true do |t|

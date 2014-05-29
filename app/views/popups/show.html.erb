@@ -48,7 +48,7 @@ Expires at:  <%= @popup.expires_at %></p>
     <%= f.submit "Create comment" %>
   <% end %>
 <% else %>
-  <p><b>sign in to post a comment</b></p>
+<%= link_to "Sign in to post a comment", new_user_session_path, :class => 'navbar-link'  %>
 <% end %>
 
 
