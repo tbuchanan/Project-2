@@ -27,11 +27,9 @@
        for (var i in data) {
          var exp = new Date(data[i].expires_at);
          console.log(data[i]);
-         var exp = new Date(data[i].expires_at);
-
-
+         // var exp = new Date(data[i].expires_at);
          $('#popups').append(
-           '<a href=/popups/' + data[i].id + '>' + '<li>' + data[i].name,
+           '<a href=/popups/' + data[i].id + '>' + '<li>' + '<br>' + data[i].name,
            data[i].description, '</br>',
            data[i].address, '</br>',
            data[i].hours, '</br>',
@@ -43,11 +41,9 @@
    };
    loadPopups();
 
-   // var addPopup = function(id, name, description, price, address, hours, expires_at) {
   $('#submit').click(function(e) {
     e.preventDefault();
     var name = $("#name").val();
-    // $('#popups').append("<li>" + name + "</li>");
     var description = $("#description").val();
     var address = $("#address").val();
     var price = $("#price").val();
@@ -70,7 +66,6 @@
       dataType: "json",
       success: function(sData) {
         $('#popups').append('<a href=/popups/' + sData.id + '>' + "<li>" + name, "<li>" + description, "<li>" + address, "<li>" + price, "<li>" + hours, "<li>" + expires_at + "</li></a>");
-        //addPopup(sData.name, sData.description, sData.address, sData.price, sData.hours, sData.expires_at);
         $('#name').val("");
         $('#description').val("");
         $('#price').val("");
