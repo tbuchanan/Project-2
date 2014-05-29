@@ -31,6 +31,11 @@ p {
 #zoomIn {
   color: black;
 }
+/* scroll feature
+/* scroll feature
+/*.col-md-6 {
+overflow-y:auto;
+}*/
 
 #zoomOut {
   color: black;
