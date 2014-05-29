@@ -122,8 +122,10 @@ ul#popups {
   border-radius: 5px;
 }
 
-  
 .google-map {
 float: right;
 }
 
+img {
+  position: inline;
+}

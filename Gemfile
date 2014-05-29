@@ -8,7 +8,7 @@ gem 'devise'
 gem 'geocoder'
 
 # gems for image upload and storage through Amazon AWS/S3
-gem 'paperclip'
+gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
 gem 'aws-sdk'
 gem 'pry'
 gem 'pry-rails'
