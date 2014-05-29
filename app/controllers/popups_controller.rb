@@ -47,6 +47,3 @@ private
   end
 
 end
-
-
-

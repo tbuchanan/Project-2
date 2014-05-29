@@ -9,6 +9,7 @@
  * compiled file so the styles you add here take precedence over styles defined in any styles
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
+ * 
  *= require bootstrap.min
  *= require_tree .
  *= require_self
@@ -18,9 +19,34 @@
 @import url(http://fonts.googleapis.com/css?family=Indie+Flower);
 @import url(http://fonts.googleapis.com/css?family=Playfair+Display:700);
 
+p {
+  color: #D3D3D3;
+  font-family: 'Playfair Display', serif;
+}
+
+#comment_field {
+  width: 300px;
+}
+
+#zoomIn {
+  color: black;
+}
+
+#zoomOut {
+  color: black;
+}
+
+h4 {
+ color: #D3D3D3;
+ font-size: 30px;
+ font-weight: bold;
+ font-family: 'Playfair Display', serif; 
+}
+
 #jumbo {
   width: 35%;
   padding-left: 20px;
+  margin-left: 0em;
 }
 
 #google {

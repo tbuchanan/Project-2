@@ -26,13 +26,13 @@
         });
     </script>
 
-<%= @popup.name %><br>
+<p><%= @popup.name %><br>
 <%= @popup.description %><br>
 <%= @popup.price %><br>
 <%= @popup.address %><br>
 <%= @popup.hours %><br>
-<img src="<%= @popup.image(:medium) %>">
-<p> Expires at:  <%= @popup.expires_at %></p>
+<img src="<%= @popup.image(:medium) %>"><br>
+Expires at:  <%= @popup.expires_at %></p>
 
 <% if current_user && current_user.id == @popup.user_id %>
   <%= form_for @popup, :html => { :multipart => true } do |f| %>
@@ -54,7 +54,7 @@
 
 <!-- count/comments needs to be fixed -->
 
-<h2>Comments</h2>
+<h4>Comments</h4>
 <div class="jumbotron" id="jumbo">
 <% @feeds.each do |feed|%>
   <%# count = 0%>
@@ -63,7 +63,6 @@
     <%= link_to "Delete", [@popup, feed], method: :delete, data: {confirm: "Are You Sure?"}, :class => 'btn btn-danger btn-sm' %></br>
 <% end %></br> 
  </div>
-
 
 
 <%= link_to 'Back to popup', popup_path(@popup) %>

@@ -87,15 +87,15 @@
      var map = new google.maps.Map(document.getElementById("map-canvas"),
        mapOptions);
      // alert(gon.current_user)
-     var loadGeo = function() {    
-       var url = "/popups.json";    
+     var loadGeo = function() {    
+       var url = "/popups.json";    
        $.ajax(url, {
          type: 'get'
-       }).success(function(data) {      
-         for (var i in data) {        
-           addPin(data[i].latitude, data[i].longitude, data[i].name, data[i].id);      
-         }    
-       }); 
+       }).success(function(data) {      
+         for (var i in data) {        
+           addPin(data[i].latitude, data[i].longitude, data[i].name, data[i].id);      
+         }    
+       }); 
 
      };
 
