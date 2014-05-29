@@ -34,11 +34,21 @@
 <img src="<%= @popup.image(:medium) %>">
 <p> Expires at:  <%= @popup.expires_at %></p>
 
+<% if current_user && current_user.id == @popup.user_id %>
+  <%= form_for @popup, :html => { :multipart => true } do |f| %>
+      <div><%= f.file_field :image %> </br> 
+        <%= f.submit "Upload image", :class => "btn-default" %>
+      </div>
+  <% end %>
+<% end %> 
 
-
-<%= form_for ([@popup, @feed_new]) do |f| %>
-  <%= f.text_field :comment, placeholder: "Add your comment" %><br></br>
-  <%= f.submit "Create comment" %>
+<% if current_user %>
+  <%= form_for ([@popup, @feed_new]) do |f| %>
+    <%= f.text_field :comment, placeholder: "Add your comment" %><br></br>
+    <%= f.submit "Create comment" %>
+  <% end %>
+<% else %>
+  <p><b>sign in to post a comment</b></p>
 <% end %>
 
 
@@ -54,10 +64,6 @@
 <% end %></br> 
  </div>
 
-<%= form_for @popup, :html => { :multipart => true } do |f| %>
-    <div><%= f.file_field :image %> </br> 
-      <%= f.submit "Upload image", :class => "btn-default" %>
-    </div>
-<% end %> 
+
 
 <%= link_to 'Back to popup', popup_path(@popup) %>

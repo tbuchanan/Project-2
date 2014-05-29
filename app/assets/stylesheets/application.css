@@ -92,7 +92,8 @@ body {
   background-color: #F5F5F5;
   font-family: 'Playfair Display', serif;
   height: 100%; 
-  background-image: url(http://i.imgur.com/foiYk30.jpg?1);
+  background-image: url(http://i.imgur.com/me3EzEO.jpg);
+  background-size: cover;
   
 }
 
@@ -120,6 +121,7 @@ ul#popups {
   margin: 0;
   padding: 0;
   border-radius: 5px;
+  position:relative;
 }
 
 .google-map {

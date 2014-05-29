@@ -1,5 +1,6 @@
 class PopupsController < ApplicationController
 
+before_action :authenticate_user!, except: [:index, :show]
   def index
     @popups = Popup.search_for(params[:q]).where(active: true)
     @popup = Popup.new

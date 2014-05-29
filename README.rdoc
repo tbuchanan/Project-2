@@ -1,3 +1,8 @@
 == README
 
+Popspotz
+
 Project 2 by Tyler, Randy and Ami
+
+Popspotz ia an app that helps you find popups in your city!
+if you are wondering what is a popup - think of a place with amazing food or unique products that appears temporarily in a single location for a limited amount of time. the only way to find them is through word of mouth, people you know or by pure accident - but what if all the information you needed about these popups was in place- what if you could track them down through the force of your community, your friend circle, your city! if you know of a popup, add it to popspotz and help others like you to never miss out on a cool popup!
