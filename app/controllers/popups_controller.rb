@@ -1,5 +1,6 @@
 class PopupsController < ApplicationController
 
+before_action :authenticate_user!, except: [:index, :show]
   def index
     @popups = Popup.search_for(params[:q]).where(active: true)
     @popup = Popup.new
@@ -23,17 +24,10 @@ class PopupsController < ApplicationController
     end
   end
 
-  def show
-    # @popup = Popup.find(params[:id])
-    if params[:id].to_i != 0
-      @popup = Popup.find(params[:id])
-      @feed_new = Feed.new
-      @feeds = @popup.feeds.all
-    else
-      @popup = Popup.find_by_name(params[:id])
-      @feed_new = Feed.new
-      @feeds = @popup.feeds.all
-    end
+  def show    
+    @popup = Popup.find(params[:id])
+    @feed_new = Feed.new
+    @feeds = @popup.feeds.all
   end
 
   def update
@@ -53,6 +47,3 @@ private
   end
 
 end
-
-
-

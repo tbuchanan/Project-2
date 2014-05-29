@@ -25,6 +25,7 @@ var ready = function() {
       },
     }).success(function(data) {
       for (var i in data) {
+        var exp = new Date(data[i].expires_at);
         console.log(data[i]);
         var exp = new Date(data[i].expires_at);
 
@@ -42,45 +43,40 @@ var ready = function() {
   };
   loadPopups();
 
-  var addPopup = function(id, name, description, price, address, hours, expires_at) {
-    $('#submit').click(function(e) {
-      e.preventDefault();
-      var name = $("#name").val();
-      // $('#popups').append("<li>" + name + "</li>");
-      var description = $("#description").val();
-      var address = $("#address").val();
-      var price = $("#price").val();
-      var hours = $("#hours").val();
-      var expires_at = $("#expires_at").val();
-      $('#popups').append('<a href=/popups/' + name + '>' + "<li>" + name, description, address, price, hours, expires_at + "</li></a>");
+  // var addPopup = function(id, name, description, price, address, hours, expires_at) {
+  $('#submit').click(function(e) {
+    e.preventDefault();
+    var name = $("#name").val();
+    // $('#popups').append("<li>" + name + "</li>");
+    var description = $("#description").val();
+    var address = $("#address").val();
+    var price = $("#price").val();
+    var hours = $("#hours").val();
+    var expires_at = $("#expires_at").val();
 
-
-      $.ajax({
-        url: ('/popups'),
-        type: ('post'),
-        data: {
-          "popup": {
-            "name": name,
-            "description": description,
-            "address": address,
-            "price": price,
-            "hours": hours,
-            "expires_at": expires_at
-          }
-        },
-        dataType: "json",
-        success: function(data) {
-          addPopup(data.name, data.description, data.address, data.price, data.hours, data.expires_at);
-          console.log(data);
+    $.ajax({
+      url: ('/popups'),
+      type: ('post'),
+      data: {
+        "popup": {
+          "name": name,
+          "description": description,
+          "address": address,
+          "price": price,
+          "hours": hours,
+          "expires_at": expires_at
         }
-      });
-
-
-
+      },
+      dataType: "json",
+      success: function(sData) {
+        $('#popups').append('<a href=/popups/' + sData.id + '>' + "<li>" + name, description, address, price, hours, expires_at + "</li></a>");
+        //addPopup(sData.name, sData.description, sData.address, sData.price, sData.hours, sData.expires_at);
+        console.log(sData);
+      }
     });
 
-  };
-  addPopup();
+  });
+
 
   (function initialize() {
     //just a variable storing a location
@@ -97,7 +93,7 @@ var ready = function() {
         type: 'get'
       }).success(function(data) {      
         for (var i in data) {        
-          addPin(data[i].latitude, data[i].longitude, data[i].name);      
+          addPin(data[i].latitude, data[i].longitude, data[i].name, data[i].id);      
         }    
       }); 
 
@@ -105,19 +101,16 @@ var ready = function() {
 
     loadGeo();
 
-    function addPin(latitude, longitude, name) {
+    function addPin(latitude, longitude, name, id) {
       var loc = new google.maps.LatLng(latitude, longitude);
       console.log(loc);
       var newMarker = new google.maps.Marker({
         position: loc,
         map: map,
         title: name
-
       });
-
-
       var newInfoWindow = new google.maps.InfoWindow({
-        content: '<a>' + name + '</a>'
+        content: "<a href=/popups/" + id + '>' + name + "</a>"
       });
       addInfoWindowListener(newMarker, newInfoWindow);
     };
