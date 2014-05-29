@@ -4,6 +4,7 @@ class AddToPopups < ActiveRecord::Migration
   def change
     add_column :popups, :latitude, :float
     add_column :popups, :longitude, :float
+    add_column :popups, :website, :string
   end
   
 end

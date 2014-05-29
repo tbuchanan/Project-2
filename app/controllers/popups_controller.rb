@@ -7,7 +7,7 @@ before_action :authenticate_user!, except: [:index, :show]
     @popup = Popup.new
     respond_to do |f|
       f.html { render :index }
-      f.json { render json: @popups, :only => [:id, :name, :address, :geocode, :longitude, :latitude, :hours, :expires_at, :active, :price, :description, :image]}
+      f.json { render json: @popups, :only => [:id, :name, :address, :geocode, :longitude, :latitude, :hours, :expires_at, :website, :active, :price, :description, :image]}
     end
   end
   
@@ -28,6 +28,7 @@ before_action :authenticate_user!, except: [:index, :show]
     @popup = Popup.find(params[:id])
     @feed_new = Feed.new
     @feeds = @popup.feeds.all
+    # @popup.expires_at = Time.now
   end
 
   def update
@@ -39,7 +40,7 @@ before_action :authenticate_user!, except: [:index, :show]
 private 
 
   def popup_params
-    params.require(:popup).permit(:id, :name, :address, :hours, :expires_at, :active, :price, :description, :image, :longitude, :latitude, :feeds_attributes => [:comment])  
+    params.require(:popup).permit(:id, :name, :website, :address, :hours, :expires_at, :active, :price, :description, :image, :longitude, :latitude, :feeds_attributes => [:comment])  
   end
 
   def image_params
