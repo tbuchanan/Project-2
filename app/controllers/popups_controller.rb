@@ -4,7 +4,6 @@ before_action :authenticate_user!, except: [:index, :show]
   def index
     @popups = Popup.search_for(params[:q]).where(active: true)
     @popup = Popup.new
-    
     respond_to do |f|
       f.html { render :index }
       f.json { render json: @popups, :only => [:id, :name, :address, :geocode, :longitude, :latitude, :hours, :expires_at, :active, :price, :description, :image]}

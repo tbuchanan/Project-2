@@ -69,8 +69,14 @@
       },
       dataType: "json",
       success: function(sData) {
-        $('#popups').append('<a href=/popups/' + sData.id + '>' + "<li>" + name, description, address, price, hours, expires_at + "</li></a>");
+        $('#popups').append('<a href=/popups/' + sData.id + '>' + "<li>" + name, "<li>" + description, "<li>" + address, "<li>" + price, "<li>" + hours, "<li>" + expires_at + "</li></a>");
         //addPopup(sData.name, sData.description, sData.address, sData.price, sData.hours, sData.expires_at);
+        $('#name').val("");
+        $('#description').val("");
+        $('#price').val("");
+        $('#address').val("");
+        $('#hours').val("");
+        $('#expires_at').val("");
         console.log(sData);
       }
     });
