@@ -7,6 +7,7 @@ class Popup < ActiveRecord::Base
   # validates :image, :presence => { :message => "Image is required" }
 
   validates :geocode, presence: true
+  # validates :name, presence: true, uniqueness: {case_sensitive: false}
 
   # for geocoder gem to convert address into "geocode"(longitude and latitude)
   geocoded_by :address
@@ -22,8 +23,11 @@ class Popup < ActiveRecord::Base
   # Validate the attached image is image/jpg, image/png, etc
   validates_attachment_content_type :image, :content_type => /\Aimage\/.*\Z/
 
+
   def self.search_for(query)
-    where('name LIKE :query', query: "%#{query}%")
+    # binding.pry
+    where('name LIKE :query', query: "%#{query}%", :conditions => ["lower(name) = ?", name.upcase])
+
   end
 
 end

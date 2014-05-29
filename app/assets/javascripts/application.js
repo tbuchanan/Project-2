@@ -35,8 +35,7 @@ var ready = function() {
           data[i].hours, '</br>',
           data[i].price, '</br>',
           exp.toLocaleDateString(), '</br>',
-          data[i].website, '</br>' + '</li></br></a>');
-
+          '<a href=' + data[i].website +'>' + data[i].website + '</a>' + '</br>' + '</li></br></a>');
       }
     });
   };

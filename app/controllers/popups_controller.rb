@@ -13,7 +13,6 @@ before_action :authenticate_user!, except: [:index, :show]
   
   def create
     @popup = Popup.new popup_params
-    # @popup.expires_at = #use params(expires_at)  
     if @popup.save
       respond_to do |f|
         f.html { render :index }
@@ -28,7 +27,6 @@ before_action :authenticate_user!, except: [:index, :show]
     @popup = Popup.find(params[:id])
     @feed_new = Feed.new
     @feeds = @popup.feeds.all
-    # @popup.expires_at = Time.now
   end
 
   def update
