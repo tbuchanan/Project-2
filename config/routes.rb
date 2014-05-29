@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
 
-  # get 'search' => 'popups#search'
-
   resources :popups do 
     get 'search', on: :collection
   end 

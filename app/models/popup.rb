@@ -3,7 +3,13 @@ class Popup < ActiveRecord::Base
 
   belongs_to :user
   has_many :feeds
+  before_save { |popup| popup.name = name.downcase }
 
+  before_save do |popup|
+    if popup.expires_at == nil
+      popup.expires_at += 
+    end
+  end
   # validates :image, :presence => { :message => "Image is required" }
 
   validates :geocode, presence: true

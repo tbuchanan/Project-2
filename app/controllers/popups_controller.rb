@@ -3,6 +3,10 @@ class PopupsController < ApplicationController
 before_action :authenticate_user!, except: [:index, :show]
 
   def index
+    # if params[:q].empty?
+    #   downcased_name = params[:q]
+    #   downcased_name.downcase
+    # end
     @popups = Popup.search_for(params[:q]).where(active: true)
     @popup = Popup.new
     respond_to do |f|
@@ -22,6 +26,7 @@ before_action :authenticate_user!, except: [:index, :show]
       f.json { render json: @popup.errors, status: :unprocessable_entity }
     end
   end
+
 
   def show    
     @popup = Popup.find(params[:id])
@@ -43,6 +48,10 @@ private
 
   def image_params
     params.require(:popup).permit(:image)  
+  end
+
+  def pin_params
+    params.require(:popup).permit(:geocode, :latitude, :longitude)  
   end
 
 end
