@@ -21,9 +21,8 @@
 
 p {
   color: #D3D3D3;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Droid Sans', sans-serif;
 }
-
 
 #comment_field {
   width: 300px;
@@ -39,19 +38,18 @@ p {
 
 h2 {
   color: #D3D3D3;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Droid Sans', sans-serif;
 }
-
-label {
+ {
   color: #D3D3D3;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Droid Sans', sans-serif;
 }
 
 h4 {
  color: #D3D3D3;
  font-size: 30px;
  font-weight: bold;
- font-family: 'Playfair Display', serif; 
+ font-family: 'Droid Sans', sans-serif;
 }
 
 #jumbo {
@@ -72,7 +70,7 @@ line-height: 0.5;
 }
 
 a {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Droid Sans', sans-serif;
   font-size: 18px;
 }
 
@@ -97,7 +95,7 @@ html, body {
 h3 {
   margin-top: 0;
   text-align: center;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Droid Sans', sans-serif;
   color: #2980b9;
 }
 
@@ -127,7 +125,7 @@ padding-bottom: 20px;
 
 body {
   background-color: #F5F5F5;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Droid Sans', sans-serif;
   height: 100%; 
   background-image: url(http://i.imgur.com/xcxY6pk.jpg?3);
   
@@ -135,12 +133,12 @@ body {
 
 ul {
   
-  font-family: 'Playfair Display', serif;
+  font-family: 'Droid Sans', sans-serif;
 }
 
 input, button, select, textarea {
-font-family: 'Playfair Display', serif;
-font-size: 12px;
+  font-family: 'Droid Sans', sans-serif;
+  font-size: 12px;
 }
 
 ul#popups {
