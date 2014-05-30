@@ -24,7 +24,6 @@ p {
   font-family: 'Playfair Display', serif;
 }
 
-
 #comment_field {
   width: 300px;
 }
@@ -43,6 +42,11 @@ h2 {
 }
 
 label {
+  color: #D3D3D3;
+  font-family: 'Playfair Display', serif;
+}
+
+i {
   color: #D3D3D3;
   font-family: 'Playfair Display', serif;
 }
@@ -105,7 +109,6 @@ h3 {
   background-color: #ADD8E6;
 }
 
-
 div.jumbotron {
   background-color: #F8F8FF;
   width: 1126px;
@@ -118,7 +121,6 @@ div.jumbotron {
 
 .container .jumbotron {
 border-radius: 5px;
-/*background: repeating-linear-gradient(circle at 0 0, #ADD8E6, #F8F8FF);*/
 background: #D3D3D3;
 padding-top: 20px;
 padding-bottom: 20px;
@@ -157,7 +159,7 @@ ul#popups {
   margin: 0;
   padding: 0;
   border-radius: 5px;
-  position:relative;
+  position:relative; 
 }
 
 .google-map {
@@ -170,4 +172,5 @@ img {
 
 li {
   list-style-type: none;
+  font-size: 25px;
 }
