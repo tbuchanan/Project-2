@@ -7,12 +7,12 @@ class Popup < ActiveRecord::Base
 
   before_save do |popup|
     if popup.expires_at == nil
-      popup.expires_at += 
+      popup.expires_at = 10.years.from_now
     end
   end
   # validates :image, :presence => { :message => "Image is required" }
 
-  validates :geocode, presence: true
+  # validates :geocode, presence: true
   # validates :name, presence: true, uniqueness: {case_sensitive: false}
 
   # for geocoder gem to convert address into "geocode"(longitude and latitude)
@@ -31,9 +31,7 @@ class Popup < ActiveRecord::Base
 
 
   def self.search_for(query)
-    # binding.pry
-    where('name LIKE :query', query: "%#{query}%", :conditions => ["lower(name) = ?", name.upcase])
-
+    where('name LIKE :query', query: "%#{query}%")
   end
 
 end
