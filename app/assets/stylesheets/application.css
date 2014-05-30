@@ -52,10 +52,10 @@ i {
 }
 
 h4 {
- color: #D3D3D3;
- font-size: 30px;
- font-weight: bold;
- font-family: 'Droid Sans', sans-serif;
+  color: #D3D3D3;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: 'Droid Sans', sans-serif;
 }
 
 #jumbo {
@@ -70,14 +70,14 @@ h4 {
 }
 
 .btn-danger {
-float: right;
-clear: both;
-line-height: 0.5;
+  float: right;
+  clear: both;
+  line-height: 0.5;
 }
 
 a {
   font-family: 'Droid Sans', sans-serif;
-  font-size: 18px;
+  font-size: 15px;
 }
 
 a.navbar-brand {
@@ -113,6 +113,7 @@ div.jumbotron {
   background-color: #F8F8FF;
   width: 1126px;
   margin-left: 1em;
+  border:solid white 2px;
 }
 
 .container {
@@ -124,19 +125,17 @@ border-radius: 5px;
 background: #D3D3D3;
 padding-top: 20px;
 padding-bottom: 20px;
-
 }
 
 body {
   background-color: #F5F5F5;
   font-family: 'Droid Sans', sans-serif;
   height: 100%; 
-  background-image: url(http://i.imgur.com/xcxY6pk.jpg?3);
-  
+  background-image: url(http://i.imgur.com/xcxY6pk.jpg?3); 
+  /*background:white;*/
 }
 
-ul {
-  
+ul {  
   font-family: 'Droid Sans', sans-serif;
 }
 
@@ -150,7 +149,9 @@ ul#popups {
   background-color: #D3D3D3;
   margin-left: 15px;
   border-radius: 5px;
-
+  height: 800px;
+  overflow: scroll;
+  border:solid white 2px;
 }
 
 #map-canvas {
@@ -160,10 +161,11 @@ ul#popups {
   padding: 0;
   border-radius: 5px;
   position:relative; 
+  border:solid white 2px;
 }
 
 .google-map {
-float: right;
+  float: right;
 }
 
 img {
@@ -174,3 +176,5 @@ li {
   list-style-type: none;
   font-size: 25px;
 }
+
+

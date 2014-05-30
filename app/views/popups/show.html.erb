@@ -26,6 +26,7 @@
         });
     </script>
 
+<div class="col-md-4" id="showpopup">
 <p><%= @popup.name %><br>
 <%= @popup.description %><br>
 <%= @popup.price %><br>
@@ -57,12 +58,15 @@ Expires at:  <%= @popup.expires_at %></p>
 <h4>Comments</h4>
 <div class="jumbotron" id="jumbo">
 <% @feeds.each do |feed|%>
-  <%# count = 0%>
   <%=feed.comment%>
-  <%# count += 1%>
+  <% binding.pry %>
     <%= link_to "Delete", [@popup, feed], method: :delete, data: {confirm: "Are You Sure?"}, :class => 'btn btn-danger btn-sm' %></br>
 <% end %></br> 
  </div>
 
 
-<%= link_to 'Back to popup', popup_path(@popup) %>
+
+
+<%= link_to 'Back', root_path %>
+
+</div>

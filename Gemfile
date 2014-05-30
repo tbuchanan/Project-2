@@ -13,7 +13,7 @@ gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
 gem 'aws-sdk'
 gem 'pry'
 gem 'pry-rails'
-gem 'handlebars_assets'
+# gem 'handlebars_assets'
 
 # have to research before implementing
 # gem 'foursquare'
