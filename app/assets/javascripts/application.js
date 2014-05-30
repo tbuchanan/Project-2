@@ -14,7 +14,11 @@
 //= require jquery_ujs
 //= require bootstrap.min.js
 //= require turbolinks
+//= require handlebars.runtime
+//= require_tree ./templates
 //= require_tree .
+
+
 
 var ready = function() {
   var loadPopups = function() {
@@ -67,7 +71,7 @@ var ready = function() {
       },
       dataType: "json",
       success: function(sData) {
-        $('#popups').append('<a href=/popups/' + sData.id + '>' + "<li>" + name, "<li>" + description, "<li>" + address, "<li>" + price, "<li>" + hours, "<li>" + expires_at + "<li>" + website + "</li></a>");
+        $('#popups').append('<a href=/popups/' + sData.id + '>' + "<li> + <br>" + name, "<br>" + description, "<br>" + address, "<br>" + price, "<br>" + hours, "<br>" + expires_at + "<br>" + '<a href=' + website + '>' + website + '</a>' + '</br>' + '</li></a>');
         $('#name').val("");
         $('#description').val("");
         $('#price').val("");
