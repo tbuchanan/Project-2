@@ -19,6 +19,7 @@
 @import url(http://fonts.googleapis.com/css?family=Indie+Flower);
 @import url(http://fonts.googleapis.com/css?family=Playfair+Display:700);
 
+
 p {
   color: #D3D3D3;
   font-family: 'Droid Sans', sans-serif;
@@ -176,4 +177,32 @@ img {
 li {
   list-style-type: none;
   font-size: 25px;
+}
+
+input#name {
+  width: 11em;
+}
+
+input#description {
+  width: 11em;
+}
+
+input#price {
+  width: 11em;
+}
+
+input#address {
+  width: 11em;
+}
+
+input#hours {
+  width: 11em;
+}
+
+input#expires_at {
+  width: 11em;
+}
+
+input#website {
+  width: 11em;
 }
