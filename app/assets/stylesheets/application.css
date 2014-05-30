@@ -37,6 +37,16 @@ p {
   color: black;
 }
 
+h2 {
+  color: #D3D3D3;
+  font-family: 'Playfair Display', serif;
+}
+
+label {
+  color: #D3D3D3;
+  font-family: 'Playfair Display', serif;
+}
+
 h4 {
  color: #D3D3D3;
  font-size: 30px;

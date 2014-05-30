@@ -5,14 +5,16 @@ class Popup < ActiveRecord::Base
   has_many :feeds
   # before_save { |popup| popup.name = name.downcase }
 
-  # before_save do |popup|
-  #   if popup.expires_at == nil
-  #     popup.expires_at += 10.years.from_now
-  #   end
-  # end
+  before_save do |popup|
+    if popup.expires_at == nil
+      popup.expires_at = 10.years.from_now
+    end
+  end
+
   # validates :image, :presence => { :message => "Image is required" }
 
-  validates :geocode, presence: true
+  # validates :geocode, presence: true
+  
 
   # for geocoder gem to convert address into "geocode"(longitude and latitude)
   geocoded_by :address
