@@ -51,18 +51,10 @@ Expires at:  <%= @popup.expires_at %></p>
 <%= link_to "Sign in to post a comment", new_user_session_path, :class => 'navbar-link'  %>
 <% end %>
 
-
-<!-- count/comments needs to be fixed -->
-
 <h4>Comments</h4>
 <div class="jumbotron" id="jumbo">
 <% @feeds.each do |feed|%>
-  <%# count = 0%>
   <%=feed.comment%>
-  <%# count += 1%>
     <%= link_to "Delete", [@popup, feed], method: :delete, data: {confirm: "Are You Sure?"}, :class => 'btn btn-danger btn-sm' %></br>
 <% end %></br> 
  </div>
-
-
-<%= link_to 'Back to popup', popup_path(@popup) %>
