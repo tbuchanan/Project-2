@@ -27,7 +27,7 @@ var ready = function() {
       for (var i in data) {
         var exp = new Date(data[i].expires_at);
         console.log(data[i]);
-        // var exp = new Date(data[i].expires_at);
+
         $('#popups').append(
           '<a href=/popups/' + data[i].id + '>' + '<li>' + '<br>' + data[i].name,
           data[i].description, '</br>',
