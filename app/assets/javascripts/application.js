@@ -27,7 +27,7 @@ var ready = function() {
       for (var i in data) {
         var exp = new Date(data[i].expires_at);
         console.log(data[i]);
-        // var exp = new Date(data[i].expires_at);
+
         $('#popups').append(
           '<a href=/popups/' + data[i].id + '>' + '<li>' + '<br>' + data[i].name,
           data[i].description, '</br>',
@@ -35,7 +35,7 @@ var ready = function() {
           data[i].hours, '</br>',
           data[i].price, '</br>',
           exp.toLocaleDateString(), '</br>',
-          '<a href=' + data[i].website + '>' + data[i].website + '</a>' + '</br>' + '</li></br></a>');
+          '<a href=' + data[i].website + '>' + data[i].website + '</a>' + '</br>' + '</li></a>');
       }
     });
   };
