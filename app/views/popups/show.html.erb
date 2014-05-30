@@ -26,7 +26,6 @@
         });
     </script>
 
-<!-- <div class="col-md-4" id="showpopup"> -->
 <p><%= @popup.name %><br>
 <%= @popup.description %><br>
 <%= @popup.price %><br>
@@ -52,9 +51,6 @@ Expires at:  <%= @popup.expires_at %></p>
 <%= link_to "Sign in to post a comment", new_user_session_path, :class => 'navbar-link'  %>
 <% end %>
 
-
-<!-- count/comments needs to be fixed -->
-
 <h4>Comments</h4>
 <div class="jumbotron" id="jumbo">
 <% @feeds.each do |feed|%>
@@ -66,6 +62,8 @@ Expires at:  <%= @popup.expires_at %></p>
 
 
 
+
 <%= link_to 'Back', root_path %>
 
-<!-- </div> -->
+
+
