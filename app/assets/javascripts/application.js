@@ -85,8 +85,8 @@ var ready = function() {
   (function initialize() {
     //just a variable storing a location
     var mapOptions = {
-      center: new google.maps.LatLng(37.7914136, -122.414475),
-      zoom: 12
+      center: new google.maps.LatLng(37.776616, -122.416972),
+      zoom: 14
     };
     var map = new google.maps.Map(document.getElementById("map-canvas"),
       mapOptions);

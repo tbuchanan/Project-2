@@ -65,10 +65,10 @@ h4 {
   margin-left: 0em;
 }
 
-#google {
+/*#google {
   float: right;
   margin-top: 5px;
-}
+}*/
 
 .btn-danger {
 float: right;
@@ -107,7 +107,7 @@ h3 {
 }
 
 .navbar {
-  background-color: #ADD8E6;
+  background-color: white;
 }
 
 div.jumbotron {
@@ -132,7 +132,7 @@ body {
   background-color: #F5F5F5;
   font-family: 'Droid Sans', sans-serif;
   height: 100%; 
-  background-image: url(http://i.imgur.com/xcxY6pk.jpg?3);
+  background: white;
   
 }
 
@@ -158,12 +158,12 @@ ul#popups {
 }
 
 #map-canvas {
-  width: 600px;
-  height: 800px;
+  width: 100em;
+  height: 33em;
   margin: 0;
   padding: 0;
   border-radius: 5px;
-  position:relative; 
+  position: absolute; 
 }
 
 .google-map {
@@ -205,4 +205,8 @@ input#expires_at {
 
 input#website {
   width: 11em;
+}
+
+.block-content{
+  margin-top:500px;
 }
