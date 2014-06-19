@@ -12,8 +12,13 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require bootstrap.min.js
 //= require turbolinks
+//= require bootstrap.min
+//= require assets/libraries/isotope/jquery.isotope
+//= require assets/libraries/jquery-bxslider/jquery.bxslider
+//= require assets/libraries/flexslider/jquery.flexslider
+//= require assets/js/jquery.chained.min
+//= require assets/js/realocation
 //= require_tree .
 
 var ready = function() {

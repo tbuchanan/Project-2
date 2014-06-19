@@ -6,6 +6,8 @@ gem 'rails', '4.1.1'
 gem 'pg'
 gem 'devise'
 gem 'geocoder'
+gem 'compass-rails'
+gem 'bootstrap-sass'
 
 # gems for image upload and storage through Amazon AWS/S3
 gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
