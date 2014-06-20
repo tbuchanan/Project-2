@@ -1,6 +1,13 @@
-<%= @results %>
 
-<script>
-  
+<!-- <div>
+<ul id = "results"> -->
+<%= @results.each do |result| %>
+  <%= result %>
+<% end %>
+<!-- </ul>
+</div> -->
+
+
+<script> 
   $('#map-canvas').gmap('addPin', { 'id': 'id', 'position': '37.7918261, -122.4131913' });
 </script>

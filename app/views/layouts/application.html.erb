@@ -9,13 +9,15 @@
   <script type="text/javascript"
       src="https://maps.googleapis.com/maps/api/js?key=<%ENV['GOOGLE_API_KEY']%>&sensor=true">
   </script>
+  <script src="http://maps.googleapis.com/maps/api/js?libraries=places&sensor=false"></script>
+  <script src="jquery.geocomplete.js"></script>
   <link href='//fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
   <link href='//fonts.googleapis.com/css?family=Ewert' rel='stylesheet' type='text/css'>
   <link href='//fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
   <link href='//fonts.googleapis.com/css?family=Playfair+Display:700' rel='stylesheet' type='text/css'>
 </head>
-<div id="map-canvas">
-</div>
+<!-- <div id="map-canvas"> -->
+<!-- </div> -->
 <header>
 
   <%= render 'layouts/search' %>
