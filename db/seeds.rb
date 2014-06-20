@@ -11,4 +11,5 @@ Popup.create([{name: "Bespoke Doughnuts", address: "2344 market st, san francisc
 Popup.create([{name: "Trilogi SF", address: "3066 24th st, san francisco,ca ", description: "thai tapas", price: "$$", hours: "Tuesdays: 6pm - 10pm", image: "http://brandoracollective.com/wp-content/uploads/2014/04/TrilogiSF-4001.jpg", expires_at: "June 2, 2014", website: "https://www.trilogisf.com" }])
 Popup.create([{name: "Bolete", address: "198 gough st, san francisco,ca ", description: "5 course meals for $75", price: "$$$", hours: "Mondays: 5:00 pm - 10:00 pm", image: "http://insidescoopsf.sfgate.com/files/2014/04/Big_Boletes_Two-502x600.jpg", expires_at: "December 26, 2015", website: "" }])
 Popup.create([{name: "Hapa Ramen", address: "422 haight st, san francisco,ca ", description: "quirky ramen & tacos", price: "$", hours: "Mondays: 6:00pm - 10:00 pm", image: "http://haparamensf.com/images/pic_4bowls.jpg", expires_at: "weekly", website: "https://www.haparamensf.com" }])
+Pop
 

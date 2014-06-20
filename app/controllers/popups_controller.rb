@@ -3,8 +3,8 @@ class PopupsController < ApplicationController
 before_action :authenticate_user!, except: [:index, :show]
 
   def index
-    @popups = Popup.search_for(params[:q]).where(active: true)
-    @popup = Popup.new
+    # @popups = Popup.search_for(params[:q]).where(active: true)
+    @popups = Popup.all
     respond_to do |f|
       f.html { render :index }
       f.json { render json: @popups, :only => [:id, :name, :address, :geocode, :longitude, :latitude, :hours, :expires_at, :website, :active, :price, :description, :image]}
@@ -21,6 +21,11 @@ before_action :authenticate_user!, except: [:index, :show]
     else
       f.json { render json: @popup.errors, status: :unprocessable_entity }
     end
+  end
+
+  def search
+    @results = Popup.near(params[:geocode]) || Popup.search_for(params[:q])
+    # render json: @results, status: :ok
   end
 
   def show    
