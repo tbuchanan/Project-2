@@ -12,3 +12,4 @@ Popup.create([{name: "Trilogi SF", address: "3066 24th st, san francisco,ca ", d
 Popup.create([{name: "Bolete", address: "198 gough st, san francisco,ca ", description: "5 course meals for $75", price: "$$$", hours: "5:00 pm - 10:00 pm", image: "http://insidescoopsf.sfgate.com/files/2014/04/Big_Boletes_Two-502x600.jpg", day: "Mondays", website: "", category: "Food" }])
 Popup.create([{name: "Hapa Ramen", address: "422 haight st, san francisco,ca ", description: "quirky ramen & tacos", price: "$", hours: "6:00pm - 10:00 pm", image: "http://haparamensf.com/images/pic_4bowls.jpg", day: "Mondays", website: "https://www.haparamensf.com", category: "Food" }])
 
+

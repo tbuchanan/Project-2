@@ -120,7 +120,7 @@ var ready = function() {
     //just a variable storing a location
     var mapOptions = {
       center: new google.maps.LatLng(37.776616, -122.416972),
-      zoom: 14,
+      zoom: 13,
       scrollwheel: false
     // mapTypeId: google.maps.MapTypeId.ROADMAP,
     // styles: [{"elementType":"labels","stylers":[{"visibility":"off"}]},{"elementType":"geometry","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"geometry","stylers":[{"visibility":"on"},{"color":"#000000"}]},{"featureType":"landscape","stylers":[{"color":"#ffffff"},{"visibility":"on"}]},{}]
