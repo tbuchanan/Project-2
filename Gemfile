@@ -9,12 +9,13 @@ gem 'geocoder'
 gem 'compass-rails'
 gem 'bootstrap-sass'
 
+
 # gems for image upload and storage through Amazon AWS/S3
 gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
 gem 'aws-sdk'
 gem 'pry'
 gem 'pry-rails'
-gem 'handlebars_assets'
+
 # have to research before implementing
 # gem 'foursquare'
 
@@ -48,6 +49,10 @@ end
 group :production do
   gem 'rails_12factor'
 end
+
+
+
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
