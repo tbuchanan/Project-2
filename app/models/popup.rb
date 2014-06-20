@@ -5,11 +5,11 @@ class Popup < ActiveRecord::Base
   has_many :feeds
   # before_save { |popup| popup.name = name.downcase }
 
-  before_save do |popup|
-    if popup.expires_at == nil
-      popup.expires_at = 10.years.from_now
-    end
-  end
+  # before_save do |popup|
+  #   if popup.expires_at == nil
+  #     popup.expires_at = 10.years.from_now
+  #   end
+  # end
 
   # validates :image, :presence => { :message => "Image is required" }
 

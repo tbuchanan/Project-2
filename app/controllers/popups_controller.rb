@@ -7,7 +7,7 @@ before_action :authenticate_user!, except: [:index, :show]
     @popups = Popup.all
     respond_to do |f|
       f.html { render :index }
-      f.json { render json: @popups, :only => [:id, :name, :address, :geocode, :longitude, :latitude, :hours, :expires_at, :website, :active, :price, :description, :image]}
+      f.json { render json: @popups, :only => [:id, :name, :address, :geocode, :longitude, :latitude, :hours, :day, :website, :price, :description, :image, :category]}
     end
   end
   
@@ -24,7 +24,7 @@ before_action :authenticate_user!, except: [:index, :show]
   end
 
   def search
-    @results = Popup.near(params[:geocode]) || Popup.search_for(params[:q])
+    @results = Popup.search_for(params[:q]) || Popup.near(params[:geocode])
     # render json: @results, status: :ok
   end
 
@@ -44,7 +44,7 @@ before_action :authenticate_user!, except: [:index, :show]
 private 
 
   def popup_params
-    params.require(:popup).permit(:id, :name, :website, :address, :hours, :expires_at, :active, :price, :description, :image, :longitude, :latitude, :feeds_attributes => [:comment])  
+    params.require(:popup).permit(:id, :name, :website, :address, :hours, :day, :category, :price, :description, :image, :longitude, :latitude, :feeds_attributes => [:comment])  
   end
 
   def image_params

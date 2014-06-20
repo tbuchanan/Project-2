@@ -31,8 +31,7 @@ ActiveRecord::Schema.define(version: 20140527202030) do
     t.string   "price"
     t.string   "description"
     t.text     "image"
-    t.datetime "expires_at"
-    t.boolean  "active",             default: true
+    t.string   "day"
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -43,6 +42,7 @@ ActiveRecord::Schema.define(version: 20140527202030) do
     t.float    "latitude"
     t.float    "longitude"
     t.string   "website"
+    t.string   "category"
   end
 
   create_table "simple_searches", force: true do |t|

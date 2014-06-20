@@ -1,8 +1,13 @@
 
 <!-- <div>
 <ul id = "results"> -->
-<%= @results.each do |result| %>
-  <%= result %>
+<% @results.each do |result| %>
+    <br><%= image_tag result.image(:medium) %></br>
+    <br><%= result.name %></br>
+    <br><%= result.address %></br>
+    <br><%= result.hours %></br>
+    <br><%= result.price %></br>  
+    <br><%= result.website %></br>
 <% end %>
 <!-- </ul>
 </div> -->

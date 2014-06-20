@@ -4,7 +4,7 @@
 
 >>>>>>> 01393eae7e28f9aea3d92012fe736358320494d4
 <%# if current_user %>
-<!-- <h3> Add a new Popup! </h3>
+<!<h3> Add a new Popup! </h3>
 <div class="jumbotron">
   
   <form>
@@ -22,17 +22,17 @@
   </div> -->
 
 <%# end %>
-<div class="row">
+<!-- <div class="row">
   <div class="col-md-6">  
     <ul id="popups">
     </ul>
   </div>
   <div class="col-md-6">
   </div>
-</div>
+</div> -->
 
 
-<!-- google map -->>
+<!-- google map -->
 <div id="map-canvas">
 </div>
 
@@ -77,7 +77,7 @@
                   </div>
                   <!-- /.col-sm-3 -->
                   <div class="property-box-meta-item col-xs-3 col-sm-4">
-                    <strong><%= link_to popup.price, popup_path(popup.id) %></strong>
+                    <strong><%= link_to popup.category, popup_path(popup.id) %></strong>
                     <span>Category</span>
                   </div><!-- /.col-sm-3 -->
                 </div><!-- /.property-box-meta -->
