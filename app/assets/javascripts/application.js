@@ -21,8 +21,6 @@
 //= require assets/js/realocation
 //= require_tree .
 
-
-
 var ready = function() {
   var loadPopups = function() {
     $.ajax('/popups.json', {
@@ -33,7 +31,7 @@ var ready = function() {
     }).success(function(data) {
       for (var i in data) {
         var exp = new Date(data[i].expires_at);
-        console.log(data[i]);
+        // console.log(data[i]);
 
         $('#popups').append(
           '<a href=/popups/' + data[i].id + '>' + '<li>' + '<br>' + data[i].name,
@@ -47,6 +45,35 @@ var ready = function() {
     });
   };
   loadPopups();
+
+// seach popup
+  // var searchPopups = function(){ $.ajax('/popups/search', {
+  //   type: 'get',
+  //   data: { "geocode": $('#geocode').val()}
+  // }).success(function(data){
+  //   $('#popups').html("");
+  //   console.log("about to append")
+  //   for (var i in data){
+  //     console.log(data[i]);
+  //   $('#popups').append(
+  //     '<a href=/popups/' + data[i].id + '>' + '<li>' + '<br>' + data[i].name,
+  //         data[i].description, '</br>',
+  //         data[i].address, '</br>',
+  //         data[i].hours, '</br>',
+  //         data[i].price, '</br>',
+  //         '<a href=' + data[i].website + '>' + data[i].website + '</a>' + '</br>' + '</li></a>');
+  //   }
+  //   });
+
+  //   };
+
+  //   // end of search popups
+  //   $('.searchbutton').click(function(e){
+  //   e.preventDefault();
+  //   searchPopups();
+  //   });
+
+
 
   $('#submit').click(function(e) {
     e.preventDefault();
@@ -82,20 +109,25 @@ var ready = function() {
         $('#hours').val("");
         $('#expires_at').val("");
         $('#website').val("");
-        console.log(sData);
+        // console.log(sData);
       }
     });
 
   });
-
-
+  
+  
   (function initialize() {
     //just a variable storing a location
     var mapOptions = {
       center: new google.maps.LatLng(37.776616, -122.416972),
       zoom: 14,
       scrollwheel: false
+    // mapTypeId: google.maps.MapTypeId.ROADMAP,
+    // styles: [{"elementType":"labels","stylers":[{"visibility":"off"}]},{"elementType":"geometry","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"geometry","stylers":[{"visibility":"on"},{"color":"#000000"}]},{"featureType":"landscape","stylers":[{"color":"#ffffff"},{"visibility":"on"}]},{}]
     };
+
+    
+
     var map = new google.maps.Map(document.getElementById("map-canvas"),
       mapOptions);
     // alert(gon.current_user)
@@ -143,7 +175,6 @@ var ready = function() {
     }
 
   })();
-
 
 };
 $(document).ready(ready);
