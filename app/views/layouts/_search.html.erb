@@ -10,11 +10,12 @@
           <a class="navbar-brand" href="/popups">Popspotz</a>
         </div>
         <div class="navbar-collapse collapse">
+          <button id="add"><%= link_to "Add Popup", new_popup_path %></button>
           <div class="navbar-form navbar-right" role="form">
             <div class="form-group">
               <%= form_tag "/popups/search", method: :get do %>
                 <%= text_field_tag :q, params[:q], placeholder: "eg: Wesburger" %> 
-                <%= text_field_tag :geocode, params[:geocode], placeholder: "eg:112 Fell St, San Francisco, CA" %>
+                <%= text_field_tag :geocode, params[:geocode], placeholder: "eg: 112 Fell St, SF, CA 94109" %>
                 <%= submit_tag "Search", :class => "searchbutton" %>
               <% end %>
               <% if user_signed_in? %>

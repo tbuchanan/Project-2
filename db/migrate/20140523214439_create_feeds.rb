@@ -8,3 +8,4 @@ class CreateFeeds < ActiveRecord::Migration
     end
   end
 end
+
