@@ -1,4 +1,4 @@
-<!--
+<!-- 
 <%# if current_user %>
 <h3> Add a new Popup! </h3>
 <div class="jumbotron">
@@ -26,69 +26,63 @@
   <div class="col-md-6">
     
   </div>
+</div> -->
+
+<!-- google map -->>
+<div id="map-canvas">
 </div>
--->
 
-
-  <!-- ISOTOPE GRID -->
-    <div class="block-content block-content-small-padding">
-      <div class="block-content-inner">
-          <h2 class="center">What's Hot?</h2>
-            <ul class="properties-filter">
-              <li><a href="#" data-filter=".property-featured"><span>Today</span></a></li>
-              <li><a href="#" data-filter=".property-rent"><span>Tomorrow</span></a></li>
-              <li class="selected"><a href="#" data-filter="*"><span>All</span></a></li>
-            </ul>
-            <!-- /.property-filter -->
-            <!-- add ERB for details -->
-            <div class="properties-items">
-              <div class="row">
-                <div class="property-item property-featured col-sm-6 col-md-3">
-                  <div class="property-box">
-                    <div class="property-box-inner">
-                      <h3 class="property-box-title"><a href="property-detail.html">Popup-Title</a></h3>
-                      <h4 class="property-box-subtitle"><a href="property-detail.html">Popup-Description</a></h4>
-                      <!-- /.property-box-label -->
-                        <div class="property-box-picture">
-                          <div class="property-box-price">Hours</div>
-                          <!-- /.property-box-price -->
-                            <div class="property-box-picture-inner">
-                              <a href="property-detail.html" class="property-box-picture-target">
-                              <img src="assets/img/tmp/properties/medium/7.jpg" alt="">
-                              </a><!-- /.property-box-picture-target -->
-                            </div>
-                          <!-- /.property-picture-inner -->
-                        </div>
-                        <!-- /.property-picture -->
-                        <div class="property-box-meta">
-                          <div class="property-box-meta-item col-xs-3 col-sm-3">
-                            <strong>9</strong>
-                            <span>Rating</span>
-                          </div>
-                          <!-- /.col-sm-3 -->
-
-                          <div class="property-box-meta-item col-xs-3 col-sm-3">
-                            <strong>$$</strong>
-                            <span>Price</span>
-                          </div>
-                          <!-- /.col-sm-3 -->
-
-                          <div class="property-box-meta-item col-xs-3 col-sm-3">
-                            <strong>285</strong>
-                            <span>Area</span>
-                          </div>
-                          <!-- /.col-sm-3 -->
-
-                          <div class="property-box-meta-item col-xs-3 col-sm-3">
-                            <strong>2</strong>
-                            <span>Garages</span>
-                          </div>
-                          <!-- /.col-sm-3 -->
-                        </div>
-                        <!-- /.property-box-meta -->
-                      </div>
-                      <!-- /.property-box-inner -->
-                    </div>
-                    <!-- /.property-box -->
+<!-- ISOTOPE GRID -->
+<div class="block-content block-content-small-padding">
+  <div class="block-content-inner">
+    <h2 class="center">What's Hot?</h2>
+    <ul class="properties-filter">
+      <li><a href="#" data-filter=".property-featured"><span>Today</span></a></li>
+      <li><a href="#" data-filter=".property-rent"><span>Tomorrow</span></a></li>
+      <li class="selected"><a href="#" data-filter="*"><span>All</span></a></li>
+    </ul>
+    <div class="properties-items isotope">
+      <div class="row">
+        <% @popups.each do |popup| %>
+        <div class="property-item property-featured col-sm-5 col-md-4">
+          <div class="property-box">
+            <div class="property-box-inner">
+              <h3 class="property-box-title"><a href="property-detail.html"><%= link_to popup.name, popup_path(popup.id) %></a></h3>
+              <h4 class="property-box-subtitle"><a href="property-detail.html"><%= link_to popup.description, popup_path(popup.id) %></a></h4>
+              <!-- /.property-box-label -->
+              <div class="property-box-picture">
+                <div class="property-box-price"><%= link_to popup.hours, popup_path(popup.id) %></div>
+                <!-- /.property-box-price -->
+                <div class="property-box-picture-inner">
+                  <div id="property-detail.html" class="property-box-picture-target">
+                    <%= image_tag popup.image(:square) %>
+                    </div><!-- /.property-box-picture-target -->
                   </div>
-                  <!-- /.property-item -->
+                  <!-- /.property-picture-inner -->
+                </div>
+                <!-- /.property-picture -->
+                <div class="property-box-meta">
+                  <div class="property-box-meta-item col-xs-4 col-sm-4">
+                    <strong>9</strong>
+                    <span>Rating</span>
+                  </div>
+                  <!-- /.col-sm-3 -->
+                  <div class="property-box-meta-item col-xs-3 col-sm-3">
+                    <strong><%= link_to popup.price, popup_path(popup.id) %></strong>
+                    <span>Price</span>
+                  </div>
+                  <!-- /.col-sm-3 -->
+                  <div class="property-box-meta-item col-xs-3 col-sm-4">
+                    <strong><%= link_to popup.price, popup_path(popup.id) %></strong>
+                    <span>Category</span>
+                  </div><!-- /.col-sm-3 -->
+                </div><!-- /.property-box-meta -->
+              </div><!-- /.property-box-inner -->
+            </div> <!-- /.property-box -->
+          </div><!-- /.property-item property-featured col-sm-6 col-md-3 -->
+          <% end %>
+        </div> <!-- row -->
+    </div> <!-- properties-items isotope -->
+  </div><!-- block-content-inner -->
+</div><!-- block-content block-content-small-padding -->
+            

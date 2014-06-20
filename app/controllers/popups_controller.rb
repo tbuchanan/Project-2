@@ -29,6 +29,7 @@ before_action :authenticate_user!, except: [:index, :show]
     @feeds = @popup.feeds.all
   end
 
+
   def update
     @popup = Popup.find(params[:id])
     @popup.update image_params

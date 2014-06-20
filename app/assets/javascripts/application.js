@@ -12,8 +12,13 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require bootstrap.min.js
 //= require turbolinks
+//= require bootstrap.min
+//= require assets/libraries/isotope/jquery.isotope
+//= require assets/libraries/jquery-bxslider/jquery.bxslider
+//= require assets/libraries/flexslider/jquery.flexslider
+//= require assets/js/jquery.chained.min
+//= require assets/js/realocation
 //= require_tree .
 
 
@@ -88,7 +93,8 @@ var ready = function() {
     //just a variable storing a location
     var mapOptions = {
       center: new google.maps.LatLng(37.776616, -122.416972),
-      zoom: 14
+      zoom: 14,
+      scrollwheel: false
     };
     var map = new google.maps.Map(document.getElementById("map-canvas"),
       mapOptions);
