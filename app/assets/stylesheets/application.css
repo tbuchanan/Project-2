@@ -27,6 +27,10 @@ p {
   font-family: 'Droid Sans', sans-serif;
 }
 
+#add {
+  position: inline;
+}
+
 #comment_field {
   width: 300px;
 }
