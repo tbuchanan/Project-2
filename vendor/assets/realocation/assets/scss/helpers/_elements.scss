@@ -30,12 +30,12 @@ address {
 }
 
 a {
-    color: $color-primary;
+    color: blue;
     text-decoration: none;
     @include transition(color .2s linear);
 
     &:hover {
-        color: $color-primary;
+        color: rgb(26, 188, 156);
         text-decoration: underline;
     }
 }

@@ -3,17 +3,9 @@
 	border: 2px solid rgba(0, 0, 0, .1);
 	margin-bottom: 30px;
 	overflow: hidden;
-	padding: 40px 20px 25px 20px;
+	padding: 30px 20px 25px 20px;
 	text-align: center;
-	// display: inline-flex;
-
-	// &.no-border {
-	// 	border: 0px;
-	// }
-
-	// &.small {
-	// 	padding-top: 30px;
-	// }
+	display: block;
 }
 
 h3.property-box-title, h3.property-box-title a {
@@ -82,8 +74,8 @@ h4.property-box-subtitle, h4.property-box-subtitle a {
 }
 
 .property-box-picture-target {
-	display: block;
-	overflow: hidden;	
+	// display: block;
+	// overflow: hidden;	
 
 	img {
 
@@ -154,6 +146,7 @@ h4.property-box-subtitle, h4.property-box-subtitle a {
 		margin-right: -15px;
 		padding: 6px 0px;
 		line-height: 1;
+		text-align: center;
 	}
 
 	strong {
@@ -167,7 +160,7 @@ h4.property-box-subtitle, h4.property-box-subtitle a {
 .properties-filter {
 	line-height: 36px;
 	margin-bottom: 30px;
-    padding: 0px;
+  padding: 0px;
 	text-align: center;
 
 	li {

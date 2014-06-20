@@ -31,8 +31,9 @@
 <%= @popup.price %><br>
 <%= @popup.address %><br>
 <%= @popup.hours %><br>
+<br></br>
 <img src="<%= @popup.image(:medium) %>"><br>
-Expires at:  <%= @popup.expires_at %></p>
+
 
 <% if current_user && current_user.id == @popup.user_id %>
   <%= form_for @popup, :html => { :multipart => true } do |f| %>

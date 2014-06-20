@@ -91,7 +91,8 @@ var ready = function() {
     //just a variable storing a location
     var mapOptions = {
       center: new google.maps.LatLng(37.776616, -122.416972),
-      zoom: 14
+      zoom: 14,
+      scrollwheel: false
     };
     var map = new google.maps.Map(document.getElementById("map-canvas"),
       mapOptions);
