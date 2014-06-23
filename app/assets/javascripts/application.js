@@ -13,7 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap.min
-//= require handlebars.runtime
 //= require_tree .
 
 $(document).ready(function() {

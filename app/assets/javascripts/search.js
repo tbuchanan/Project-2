@@ -9,7 +9,6 @@ $(document).ready(function() {
 
     var map = new google.maps.Map(document.getElementById("map-search"), mapLoad);
 
-
     var loadSearch = function() {
       // Find search string and geocode and add to url
       var url = "/popups/search.json";
@@ -29,7 +28,6 @@ $(document).ready(function() {
     loadSearch();
 
     $('#search_form').on('submit', function(event) {
-      // event.preventDefault();
     });
 
     function addPin(latitude, longitude, name, id) {
@@ -60,9 +58,6 @@ $(document).ready(function() {
         }
       });
     }
-
-
-
   };
   google.maps.event.addDomListener(window, 'load', initialize);
 });

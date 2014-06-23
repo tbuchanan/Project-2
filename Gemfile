@@ -13,7 +13,6 @@ gem 'bootstrap-sass'
 # gems for image upload and storage through Amazon AWS/S3
 gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
 gem 'aws-sdk'
-gem 'handlebars_assets'
 gem 'pry'
 gem 'pry-rails'
 
