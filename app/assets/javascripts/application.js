@@ -67,26 +67,26 @@ var ready = function() {
     loadGeo();
 
 // pins are showing up on top of all pins. need to clear map before search
-    var loadSearch = function() {
-      // Find search string and geocode and add to url
-      var url = "/popups/search.json";
-      $.ajax(url, {
-        type: 'get',
-        data: {
-        "q": $('#q').val(),
-        "geocode": $('#geocode').val()
-      }
-      }).success(function(data) {
-        for (var i in data) {
-          addPin(data[i].latitude, data[i].longitude, data[i].name, data[i].id);
-        }
-      });
-    };
+    // var loadSearch = function() {
+    //   // Find search string and geocode and add to url
+    //   var url = "/popups/search.json";
+    //   $.ajax(url, {
+    //     type: 'get',
+    //     data: {
+    //     "q": $('#q').val(),
+    //     "geocode": $('#geocode').val()
+    //   }
+    //   }).success(function(data) {
+    //     for (var i in data) {
+    //       addPin(data[i].latitude, data[i].longitude, data[i].name, data[i].id);
+    //     }
+    //   });
+    // };
 
-    $('#search_form').on('submit', function(event) {
-      event.preventDefault();
-      loadSearch();
-    })
+    // $('#search_form').on('submit', function(event) {
+    //   // event.preventDefault();
+    //   loadSearch();
+    // })
 
   
     function addPin(latitude, longitude, name, id) {
