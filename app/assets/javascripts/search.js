@@ -27,7 +27,7 @@ $(document).ready(function() {
     }();
 
     $('#search_form').on('submit', function(event) {
-      event.preventDefault();
+      // event.preventDefault();
     })
 
     function addPin(latitude, longitude, name, id) {

@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap.min
+//= require handlebars.runtime
 //= require_tree .
 
 var ready = function() {
