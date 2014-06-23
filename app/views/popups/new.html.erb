@@ -1,1 +1,71 @@
-<h1>Form goes here</h1>
+
+<div id="main-wrapper">
+  <div id="main">
+    <div id="main-inner">
+      <div class="container">  
+        <h2 class="center">Submit Popup!</h2>
+
+        <% if current_user %> 
+          <%= form_for @popup do |f| %>
+            <div class="box">
+              <div class="form-group">
+                <%= f.label "Name" %>
+                <%= f.text_field "name", placeholder: "name", :class => "form-control" %>
+              </div>
+            
+              <div class="form-group">
+                <%= f.label "Address: " %>
+                <%= f.text_field "address", placeholder: "eg: 122 Market St", :class => "form-control" %>
+              </div>
+            
+      
+            
+              <div class="form-group">
+                <%= f.label "Description" %>
+                <%= f.text_area "description", :class => "form-control" %>
+              </div>
+            
+      
+            
+              <div class="form-group">
+                <%= f.label "Website" %>
+                <%= f.text_field "website", placeholder: "eg: www.example.com", :class => "form-control" %>
+              </div>
+              
+      
+              <div class="form-group">
+                <%= f.label "Hours" %>
+                <%= f.text_field "hours", placeholder: "eg: 6:00pm-7:00pm", :class => "form-control" %>
+              </div>
+            
+      
+            
+              <div class="form-group">
+                <%= f.label "Day" %>
+                  <%= f.select "day", options_for_select([ ['Day'], ['Monday', 'Monday'], ['Tuesday','Tuesday'], ['Wednesday', 'Wednesday'], ['Thursday', 'Thursday'], ['Friday', 'Friday'], ['Saturday','Saturday'], ['Sunday', 'Sunday'] ]) %>
+              </div>
+          
+            
+              <div class="form-group">
+                <%= f.label "Price" %>
+              <%= f.select "price", options_for_select([ ['Price'], ['$', '$'],['$$', '$$'],['$$$', '$$$'],['$$$$', '$$$$'] ]) %>
+              </div>
+
+              <div class="form-group">
+                <%= f.label "Category" %>
+                  <%= f.select "category", options_for_select([ ['Choose a category'], ['Food', 'Food'], ['Bars','Bars'], ['Clothing', 'Clothing'], ['Shoes', 'Shoes'], ['Jewelery', 'Jewelery'], ['Entertainment','Entertainment'] ]) %>
+              </div>
+
+              <div class="form-group">
+              <%= f.submit %>
+              </div>
+      
+            </div>
+          </div>
+        <% end %>
+      <% end %>
+              
+      </div><!-- /.container -->
+    </div><!-- /#main-inner -->
+  </div><!-- /#main -->
+</div><!-- /#main-wrapper -->

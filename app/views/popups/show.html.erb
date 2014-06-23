@@ -1,6 +1,12 @@
-<div class="col-md-7" id="google">
-    <%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&markers=#{@popup.address}&zoom=16", id: "popupMap" %>
-    <button id="zoomOut"> - </button><button id="zoomIn"> + </button>
+<br></br>
+<div class="col-lg-7" id="google">
+    </br><%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&markers=#{@popup.address}&zoom=16", id: "popupMap" %><br>
+    
+     <div id="directions"><%= link_to("get directions", "https://maps.google.com/maps?daddr=#{@popup.address}") %></div>
+
+    <button id="zoomOut"> - </button><button id="zoomIn"> + </button>   
+    <h4><%= @popup.name %></h4>
+    <%= @popup.address %><br>    
   </div>
   <script>
   $("#google").on("click", "#zoomIn, #zoomOut", function(event){
@@ -26,15 +32,9 @@
   });
   </script>
 
-<p><%= @popup.name %><br>
-<%= @popup.description %><br>
-<%= @popup.price %><br>
-<%= @popup.address %><br>
-<%= @popup.hours %><br>
-<br></br>
-<img src="<%= @popup.image(:medium) %>"><br>
-
-
+<% if current_user %> 
+<h4><strong><%= @popup.name %></strong></h4>
+<img src="<%= @popup.image(:medium) %>"><br></br>
 <% if current_user && current_user.id == @popup.user_id %>
   <%= form_for @popup, :html => { :multipart => true } do |f| %>
       <div><%= f.file_field :image %> </br> 
@@ -42,10 +42,18 @@
       </div>
   <% end %>
 <% end %> 
+<p>Description: <%= @popup.description %></p><br>
+<p>Hours: <%= @popup.hours %></p><br>
+<p>Days: <%= @popup.day %></p><br>
+<p>Price: <%= @popup.price %></p><br>
+<p>Category: <%= @popup.category %></p><br>
+<%= link_to "Website", @popup.website %>
+<br></br>
+
 
 <% if current_user %>
   <%= form_for ([@popup, @feed_new]) do |f| %>
-    <%= f.text_field :comment, placeholder: "Add your comment" %><br></br>
+    <br><%= f.text_area :comment, placeholder: "Add your comment" %><br></br>
     <%= f.submit "Create comment" %>
   <% end %>
 <% else %>
@@ -55,12 +63,15 @@
 <h4>Comments</h4>
 <div class="jumbotron" id="jumbo">
 <% @feeds.each do |feed|%>
-  <%=feed.comment%>
-    <%= link_to "Delete", [@popup, feed], method: :delete, data: {confirm: "Are You Sure?"}, :class => 'btn btn-danger btn-sm' %></br>
+<h7><%= feed.comment %></h7><%= link_to "Delete", [@popup, feed], method: :delete, data: {confirm: "Are You Sure?"}, :class => 'btn btn-danger btn-sm' %></br>
+<h7>Posted <%= time_ago_in_words(feed.created_at) %> ago by: </h7><br>
+<h7><strong><%= @user.email %></strong></h7><br>
 <% end %></br> 
  </div>
+<% end %>
 
 
  <%= link_to 'Back', root_path %>
+
 
 
