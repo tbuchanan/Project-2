@@ -25,7 +25,11 @@ before_action :authenticate_user!, except: [:index, :show]
 
   def search
     @results = Popup.search_for(params[:q]) || Popup.near(params[:geocode])
-    # render json: @results, status: :ok
+    # binding.pry
+     respond_to do |f|
+        f.html { render :search }
+        f.json { render json: @results, :only => [:id, :name, :address, :geocode, :longitude, :latitude, :hours, :day, :website, :price, :description, :image, :category]}
+      end
   end
 
   def show    

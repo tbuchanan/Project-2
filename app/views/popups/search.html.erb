@@ -1,18 +1,19 @@
+<!-- 
 
-<!-- <div>
-<ul id = "results"> -->
-<% @results.each do |result| %>
-    <br><%= image_tag result.image(:medium) %></br>
-    <br><%= result.name %></br>
-    <br><%= result.address %></br>
-    <br><%= result.hours %></br>
-    <br><%= result.price %></br>  
-    <br><%= result.website %></br>
-<% end %>
-<!-- </ul>
-</div> -->
+  <%# @results.each do |result| %>
+    <br><%#= image_tag result.image(:medium) %></br>
+    <br><%#= result.name %></br>
+    <br><%#= result.address %></br>
+    <br><%#= result.hours %></br>
+    <br><%#= result.price %></br>  
+    <br><%#= result.website %></br>
+    <%# end %>
+-->
 
 
-<script> 
-  $('#map-canvas').gmap('addPin', { 'id': 'id', 'position': '37.7918261, -122.4131913' });
-</script>
+<!-- <script> 
+// $('#map-search').gmap('addPin', { 'id': 'id', 'position': '37.7918261, -122.4131913' });
+// </script> -->
+
+<div id="map-search">
+</div>

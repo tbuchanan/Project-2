@@ -14,11 +14,6 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap.min
-//= require assets/libraries/isotope/jquery.isotope
-//= require assets/libraries/jquery-bxslider/jquery.bxslider
-//= require assets/libraries/flexslider/jquery.flexslider
-//= require assets/js/jquery.chained.min
-//= require assets/js/realocation
 //= require_tree .
 
 var ready = function() {
@@ -44,77 +39,7 @@ var ready = function() {
       }
     });
   };
-  loadPopups();
-
-// seach popup
-  // var searchPopups = function(){ $.ajax('/popups/search', {
-  //   type: 'get',
-  //   data: { "geocode": $('#geocode').val()}
-  // }).success(function(data){
-  //   $('#popups').html("");
-  //   console.log("about to append")
-  //   for (var i in data){
-  //     console.log(data[i]);
-  //   $('#popups').append(
-  //     '<a href=/popups/' + data[i].id + '>' + '<li>' + '<br>' + data[i].name,
-  //         data[i].description, '</br>',
-  //         data[i].address, '</br>',
-  //         data[i].hours, '</br>',
-  //         data[i].price, '</br>',
-  //         '<a href=' + data[i].website + '>' + data[i].website + '</a>' + '</br>' + '</li></a>');
-  //   }
-  //   });
-
-  //   };
-
-  //   // end of search popups
-  //   $('.searchbutton').click(function(e){
-  //   e.preventDefault();
-  //   searchPopups();
-  //   });
-
-
-
-  $('#submit').click(function(e) {
-    e.preventDefault();
-    var name = $("#name").val();
-    var description = $("#description").val();
-    var address = $("#address").val();
-    var price = $("#price").val();
-    var hours = $("#hours").val();
-    var expires_at = $("#expires_at").val();
-    var website = $("#website").val();
-
-    $.ajax({
-      url: ('/popups'),
-      type: ('post'),
-      data: {
-        "popup": {
-          "name": name,
-          "description": description,
-          "address": address,
-          "price": price,
-          "hours": hours,
-          "expires_at": expires_at,
-          "website": website
-        }
-      },
-      dataType: "json",
-      success: function(sData) {
-        $('#popups').append('<a href=/popups/' + sData.id + '>' + "<li> + <br>" + name, "<br>" + description, "<br>" + address, "<br>" + price, "<br>" + hours, "<br>" + expires_at + "<br>" + '<a href=' + website + '>' + website + '</a>' + '</br>' + '</li></a>');
-        $('#name').val("");
-        $('#description').val("");
-        $('#price').val("");
-        $('#address').val("");
-        $('#hours').val("");
-        $('#expires_at').val("");
-        $('#website').val("");
-        // console.log(sData);
-      }
-    });
-
-  });
-  
+  loadPopups();  
   
   (function initialize() {
     //just a variable storing a location
@@ -125,8 +50,6 @@ var ready = function() {
     // mapTypeId: google.maps.MapTypeId.ROADMAP,
     // styles: [{"elementType":"labels","stylers":[{"visibility":"off"}]},{"elementType":"geometry","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"geometry","stylers":[{"visibility":"on"},{"color":"#000000"}]},{"featureType":"landscape","stylers":[{"color":"#ffffff"},{"visibility":"on"}]},{}]
     };
-
-    
 
     var map = new google.maps.Map(document.getElementById("map-canvas"),
       mapOptions);
@@ -140,11 +63,32 @@ var ready = function() {
           addPin(data[i].latitude, data[i].longitude, data[i].name, data[i].id);
         }
       });
-
     };
-
     loadGeo();
 
+// pins are showing up on top of all pins. need to clear map before search
+    var loadSearch = function() {
+      // Find search string and geocode and add to url
+      var url = "/popups/search.json";
+      $.ajax(url, {
+        type: 'get',
+        data: {
+        "q": $('#q').val(),
+        "geocode": $('#geocode').val()
+      }
+      }).success(function(data) {
+        for (var i in data) {
+          addPin(data[i].latitude, data[i].longitude, data[i].name, data[i].id);
+        }
+      });
+    };
+
+    $('#search_form').on('submit', function(event) {
+      event.preventDefault();
+      loadSearch();
+    })
+
+  
     function addPin(latitude, longitude, name, id) {
       var loc = new google.maps.LatLng(latitude, longitude);
       console.log(loc);
@@ -158,6 +102,7 @@ var ready = function() {
       });
       addInfoWindowListener(newMarker, newInfoWindow);
     };
+
 
     var lastInfoWindow;
     var addInfoWindowListener = function(marker, newInfoWindow) {

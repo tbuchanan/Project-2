@@ -84,6 +84,7 @@
     .navbar-fixed-bottom & {
       padding-left: 0;
       padding-right: 0;
+
     }
   }
 }
@@ -145,6 +146,8 @@
   bottom: 0;
   margin-bottom: 0; // override .navbar defaults
   border-width: 1px 0 0;
+  background-color: #E1FCC7;
+  border-color: none;
 }
 
 
@@ -381,8 +384,9 @@
 
 // Default navbar
 .navbar-default {
-  background-color: $navbar-default-bg;
-  border-color: $navbar-default-border;
+  background-color: #E1FCC7;
+  border-color: none;
+  
 
   .navbar-brand {
     color: $navbar-default-brand-color;
