@@ -10,8 +10,13 @@ before_action :authenticate_user!, except: [:index, :show]
     end
   end
 
+  # search page and google map json rendering
   def search
     @results = Popup.search_for(params[:q]) || Popup.near(params[:geocode])
+    respond_to do |f|
+      f.html { render :search }
+      f.json { render json: @results, :only => [:id, :name, :address, :geocode, :longitude, :latitude, :hours, :day, :website, :price, :description, :image, :category]}
+    end
   end
   
   def new

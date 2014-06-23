@@ -17,29 +17,29 @@
 //= require_tree .
 
 var ready = function() {
-  var loadPopups = function() {
-    $.ajax('/popups.json', {
-      type: 'get',
-      data: {
-        "q": $('#q').val()
-      },
-    }).success(function(data) {
-      for (var i in data) {
-        var exp = new Date(data[i].expires_at);
-        // console.log(data[i]);
+  // var loadPopups = function() {
+  //   $.ajax('/popups.json', {
+  //     type: 'get',
+  //     data: {
+  //       "q": $('#q').val()
+  //     },
+  //   }).success(function(data) {
+  //     for (var i in data) {
+  //       var exp = new Date(data[i].expires_at);
+  //       // console.log(data[i]);
 
-        $('#popups').append(
-          '<a href=/popups/' + data[i].id + '>' + '<li>' + '<br>' + data[i].name,
-          data[i].description, '</br>',
-          data[i].address, '</br>',
-          data[i].hours, '</br>',
-          data[i].price, '</br>',
-          exp.toLocaleDateString(), '</br>',
-          '<a href=' + data[i].website + '>' + data[i].website + '</a>' + '</br>' + '</li></a>');
-      }
-    });
-  };
-  loadPopups();  
+  //       $('#popups').append(
+  //         '<a href=/popups/' + data[i].id + '>' + '<li>' + '<br>' + data[i].name,
+  //         data[i].description, '</br>',
+  //         data[i].address, '</br>',
+  //         data[i].hours, '</br>',
+  //         data[i].price, '</br>',
+  //         exp.toLocaleDateString(), '</br>',
+  //         '<a href=' + data[i].website + '>' + data[i].website + '</a>' + '</br>' + '</li></a>');
+  //     }
+  //   });
+  // };
+  // loadPopups();  
   
   (function initialize() {
     //just a variable storing a location
@@ -67,26 +67,26 @@ var ready = function() {
     loadGeo();
 
 // pins are showing up on top of all pins. need to clear map before search
-    var loadSearch = function() {
-      // Find search string and geocode and add to url
-      var url = "/popups/search.json";
-      $.ajax(url, {
-        type: 'get',
-        data: {
-        "q": $('#q').val(),
-        "geocode": $('#geocode').val()
-      }
-      }).success(function(data) {
-        for (var i in data) {
-          addPin(data[i].latitude, data[i].longitude, data[i].name, data[i].id);
-        }
-      });
-    };
+    // var loadSearch = function() {
+    //   // Find search string and geocode and add to url
+    //   var url = "/popups/search.json";
+    //   $.ajax(url, {
+    //     type: 'get',
+    //     data: {
+    //     "q": $('#q').val(),
+    //     "geocode": $('#geocode').val()
+    //   }
+    //   }).success(function(data) {
+    //     for (var i in data) {
+    //       addPin(data[i].latitude, data[i].longitude, data[i].name, data[i].id);
+    //     }
+    //   });
+    // };
 
-    $('#search_form').on('submit', function(event) {
-      event.preventDefault();
-      loadSearch();
-    })
+    // $('#search_form').on('submit', function(event) {
+    //   // event.preventDefault();
+    //   loadSearch();
+    // })
 
   
     function addPin(latitude, longitude, name, id) {
