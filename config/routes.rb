@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
 
+  root 'popups#index'
+
+  get '/about', to: 'pages#about'
+  get '/contact', to: 'pages#contact'
+  get '/faq', to: 'pages#faq'
+
   resources :popups do 
     get 'search', on: :collection
   end 
@@ -9,8 +15,6 @@ Rails.application.routes.draw do
     resources :feeds
   end 
  
-
-  root 'popups#index'
 
 end
 

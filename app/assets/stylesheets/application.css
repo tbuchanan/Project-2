@@ -13,8 +13,6 @@
  *= require_tree .
  *= require_self
  *= require bootstrap
- *= require assets/libraries/jquery-bxslider/jquery.bxslider
- *= require assets/libraries/flexslider/flexslider
  *= require assets/scss/realocation
  */
 
@@ -27,8 +25,22 @@ p {
   font-family: 'Droid Sans', sans-serif;
 }
 
-#add {
-  position: inline;
+button#add.btn.btn-primary {
+  margin-top: 15px;
+  margin-left: 12em;
+  margin-right: 30px;
+}
+
+#feed {
+  margin-top: -25px;
+}
+
+#hours {
+  color: #899180;
+}
+
+.btn-success {
+  margin-top: 19px;
 }
 
 #comment_field {
@@ -42,6 +54,7 @@ p {
 #zoomOut {
   color: black;
 }
+
 
 h2 {
   color: #D3D3D3;
@@ -85,7 +98,7 @@ a {
 a.navbar-brand {
   font-family: 'Ewert', cursive;
   font-size: 35px;
-  margin-top: -2px;
+  margin-top: 10px;
 }
 
 .form-group {
@@ -95,6 +108,7 @@ a.navbar-brand {
 a.navbar-brand:hover, a.navbar-brand:hover:focus {
   text-decoration: underline;
 }
+
 
 html, body {
   height: 100%;
@@ -109,6 +123,7 @@ h3 {
 
 .navbar {
   background-color: white;
+  text-align: center;
 }
 
 div.jumbotron {
@@ -157,13 +172,23 @@ ul#popups {
 
 #map-canvas {
   width: 100%;
-  height: 65%;
+  height: 58%;
   left: 0px;
   top: 5%;
   border-radius: 5px;
   position: absolute;
   z-index: 0;
 }
+
+/*#map-search {
+  width: 100%;
+  height: 65%;
+  left: 0px;
+  top: 5%;
+  border-radius: 5px;
+  position: absolute;
+  z-index: 0;
+}*/
 
 /*.google-map {
   position: absolute;
@@ -213,7 +238,11 @@ input#website {
 }
 
 .block-content{
-  margin-top: 400px;
+  margin-top: 350px;
+
+  /*.small {
+    margin-top: 40em;
+  } */
 }
 /*test code below*/
 /*div, html {

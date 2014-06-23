@@ -1,8 +1,6 @@
 
 <!-- 
-=======
 
->>>>>>> 01393eae7e28f9aea3d92012fe736358320494d4
 <%# if current_user %>
 <!<h3> Add a new Popup! </h3>
 <div class="jumbotron">
@@ -53,11 +51,13 @@
         <div class="property-item property-featured col-sm-5 col-md-4">
           <div class="property-box">
             <div class="property-box-inner">
-              <h3 class="property-box-title"><a href="property-detail.html"><%= link_to popup.name, popup_path(popup.id) %></a></h3>
-              <h4 class="property-box-subtitle"><a href="property-detail.html"><%= link_to popup.description, popup_path(popup.id) %></a></h4>
+              <h3 class="property-box-title"><a href="property-detail.html"><%= link_to popup.name, popup_path(popup.id), id: 'name' %></a></h3>
+              <h4 class="property-box-subtitle"><a href="property-detail.html"><%= link_to popup.description, popup_path(popup.id), id: 'description' %></a></h4>
               <!-- /.property-box-label -->
               <div class="property-box-picture">
-                <div class="property-box-price"><%= link_to popup.hours, popup_path(popup.id) %></div>
+                <div class="property-box-price">
+                  <%= link_to popup.day, popup_path(popup.id), id: 'hours' %><br>
+                  <%= link_to popup.hours, popup_path(popup.id), id: 'hours' %></div>
                 <!-- /.property-box-price -->
                 <div class="property-box-picture-inner">
                   <div id="property-detail.html" class="property-box-picture-target">
