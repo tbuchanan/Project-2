@@ -181,7 +181,7 @@ ul#popups {
 
 li {
   list-style-type: none;
-  font-size: 25px;
+  font-size: 14px;
 }
 
 input#name {
@@ -219,6 +219,9 @@ input#website {
 /*div, html {
   border: 1px solid #f0f;
 }*/
+#directions{
+  margin-top:-55px;
+}
 
 
 
