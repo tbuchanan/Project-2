@@ -46,14 +46,16 @@ var ready = function() {
     var mapOptions = {
       center: new google.maps.LatLng(37.776616, -122.416972),
       zoom: 13,
-      scrollwheel: false
+      scrollwheel: false,
     // mapTypeId: google.maps.MapTypeId.ROADMAP,
     // styles: [{"elementType":"labels","stylers":[{"visibility":"off"}]},{"elementType":"geometry","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"geometry","stylers":[{"visibility":"on"},{"color":"#000000"}]},{"featureType":"landscape","stylers":[{"color":"#ffffff"},{"visibility":"on"}]},{}]
     };
 
     var map = new google.maps.Map(document.getElementById("map-canvas"),
       mapOptions);
-    // alert(gon.current_user)
+  
+
+
     var loadGeo = function() {
       var url = "/popups.json";
       $.ajax(url, {
@@ -95,10 +97,13 @@ var ready = function() {
       var newMarker = new google.maps.Marker({
         position: loc,
         map: map,
+        animation: google.maps.Animation.DROP,
         title: name
       });
+      var contentString = "<a href=/popups/" + id + '>' + name + "</a>" ;
+      
       var newInfoWindow = new google.maps.InfoWindow({
-        content: "<a href=/popups/" + id + '>' + name + "</a>"
+        content: contentString
       });
       addInfoWindowListener(newMarker, newInfoWindow);
     };
