@@ -32,6 +32,13 @@
 
 <!-- google map -->
 <div id="map-canvas">
+  <div class="infobox-wrapper">
+    <div id="infobox1">
+      <% @popups.each do |popup| %>
+        <%= popup.address %>
+      <% end %>
+    </div>
+</div>
 </div>
 
 
