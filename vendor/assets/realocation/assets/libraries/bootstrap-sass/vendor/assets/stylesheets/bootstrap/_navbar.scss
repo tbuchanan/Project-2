@@ -1,4 +1,4 @@
-//
+/*//
 // Navbars
 // --------------------------------------------------
 
@@ -6,7 +6,7 @@
 // Wrapper and base class
 //
 // Provide a static navbar from which we expand to create full-width, fixed, and
-// other navbar variations.
+// other navbar variations.*/
 
 .navbar {
   position: relative;
@@ -14,7 +14,7 @@
   margin-bottom: $navbar-margin-bottom;
   border: 1px solid transparent;
 
-  // Prevent floats from breaking the navbar
+  /*// Prevent floats from breaking the navbar*/
   @include clearfix();
 
   @media (min-width: $grid-float-breakpoint) {
@@ -23,10 +23,10 @@
 }
 
 
-// Navbar heading
+/*// Navbar heading
 //
 // Groups `.navbar-brand` and `.navbar-toggle` into a single component for easy
-// styling of responsive aspects.
+// styling of responsive aspects.*/
 
 .navbar-header {
   @include clearfix();
@@ -37,7 +37,7 @@
 }
 
 
-// Navbar collapse (body)
+/*// Navbar collapse (body)
 //
 // Group your navbar content into this for easy collapsing and expanding across
 // various device sizes. By default, this content is collapsed when <768px, but
@@ -46,6 +46,7 @@
 // To start (on mobile devices) the navbar links, forms, and buttons are stacked
 // vertically and include a `max-height` to overflow in case you have too much
 // content for the user's viewport.
+*/
 
 .navbar-collapse {
   max-height: $navbar-collapse-max-height;
@@ -77,8 +78,8 @@
       overflow-y: visible;
     }
 
-    // Undo the collapse side padding for navbars with containers to ensure
-    // alignment of right-aligned contents.
+    /*// Undo the collapse side padding for navbars with containers to ensure
+    // alignment of right-aligned contents.*/
     .navbar-fixed-top &,
     .navbar-static-top &,
     .navbar-fixed-bottom & {
@@ -90,10 +91,10 @@
 }
 
 
-// Both navbar header and collapse
+/*// Both navbar header and collapse
 //
 // When a container is present, change the behavior of the header and collapse.
-
+*/
 .container,
 .container-fluid {
   > .navbar-header,
@@ -109,13 +110,14 @@
 }
 
 
-//
+/*//
 // Navbar alignment options
 //
 // Display the navbar across the entirety of the page or fixed it to the top or
 // bottom of the page.
+*/
+/*// Static top (unfixed, but 100% wide) navbar*/
 
-// Static top (unfixed, but 100% wide) navbar
 .navbar-static-top {
   z-index: $zindex-navbar;
   border-width: 0 0 1px;
@@ -125,7 +127,7 @@
   }
 }
 
-// Fix the top/bottom navbars when screen real estate supports it
+/*// Fix the top/bottom navbars when screen real estate supports it*/
 .navbar-fixed-top,
 .navbar-fixed-bottom {
   position: fixed;
@@ -133,7 +135,7 @@
   left: 0;
   z-index: $zindex-navbar-fixed;
 
-  // Undo the rounded corners
+  /*// Undo the rounded corners*/
   @media (min-width: $grid-float-breakpoint) {
     border-radius: 0;
   }
@@ -146,12 +148,12 @@
   bottom: 0;
   margin-bottom: 0; // override .navbar defaults
   border-width: 1px 0 0;
-  background-color: #E1FCC7;
+  background-color: rgb(248, 140, 93);
   border-color: none;
 }
 
 
-// Brand/project name
+/*// Brand/project name*/
 
 .navbar-brand {
   float: left;
@@ -384,7 +386,7 @@
 
 // Default navbar
 .navbar-default {
-  background-color: #E1FCC7;
+  background-color: rgb(248, 140, 93);
   border-color: none;
   
 

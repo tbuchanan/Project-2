@@ -57,7 +57,7 @@ button#add.btn.btn-primary {
 
 
 h2 {
-  color: #D3D3D3;
+  color: black;
   font-family: 'Droid Sans', sans-serif;
 }
 
@@ -67,12 +67,12 @@ label {
 }
 
 i {
-  color: #D3D3D3;
+  color: black;
   font-family: 'Playfair Display', serif;
 }
 
 h4 {
-  color: #D3D3D3;
+  color: black;
   font-size: 30px;
   font-weight: bold;
   font-family: 'Droid Sans', sans-serif;
@@ -99,6 +99,7 @@ a.navbar-brand {
   font-family: 'Ewert', cursive;
   font-size: 35px;
   margin-top: 10px;
+  color:black;
 }
 
 .form-group {
@@ -118,16 +119,18 @@ h3 {
   margin-top: 0;
   text-align: center;
   font-family: 'Droid Sans', sans-serif;
-  color: #2980b9;
+  color: black;
 }
 
 .navbar {
-  background-color: white;
+  background-color: #f48f5c;
   text-align: center;
 }
 
+
+
 div.jumbotron {
-  background-color: #F8F8FF;
+  background-color: #f48f5c;
   width: 1126px;
   margin-left: 1em;
   border:solid white 2px;
@@ -139,13 +142,12 @@ div.jumbotron {
 
 .container .jumbotron {
 border-radius: 5px;
-background: #D3D3D3;
+background: #f48f5c;
 padding-top: 20px;
 padding-bottom: 20px;
 }
 
 body {
-  background-color: white;
   font-family: 'Droid Sans', sans-serif;
   height: 100%; 
   background: white;
@@ -162,7 +164,7 @@ input, button, select, textarea {
 
 ul#popups {
   padding-left: 25px;
-  background-color: #D3D3D3;
+  background-color: #54B54A;
   margin-left: 15px;
   height: 800px;
   overflow: scroll;
