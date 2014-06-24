@@ -1,6 +1,6 @@
 class PopupsController < ApplicationController
 
-before_action :authenticate_user!, except: [:index, :show]
+before_action :authenticate_user!, except: [:index]
 
   def index
     @popups = Popup.all

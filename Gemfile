@@ -9,6 +9,8 @@ gem 'geocoder'
 gem 'compass-rails'
 gem 'bootstrap-sass'
 
+# gem for up to 5 star ratings
+# gem 'letsrate'
 
 # gems for image upload and storage through Amazon AWS/S3
 gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
