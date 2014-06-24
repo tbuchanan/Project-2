@@ -40,30 +40,6 @@ $(document).ready(function() {
       });
     };
     loadGeo();
-
-
-// pins are showing up on top of all pins. need to clear map before search
-    // var loadSearch = function() {
-    //   // Find search string and geocode and add to url
-    //   var url = "/popups/search.json";
-    //   $.ajax(url, {
-    //     type: 'get',
-    //     data: {
-    //     "q": $('#q').val(),
-    //     "geocode": $('#geocode').val()
-    //   }
-    //   }).success(function(data) {
-    //     for (var i in data) {
-    //       addPin(data[i].latitude, data[i].longitude, data[i].name, data[i].id);
-    //     }
-    //   });
-    // };
-
-    // $('#search_form').on('submit', function(event) {
-    //   // event.preventDefault();
-    //   loadSearch();
-    // })
-
   
     function addPin(latitude, longitude, name, id, address, category, image) {
       var loc = new google.maps.LatLng(latitude, longitude);
@@ -71,8 +47,8 @@ $(document).ready(function() {
       var newMarker = new google.maps.Marker({
         position: loc,
         map: map,
-        animation: google.maps.Animation.DROP,
         icon: "http://i.imgur.com/xYtLJ5D.png",
+        animation: google.maps.Animation.DROP,
         title: name
       });
 
@@ -103,7 +79,7 @@ $(document).ready(function() {
     var place;
     var autocomplete = new google.maps.places.Autocomplete(input);
 
-    google.maps.event.addListener(autocomplete, 'place_changed', function () {
+    google.maps.event.addListener(autocomplete, 'place_changed', function() {
         place = autocomplete.getPlace();
         //console.log(place);
     });
@@ -118,12 +94,12 @@ $(document).ready(function() {
      
     //Reset the input box on click
     input.addEventListener('click', function(){
-        input.value = "";
+      input.value = "";
     });
 
     // end of autocomplete code
 
-      var contentString = "<img width='100' src=" + image + ">" + "<br>" + "<a href=/popups/" + id + '>' + name + "</a>" + '<br>' + address + '<br>' + category ;
+      var contentString = "<img width='90' src=" + image + ">" + "<br>" + "<a href=/popups/" + id + '>' + name + "</a>" + '<br>' + address + '<br>' + category ;
       
       var newInfoWindow = new google.maps.InfoWindow({
         content: contentString
