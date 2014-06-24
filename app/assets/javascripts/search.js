@@ -1,14 +1,13 @@
 $(document).ready(function() {
-    (function initialize() {
+    function initialize() {
     //just a variable storing a location
     var mapLoad = {
       center: new google.maps.LatLng(37.776616, -122.416972),
       zoom: 13,
       scrollwheel: false
-    };
+    }
 
-    var map = new google.maps.Map(document.getElementById("map-search"),
-      mapLoad);
+    var map = new google.maps.Map(document.getElementById("map-search"), mapLoad);
 
     var loadSearch = function() {
       // Find search string and geocode and add to url
@@ -24,11 +23,12 @@ $(document).ready(function() {
           addPin(data[i].latitude, data[i].longitude, data[i].name, data[i].id);
         }
       });
-    }();
+    }
+
+    loadSearch();
 
     $('#search_form').on('submit', function(event) {
-      event.preventDefault();
-    })
+    });
 
     function addPin(latitude, longitude, name, id) {
       var loc = new google.maps.LatLng(latitude, longitude);
@@ -58,7 +58,6 @@ $(document).ready(function() {
         }
       });
     }
-
+  };
   google.maps.event.addDomListener(window, 'load', initialize);
-  })();
 });

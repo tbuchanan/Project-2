@@ -12,36 +12,11 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
 //= require bootstrap.min
 //= require_tree .
 
-var ready = function() {
-  // var loadPopups = function() {
-  //   $.ajax('/popups.json', {
-  //     type: 'get',
-  //     data: {
-  //       "q": $('#q').val()
-  //     },
-  //   }).success(function(data) {
-  //     for (var i in data) {
-  //       var exp = new Date(data[i].expires_at);
-  //       // console.log(data[i]);
-
-  //       $('#popups').append(
-  //         '<a href=/popups/' + data[i].id + '>' + '<li>' + '<br>' + data[i].name,
-  //         data[i].description, '</br>',
-  //         data[i].address, '</br>',
-  //         data[i].hours, '</br>',
-  //         data[i].price, '</br>',
-  //         exp.toLocaleDateString(), '</br>',
-  //         '<a href=' + data[i].website + '>' + data[i].website + '</a>' + '</br>' + '</li></a>');
-  //     }
-  //   });
-  // };
-  // loadPopups();  
-  
-  (function initialize() {
+$(document).ready(function() {
+    function initialize() {
     //just a variable storing a location
     var mapOptions = {
       center: new google.maps.LatLng(37.776616, -122.416972),
@@ -50,9 +25,9 @@ var ready = function() {
     // mapTypeId: google.maps.MapTypeId.ROADMAP,
     // styles: [{"elementType":"labels","stylers":[{"visibility":"off"}]},{"elementType":"geometry","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"geometry","stylers":[{"visibility":"on"},{"color":"#000000"}]},{"featureType":"landscape","stylers":[{"color":"#ffffff"},{"visibility":"on"}]},{}]
     };
+    var map = new google.maps.Map(document.getElementById("map-canvas-index"),
+    mapOptions);
 
-    var map = new google.maps.Map(document.getElementById("map-canvas"),
-      mapOptions);
 
     var loadGeo = function() {
       var url = "/popups.json";
@@ -65,6 +40,7 @@ var ready = function() {
       });
     };
     loadGeo();
+
 
 // pins are showing up on top of all pins. need to clear map before search
     // var loadSearch = function() {
@@ -120,6 +96,7 @@ var ready = function() {
     //     infobox.open(map, this);
     //     map.panTo(loc);
     // });
+
       // --> adding autocomplete functionality 
     var input = document.getElementById('location');
     var searchform = document.getElementById('search_form');
@@ -169,8 +146,6 @@ var ready = function() {
       });
     }
 
-  })();
-
-};
-$(document).ready(ready);
-$(document).on('page:load', ready);
+  };
+  google.maps.event.addDomListener(window, 'load', initialize);
+});

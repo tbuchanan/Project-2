@@ -9,6 +9,8 @@ gem 'geocoder'
 gem 'compass-rails'
 gem 'bootstrap-sass'
 
+# gem for up to 5 star ratings
+# gem 'letsrate'
 
 # gems for image upload and storage through Amazon AWS/S3
 gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
@@ -31,7 +33,7 @@ gem 'coffee-rails', '~> 4.0.0'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-gem 'turbolinks'
+# gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.

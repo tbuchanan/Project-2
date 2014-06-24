@@ -1,47 +1,8 @@
 
-<!-- 
-
-<%# if current_user %>
-<!<h3> Add a new Popup! </h3>
-<div class="jumbotron">
-  
-  <form>
-    <input id="name" type="text" placeholder="popup name">
-    <input id="description" type="text" placeholder="description">
-    <input id="price" type="text" placeholder="price">
-    <input id="address" type="text" placeholder="address">
-    <input id="hours" type="text" placeholder="hours">
-    <input id="expires_at" type="text" placeholder="example: June 1, 2014">
-    <input id="website" type="text" placeholder="website">
-    
-    <button id="submit" type="submit">Submit</button>
-  </form>
-  
-  </div> -->
-
-<%# end %>
-<!-- <div class="row">
-  <div class="col-md-6">  
-    <ul id="popups">
-    </ul>
-  </div>
-  <div class="col-md-6">
-  </div>
-</div> -->
-
-
 <!-- google map -->
-<div id="map-canvas">
-  <div class="infobox-wrapper">
-    <div id="infobox1">
-      <% @popups.each do |popup| %>
-        <%= popup.address %>
-      <% end %>
-    </div>
-</div>
-</div>
 
-
+<div id="map-canvas-index">
+</div>
 
 <!-- ISOTOPE GRID -->
 <div class="block-content block-content-small-padding">
@@ -99,3 +60,4 @@
   </div><!-- block-content-inner -->
 </div><!-- block-content block-content-small-padding -->
             
+
