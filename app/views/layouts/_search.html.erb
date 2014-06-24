@@ -15,7 +15,7 @@
             <div class="form-group">
               <%= form_tag "/popups/search", method: :get, id: 'search_form' do %>
                 <%= text_field_tag :q, params[:q], placeholder: "eg: Wesburger" %> 
-                <%= text_field_tag :geocode, params[:geocode], placeholder: "eg: 112 Fell St, SF, CA 94109" %>
+                <%= text_field_tag :geocode, params[:geocode], placeholder: "eg: 112 Fell St, SF, CA 94109", :id => "location" %>
                 <%= submit_tag "Search", :class => "searchbutton" %>
               <% end %>
               <% if user_signed_in? %>
