@@ -55,6 +55,23 @@ button#add.btn.btn-primary {
   color: black;
 }
 
+#meta-image {
+  border: 1px solid #CFDADA;
+}
+
+.row-meta {
+  margin-left: 16px;
+  margin-right: 1px;
+  color: rgb(3, 216, 247);
+  font-weight: bold;
+  font-size: 17px;
+}
+
+#meta {
+  color: rgb(3, 216, 247);
+  font-weight: bold;
+  font-size: 17px;
+}
 
 h2 {
   color: #D3D3D3;
