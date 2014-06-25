@@ -2,8 +2,50 @@
 
 Popspotz http://popups-app.herokuapp.com/
 
--Project 2 by Tyler, Randy and Ami
+Authors: Tyler and Ami
 
-Popspotz is an app that helps you find popups in your city!
-If you are wondering what a Popup is - think of a place with amazing food or unique products that appears temporarily and typically in a single location. Currently, most people only find out about Popups by word of mouth or by pure accident, but what if all the information you needed about these Popups was in one place?! What if you could track them down through your community, your friend circle, your city?! 
-If you know of a Popup, add it to Popspotz and help others like you from missing out on a cool Popup!
+POPSPOTZ
+
+Popspotz, as the name suggests is an app that helps users in finding pop-ups nearest to them.
+
+WHAT ARE POP-UPS?
+
+Pop-ups are temporary businesses that show up at designated venues for a limited period of time.
+There are typically no promotional activities for Pop-ups. At the moment, the best way to find them is through word-of-mouth or through sheer seredipidity!
+
+POPSPOTZ OBJECTIVE 
+
+Popspotz hopes to consolidate all the information users need about existing pop-ups in one place so that these businesses can become more accessible to a larger section of the community.
+
+TOP FEATURES OF POPSPOTZ
+
+- users can sign up
+- the database is user-generated
+- users can search the existing database by location or name of popup
+- all the pop-ups in the database can be seen on a map 
+- users can view and add ratings to existing pop-ups
+- maps have links so users can automatically get directions to the selected popup
+
+APIs
+
+- Google Maps
+- AWS
+
+GEMS
+
+- devise
+- geocoder
+- compass-rails
+- bootstrap-sass
+- letsrate
+- paperclip
+
+TECHNOLOGIES
+
+- Ruby on Rails
+- AJAX
+- Javascript
+- jQuery
+
+
+P.S If you know of a Popup, add it to Popspotz and help others like you from missing out on a cool Popup!
