@@ -8,7 +8,7 @@
         <span class="icon-bar"></span>
       </button>
       <a class="navbar-brand" href="/popups">Popspotz</a>
-    </div>
+    </div><!-- navbar-header-fluid -->
     <div class="navbar-collapse collapse">
       <!-- <button id="add" class="btn btn-primary"><%#= link_to "Add Popup", new_popup_path %></button> -->
          <!--  <form class="navbar-form navbar-left" role="search">
@@ -51,4 +51,31 @@
       </div>
     </div>
   </div>
+
+      <div class="navbar-form navbar-fluid" role="search">
+        <div class="form-group">
+          <%= form_tag "/popups/search", method: :get, id: 'search_form' do %>
+            <%= text_field_tag :q, params[:q], placeholder: "eg: Wesburger", class: "form-control" %> 
+            <%= text_field_tag :geocode, params[:geocode], placeholder: "eg: 112 Fell St, San Francisco, CA 94102", :id => "location", class: "form-control" %>
+            <%= submit_tag "Search", :class => "btn btn-info" %>
+          <% end %>
+        </div>
+          <div class="navbar-form pull-right">                
+            <!-- <strong id="logged">Logged in as <%#= current_user.email %></strong> -->
+            <ul class="links">
+            <% if user_signed_in? %>
+              <%= link_to "Add Popup", new_popup_path, :class => 'navbar-link' %> <label id="slash">/</label>
+              <%= link_to 'Profile', edit_user_registration_path, :class => 'navbar-link' %> <label id="slash">/</label>
+              <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+            <% else %>
+              <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> <label id="slash">/</label>
+              <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+            <% end %>
+            </ul>
+          </div><!-- navbar-form pull-right -->        
+      </div><!-- navbar-form navbar-fluid" -->          
+    </div><!-- navbar-collapse collapse -->
+  </div><!-- container-fluid -->    
+</div><!-- navbar navbar-default navbar-fixed-top -->
+<br></br>
 

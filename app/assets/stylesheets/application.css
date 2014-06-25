@@ -31,9 +31,39 @@ button#add.btn.btn-primary {
   margin-right: 30px;
 }
 
+a.navbar-link {
+color: white;
+}
+
+#slash {
+  color: white;
+}
+
+.links {
+  margin-top: 3px;
+  word-spacing: 3px;
+  font-weight: bold;
+  padding-left: 0px;
+}
+
+#logged {
+  font-size: 11px;
+  line-height: 16px;
+  margin-top: 10px;
+}
+
 #feed {
   margin-top: -25px;
 }
+
+#location {
+  width: 352px;
+
+  .small {
+    
+  }
+}
+
 
 #hours {
   color: #899180;
@@ -176,7 +206,6 @@ padding-bottom: 20px;
 body {
   font-family: 'Droid Sans', sans-serif;
   height: 100%; 
-  background: rgb(185, 187, 190);
 }
 
 ul {  
@@ -199,7 +228,7 @@ ul#popups {
   height: 800px;
 }
 
-#map-canvas {
+/*#map-canvas {
   width: 100%;
   height: 65%;
   left: 0px;
@@ -207,16 +236,12 @@ ul#popups {
   border-radius: 5px;
   position: absolute;
   z-index: 0;
-}
+}*/
 
 #map-canvas-index {
   width: 100%;
-  height: 58%;
-  left: 0px;
-  top: 5%;
-  border-radius: 5px;
-  position: absolute;
-  z-index: 0;
+  height: 450px;
+  border: 1px solid #7f8c8d;
 }
 
 #map-search {
@@ -270,7 +295,7 @@ input#website {
 }
 
 .block-content{
-  margin-top: 350px;
+ /* margin-top: 350px;*/
 
   /*.small {
     margin-top: 40em;

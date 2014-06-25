@@ -28,6 +28,9 @@ $(document).ready(function() {
     var map = new google.maps.Map(document.getElementById("map-canvas-index"),
     mapOptions);
 
+    $(window).on('resize', function () {
+        google.maps.event.trigger(map, 'resize');
+      });
 
     var loadGeo = function() {
       var url = "/popups.json";

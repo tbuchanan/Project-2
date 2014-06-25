@@ -4,11 +4,10 @@
 
 
 .breadcrumb {
-  padding: $breadcrumb-padding-vertical $breadcrumb-padding-horizontal;
-  margin-bottom: $line-height-computed;
-  list-style: none;
-  background-color: $breadcrumb-bg;
-  border-radius: $border-radius-base;
+  margin-bottom: -18px;
+  margin-top: -18px;
+  background-color: transparent;
+  opacity: 1;
 
   > li {
     display: inline-block;
