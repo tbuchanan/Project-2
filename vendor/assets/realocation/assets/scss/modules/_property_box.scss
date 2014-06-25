@@ -1,6 +1,5 @@
 .property-box {
 	background-color: #fff;
-	border: 2px solid rgba(0, 0, 0, .1);
 	margin-bottom: 30px;
 	overflow: hidden;
 	padding: 15px 10px 15px 10px;
@@ -161,9 +160,8 @@ h4.property-box-subtitle, h4.property-box-subtitle a {
 }
 
 .properties-filter {
-	line-height: 36px;
-	margin-bottom: 30px;
-  padding: 0px;
+	margin-bottom: 45px;
+	padding: 0px 6em 0px 0px;
 	text-align: center;
 
 	li {

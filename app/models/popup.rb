@@ -4,6 +4,9 @@ class Popup < ActiveRecord::Base
   belongs_to :user
   has_many :feeds
 
+  # letsrate gem requirement
+  letsrate_rateable "price"
+
   # validates :image, :presence => { :message => "Image is required" }
 
   # validates :geocode, presence: true

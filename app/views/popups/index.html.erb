@@ -38,19 +38,14 @@
                 <div class="row-meta">  
                   <div class="property-box-meta">
                     <div class="property-box-meta-item col-xs-4 col-sm-4">
-                      <strong>9</strong>
-                      <span>Rating</span>
+                      <strong><%= rating_for popup, "price", :star => 5 %></strong>                      
                     </div>
                     <!-- /.col-sm-3 -->
                     <div class="property-box-meta-item col-xs-3 col-sm-3">
-                      <strong><%= link_to popup.price, popup_path(popup.id), id: 'meta' %></strong>
-                      <span>Price</span>
+                      <strong><%= link_to popup.price, popup_path(popup.id), id: 'meta' %></strong>                    
                     </div>
                     <!-- /.col-sm-3 -->
-                    <div class="property-box-meta-item col-xs-3 col-sm-4">
-                      <strong><%= link_to popup.category, popup_path(popup.id), id: 'meta' %></strong>
-                      <span>Category</span>
-                    </div><!-- /.col-sm-3 -->
+                    
                   </div><!-- /.property-box-meta -->  
                 </div><!-- row-meta -->
               </div><!-- /.property-box-inner -->
