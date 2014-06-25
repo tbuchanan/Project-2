@@ -55,22 +55,28 @@ button#add.btn.btn-primary {
   color: black;
 }
 
+.block-content-inner {
+  padding: 0em 0em 0em 4em;
+}
+
 #meta-image {
   border: 1px solid #CFDADA;
 }
 
 .row-meta {
-  margin-left: 16px;
-  margin-right: 1px;
-  color: rgb(3, 216, 247);
+  margin-left: 3em;
+  margin-right: -7em;
   font-weight: bold;
   font-size: 17px;
+  margin-top: -14em;
+  text-align: center;
 }
 
 #meta {
-  color: rgb(3, 216, 247);
+  color: rgb(240, 160, 40);
   font-weight: bold;
   font-size: 17px;
+  text-align: center;
 }
 
 h2 {
@@ -116,7 +122,7 @@ a.navbar-brand {
   font-family: 'Ewert', cursive;
   font-size: 35px;
   margin-top: 10px;
-  color:black;
+  color:white;
 }
 
 .form-group {
@@ -131,6 +137,7 @@ a.navbar-brand:hover, a.navbar-brand:hover:focus {
 html, body {
   height: 100%;
 }
+
 
 h3 {
   margin-top: 0;
@@ -167,11 +174,12 @@ padding-bottom: 20px;
 body {
   font-family: 'Droid Sans', sans-serif;
   height: 100%; 
-  background: white;
+  background: rgb(185, 187, 190);
 }
 
 ul {  
   font-family: 'Droid Sans', sans-serif;
+  text-align: center;
 }
 
 input, button, select, textarea {

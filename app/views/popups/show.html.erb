@@ -50,6 +50,9 @@
 <%= link_to "Website", @popup.website %>
 <br></br>
 
+<!--  -->
+Rating : <%= rating_for @popup, "price", :star => 5 %>
+
 
 <% if current_user %>
   <%= form_for ([@popup, @feed_new]) do |f| %>
