@@ -4,7 +4,9 @@ $(document).ready(function() {
     var mapLoad = {
       center: new google.maps.LatLng(37.776616, -122.416972),
       zoom: 13,
-      scrollwheel: false
+      scrollwheel: false,
+      mapTypeId: google.maps.MapTypeId.ROADMAP,
+      styles: [{"featureType":"landscape.natural","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#e0efef"}]},{"featureType":"poi","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"hue":"#1900ff"},{"color":"#c0e8e8"}]},{"featureType":"landscape.man_made","elementType":"geometry.fill"},{"featureType":"road","elementType":"geometry","stylers":[{"lightness":100},{"visibility":"simplified"}]},{"featureType":"road","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"water","stylers":[{"color":"#7dcdcd"}]},{"featureType":"transit.line","elementType":"geometry","stylers":[{"visibility":"on"},{"lightness":700}]}]
     }
 
     var map = new google.maps.Map(document.getElementById("map-search"), mapLoad);
@@ -20,7 +22,7 @@ $(document).ready(function() {
       }
       }).success(function(data) {
         for (var i in data) {
-          addPin(data[i].latitude, data[i].longitude, data[i].name, data[i].id);
+          addPin(data[i].latitude, data[i].longitude, data[i].name, data[i].id, data[i].address, data[i].category, data[i].image);
         }
       });
     }
@@ -30,23 +32,27 @@ $(document).ready(function() {
     $('#search_form').on('submit', function(event) {
     });
 
-    function addPin(latitude, longitude, name, id) {
+    function addPin(latitude, longitude, name, id, address, category, image) {
       var loc = new google.maps.LatLng(latitude, longitude);
       console.log(loc);
       var newMarker = new google.maps.Marker({
         position: loc,
         map: map,
+        icon: "http://i.imgur.com/xYtLJ5D.png",
+        animation: google.maps.Animation.DROP,
         title: name
       });
+      
+      var contentString = "<img width='90' src=" + image + ">" + "<br>" + "<a href=/popups/" + id + '>' + name + "</a>" + '<br>' + address + '<br>' + category ;
       var newInfoWindow = new google.maps.InfoWindow({
-        content: "<a href=/popups/" + id + '>' + name + "</a>"
+        content: contentString
       });
       addInfoWindowListener(newMarker, newInfoWindow);
     };
 
     var lastInfoWindow;
     var addInfoWindowListener = function(marker, newInfoWindow) {
-      google.maps.event.addListener(marker, 'click', function() {
+      google.maps.event.addListener(marker, 'mouseover', function() {
         if ( !! lastInfoWindow) {
           lastInfoWindow.close();
         }
