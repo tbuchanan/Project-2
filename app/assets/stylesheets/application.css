@@ -61,7 +61,7 @@ button#add.btn.btn-primary {
 }
 
 #meta-image {
-  border: 1px solid #CFDADA;
+  border: 5px solid #CFDADA;
 }
 
 .row-meta {
@@ -100,6 +100,7 @@ h4 {
   font-size: 30px;
   font-weight: bold;
   font-family: 'Droid Sans', sans-serif;
+  text-decoration:none;
 }
 
 #jumbo {
@@ -117,6 +118,7 @@ h4 {
 a {
   font-family: 'Droid Sans', sans-serif;
   font-size: 15px;
+  text-decoration:none;
 }
 
 a.navbar-brand {
@@ -124,6 +126,7 @@ a.navbar-brand {
   font-size: 35px;
   margin-top: 10px;
   color:white;
+  text-decoration:none;
 }
 
 .form-group {
@@ -165,7 +168,7 @@ div.jumbotron {
 
 .container .jumbotron {
 border-radius: 5px;
-background: #f48f5c;
+background: #b9bbbe;
 padding-top: 20px;
 padding-bottom: 20px;
 }
@@ -220,12 +223,13 @@ ul#popups {
   width: 100%;
   height: 100%;
   left: 0px;
-  top: 5%;
+  top: 7%;
   border-radius: 5px;
   position: absolute;
-  z-index: 0;
+  z-index: 200;
 }
 
+/*height : 100%; width : 100%; top : 0; left : 0; position : absolute; z-index : 200;*/
 
 #google {
   float: right;  
@@ -280,12 +284,30 @@ input#website {
   margin-top:-55px;
 }
 
-.navbar-static-bottom {
+/*.navbar-static-bottom {
    position:absolute;
    margin-top:3000px;
    width:100%;
-   height:60px;   /* Height of the footer */
-   background:#F25D1D;
+   height:100%;   /* Height of the footer 
+   /*background:#F25D1D;*/
+/*}
+*/
+.popupinfo{
+  background: white;
+  padding:15px;
+  padding-left:110px;
+} 
+
+#popupMap{
+  margin-left:20%;
+}
+
+.mapinfo{
+  margin-left:20%;
+}
+
+p {
+  font-size:17px;
 }
 
 

@@ -1,13 +1,13 @@
 <br></br>
-<div class="col-lg-7" id="google">
-    </br><%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&markers=#{@popup.address}&zoom=16", id: "popupMap" %><br>
-    
-     <div id="directions"><%= link_to("get directions", "https://maps.google.com/maps?daddr=#{@popup.address}") %></div>
-
-    <button id="zoomOut"> - </button><button id="zoomIn"> + </button>   
-    <h4><%= @popup.name %></h4>
-    <%= @popup.address %><br>    
+<div class="col-lg-7" id="google"><br></br></br>
+    </br><%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&markers=#{@popup.address}&zoom=16", id: "popupMap" %><br></br>
+    <div class="mapinfo">
+      <button id="zoomOut"> - </button><button id="zoomIn"> + </button><br></br>
+      <p><%= @popup.address %></p><br>
+      <button class="btn btn-info"><%= link_to("Get Directions", "https://maps.google.com/maps?daddr=#{@popup.address}")%></button>  
+    </div> 
   </div>
+
   <script>
   $("#google").on("click", "#zoomIn, #zoomOut", function(event){
     var $img = $("#popupMap");
@@ -32,8 +32,9 @@
   });
   </script>
 
+<div class="popupinfo">
 <% if current_user %> 
-<h4><strong><%= @popup.name %></strong></h4>
+<h1><strong><%= @popup.name %></strong></h1><br>
 <img src="<%= @popup.image(:medium) %>"><br></br>
 <% if current_user && current_user.id == @popup.user_id %>
   <%= form_for @popup, :html => { :multipart => true } do |f| %>
@@ -42,22 +43,21 @@
       </div>
   <% end %>
 <% end %> 
-<p>Description: <%= @popup.description %></p><br>
-<p>Hours: <%= @popup.hours %></p><br>
-<p>Days: <%= @popup.day %></p><br>
-<p>Price: <%= @popup.price %></p><br>
-<p>Category: <%= @popup.category %></p><br>
-<%= link_to "Website", @popup.website %>
-<br></br>
+<p>Description: <%= @popup.description %></p>
+<p>Hours: <%= @popup.hours %></p>
+<p>Days: <%= @popup.day %></p>
+<p>Price: <%= @popup.price %></p>
+<p>Category: <%= @popup.category %></p>
+<p><%= link_to "Website", @popup.website %></p>
 
 <!--  -->
-Rating : <%= rating_for @popup, "price", :star => 5 %>
+<p><%= rating_for @popup, "price", :star => 5 %></p>
 
 
 <% if current_user %>
   <%= form_for ([@popup, @feed_new]) do |f| %>
-    <br><%= f.text_area :comment, placeholder: "Add your comment" %><br></br>
-    <%= f.submit "Create comment" %>
+    <br><%= f.text_area :comment, placeholder: "Add your comment" %><br>
+    <%= f.submit "Create comment", :class => 'btn btn-info' %><br></br>
   <% end %>
 <% else %>
 <%= link_to "Sign in to post a comment", new_user_session_path, :class => 'navbar-link'  %>
@@ -71,9 +71,10 @@ Rating : <%= rating_for @popup, "price", :star => 5 %>
 <h7><strong><%= @user.email %></strong></h7><br>
 <% end %></br> 
  </div>
-<% end %>
-
- <%= link_to 'Back', root_path %>
+<% end %></br>
+</div>
+<%= link_to 'Back', root_path %></br>
+ 
 
 
 

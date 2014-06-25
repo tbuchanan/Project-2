@@ -32,6 +32,7 @@ $(document).ready(function() {
     $('#search_form').on('submit', function(event) {
     });
 
+
     function addPin(latitude, longitude, name, id, address, category, image, price) {
       var loc = new google.maps.LatLng(latitude, longitude);
       console.log(loc);
@@ -43,7 +44,7 @@ $(document).ready(function() {
         title: name
       });
       
-      var contentString = "<img width='90' src=" + image + ">" + "<br>" + "<a href=/popups/" + id + '>' + name + "</a>" + '<br>' + address + '<br>' + category + '<br>' + price;
+      var contentString = "<a href=/popups/" + id + '>' + name + "</a>" + "<br>" + "<img width='90' height='90' src=" + image + ">" + "<br>";
       var newInfoWindow = new google.maps.InfoWindow({
         content: contentString
       });
@@ -63,7 +64,7 @@ $(document).ready(function() {
           lastInfoWindow = newInfoWindow;
         }
       });
-      newInfoWindow.open(map,marker);
+      // newInfoWindow.open(map,marker);
     }
   };
   google.maps.event.addDomListener(window, 'load', initialize);
