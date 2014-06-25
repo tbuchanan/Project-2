@@ -35,13 +35,13 @@ $(document).ready(function() {
         type: 'get'
       }).success(function(data) {
         for (var i in data) {
-          addPin(data[i].latitude, data[i].longitude, data[i].name, data[i].id, data[i].address, data[i].category, data[i].image);
+          addPin(data[i].latitude, data[i].longitude, data[i].name, data[i].id, data[i].address, data[i].category, data[i].image, data[i].price);
         }
       });
     };
     loadGeo();
   
-    function addPin(latitude, longitude, name, id, address, category, image) {
+    function addPin(latitude, longitude, name, id, address, category, image, price) {
       var loc = new google.maps.LatLng(latitude, longitude);
       console.log(loc);
       var newMarker = new google.maps.Marker({
@@ -99,7 +99,7 @@ $(document).ready(function() {
 
     // end of autocomplete code
 
-      var contentString = "<img width='90' src=" + image + ">" + "<br>" + "<a href=/popups/" + id + '>' + name + "</a>" + '<br>' + address + '<br>' + category ;
+      var contentString = "<img width='90' src=" + image + ">" + "<br>" + "<a href=/popups/" + id + '>' + name + "</a>" + '<br>' + address + '<br>' + 'Category: ' + category + '<br>' + price;
       
       var newInfoWindow = new google.maps.InfoWindow({
         content: contentString
