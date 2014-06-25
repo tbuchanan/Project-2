@@ -31,9 +31,39 @@ button#add.btn.btn-primary {
   margin-right: 30px;
 }
 
+a.navbar-link {
+color: white;
+}
+
+#slash {
+  color: white;
+}
+
+.links {
+  margin-top: 3px;
+  word-spacing: 3px;
+  font-weight: bold;
+  padding-left: 0px;
+}
+
+#logged {
+  font-size: 11px;
+  line-height: 16px;
+  margin-top: 10px;
+}
+
 #feed {
   margin-top: -25px;
 }
+
+#location {
+  width: 352px;
+
+  .small {
+    
+  }
+}
+
 
 #hours {
   color: #899180;
@@ -280,7 +310,3 @@ input#website {
 #directions{
   margin-top:-55px;
 }
-
-
-
-

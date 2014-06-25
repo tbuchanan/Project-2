@@ -38,22 +38,19 @@
                 <%= f.text_field "hours", placeholder: "eg: 6:00pm-7:00pm", :class => "form-control" %>
               </div>
             
-      
+              <div class="form-group">
+                <%= f.label "Category" %>
+                  <%= f.select "category", options_for_select([ ['Choose a category'], ['Coffee', 'Coffee'], ['Food', 'Food'], ['Bars','Bars'], ['Clothing', 'Clothing'], ['Shoes', 'Shoes'], ['Crafts', 'Crafts'], ['Entertainment','Entertainment'] ]) %>
+              </div>
             
               <div class="form-group">
                 <%= f.label "Day" %>
                   <%= f.select "day", options_for_select([ ['Day'], ['Monday', 'Monday'], ['Tuesday','Tuesday'], ['Wednesday', 'Wednesday'], ['Thursday', 'Thursday'], ['Friday', 'Friday'], ['Saturday','Saturday'], ['Sunday', 'Sunday'] ]) %>
-              </div>
-          
+              </div>      
             
               <div class="form-group">
                 <%= f.label "Price" %>
               <%= f.select "price", options_for_select([ ['Price'], ['$', '$'],['$$', '$$'],['$$$', '$$$'],['$$$$', '$$$$'] ]) %>
-              </div>
-
-              <div class="form-group">
-                <%= f.label "Category" %>
-                  <%= f.select "category", options_for_select([ ['Choose a category'], ['Coffee', 'Coffee'], ['Food', 'Food'], ['Bars','Bars'], ['Clothing', 'Clothing'], ['Shoes', 'Shoes'], ['Crafts', 'Crafts'], ['Entertainment','Entertainment'] ]) %>
               </div>
 
               <div class="form-group">

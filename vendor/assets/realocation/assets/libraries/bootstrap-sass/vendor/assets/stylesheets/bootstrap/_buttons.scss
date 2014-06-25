@@ -62,7 +62,9 @@
 }
 // Info appears as blue-green
 .btn-info {
-  @include button-variant($btn-info-color, $btn-info-bg, $btn-info-border);
+  color: white;
+  background-color: rgb(125, 205, 205);
+  border-color: none;
 }
 // Warning appears as orange
 .btn-warning {
