@@ -7,6 +7,7 @@ class PagesController < ApplicationController
   end 
 
   def contact
+  end 
   end
 
   def faq
