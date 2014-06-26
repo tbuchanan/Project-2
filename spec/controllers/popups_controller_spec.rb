@@ -1,16 +1,16 @@
 require 'spec_helper'
 
 describe PopupsController, type: :controller do
-  include Devise::TestHelpers
+  # include Devise::TestHelpers
 
   # def mock_user(stubs={})
   #   @mock_user ||= mock_model(User, stubs).as_null_object
   # end
 
-  before (:each) do
-    @user = User.create({email: "mathur7@gmail.com", password: "123456"})
-    sign_in @user
-  end
+  # before (:each) do
+  #   @user = User.create({email: "mathur7@gmail.com", password: "123456"})
+  #   sign_in @user
+  # end
 
 describe "GET #index" do
     it "should render index template" do

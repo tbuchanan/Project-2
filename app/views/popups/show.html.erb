@@ -1,52 +1,58 @@
 <br></br>
-<div class="row">
-<div class="col-sm-6 col-md-7" id="google"><br></br></br>
-    </br><%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&markers=#{@popup.address}&zoom=16", id: "popupMap" %><br></br>
-    <div class="mapinfo">
-      <button id="zoomOut"> - </button><button id="zoomIn"> + </button><br></br>
-      <p><%= @popup.address %></p><br>
-      <button class="btn btn-info"><%= link_to("Get Directions", "https://maps.google.com/maps?daddr=#{@popup.address}")%></button>  
-    </div> 
-  </div>
+<div class="container">
+  <div class="jumbotron">
+    <h1><center><strong><%= @popup.name %></strong></center></h1></br>
+    <div class="row">
+      <div class="col-sm-6 col-md-7 col-lg-8">
+        <%= image_tag @popup.image(:medium) %>
+      <div class="col-sm-6 col-md-5 col-lg-4" id="google">
+          <%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&markers=#{@popup.address} &zoom=16", id: "popupMap"%>
+          <div class="map-zoom"> 
+            <button id="zoomOut"> - </button><button id="zoomIn"> + </button><br></br>    
+            <div class="get-direct">
+            <%= link_to "Get Directions", "https://maps.google.com/maps?daddr=#{@popup.address}", :method => "get", id: "directions" %>
+            </div>
+          </div><!-- map-zoom -->  
+      </div><!-- col-sm-6 col-md-7 col-lg-8 --> 
+      </div><!-- col-sm-6 col-md-5 col-lg-4 --> 
+  </div><!-- row -->
+  <div class="popup-info">
+    <p><%= rating_for @popup, "price", :star => 5 %></p>
+    <p>Description: <%= @popup.description %></p>
+    <p>Address: <%= @popup.address %></p>
+    <p>Hours: <%= @popup.hours %></p>
+    <p>Days: <%= @popup.day %></p>
+    <p>Price: <%= @popup.price %></p>
+    <p>Category: <%= @popup.category %></p>
+    <p><%= link_to "Website", @popup.website %></p>
+  </div><!-- popup-info -->
 
-<div class="popupinfo">
-
-<h1><strong><%= @popup.name %></strong></h1>
-<%= image_tag @popup.image(:medium) %><br>
-<% if current_user && current_user.id == @popup.user_id %>
-  <%= form_for @popup, :html => { :multipart => true } do |f| %>
-      <div><%= f.file_field :image %> </br> 
-        <%= f.submit "Upload image", :class => "btn-default" %>
-      </div>
+  <% if current_user %>
+    <%= form_for ([@popup, @feed_new]) do |f| %>
+      <br><%= f.text_area :comment, placeholder: "Add your comment" %><br>
+      <%= f.submit "Create comment", :class => 'btn btn-info' %><br></br>
+    <% end %>
+  <% else %>
+    <%= link_to "Sign in to post a comment", new_user_session_path, :class => 'navbar-link'  %>
   <% end %>
+  <h4>Comments</h4>
+    <div class="jumbotron" id="jumbo">
+      <% @feeds.each do |feed|%>
+        <h7><%= feed.comment %></h7>
+        <% if current_user %>
+          <h7><%= link_to "Delete", [@popup, feed], method: :delete, data: {confirm: "Are You Sure?"}, :class => 'btn btn-danger btn-sm' %></h7></br>
+        <% end %>
+        <h7>Posted <%= time_ago_in_words(feed.created_at) %> ago by: </h7><br>
+        <h7><strong><%= @user.email %></strong></h7><br>
+      <% end %></br> 
+    </div><!-- jumbo -->
 
+  </div><!-- jumbotron -->
 
-
-
-
-<% if current_user %>
-  <%= form_for ([@popup, @feed_new]) do |f| %>
-    <br><%= f.text_area :comment, placeholder: "Add your comment" %><br>
-    <%= f.submit "Create comment", :class => 'btn btn-info' %><br></br>
-  <% end %>
-<% else %>
-<%= link_to "Sign in to post a comment", new_user_session_path, :class => 'navbar-link'  %>
-<% end %>
-
-<h4>Comments</h4>
-<div class="jumbotron" id="jumbo">
-<% @feeds.each do |feed|%>
-<h7><%= feed.comment %></h7><%= link_to "Delete", [@popup, feed], method: :delete, data: {confirm: "Are You Sure?"}, :class => 'btn btn-danger btn-sm' %></br>
-<h7>Posted <%= time_ago_in_words(feed.created_at) %> ago by: </h7><br>
-<h7><strong><%= @user.email %></strong></h7><br>
-<% end %></br> 
- </div>
-<% end %></br>
-</div>
-</div>
 <%= link_to 'Back', root_path %></br>
- 
+</div><!-- container -->
 <!-- static google map --> 
+
 <script>
   $("#google").on("click", "#zoomIn, #zoomOut", function(event){
     var $img = $("#popupMap");
