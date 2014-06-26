@@ -1,5 +1,6 @@
 <br></br>
-<div class="col-lg-7" id="google"><br></br></br>
+<div class="row">
+<div class="col-sm-6 col-md-7" id="google"><br></br></br>
     </br><%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&markers=#{@popup.address}&zoom=16", id: "popupMap" %><br></br>
     <div class="mapinfo">
       <button id="zoomOut"> - </button><button id="zoomIn"> + </button><br></br>
@@ -8,50 +9,19 @@
     </div> 
   </div>
 
-  <script>
-  $("#google").on("click", "#zoomIn, #zoomOut", function(event){
-    var $img = $("#popupMap");
-    var src = $("#popupMap").attr("src");
-
-    var src_arr = src.split("&zoom=")
-    var zoom = (Number(src_arr[1]));
-
-    console.log(event.target.id)
-    if (event.target.id === "zoomIn"){
-      if (zoom < 20){ 
-        zoom += 1;
-        
-      }
-    } else {
-      if (zoom > 0){ 
-        zoom -= 1;
-      }
-    }
-    src = src_arr[0] + "&zoom="+ zoom;
-    $img.attr("src",src);
-  });
-  </script>
-
 <div class="popupinfo">
-<% if current_user %> 
-<h1><strong><%= @popup.name %></strong></h1><br>
-<img src="<%= @popup.image(:medium) %>"><br></br>
+
+<h1><strong><%= @popup.name %></strong></h1>
+<%= image_tag @popup.image(:medium) %><br>
 <% if current_user && current_user.id == @popup.user_id %>
   <%= form_for @popup, :html => { :multipart => true } do |f| %>
       <div><%= f.file_field :image %> </br> 
         <%= f.submit "Upload image", :class => "btn-default" %>
       </div>
   <% end %>
-<% end %> 
-<p>Description: <%= @popup.description %></p>
-<p>Hours: <%= @popup.hours %></p>
-<p>Days: <%= @popup.day %></p>
-<p>Price: <%= @popup.price %></p>
-<p>Category: <%= @popup.category %></p>
-<p><%= link_to "Website", @popup.website %></p>
 
-<!--  -->
-<p><%= rating_for @popup, "price", :star => 5 %></p>
+
+
 
 
 <% if current_user %>
@@ -73,8 +43,30 @@
  </div>
 <% end %></br>
 </div>
+</div>
 <%= link_to 'Back', root_path %></br>
  
+<!-- static google map --> 
+<script>
+  $("#google").on("click", "#zoomIn, #zoomOut", function(event){
+    var $img = $("#popupMap");
+    var src = $("#popupMap").attr("src");
 
+    var src_arr = src.split("&zoom=")
+    var zoom = (Number(src_arr[1]));
 
-
+    console.log(event.target.id)
+    if (event.target.id === "zoomIn"){
+      if (zoom < 20){ 
+        zoom += 1;
+        
+      }
+    } else {
+      if (zoom > 0){ 
+        zoom -= 1;
+      }
+    }
+    src = src_arr[0] + "&zoom="+ zoom;
+    $img.attr("src",src);
+  });
+</script>
