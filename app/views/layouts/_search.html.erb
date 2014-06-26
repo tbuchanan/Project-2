@@ -22,11 +22,11 @@
             <!-- <strong id="logged">Logged in as <%#= current_user.email %></strong> -->
             <ul class="links">
             <% if user_signed_in? %>
-              <%= link_to "Add Popup", new_popup_path, :class => 'navbar-link' %> <label id="slash"></label>
-              <%= link_to 'Profile', edit_user_registration_path, :class => 'navbar-link' %> <label id="slash"></label>
+              <%= link_to "Add Popup", new_popup_path, :class => 'navbar-link' %>
+              <%= link_to 'Profile', edit_user_registration_path, :class => 'navbar-link' %>
               <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
             <% else %>
-              <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> <label id="slash"></label>
+              <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %>
               <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
             <% end %>
             </ul>
