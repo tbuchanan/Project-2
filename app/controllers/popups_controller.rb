@@ -4,8 +4,8 @@ before_action :authenticate_user!, except: [:index, :show]
 
   def index
     @popups = Popup.all
-    # @filtered_popups_category = Popup.where(:category => "Food" || "Bars" || "Clothing" || "Shoes" || "Crafts" || "Entertainment" || "Coffee")
-    # @filtered_popups_day = Popup.where(:day => "Monday")
+    # @filtered_category = Popup.where(category: params[:category])
+    # @filtered_day = Popup.where(day: params[:day])
     respond_to do |f|
       f.html { render :index }
       f.json { render json: @popups, :only => [:id, :name, :address, :geocode, :longitude, :latitude, :hours, :day, :website, :price, :description, :image, :category]}
