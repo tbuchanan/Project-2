@@ -1,59 +1,105 @@
+<!-- 
+<div class="row">
+  <div class="col-md-6">  
+    <ul id="popups">
+    </ul>
+  </div>
+  <div class="col-md-6">
+  </div><col-md-6-->
+<!-- need div to close row -->
+
 <br></br>
 <div class="container">
   <div class="jumbotron">
     <h1><center><strong><%= @popup.name %></strong></center></h1></br>
     <div class="row">
-      <div class="col-sm-6 col-md-7 col-lg-8">
-        <%= image_tag @popup.image(:medium) %>
-      <div class="col-sm-6 col-md-5 col-lg-4" id="google">
-          <%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&markers=#{@popup.address} &zoom=16", id: "popupMap"%>
-          <div class="map-zoom"> 
-            <button id="zoomOut"> - </button><button id="zoomIn"> + </button><br></br>    
-            <div class="get-direct">
-            <%= link_to "Get Directions", "https://maps.google.com/maps?daddr=#{@popup.address}", :method => "get", id: "directions" %>
-            </div>
-          </div><!-- map-zoom -->  
-      </div><!-- col-sm-6 col-md-7 col-lg-8 --> 
-      </div><!-- col-sm-6 col-md-5 col-lg-4 --> 
-  </div><!-- row -->
-  <div class="popup-info">
-    <p><%= rating_for @popup, "price", :star => 5 %></p>
-    <p>Description: <%= @popup.description %></p>
-    <p>Address: <%= @popup.address %></p>
-    <p>Hours: <%= @popup.hours %></p>
-    <p>Days: <%= @popup.day %></p>
-    <p>Price: <%= @popup.price %></p>
-    <p>Category: <%= @popup.category %></p>
-    <p><%= link_to "Website", @popup.website %></p>
-  </div><!-- popup-info -->
-
-  <div class="float_right">
-  <% if current_user %>
-    <%= form_for ([@popup, @feed_new]) do |f| %>
-      <br><%= f.text_area :comment, placeholder: "Add your comment" %><br>
-      <%= f.submit "Create comment", :class => 'btn btn-info' %><br></br>
-    <% end %>
-  <% else %>
-    <%= link_to "Sign in to post a comment", new_user_session_path, :class => 'navbar-link'  %>
-  <% end %>
-  <h4>Comments</h4>
-    <div class="jumbotron" id="jumbo">
-      <% @feeds.each do |feed|%>
-        <h7><%= feed.comment %></h7>
-        <% if current_user %>
-          <h7><%= link_to "Delete", [@popup, feed], method: :delete, data: {confirm: "Are You Sure?"}, :class => 'btn btn-danger btn-sm' %></h7></br>
-        <% end %>
-        <h7>Posted <%= time_ago_in_words(feed.created_at) %> ago by: </h7><br>
-        <h7><strong><%= @user.email %></strong></h7><br>
-      <% end %></br> 
-    </div><!-- jumbo -->
-
+      <div class="col-sm-7 col-md-7 col-lg-9">
+        <%= image_tag @popup.image(:medium), :id => 'pop-image' %>
+      <div class="col-sm-5 col-md-5 col-lg-3" id="google">
+        <%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&markers=#{@popup.address} &zoom=16", id: "popupMap"%>
+        <div class="map-zoom"> 
+          <button id="zoomOut"> - </button><button id="zoomIn"> + </button>  
+        </div><!-- map-zoom -->
+        <div class="get-direct">
+          <%= link_to "Get Directions", "https://maps.google.com/maps?daddr=#{@popup.address}", :method => "get", id: "directions" %>
+        </div><!-- get-direct -->            
+      </div><!-- col-sm-5 col-md-5 col-lg-3 --> 
+      </div><!-- col-sm-7 col-md-7 col-lg-9 --> 
+  </div></br><!-- row -->
+      <div class="popup-info">
+        <div class="row" id="show-box">
+          <div class="col-sm-6 col-md-6 col-lg-6" id 'top-column'>
+            <p><%= rating_for @popup, "price", :star => 5 %></p>
+            <p>Description: <%= @popup.description %></p>
+            <p>Address: <%= @popup.address %></p>
+            <p>Hours: <%= @popup.hours %></p>
+          </div><!-- col-sm-7 col-md-6 col-lg-6 -->  
+        <div class="col-sm-6 col-md-6 col-lg-6">
+          <p>Open: <%= @popup.day %></p>
+          <p>Price: <%= @popup.price %></p>
+          <p>Category: <%= @popup.category %></p>
+          <p><%= link_to "Website", @popup.website %></p>
+        </div><!-- col-sm-5 col-md-6 col-lg-6 -->
+      <%#= link_to 'Back', root_path, :class => 'btn btn-warning' %>
+      </div> <!-- row -->
+    </div></br>  
+    
+      <!-- comments jumbotron box -->
+      <div class="jumbotron" id="jumbo">
+        <h3 id="comment-header">Comments</h3>
+            <div class="form-group">
+              <% if current_user %>
+                <%= form_for ([@popup, @feed_new]) do |f| %>
+                
+                <div class="row">
+                  <div class="col-sm-8 col-md-10 col-lg-11" id="text-form">            
+                    <%= f.text_area :comment, placeholder: "Your comments", :class => "form-control" %></br>
+                  </div>  
+                  <div class"col-sm-4 col-md-2 col-lg-1">
+                    <%= f.submit "Add", :class => 'btn btn-info' %>
+                  </div>  
+                
+                <% end %>
+                
+              <% else %>
+                <%= link_to "Sign in to post a comment", new_user_session_path, :class => 'navbar-link'  %>
+              <% end %>
+              </div><!-- row -->
+            </div></br> <!-- form-group -->   
+          <!-- comments -->       
+         <div class="detailBox">
+            <div class="actionBox">
+              <ul class="commentList">
+                <% @feeds.each do |feed|%>
+                  <div class="commentText">
+                    <p class=""><%= feed.comment %></p>
+                  </div><!-- commentText -->                  
+                  <% if current_user %>
+                    <h7><%= link_to "Delete", [@popup, feed], method: :delete, data: {confirm: "Are You Sure?"}, :class => 'btn btn-danger btn-sm', :id => "danger" %></h7></br>
+                  <% end %>
+                  <h7>Posted <%= time_ago_in_words(feed.created_at) %> ago by: </h7><br>
+                  <h7><strong><%= @user.email %></strong></h7>
+                <% end %>
+                  <p id="user-post"></p>
+                <li>
+                  <div class="commentText">
+                    <p class="">Hello this is a test comment.</p>
+                  </div>
+                </li>        
+                <li>
+                  <div class="commentText">
+                    <p class="">Hello this is a test comment.</p>
+                  </div>
+                </li>
+              </ul><!-- commentList -->
+            </div><!-- actionBox -->
+          </div><!-- detailBox -->
+      </div><!-- jumbo -->  
   </div><!-- jumbotron -->
-</div>
-
-<%= link_to 'Back', root_path %></br>
 </div><!-- container -->
 <!-- static google map --> 
+
+
 
 <script>
   $("#google").on("click", "#zoomIn, #zoomOut", function(event){
@@ -78,3 +124,4 @@
     $img.attr("src",src);
   });
 </script>
+<br></br>
