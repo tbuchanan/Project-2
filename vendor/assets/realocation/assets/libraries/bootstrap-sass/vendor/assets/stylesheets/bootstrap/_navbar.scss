@@ -406,6 +406,10 @@
 
   .navbar-text {
     color:white;
+
+    &:hover{
+      color: black;
+    }
   }
 
   .navbar-nav {

@@ -25,21 +25,24 @@ address {
 	line-height: 22px;
 
 	a {
-		text-decoration: underline;
+		text-decoration: none;
+		&:hover{
+			color:black;
+		}
 	}
 }
 
 a {
-    /*color: black;*/
-    text-decoration: none;
+    color:#F25D1D;
     @include transition(color .2s linear);
+  }
 
-    &:hover {
-        /*text-decoration: none;*/
+a:hover {
+        text-decoration: none;
         color:black;
         /*color: rgb(26, 188, 156);*/
     }
-}
+
 
 abbr, abbr[title], abbr[data-original-title] {
 	border-bottom: 0px !important;
