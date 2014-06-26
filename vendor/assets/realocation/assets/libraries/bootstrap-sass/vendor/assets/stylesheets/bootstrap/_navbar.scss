@@ -164,6 +164,7 @@
   line-height: 9px;
   height: $navbar-height;
 
+
   &:hover,
   &:focus {
     text-decoration: none;
@@ -173,6 +174,7 @@
     .navbar > .container &,
     .navbar > .container-fluid & {
       margin-left: -$navbar-padding-horizontal;
+      text-decoration: none;
     }
   }
 }
@@ -390,13 +392,14 @@
 .navbar-default {
   background-color: #F25D1D;
   border-color: none;
+  text-decoration: none;
   
 
   .navbar-brand {
     color: white;
     &:hover,
     &:focus {
-      color: $navbar-default-brand-hover-color;
+      color: black;
       background-color: $navbar-default-brand-hover-bg;
     }
   }
@@ -499,8 +502,9 @@
 
   .navbar-link {
     color: white;
+    text-decoration: none;
     &:hover {
-      color: $navbar-default-link-hover-color;
+      color: black;
     }
   }
 

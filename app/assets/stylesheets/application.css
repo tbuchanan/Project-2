@@ -164,7 +164,7 @@ a.navbar-brand {
 }
 
 a.navbar-brand:hover, a.navbar-brand:hover:focus {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 
