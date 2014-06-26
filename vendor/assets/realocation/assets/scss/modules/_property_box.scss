@@ -19,6 +19,10 @@ h3.property-box-title, h3.property-box-title a {
 		display: none;
 	}
 
+	&:hover{
+		color:orange;
+	}
+
 	.small & {
 		font-size: 14px;
 	}
