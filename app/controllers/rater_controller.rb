@@ -7,6 +7,7 @@ class RaterController < ApplicationController
 
       render :json => true
     else
+      flash[:notice] = "Please sign in to rate"
       render :json => false
     end
   end

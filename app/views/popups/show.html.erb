@@ -80,27 +80,15 @@
                   <h7>Posted <%= time_ago_in_words(feed.created_at) %> ago by: </h7><br>
                   <h7><strong><%= @user.email %></strong></h7>
                 <% end %>
-                  <p id="user-post"></p>
-                <li>
-                  <div class="commentText">
-                    <p class="">Hello this is a test comment.</p>
-                  </div>
-                </li>        
-                <li>
-                  <div class="commentText">
-                    <p class="">Hello this is a test comment.</p>
-                  </div>
-                </li>
+                  <p id="user-post"></p>                
               </ul><!-- commentList -->
             </div><!-- actionBox -->
           </div><!-- detailBox -->
       </div><!-- jumbo -->  
   </div><!-- jumbotron -->
 </div><!-- container -->
+
 <!-- static google map --> 
-
-
-
 <script>
   $("#google").on("click", "#zoomIn, #zoomOut", function(event){
     var $img = $("#popupMap");

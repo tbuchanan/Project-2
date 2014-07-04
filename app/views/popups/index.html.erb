@@ -1,9 +1,10 @@
-<div id="map-canvas-index">
-</div>
 <!-- google map -->
-<div class="container">
+<div id="map-canvas-index">
+</div><!-- map-canvas-index -->
 
-</div>
+<!-- for extra separation -->
+<div class="container">
+</div><!-- container -->
 
 <div class="container">
 <!-- ISOTOPE GRID -->
@@ -27,37 +28,32 @@
               <div class="property-box-picture">
                 <div class="property-box-price">
                   <%= link_to popup.day, popup_path(popup.id), id: 'hours' %><br>
-                  <%= link_to popup.hours, popup_path(popup.id), id: 'hours' %></div>
-                  <!-- /.property-box-price -->
+                  <%= link_to popup.hours, popup_path(popup.id), id: 'hours' %>
+                </div><!-- /.property-box-price -->
                   <div class="property-box-picture-inner">
                     <div id="property-detail.html" class="property-box-picture-target">
                       <%= image_tag popup.image(:square), id: 'meta-image' %>
                     </div><!-- /.property-box-picture-target -->
-                  </div>
+                  </div><!-- property-box-picture-inner -->
                   <!-- /.property-picture-inner -->
-              </div>
-                <!-- /.property-picture -->
+              </div><!-- /.property-picture -->
                 <div class="row-meta">  
                   <div class="property-box-meta">
-                    <div class="property-box-meta-item col-xs-4 col-sm-4">
-                      <strong><%= rating_for popup, "price", :star => 5 %></strong>                      
-                    </div>
-                    <!-- /.col-sm-3 -->
+                    <div class="property-box-meta-item col-xs-4 col-sm-4">                    
+                      <%= rating_for popup, "price", :star => 5 %>                  
+                    </div><!-- property-box-meta-item col-xs-4 col-sm-4 -->
                     <div class="property-box-meta-item col-xs-3 col-sm-3">
-                      <strong><%= link_to popup.price, popup_path(popup.id), id: 'meta' %></strong>                    
-                    </div>
-                    <!-- /.col-sm-3 -->
-                    
+                      <strong><%= link_to popup.price, popup_path(popup.id), id: 'meta' %></strong>
+                    </div><!-- property-box-meta-item col-xs-3 col-sm-3 -->
                   </div><!-- /.property-box-meta -->  
                 </div><!-- row-meta -->
               </div><!-- /.property-box-inner -->
             </div> <!-- /.property-box -->
-          </div><!-- /.property-item property-featured col-sm-6 col-md-3 -->
+          </div><!-- /.property-item property-featured col-sm-5 col-md-4 -->
           <% end %>
         </div> <!-- row -->
       </div> <!-- properties-items isotope -->
     </div><!-- block-content-inner -->
   </div><!-- block-content block-content-small-padding -->
-</div>
+</div><!-- container -->
 
-<%= @filtered_category.inspect %>
