@@ -11,10 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140624180955) do
+ActiveRecord::Schema.define(version: 20140705002642) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "contacts", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "feeds", force: true do |t|
     t.string   "comment"
@@ -43,6 +48,13 @@ ActiveRecord::Schema.define(version: 20140624180955) do
     t.float    "longitude"
     t.string   "website"
     t.string   "category"
+  end
+
+  create_table "posts", force: true do |t|
+    t.text     "body"
+    t.string   "email"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "rates", force: true do |t|

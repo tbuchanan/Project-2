@@ -7,6 +7,10 @@ Rails.application.routes.draw do
   get '/contact', to: 'pages#contact'
   get '/faq', to: 'pages#faq'
 
+  # email route
+  match '/contacts', to: 'contacts#new', via: 'get'
+  resources "contacts", only: [:new, :create]
+
   resources :popups do 
     get 'search', on: :collection
   end 

@@ -10,6 +10,10 @@ gem 'geocoder'
 gem 'compass-rails'
 gem 'bootstrap-sass'
 
+# email gems
+gem 'mail_form'
+gem 'simple_form'
+
 # gem for up to 5 star ratings
 gem 'letsrate', '~> 1.0.9'
 

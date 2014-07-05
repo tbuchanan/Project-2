@@ -95,6 +95,9 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    mail_form (1.5.0)
+      actionmailer (>= 3.2, < 5)
+      activemodel (>= 3.2, < 5)
     method_source (0.8.2)
     mime-types (1.25.1)
     mini_portile (0.6.0)
@@ -168,6 +171,9 @@ GEM
     sdoc (0.4.0)
       json (~> 1.8)
       rdoc (~> 4.0, < 5.0)
+    simple_form (3.0.2)
+      actionpack (~> 4.0)
+      activemodel (~> 4.0)
     slop (3.5.0)
     spring (1.1.3)
     sprockets (2.11.0)
@@ -207,6 +213,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   letsrate (~> 1.0.9)
+  mail_form
   paperclip!
   pg
   pry
@@ -217,5 +224,6 @@ DEPENDENCIES
   rspec-rails
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)
+  simple_form
   spring
   uglifier (>= 1.3.0)
