@@ -19,6 +19,7 @@ Rails.application.configure do
   # For large-scale production use, consider using a caching reverse proxy like nginx, varnish or squid.
   # config.action_dispatch.rack_cache = true
 
+  # If features aren't working on Heroku set to false
   # Disable Rails's static asset server (Apache or nginx will already do this).
   config.serve_static_assets = true
 
@@ -94,4 +95,19 @@ Rails.application.configure do
 
   # for devise use on Heroku
   config.action_mailer.default_url_options = { :host => 'http://popups-app.herokuapp.com/' }
+
+  # devise email setup
+  config.action_mailer.delivery_method = :smtp 
+
+  config.action_mailer.smtp_settings = {
+    address: "smtp.gmail.com",
+    port: 587,
+    domain: ENV["GMAIL_DOMAIN"],
+    authentication: "plain",
+    enable_starttls_auto: true,
+    user_name: ENV["GMAIL_USERNAME"],
+    password: ENV["GMAIL_PASSWORD"]
+  }
+
 end
+
