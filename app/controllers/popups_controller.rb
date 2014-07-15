@@ -1,11 +1,9 @@
 class PopupsController < ApplicationController
 
-before_action :authenticate_user!, except: [:index, :show]
+before_action :authenticate_user!, except: [:index, :show, :search]
 
   def index
     @popups = Popup.all
-    # @filtered_category = Popup.where(category: params[:category])
-    # @filtered_day = Popup.where(day: params[:day])
     respond_to do |f|
       f.html { render :index }
       f.json { render json: @popups, :only => [:id, :name, :address, :geocode, :longitude, :latitude, :hours, :day, :website, :price, :description, :image, :category]}
