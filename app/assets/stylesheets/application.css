@@ -24,6 +24,10 @@
   background-color: white;
 }
 
+.taco {
+  margin-left: -15px;
+}
+
 p {
   color: black;
   font-family: 'Droid Sans', sans-serif;
