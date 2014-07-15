@@ -24,8 +24,12 @@
   background-color: white;
 }
 
-.taco {
+.devise-sign {
   margin-left: -15px;
+}
+
+.devise-flash {
+  margin-top: 45px;
 }
 
 p {
