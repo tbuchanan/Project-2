@@ -1,4 +1,4 @@
-
+.links
 /*//
 =======
 // Navbars
@@ -511,6 +511,25 @@
       color: black;
     }
   }
+
+   .navbar-link2 {
+    color: white;
+    margin-right: 23px;
+    text-decoration: none;
+    &:hover {
+      color: black;
+    }
+  }
+
+  .navbar-link3 {
+    color: white;
+    margin-right: 23px;
+    text-decoration: none;
+    &:hover {
+      color: black;
+    }
+  }
+
 
 }
 
