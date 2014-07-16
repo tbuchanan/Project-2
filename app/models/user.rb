@@ -1,5 +1,8 @@
 class User < ActiveRecord::Base
   
+  has_many :popups   
+  has_many :feeds
+  
   # letsrate gem requirement
   letsrate_rater
 
@@ -7,8 +10,5 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
-
-  has_many :popups   
-  has_many :feeds
   
 end

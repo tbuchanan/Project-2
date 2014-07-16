@@ -24,12 +24,13 @@
   background-color: white;
 }
 
+
 .devise-sign {
   margin-left: -15px;
 }
 
-.devise-flash {
-  margin-top: 45px;
+.jumbotron p {
+  font-size: 18px !important;
 }
 
 p {
@@ -45,6 +46,16 @@ button#add.btn.btn-primary {
 
 a.navbar-link {
 color: white;
+}
+
+a.comment-link {
+color: black;
+margin: 0px 0px 0px 348px;
+}
+
+a.comment-link a:hover{
+color: orange
+
 }
 
 #slash {
@@ -246,7 +257,7 @@ ul#popups {
 .map-zoom {
   margin-top: -300px;
   opacity: 0.75;
-  padding: 0px 0px 0px 31px;
+  padding: 3px 0px 0px 36px;
   border-radius: 5px;
 }
 
@@ -316,7 +327,7 @@ input#website {
 
 #directions{
   padding: 2px 2px 2px 2px;
-  margin-left: 1px;
+  margin-left: 5px;
   margin-top: 1em;
   background-color: white;
   opacity: 0.75;
@@ -324,7 +335,7 @@ input#website {
 
 .get-direct {
   margin-left: 30px;
-  margin-top: 21em;
+  margin-top: 245px;
   margin-bottom: 0px;
   opacity: 0.75;
   color: red;
@@ -352,7 +363,7 @@ input#website {
 #show-box {
   margin-left: 0;
   margin-right: 0;
-  background: #7dcdcd;
+  background-color: #e9e6db;
   border-radius: 5px;
   border: 1px solid white;
 }
