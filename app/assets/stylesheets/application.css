@@ -24,9 +24,13 @@
   background-color: white;
 }
 
+.devise-signin {
+  margin-top: 7em;
+  padding: 2px 0px 0px 8em;
+}
 
 .devise-sign {
-  margin-left: -15px;
+  margin-left: -64px;
 }
 
 .jumbotron p {
