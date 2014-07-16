@@ -1,15 +1,10 @@
 class FeedsController < ApplicationController
-
+before_action :authenticate_user!, except: [:index]
 before_filter :load_popup
 
   def index
     @feeds = @popup.feeds.all
     @user = current_user
-  end
-
-  def new
-    @feed = @popup.feeds.new
-    @feed = User.find(params[:user_id]).feeds.new(params[:feed])
   end
 
   def create
@@ -18,12 +13,8 @@ before_filter :load_popup
     if @feed.save
       redirect_to popup_path(@popup)
     else
-      render 'new'
+      flash[:notice] = "Not Authorized!"
     end 
-  end
-
-  def show
-    @feed = @popup.feeds.find(params[:id])
   end
 
   def destroy

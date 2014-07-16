@@ -30,7 +30,7 @@
     width:18%;
 }
 .actionBox .form-group * {
-    width:100%;
+    width:100%;  
 }
 .taskDescription {
     margin-top:10px 0;
@@ -67,8 +67,9 @@
     font-size:11px;
 }
 .actionBox {
-    border:4px dotted #bbb;
+    border:4px dotted #888;
     padding:10px;
+    background-color: #e9e6db;
 }
 
 #user-post {

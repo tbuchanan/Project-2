@@ -20,9 +20,9 @@
         <div class="map-zoom"> 
           <button id="zoomOut"> - </button><button id="zoomIn"> + </button>  
         </div><!-- map-zoom -->
-        <div class="get-direct">
+        <p class="get-direct">
           <%= link_to "Get Directions", "https://maps.google.com/maps?daddr=#{@popup.address}", :method => "get", id: "directions" %>
-        </div><!-- get-direct -->            
+        </p><!-- get-direct -->            
       </div><!-- col-sm-5 col-md-5 col-lg-3 --> 
       </div><!-- col-sm-7 col-md-7 col-lg-9 --> 
   </div></br><!-- row -->
@@ -62,7 +62,7 @@
                 <% end %>
                 
               <% else %>
-                <%= link_to "Sign in to post a comment", new_user_session_path, :class => 'navbar-link'  %>
+                <%= link_to "Sign in to post a comment", new_user_session_path, :class => 'comment-link' %>
               <% end %>
               </div><!-- row -->
             </div></br> <!-- form-group -->   
@@ -72,15 +72,16 @@
               <ul class="commentList">
                 <% @feeds.each do |feed|%>
                   <div class="commentText">
-                    <p class=""><%= feed.comment %></p>
-                  </div><!-- commentText -->                  
+                    <p class=""><%= feed.comment %></p>        
+                  <!-- </div> --><!-- commentText -->                  
                   <% if current_user %>
-                    <h7><%= link_to "Delete", [@popup, feed], method: :delete, data: {confirm: "Are You Sure?"}, :class => 'btn btn-danger btn-sm', :id => "danger" %></h7></br>
+                    <h7><%= link_to "Delete", [@popup, feed], method: :delete, data: {confirm: "Are You Sure?"}, :class => 'btn btn-danger btn-sm', :id => "danger" %></h7>
                   <% end %>
                   <h7>Posted <%= time_ago_in_words(feed.created_at) %> ago by: </h7><br>
-                  <h7><strong><%= @user.email %></strong></h7>
+                  <h7 ><strong><%= User.where(id: feed.user_id).first.email %></strong></h7></br>
+                  <p id="user-post"></p> 
                 <% end %>
-                  <p id="user-post"></p>                
+                </div><!-- commentText -->                                                     
               </ul><!-- commentList -->
             </div><!-- actionBox -->
           </div><!-- detailBox -->
