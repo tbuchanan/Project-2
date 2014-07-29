@@ -2,7 +2,7 @@
 
 Popspotz http://popups-app.herokuapp.com/
 
-Authors: Tyler and Ami
+Authors: Tyler Buchanan and Ami Mathur
 
 POPSPOTZ
 
