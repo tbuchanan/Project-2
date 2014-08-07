@@ -1,6 +1,6 @@
 $(document).ready(function() {
     function initialize() {
-    //just a variable storing a location
+    
     var mapLoad = {
       center: new google.maps.LatLng(37.776616, -122.416972),
       zoom: 13,
@@ -10,32 +10,65 @@ $(document).ready(function() {
     }
 
     var map = new google.maps.Map(document.getElementById("map-search"), mapLoad);
+    var search_name = $('#q').val();
+    var search_loc = $('#location').val();
 
-    var loadSearch = function() {
-      // Find search string and geocode and add to url
-      var url = "/popups/search.json";
-      $.ajax(url, {
+    if (search_loc !== null) {
+      loadSearchGeo();
+    }  
+    else if (search_name !== null) {
+      loadSearch();
+    }
+
+    function loadSearch() {
+      $.ajax({ url: '/popups/search.json',
         type: 'get',
         data: {
         "q": $('#q').val(),
-        "geocode": $('#geocode').val()
       }
       }).success(function(data) {
         for (var i in data) {
+          // console.log(i);
           addPin(data[i].latitude, data[i].longitude, data[i].name, data[i].id, data[i].address, data[i].category, data[i].image, data[i].price);
         }
       });
     }
 
-    loadSearch();
-
     $('#search_form').on('submit', function(event) {
+      event.preventDefault();
+
+      if (search_name !== null) {
+        loadSearch(search_name);
+      } 
+      else if (search_loc !== null) {
+        loadSearchGeo(search_loc);
+      }
+
     });
+      
+    function loadSearchGeo() {
+      // Find search string and geocode and add to url
+      $.ajax({url: "/popups/search_geocode.json", 
+        type: 'get',
+        data: {
+        "geocode": $('#location').val()
+      }
+      }).success(function(data) {
+        for (var i in data) {
+          console.log(i);
+          addPin(data[i].latitude, data[i].longitude, data[i].name, data[i].id, data[i].address, data[i].category, data[i].image, data[i].price);
+        }
+      });
+    }
 
+    //  $('#search_form').on('submit', function(event) {
+    //   event.preventDefault();
+    //   loadSearchGeo(search_loc);
+    // });
+   // }
 
-    function addPin(latitude, longitude, name, id, address, category, image, price) {
+    var addPin = function(latitude, longitude, name, id, address, category, image, price) {
       var loc = new google.maps.LatLng(latitude, longitude);
-      console.log(loc);
       var newMarker = new google.maps.Marker({
         position: loc,
         map: map,
@@ -59,7 +92,8 @@ $(document).ready(function() {
         }
         if (lastInfoWindow === newInfoWindow) {
           lastInfoWindow = null;
-        } else {
+        } 
+        else {
           newInfoWindow.open(map, this);
           lastInfoWindow = newInfoWindow;
         }

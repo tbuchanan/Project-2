@@ -11,11 +11,22 @@ before_action :authenticate_user!, except: [:index, :show, :search]
   end
 
   # search page and google map json rendering 
+  # @results = Popup.search_for(params[:q]) || Popup.near(('501 Folsom St, San Francisco, CA, US'), 1)
   def search
-    @results = Popup.search_for(params[:q]) || Popup.near(params[:geocode])
+    @results = Popup.search_for(params[:q])
+    # binding.pry
     respond_to do |f|
       f.html { render :search }
       f.json { render json: @results, :only => [:id, :name, :address, :geocode, :longitude, :latitude, :hours, :day, :website, :price, :description, :image, :category]}
+    end
+  end
+
+  def search_geocode
+    @geocode_results = Popup.near(params[:geocode],1)
+    # binding.pry
+    respond_to do |f|
+      f.html { render :search_geocode }
+      f.json { render json: @geocode_results, :only => [:id, :name, :address, :geocode, :longitude, :latitude, :hours, :day, :website, :price, :description, :image, :category]}
     end
   end
   
@@ -45,7 +56,7 @@ before_action :authenticate_user!, except: [:index, :show, :search]
 private 
 
   def popup_params
-    params.require(:popup).permit(:id, :name, :website, :address, :hours, :day, :category, :price, :description, :image, :longitude, :latitude, :feeds_attributes => [:comment])  
+    params.require(:popup).permit(:id, :name, :website, :address, :geocode, :hours, :day, :category, :price, :description, :image, :longitude, :latitude, :feeds_attributes => [:comment])  
   end
 
   def image_params
