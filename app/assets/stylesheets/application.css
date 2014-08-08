@@ -20,6 +20,12 @@
 @import url(http://fonts.googleapis.com/css?family=Indie+Flower);
 @import url(http://fonts.googleapis.com/css?family=Playfair+Display:700);
 
+#image-row {
+  /*border: 2px solid black;*/
+  width: 100%;
+  position: relative;
+
+}
 
 .col-md-3 {
   width: 65% !important;
@@ -121,14 +127,14 @@ color: orange
 
 #zoomIn {
   color: black;
-  margin: 0% 0% 0% 50%;
-  z-index: 1;
+  
+  
 }
 
 #zoomOut {
   color: black;
-  margin: 0% 0% 0% 50%;
-  z-index: 1;
+  
+  
 }
 
 /*added some margin and positioning*/
@@ -279,7 +285,7 @@ ul#popups {
 }
 
 .map-zoom {
-  margin: -12px 0px 0px 549px;
+  margin: -1.5% 0px 0px 55.5%;
   opacity: 0.75;
   border-radius: 5px;
   position: absolute;
@@ -300,12 +306,6 @@ ul#popups {
   margin-top: 60px;
 }
 
-#direction-button {
-  margin-top: -49px;
-  padding: 0px 0px 0px 328px;
-  position: relative;
-}
-
 #google {
   float: left;
   border-radius: 5px;
@@ -317,7 +317,7 @@ ul#popups {
   float: left;
   position: absolute;
   /* percentage better for mobile */
-  margin: 1.4% 5.3% 2.6% 1.2%;
+  margin: 2.2% 5.3% 2.6% 0%;
 }
 
 
@@ -358,11 +358,10 @@ input#website {
   width: 11em;
 }
 
-.get-direct {
-  background-color: white;
-  margin: 38% 0px 0px 569px;
-  opacity: 0.75;
-  /*position: relative;*/
+#get-direct {
+  background-color: none;
+  font-weight: bold;
+  /*margin: 26% 0% 0% 54.5%;*/
 }
 
 /*.navbar-static-bottom {
@@ -378,7 +377,7 @@ input#website {
   background: white;
   border-radius: 5px;
   /*position: relative;*/
-  margin-top: 10px;
+  margin-top: 30%;
 } 
 
 #show-box {
@@ -399,7 +398,7 @@ input#website {
 }
 
 #popupMap{
-  margin: 0% 0% 0% 37%;
+  margin: 0% 0% 0% 54.7%;
   border-radius: 5px;
   border: 1px solid white;
   position: absolute;
