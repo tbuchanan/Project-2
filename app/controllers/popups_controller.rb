@@ -1,6 +1,6 @@
 class PopupsController < ApplicationController
 
-before_action :authenticate_user!, except: [:index, :show, :search]
+before_action :authenticate_user!, except: [:index, :show, :search, :search_geocode]
 
   def index
     @popups = Popup.all
@@ -56,7 +56,7 @@ before_action :authenticate_user!, except: [:index, :show, :search]
 private 
 
   def popup_params
-    params.require(:popup).permit(:id, :name, :website, :address, :geocode, :hours, :day, :category, :price, :description, :image, :longitude, :latitude, :feeds_attributes => [:comment])  
+    params.require(:popup).permit(:id, :name, :q, :website, :address, :geocode, :hours, :day, :category, :price, :description, :image, :longitude, :latitude, :feeds_attributes => [:comment])  
   end
 
   def image_params

@@ -13,13 +13,6 @@ $(document).ready(function() {
     var search_name = $('#q').val();
     var search_loc = $('#location').val();
 
-    if (search_loc !== null) {
-      loadSearchGeo();
-    }  
-    else if (search_name !== null) {
-      loadSearch();
-    }
-
     function loadSearch() {
       $.ajax({ url: '/popups/search.json',
         type: 'get',
@@ -28,22 +21,39 @@ $(document).ready(function() {
       }
       }).success(function(data) {
         for (var i in data) {
-          // console.log(i);
+          console.log(i);
           addPin(data[i].latitude, data[i].longitude, data[i].name, data[i].id, data[i].address, data[i].category, data[i].image, data[i].price);
         }
       });
     }
-
+    // this function needs help
     $('#search_form').on('submit', function(event) {
       event.preventDefault();
 
-      if (search_name !== null) {
-        loadSearch(search_name);
-      } 
-      else if (search_loc !== null) {
-        loadSearchGeo(search_loc);
+      if (search_loc != true && search_name != true) {
+      // alert("tacos");
+        if (search_loc !=""){
+          alert("tacos");
+          loadSearchGeo(search_loc);
+        }
+        else if (search_name !="") {
+          alert("salsa");
+          loadSearch(search_name);
+        }
+      loadSearch();
+      loadSearchGeo();
+      }  
+      // else if (search_name !== null && search_loc === null) {         
+      //   alert("salsa");
+      //     loadSearch();
+      // } 
+      // else if (search_loc !== null && search_name !== null) {    
+      //   alert("burritos");
+      //     loadSearchGeo();
+      // }
+      else {
+        alert("burritos");
       }
-
     });
       
     function loadSearchGeo() {

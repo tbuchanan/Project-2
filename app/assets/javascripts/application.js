@@ -17,7 +17,6 @@
 
 $(document).ready(function() {
     function initialize() {
-    //just a variable storing a location
     var mapOptions = {
       center: new google.maps.LatLng(37.776616, -122.416972),
       zoom: 13,
@@ -33,8 +32,7 @@ $(document).ready(function() {
       });
 
     var loadGeo = function() {
-      var url = "/popups.json";
-      $.ajax(url, {
+      $.ajax({url: "/popups.json", 
         type: 'get'
       }).success(function(data) {
         for (var i in data) {
@@ -97,7 +95,8 @@ $(document).ready(function() {
         }
         if (lastInfoWindow === newInfoWindow) {
           lastInfoWindow = null;
-        } else {
+        } 
+        else {
           newInfoWindow.open(map, this);
           lastInfoWindow = newInfoWindow;
         }
