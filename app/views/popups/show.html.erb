@@ -13,19 +13,19 @@
   <div class="jumbotron" id="show-jumbo">
     <h1><center><strong><%= @popup.name %></strong></center></h1></br>
     <div class="row">
-      <div class="col-sm-7 col-md-7 col-lg-9">
+      <div id="business-image">
         <%= image_tag @popup.image(:medium), :id => 'pop-image' %>
-      <div class="col-sm-5 col-md-5 col-lg-3" id="google">
-        <%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&markers=#{@popup.address} &zoom=16", id: "popupMap"%>
-        <div class="map-zoom"> 
-          <button id="zoomOut"> - </button><button id="zoomIn"> + </button>  
-        </div><!-- map-zoom -->
-        <p class="get-direct">
-          <%= link_to "Get Directions", "https://maps.google.com/maps?daddr=#{@popup.address}", :method => "get", id: "directions" %>
-        </p><!-- get-direct -->            
-      </div><!-- col-sm-5 col-md-5 col-lg-3 --> 
-      </div><!-- col-sm-7 col-md-7 col-lg-9 --> 
-  </div></br><!-- row -->
+        <div id="google">
+          <%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&markers=#{@popup.address} &zoom=16", id: "popupMap"%>
+          <div class="map-zoom"> 
+            <button id="zoomOut"> - </button><button id="zoomIn"> + </button>  
+          </div><!-- map-zoom -->
+          <p class="get-direct">
+            <%= link_to "Get Directions", "https://maps.google.com/maps?daddr=#{@popup.address}", :method => "get", id: "directions" %>
+          </p><!-- get-direct -->            
+        </div><!-- google -->
+      </div><!-- business-image --> 
+    </div><!-- row -->  
       <div class="popup-info">
         <div class="row" id="show-box">
           <div class="col-sm-6 col-md-6 col-lg-6" id 'top-column'>
@@ -42,7 +42,7 @@
         </div><!-- col-sm-5 col-md-6 col-lg-6 -->
       <%#= link_to 'Back', root_path, :class => 'btn btn-warning' %>
       </div> <!-- row -->
-    </div></br>  
+    </div><!-- popup-info --></br>  
     
       <!-- comments jumbotron box -->
       <div class="jumbotron" id="jumbo">

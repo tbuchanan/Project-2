@@ -29,6 +29,10 @@
 
 }
 
+#business-image {
+  background-color: white;
+}
+
 #show-jumbo {
   background-color: white;
 }
@@ -270,7 +274,7 @@ ul#popups {
 .map-zoom {
   margin-top: -300px;
   opacity: 0.75;
-  padding: 3px 0px 0px 36px;
+  padding: 3px 0px 0px 105px;
   border-radius: 5px;
 }
 
@@ -295,9 +299,17 @@ ul#popups {
 }
 
 #google {
-  float: right;
-  margin-right: 54px;
+  float: left;
+  border-radius: 5px;
 }
+
+#pop-image {
+  border-radius: 5px !important;
+  border: 1px solid white;
+  float: left;
+  margin: 15px 55px 0px 17px;
+}
+
 
 .comments {
   margin-left: 10em;
@@ -338,7 +350,7 @@ input#website {
 
 #directions{
   padding: 2px 2px 2px 2px;
-  margin-left: 5px;
+  margin-left: 75px;
   margin-top: 1em;
   background-color: white;
   opacity: 0.75;
@@ -350,11 +362,6 @@ input#website {
   margin-bottom: 0px;
   opacity: 0.75;
   color: red;
-}
-
-#pop-image {
-  border-radius: 5px;
-  border: 1px solid white;
 }
 
 /*.navbar-static-bottom {
@@ -374,6 +381,7 @@ input#website {
 #show-box {
   margin-left: 0;
   margin-right: 0;
+  margin-top: 9px;
   background-color: #e9e6db;
   border-radius: 5px;
   border: 1px solid white;
