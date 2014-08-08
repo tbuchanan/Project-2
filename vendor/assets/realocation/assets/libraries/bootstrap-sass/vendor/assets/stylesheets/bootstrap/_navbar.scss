@@ -14,7 +14,7 @@
   position: relative;
   min-height: $navbar-height; // Ensure a navbar always shows (e.g., without a .navbar-brand in collapsed mode)
   margin-bottom: $navbar-margin-bottom;
-  border: 1px solid transparent;
+  border: none;
 
   /*// Prevent floats from breaking the navbar*/
   @include clearfix();
@@ -39,6 +39,8 @@
 }
 
 
+
+
 /*// Navbar collapse (body)
 //
 // Group your navbar content into this for easy collapsing and expanding across
@@ -55,7 +57,7 @@
   overflow-x: visible;
   padding-right: $navbar-padding-horizontal;
   padding-left:  $navbar-padding-horizontal;
-  border-top: 1px solid transparent;
+  border-top: none;
   box-shadow: inset 0 1px 0 rgba(255,255,255,.1);
   @include clearfix();
   -webkit-overflow-scrolling: touch;
@@ -73,7 +75,7 @@
       display: block !important;
       height: auto !important;
       padding-bottom: 0; // Override default setting
-      overflow: visible !important;
+      overflow: hidden !important;
     }
 
     &.in {
@@ -122,7 +124,7 @@
 
 .navbar-static-top {
   z-index: $zindex-navbar;
-  border-width: 0 0 1px;
+  border-width: none;
 
   @media (min-width: $grid-float-breakpoint) {
     border-radius: 0;
@@ -144,12 +146,12 @@
 }
 .navbar-fixed-top {
   top: 0;
-  border-width: 0 0 1px;
+  border-width: none;
 }
 .navbar-fixed-bottom {
   bottom: 0;
   margin-bottom: 0; // override .navbar defaults
-  border-width: 1px 0 0;
+  border-width: none;
   background-color: #F25D1D;
   border-color: none;
 }
@@ -193,9 +195,8 @@
   @include navbar-vertical-align(34px);
   background-color: transparent;
   background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
-  border: 1px solid transparent;
+  border: none;
   border-radius: $border-radius-base;
-
   // We remove the `outline` here, but later compensate by attaching `:hover`
   // styles to `:focus`.
   &:focus {
@@ -302,8 +303,8 @@
   margin-left: -$navbar-padding-horizontal;
   margin-right: -$navbar-padding-horizontal;
   padding: 10px $navbar-padding-horizontal;
-  border-top: 1px solid transparent;
-  border-bottom: 1px solid transparent;
+  border-top: none;
+  border-bottom: none;
   $shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 0 rgba(255,255,255,.1);
   @include box-shadow($shadow);
 
@@ -441,7 +442,7 @@
   }
 
   .navbar-toggle {
-    border-color: $navbar-default-toggle-border-color;
+    border-color: none;
     &:hover,
     &:focus {
       background-color: $navbar-default-toggle-hover-bg;
@@ -453,7 +454,7 @@
 
   .navbar-collapse,
   .navbar-form {
-    border-color: $navbar-default-border;
+    border-color: none;
   }
 
   // Dropdown menu items
@@ -537,7 +538,7 @@
 
 .navbar-inverse {
   background-color: $navbar-inverse-bg;
-  border-color: $navbar-inverse-border;
+  border-color: none;
 
   .navbar-brand {
     color: $navbar-inverse-brand-color;
@@ -582,7 +583,7 @@
 
   // Darken the responsive nav toggle
   .navbar-toggle {
-    border-color: $navbar-inverse-toggle-border-color;
+    border-color: none;
     &:hover,
     &:focus {
       background-color: $navbar-inverse-toggle-hover-bg;
@@ -612,7 +613,7 @@
       // Dropdowns get custom display
       .open .dropdown-menu {
         > .dropdown-header {
-          border-color: $navbar-inverse-border;
+          border-color: none;
         }
         .divider {
           background-color: $navbar-inverse-border;
