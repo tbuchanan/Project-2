@@ -15,24 +15,25 @@
     <div class="row">
       <div id="business-image">
         <%= image_tag @popup.image(:medium), :id => 'pop-image' %>
+      </div><!-- business image -->
         <div id="google">
           <%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&markers=#{@popup.address} &zoom=16", id: "popupMap"%>
+        </br>
           <div class="map-zoom"> 
             <button id="zoomOut"> - </button><button id="zoomIn"> + </button>  
           </div><!-- map-zoom -->
           <p class="get-direct">
-            <%= link_to "Get Directions", "https://maps.google.com/maps?daddr=#{@popup.address}", :method => "get", id: "directions" %>
+            <%= link_to "Get Directions", "https://maps.google.com/maps?daddr=#{@popup.address}", :method => "get" %>
           </p><!-- get-direct -->            
         </div><!-- google -->
-      </div><!-- business-image --> 
     </div><!-- row -->  
       <div class="popup-info">
         <div class="row" id="show-box">
           <div class="col-sm-6 col-md-6 col-lg-6" id 'top-column'>
-            <p><%= rating_for @popup, "price", :star => 5 %></p>
             <p>Description: <%= @popup.description %></p>
             <p>Address: <%= @popup.address %></p>
             <p>Hours: <%= @popup.hours %></p>
+            <p><%= rating_for @popup, "price", :star => 5 %></p>
           </div><!-- col-sm-7 col-md-6 col-lg-6 -->  
         <div class="col-sm-6 col-md-6 col-lg-6">
           <p>Open: <%= @popup.day %></p>
@@ -46,8 +47,9 @@
     
       <!-- comments jumbotron box -->
       <div class="jumbotron" id="jumbo">
-        <h3 id="comment-header">Comments</h3>
+        
             <div class="form-group">
+              <h3 id="comment-header">Comments</h3>
               <% if current_user %>
                 <%= form_for ([@popup, @feed_new]) do |f| %>
                 
@@ -86,7 +88,7 @@
             </div><!-- actionBox -->
           </div><!-- detailBox -->
       </div><!-- jumbo -->  
-  </div><!-- jumbotron -->
+  </div></br><!-- jumbotron -->
 </div><!-- container -->
 
 <!-- static google map --> 

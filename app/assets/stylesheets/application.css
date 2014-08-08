@@ -35,6 +35,9 @@
 
 #show-jumbo {
   background-color: white;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 .devise-signin {
@@ -118,10 +121,14 @@ color: orange
 
 #zoomIn {
   color: black;
+  margin: 0% 0% 0% 50%;
+  z-index: 1;
 }
 
 #zoomOut {
   color: black;
+  margin: 0% 0% 0% 50%;
+  z-index: 1;
 }
 
 /*added some margin and positioning*/
@@ -272,10 +279,10 @@ ul#popups {
 }
 
 .map-zoom {
-  margin-top: -300px;
+  margin: -12px 0px 0px 549px;
   opacity: 0.75;
-  padding: 3px 0px 0px 105px;
   border-radius: 5px;
+  position: absolute;
 }
 
 #map-canvas-index {
@@ -296,6 +303,7 @@ ul#popups {
 #direction-button {
   margin-top: -49px;
   padding: 0px 0px 0px 328px;
+  position: relative;
 }
 
 #google {
@@ -307,8 +315,9 @@ ul#popups {
   border-radius: 5px;
   border: 1px solid white;
   float: left;
-  /*margin: 15px 55px 0px 17px;*/
-  margin: 1.85% 5.3% 2.6% 1.7%;
+  position: absolute;
+  /* percentage better for mobile */
+  margin: 1.4% 5.3% 2.6% 1.2%;
 }
 
 
@@ -349,20 +358,11 @@ input#website {
   width: 11em;
 }
 
-#directions{
-  padding: 2px 2px 2px 2px;
-  margin-left: 75px;
-  margin-top: 1em;
-  background-color: white;
-  opacity: 0.75;
-}
-
 .get-direct {
-  margin-left: 30px;
-  margin-top: 245px;
-  margin-bottom: 0px;
+  background-color: white;
+  margin: 38% 0px 0px 569px;
   opacity: 0.75;
-  color: red;
+  /*position: relative;*/
 }
 
 /*.navbar-static-bottom {
@@ -377,12 +377,14 @@ input#website {
 .popup-info{
   background: white;
   border-radius: 5px;
+  /*position: relative;*/
+  margin-top: 10px;
 } 
 
 #show-box {
   margin-left: 0;
   margin-right: 0;
-  margin-top: 9px;
+  margin-top: 22px;
   background-color: #e9e6db;
   border-radius: 5px;
   border: 1px solid white;
@@ -397,9 +399,10 @@ input#website {
 }
 
 #popupMap{
-  margin-left:20%;
+  margin: 0% 0% 0% 37%;
   border-radius: 5px;
   border: 1px solid white;
+  position: absolute;
 }
 
 .mapinfo{

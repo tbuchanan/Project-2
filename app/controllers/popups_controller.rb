@@ -18,6 +18,15 @@ before_action :authenticate_user!, except: [:index, :show, :search]
       f.json { render json: @results, :only => [:id, :name, :address, :geocode, :longitude, :latitude, :hours, :day, :website, :price, :description, :image, :category]}
     end
   end
+
+    def search_geocode
+    @geocode_results = Popup.near(params[:geocode],1)
+    # binding.pry
+    respond_to do |f|
+      f.html { render :search_geocode }
+      f.json { render json: @geocode_results, :only => [:id, :name, :address, :geocode, :longitude, :latitude, :hours, :day, :website, :price, :description, :image, :category]}
+    end
+  end
   
   def new
     @popup = Popup.new
