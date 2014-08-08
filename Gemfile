@@ -1,5 +1,3 @@
-
-
 source 'https://rubygems.org'
 ruby '2.1.1'
 
@@ -20,9 +18,6 @@ gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
 gem 'aws-sdk'
 gem 'pry'
 gem 'pry-rails'
-
-# have to research before implementing
-# gem 'foursquare'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'

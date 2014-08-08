@@ -1,23 +1,23 @@
 == README
 
-Popspotz http://popups-app.herokuapp.com/
+Popspot http://popups-app.herokuapp.com/
 
-Authors: Tyler and Ami
+Authors: Tyler Buchanan and Ami Mathur
 
-POPSPOTZ
+POPSPOT
 
-Popspotz, as the name suggests is an app that helps users in finding pop-ups nearest to them.
+Popspot, as the name suggests is an app that helps users in finding pop-ups nearest to them.
 
 WHAT ARE POP-UPS?
 
 Pop-ups are temporary businesses that show up at designated venues for a limited period of time.
 There are typically no promotional activities for Pop-ups. At the moment, the best way to find them is through word-of-mouth or through sheer serendipity!
 
-POPSPOTZ OBJECTIVE 
+POPSPOT OBJECTIVE 
 
-Popspotz hopes to consolidate all the information users need about existing pop-ups in one place so that these businesses can become more accessible to a larger section of the community.
+Popspot hopes to consolidate all the information users need about existing pop-ups in one place so that these businesses can become more accessible to a larger section of the community.
 
-TOP FEATURES OF POPSPOTZ
+TOP FEATURES OF POPSPOT
 
 - users can sign up
 - the database is user-generated
@@ -48,6 +48,6 @@ TECHNOLOGIES
 - jQuery
 
 
-P.S If you know of a Popup, add it to Popspotz and help others like you from missing out on a cool Popup!
+P.S If you know of a Popup, add it to Popspot and help others like you from missing out on a cool Popup!
 
 
