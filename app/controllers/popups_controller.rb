@@ -35,7 +35,11 @@ before_action :authenticate_user!, except: [:index, :show, :search]
 
   def create
     @popup = Popup.create popup_params 
+    # if (params[:name]) == nil 
+    #   render :new
+    # else
     redirect_to popup_path(@popup)
+    # end
   end
 
   def show    

@@ -41,7 +41,8 @@
 
 #show-jumbo {
   background-color: white;
-  margin: 0 auto;
+  margin-left: 0 auto;
+  margin-right: 0 auto;
   margin-bottom: 10px;
   margin-top: 10px;
 }
@@ -246,6 +247,7 @@ div.jumbotron {
   width: 1126px;
   margin-left: 1em;
   border:solid white 2px;
+  margin: 0 auto;
 }
 
 .container {
@@ -257,6 +259,7 @@ border-radius: 5px;
 background: #b9bbbe;
 padding-top: 20px;
 padding-bottom: 20px;
+margin: 0 auto;
 }
 
 body {

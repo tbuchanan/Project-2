@@ -25,6 +25,7 @@ class Popup < ActiveRecord::Base
   # Validate the attached image is image/jpg, image/png, etc
   validates_attachment_content_type :image, :content_type => /\Aimage\/.*\Z/
   # validates :name, presence: true
+  validates_length_of :name, :maximum => 15
   # validates :address, presence: true
   # validates :day, presence: true
   # validates :hours, presence: true
