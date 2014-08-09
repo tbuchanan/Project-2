@@ -27,11 +27,12 @@
 
 }
 
-.col-md-3 {
-  width: 65% !important;
-  margin-top: 25px;
+#copyright {
+  margin: 1.2% 0% 0% 29%;
   font-size: 8px;
   color: white;
+  position: absolute;
+  float: right;
 
 }
 
