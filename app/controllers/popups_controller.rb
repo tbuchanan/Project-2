@@ -12,9 +12,9 @@ before_action :authenticate_user!, except: [:index, :show, :search]
 
   # search page and google map json rendering 
   # @results = Popup.search_for(params[:q]) || Popup.near(('501 Folsom St, San Francisco, CA, US'), 1)
+  # work in progress - separating search queries by name and geocode into 2 different methods in order to make search by geocode work in javascript
   def search
     @results = Popup.search_for(params[:q])
-    # binding.pry
     respond_to do |f|
       f.html { render :search }
       f.json { render json: @results, :only => [:id, :name, :address, :geocode, :longitude, :latitude, :hours, :day, :website, :price, :description, :image, :category]}
@@ -31,7 +31,6 @@ before_action :authenticate_user!, except: [:index, :show, :search]
   
   def new
     @popup = Popup.new
-    @taco = Popup.where(:category => "Food")
   end
 
   def create

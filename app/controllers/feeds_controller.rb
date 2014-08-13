@@ -9,6 +9,7 @@ before_filter :load_popup
 
   def create
     @feed = @popup.feeds.new(feed_params)
+    # defining that the feed/comment creator is the current user logged in
     @feed.user_id = current_user.id
     if @feed.save
       redirect_to popup_path(@popup)
@@ -19,6 +20,7 @@ before_filter :load_popup
 
   def destroy
     @feed = @popup.feeds.find(params[:id])
+    # ensuring that only the owner of the feed/comment can destroy the feed/comment
     if current_user && current_user.id == @feed.user_id
       @feed.destroy
     else

@@ -5,10 +5,6 @@ class Popup < ActiveRecord::Base
 
   # letsrate gem requirement
   letsrate_rateable "price"
-
-  # validates :image, :presence => { :message => "Image is required" }
-
-  # validates :geocode, presence: true
   
 
   # for geocoder gem to convert address into "geocode"(longitude and latitude)
@@ -24,8 +20,9 @@ class Popup < ActiveRecord::Base
 
   # Validate the attached image is image/jpg, image/png, etc
   validates_attachment_content_type :image, :content_type => /\Aimage\/.*\Z/
-  # validates :name, presence: true
   validates_length_of :name, :maximum => 15
+  # not using validations for the rest of the form fields until we make the necessary changes to the form
+  # validates :name, presence: true
   # validates :address, presence: true
   # validates :day, presence: true
   # validates :hours, presence: true
@@ -35,7 +32,7 @@ class Popup < ActiveRecord::Base
   # validates :category, presence: true
   
 
-
+  #search query for finding popups by name - ILIKE makes it case insensitive
   def self.search_for(query)
     where('name ILIKE :query', query: "%#{query}%")
   end
