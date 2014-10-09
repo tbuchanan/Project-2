@@ -1,0 +1,42 @@
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+  .navbar-form.navbar-fluid {
+    display: none;
+  }
+
+  input#location.form-control {
+    width: 20em;
+    font-size: 8px;
+  }
+
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (max-width : 480px) {
+
+  #copyright {
+    text-align: center;
+    font-size: 8px;
+    color: white;
+    position: absolute;
+    margin: 0 auto;
+    float: none !important;
+  }
+
+  .navbar-fixed-bottom {
+    display: none !important;
+  }
+
+  a.navbar-brand {
+    font-family: 'Ewert', cursive;
+    font-size: 25px !important;
+    margin-top: 10px;
+    color:white;
+    text-decoration:none;
+  }
+
+  
+  
+
+
+} /*media only*/

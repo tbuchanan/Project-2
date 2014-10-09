@@ -27,12 +27,12 @@
 
 }
 
-.col-md-3 {
-  width: 65% !important;
-  margin-top: 25px;
+#copyright {
+  margin: 1.2% 2.2% 0% 0%;
   font-size: 8px;
   color: white;
-
+  position: relative;
+  float: right;
 }
 
 #business-image {
@@ -106,11 +106,12 @@ color: orange
 }
 
 #location {
-  width: 352px;
+  width: 300px;
+  
+}
 
-  .small {
-    
-  }
+#q {
+  width: 125px;
 }
 
 

@@ -15,7 +15,7 @@
           <%= form_tag "/popups/search", method: :get, id: 'search_form' do %>
             <%= text_field_tag :q, params[:q], placeholder: "eg: Wesburger", class: "form-control" %> 
             <%= text_field_tag :geocode, params[:geocode], placeholder: "eg: 112 Fell St, San Francisco, CA 94102", :id => "location", class: "form-control" %>
-            <%= submit_tag "Search", :class => "btn btn-info" %>
+            <%= submit_tag "Search", :class => "btn btn-info", :id => "home-search" %>
           <% end %>
         </div>
           <div class="navbar-form pull-right">                
@@ -35,12 +35,12 @@
     </div><!-- navbar-collapse collapse -->
       <div id="nav-bottom">
        <div class="navbar navbar-fixed-bottom">
-          <a href="/about" class="navbar-text">About Us</a>
-          <a href="/contact" class="navbar-text">Contact</a>
+          <a href="/about" class="navbar-text">About</a>
+          <a href="mailto:pop.spotz.app@gmail.com" title="Contact Us" itemprop="url" rel="nofollow" class="navbar-text">Contact</a>
           <a href="/faq" class="navbar-text">FAQ</a>
-          <div class="col-md-3 col-sm-6 copyright">
-            Copyright &copy; 2014 Popspot
-          </div>
+          <!-- <div class="col-md-3 col-sm-6 copyright"> -->
+            <center><label id="copyright">Copyright &copy; 2014 Popspot</label></center>
+          <!-- </div> -->
        </div><!-- navbar navbar-fixed-bottom -->
 
       </div><!-- nav-bottom -->
