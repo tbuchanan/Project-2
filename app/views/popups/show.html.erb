@@ -59,7 +59,7 @@
                     <h7><%= link_to "Delete", [@popup, feed], method: :delete, data: {confirm: "Are You Sure?"}, :class => 'btn btn-danger btn-sm', :id => "danger" %></h7>
                   <% end %>
                   <h7>Posted <%= time_ago_in_words(feed.created_at) %> ago by: </h7><br>
-                  <h7 ><strong><%= User.where(id: feed.user_id).first.email %></strong></h7></br>
+                  <h7 ><strong><%= feed.user.email %></strong></h7></br><!-- User.where(id: feed.user_id).first.email  -->
                   <p id="user-post"></p> 
                 <% end %>
                 </div><!-- commentText -->                                                     

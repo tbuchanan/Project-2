@@ -9,7 +9,6 @@ before_action :authenticate_user!, except: [:index, :show, :search]
       f.json { render json: @popups, :only => [:id, :name, :address, :geocode, :longitude, :latitude, :hours, :day, :website, :price, :description, :image, :category]}
     end
   end
-
   # search page and google map json rendering 
   # @results = Popup.search_for(params[:q]) || Popup.near(('501 Folsom St, San Francisco, CA, US'), 1)
   # work in progress - separating search queries by name and geocode into 2 different methods in order to make search by geocode work in javascript

@@ -113,11 +113,14 @@ $(document).ready(function() {
     var lastInfoWindow;
     var addInfoWindowListener = function(marker, newInfoWindow) {
       google.maps.event.addListener(marker, 'mouseover', function() {
+        //if lastinfowindow is NOT not lastinfowindow or if lastinfowindow is lastinfowindow, close lastinfowindow
         if ( !! lastInfoWindow) {
           lastInfoWindow.close();
         }
+        //if lastinfowindow is the same as newinfowindow, assign lastinfowindow to be null
         if (lastInfoWindow === newInfoWindow) {
           lastInfoWindow = null;
+        // else open new infowindow for this(the marker), lastwindow is now assigned the value of newinfowindow
         } else {
           newInfoWindow.open(map, this);
           lastInfoWindow = newInfoWindow;
