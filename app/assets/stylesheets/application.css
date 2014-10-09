@@ -106,11 +106,12 @@ color: orange
 }
 
 #location {
-  width: 352px;
+  width: 300px;
+  
+}
 
-  .small {
-    
-  }
+#q {
+  width: 125px;
 }
 
 

@@ -1,6 +1,14 @@
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
-  
+  .navbar-form.navbar-fluid {
+    display: none;
+  }
+
+  input#location.form-control {
+    width: 20em;
+    font-size: 8px;
+  }
+
 }
 
 /* Extra Small Devices, Phones */ 
