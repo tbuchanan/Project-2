@@ -1,0 +1,13 @@
+<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+  <span class="icon-bar"></span>
+</button>
+
+<ul class="nav nav-pills nav-stacked form-group">
+  
+    <%= form_tag "/popups/search", method: :get, id: 'search_form' do %>
+    <%= text_field_tag :q, params[:q], placeholder: "eg: Wesburger", class: "form-control" %> 
+    <%= text_field_tag :geocode, params[:geocode], placeholder: "eg: 112 Fell St, San Francisco, CA 94102", :id => "location", class: "form-control" %>
+    <%= submit_tag "Search", :class => "btn btn-info", :id => "home-search" %>
+    <% end %>
+  
+</ul>

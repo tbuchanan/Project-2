@@ -1,12 +1,45 @@
+@media screen and (min-width: 767px) and (max-width: 4000px) {
+  
+}
+
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
   .navbar-form.navbar-fluid {
-    display: none;
+    position: relative;
+  }
+
+  .nav.nav-pills.nav-stacked {
+    margin-top: 5em;
+  }
+
+  input#q.form-control {
+    margin: 0em 0em 3px -150px;
+    font-size: 8px;
+    width: 20em;
   }
 
   input#location.form-control {
+    margin: 0em 42px 0em -150px;
     width: 20em;
     font-size: 8px;
+    padding: 0em 0em 0em 12px;
+  }
+
+  input#home-search.btn.btn-info {
+    margin: 10px 0px 0px -341px;
+  }
+
+  div.navbar-form {
+    margin: 3em 0em -1em -85px;
+  }
+
+  div.navbar-form.pull-right ul.links{
+    margin: -48px 48px 0px -350px;
+    z-index: 1;
+  }
+
+  .navbar-default .navbar-toggle:hover {
+    background-color: none !important;
   }
 
 }
