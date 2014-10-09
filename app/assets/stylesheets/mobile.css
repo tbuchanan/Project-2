@@ -8,10 +8,6 @@
     position: relative;
   }
 
-  .nav.nav-pills.nav-stacked {
-    margin-top: 5em;
-  }
-
   input#q.form-control {
     margin: 0em 0em 3px -150px;
     font-size: 8px;
@@ -27,19 +23,18 @@
 
   input#home-search.btn.btn-info {
     margin: 10px 0px 0px -341px;
+    position: relative;
   }
 
   div.navbar-form {
     margin: 3em 0em -1em -85px;
+    position: relative;
   }
 
   div.navbar-form.pull-right ul.links{
     margin: -48px 48px 0px -350px;
     z-index: 1;
-  }
-
-  .navbar-default .navbar-toggle:hover {
-    background-color: none !important;
+    position: relative;
   }
 
 }
