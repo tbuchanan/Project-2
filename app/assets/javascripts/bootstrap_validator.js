@@ -1,1 +1,1 @@
-$('#new_popup').bootstrapValidator();
+// $('#new_popup').bootstrapValidator();

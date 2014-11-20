@@ -22,8 +22,8 @@
   }
 
   input#home-search.btn.btn-info {
-    margin: 10px 0px 0px -341px;
-    position: relative;
+    margin: 10px 0px 0px -145%;
+    position: absolute;
   }
 
   div.navbar-form {
@@ -32,9 +32,9 @@
   }
 
   div.navbar-form.pull-right ul.links{
-    margin: -48px 48px 0px -350px;
+    margin: -35px 0px 0px -500%;
     z-index: 1;
-    position: relative;
+    position: absolute;
   }
 
 }
