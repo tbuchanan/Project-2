@@ -21,10 +21,8 @@ before_action :authenticate_user!, except: [:index, :show]
   end
 
   def search_geo
-    # test code but it works to get first Popup's geocode
-    @address = Popup.first.geocode
-    @geocode_results = @address
-    # @geocode_results = Popup.near(params[:geocode],1)
+    # test code but it works to get first Popup's geocode    
+    @geocode_results = Popup.near(params[:geocode],1)
     respond_to do |f|
       f.html { render :search_geo }
       f.json { render json: @geocode_results, :only => [:id, :name, :address, :geocode, :longitude, :latitude, :hours, :day, :website, :price, :description, :image, :category]}
