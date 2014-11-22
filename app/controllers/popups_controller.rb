@@ -20,8 +20,10 @@ before_action :authenticate_user!, except: [:index, :show, :search]
     end
   end
 
+  # doesn't work :( SHIT METHOD!
   def search_geocode
-    @geocode_results = Popup.near(params[:geocode],1)
+    @geocode_results = Popup.near(params[:latitude], params[:longitude], 2)
+    # @geocode_results = Popup.near([37.77, -122.41],1)
     respond_to do |f|
       f.html { render :search_geocode }
       f.json { render json: @geocode_results, :only => [:id, :name, :address, :geocode, :longitude, :latitude, :hours, :day, :website, :price, :description, :image, :category]}

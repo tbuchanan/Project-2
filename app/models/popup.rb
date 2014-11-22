@@ -37,4 +37,12 @@ class Popup < ActiveRecord::Base
     where('name ILIKE :query', query: "%#{query}%")
   end
 
+#   def self.search_geo()
+#   if params[:address].present?
+#     @geocode_results = Popup.near(params[:geocode], 1, :order => :distance)
+#   else
+#     @geocode_results = Popup.all
+#   end
+# end
+
 end

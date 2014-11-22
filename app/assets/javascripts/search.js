@@ -18,7 +18,7 @@ $(document).ready(function() {
         type: 'get',
         data: {
         "q": $('#q').val(),
-        "geocode": $('#geocode').val()
+        "geocode": $('#location').val()
       }
       }).success(function(data) {
         for (var i in data) {
