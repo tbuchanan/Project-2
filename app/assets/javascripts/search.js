@@ -1,4 +1,5 @@
 $(document).ready(function() {
+  var url;
     function initialize() {
     //just a variable storing a location
     var mapLoad = {
@@ -13,26 +14,43 @@ $(document).ready(function() {
 
     var loadSearch = function() {
       // Find search string and geocode and add to url
-      var url = "/popups/search.json";
+      var url = "/popups/search_name.json";
       $.ajax(url, {
         type: 'get',
         data: {
         "q": $('#q').val(),
+      }
+      }).success(function(data) {
+        for (var i in data) {
+           addPin(data[i].latitude, data[i].longitude, data[i].name, data[i].id, data[i].address, data[i].category, data[i].image, data[i].price, data[i].geocode);
+        }
+      });
+    }
+    loadSearch();
+
+
+    // $('#search_form').on('submit', loadSearch());
+
+    var loadSearchGeo = function() {
+      // Find search string and geocode and add to url
+      var url = "/popups/search.json";
+      $.ajax(url, {
+        type: 'get',
+        data: {
         "geocode": $('#location').val()
       }
       }).success(function(data) {
+        console.log(data);
         for (var i in data) {
           addPin(data[i].latitude, data[i].longitude, data[i].name, data[i].id, data[i].address, data[i].category, data[i].image, data[i].price, data[i].geocode);
         }
       });
     }
+    loadSearchGeo();
+    
 
-    loadSearch();
 
-    $('#search_form').on('submit', function(event) {
-    });
-
-    //   var loadSearchGeo = function() {
+    //   var loadSearchBoth = function() {
     //   // Find search string and geocode and add to url
     //   var url = "/popups/search_geo.json";
     //   $.ajax(url, {
