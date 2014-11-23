@@ -12,12 +12,14 @@
     <div class="navbar-collapse collapse">
       <div class="navbar-form navbar-fluid" role="search">
         <div class="form-group">
-          <%= form_tag "/popups/search", method: :get, id: 'search_form' do %>
+          <%= form_tag "/popups/search", method: :get, id: 'search_geo_form' do %>
+            <%= text_field_tag :geocode, params[:geocode], placeholder: "eg: 112 Fell St, San Francisco, CA 94102", :id => "location", class: "form-control" %>
+            <%= submit_tag "Search", :class => "btn btn-info", :id => "home-geo-search" %>
+          <% end %>
+
+          <%= form_tag "/popups/search_name", method: :get, id: 'search_form' do %>
             <%= text_field_tag :q, params[:q], placeholder: "eg: Wesburger", class: "form-control", :id => "q" %> 
-            <%= form_tag "/popups/search_geo", method: :get, id: 'search_form' do %>
-            <%= text_field_tag :geocode, params[:geocode], placeholder: "eg: 112 Fell St, San Francisco, CA 94102", :id => "location", class: "form-control" %>            
-            <%= submit_tag "Search", :class => "btn btn-info", :id => "home-search" %>
-            <% end %>
+            <%= submit_tag "Search", :class => "btn btn-info", :id => "home-search" %>          
           <% end %>
         </div>
         <div class="navbar-form pull-right">                

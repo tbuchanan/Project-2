@@ -8,9 +8,8 @@ Rails.application.routes.draw do
   get '/faq', to: 'pages#faq'
 
   resources :popups do 
-    get 'search', on: :collection
-    get 'search_both', on: :collection
-    get 'search_geo', on: :collection # route for "address/geocode" search results
+    get 'search', on: :collection    
+    get 'search_name', on: :collection # route for "address/geocode" search results
   end 
 
   devise_for :users

@@ -13,39 +13,20 @@ before_action :authenticate_user!, except: [:index, :show]
   # @results = Popup.search_for(params[:q]) || Popup.near(('501 Folsom St, San Francisco, CA, US'), 1)
   # work in progress - separating search queries by name and geocode into 2 different methods in order to make search by geocode work in javascript
   def search
-    # @results = Popup.search_for(params[:q])
-    @results = Popup.search_for(params[:q])
-    @results_geo = Popup.search_geo(params[:address])    
-    # if @results.include?(params[:address]) ? @results : 'taco'
-    #   @results
-
-    # else
-    #   @results = 'taco'
-    # end
-    # binding.pry
-    # Rails.logger.debug @results.inspect
-    Rails.logger.debug @results_geo.inspect
+    @results = Popup.near((params[:geocode]), 1)
     respond_to do |f|
       f.html { render :search }
       f.json { render json: @results, :only => [:id, :name, :address, :geocode, :longitude, :latitude, :hours, :day, :website, :price, :description, :image, :category]}
     end
   end
 
-  def search_geocode
-    # @geocode_results = Popup.near(params[:latitude] params[:longitude], 2)
-    @geocode_results = Popup.near([37.77, -122.41],1)
+  def search_name
+    @results = Popup.search_for(params[:q])
     respond_to do |f|
-      f.html { render :search_geo }
-      f.json { render json: @geocode_results, :only => [:id, :name, :address, :geocode, :longitude, :latitude, :hours, :day, :website, :price, :description, :image, :category]}
+      f.html { render :search_name }
+      f.json { render json: @results, :only => [:id, :name, :address, :geocode, :longitude, :latitude, :hours, :day, :website, :price, :description, :image, :category]}
     end
   end
-
-  def search_both
-    search_geocode
-    search
-  end
-  
-
 
   def new
     @popup = Popup.new
