@@ -43,6 +43,7 @@ $(document).ready(function() {
       });
     };
     loadGeo();
+
   
     function addPin(latitude, longitude, name, id, address, category, image, price) {
       var loc = new google.maps.LatLng(latitude, longitude);
